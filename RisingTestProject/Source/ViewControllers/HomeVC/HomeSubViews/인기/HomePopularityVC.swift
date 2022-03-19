@@ -54,6 +54,6 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
+        return tableView.frame.width * 0.85
     }
 }
