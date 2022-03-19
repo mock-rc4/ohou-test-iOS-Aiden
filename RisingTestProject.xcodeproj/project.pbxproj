@@ -16,6 +16,8 @@
 		D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */; };
 		D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */; };
 		D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */; };
+		D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DE627E5CE9800D1C7D6 /* PopularityTableViewHeader.swift */; };
+		D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -48,6 +50,8 @@
 		D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKnowHowVC.swift; sourceTree = "<group>"; };
 		D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpertVC.swift; sourceTree = "<group>"; };
 		D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQnAVC.swift; sourceTree = "<group>"; };
+		D04A2DE627E5CE9800D1C7D6 /* PopularityTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityTableViewHeader.swift; sourceTree = "<group>"; };
+		D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityTableViewHeader.xib; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,15 +101,88 @@
 		D04A2DD027E5C1BC00D1C7D6 /* HomeSubViews */ = {
 			isa = PBXGroup;
 			children = (
-				D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */,
-				D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */,
-				D04A2DD527E5C25F00D1C7D6 /* HomePhotoVC.swift */,
-				D04A2DD727E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift */,
-				D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */,
-				D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */,
-				D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */,
+				D04A2DDF27E5CB8500D1C7D6 /* 인기 */,
+				D04A2DE027E5CB8E00D1C7D6 /* 팔로잉 */,
+				D04A2DE127E5CB9200D1C7D6 /* 사진 */,
+				D04A2DE227E5CB9900D1C7D6 /* 집들이 */,
+				D04A2DE327E5CB9E00D1C7D6 /* 노하우 */,
+				D04A2DE427E5CBA300D1C7D6 /* 전문가집들이 */,
+				D04A2DE527E5CBA800D1C7D6 /* 질문과답변 */,
 			);
 			path = HomeSubViews;
+			sourceTree = "<group>";
+		};
+		D04A2DDF27E5CB8500D1C7D6 /* 인기 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */,
+				D04A2DE827E5CE9B00D1C7D6 /* Header */,
+			);
+			name = "인기";
+			path = "인기";
+			sourceTree = "<group>";
+		};
+		D04A2DE027E5CB8E00D1C7D6 /* 팔로잉 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */,
+			);
+			name = "팔로잉";
+			path = "팔로잉";
+			sourceTree = "<group>";
+		};
+		D04A2DE127E5CB9200D1C7D6 /* 사진 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD527E5C25F00D1C7D6 /* HomePhotoVC.swift */,
+			);
+			name = "사진";
+			path = "사진";
+			sourceTree = "<group>";
+		};
+		D04A2DE227E5CB9900D1C7D6 /* 집들이 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD727E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift */,
+			);
+			name = "집들이";
+			path = "집들이";
+			sourceTree = "<group>";
+		};
+		D04A2DE327E5CB9E00D1C7D6 /* 노하우 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */,
+			);
+			name = "노하우";
+			path = "노하우";
+			sourceTree = "<group>";
+		};
+		D04A2DE427E5CBA300D1C7D6 /* 전문가집들이 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */,
+			);
+			name = "전문가집들이";
+			path = "전문가집들이";
+			sourceTree = "<group>";
+		};
+		D04A2DE527E5CBA800D1C7D6 /* 질문과답변 */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */,
+			);
+			name = "질문과답변";
+			path = "질문과답변";
+			sourceTree = "<group>";
+		};
+		D04A2DE827E5CE9B00D1C7D6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DE627E5CE9800D1C7D6 /* PopularityTableViewHeader.swift */,
+				D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		D0910F4E27E56D9800793D90 = {
@@ -329,6 +406,7 @@
 				D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */,
 				D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
+				D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +461,7 @@
 			files = (
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
+				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
 				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
