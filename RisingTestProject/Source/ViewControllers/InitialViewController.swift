@@ -14,8 +14,15 @@ class InitialViewController: BaseViewController {
     
     // 로그인하지 않고 메인화면으로 넘어가기
     @IBAction func didTapLookAroundButton(_ sender: Any) {
-        Constant.isUserTapLookAroundButton = true
-        self.dismiss(animated: true)
+        // Alert
+        let lookAround: UIAlertAction = UIAlertAction(title: "둘러보기", style: .default) { _ in
+            Constant.isUserTapLookAroundButton = true
+            self.dismiss(animated: true)
+        }
+        let signInNow: UIAlertAction = UIAlertAction(title: "지금 가입하기", style: .default) { _ in
+            print("지금 가입하기 버튼 클릭")
+        }
+        presentAlert(title: "첫 구매 최대 100,000원 할인", message: "지금 가입하면 바로 사용 가능한\n최대 10만원 쿠폰팩을 드립니다.", isCancelActionIncluded: false, preferredStyle: .alert, with: lookAround, signInNow)
     }
     
     // 카카오 로그인 버튼
