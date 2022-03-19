@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0164AC4A69706993E2EA7DBE /* Pods_RisingTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */; };
+		D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DCE27E5C03C00D1C7D6 /* HomeTapmanViewController.swift */; };
+		D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */; };
+		D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */; };
+		D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD527E5C25F00D1C7D6 /* HomePhotoVC.swift */; };
+		D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD727E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift */; };
+		D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */; };
+		D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */; };
+		D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -29,6 +38,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3373D6D7D9CC2F5B66FA1122 /* Pods-RisingTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTestProject.debug.xcconfig"; path = "Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		57A1119FE0DF7529DAB93FE8 /* Pods-RisingTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTestProject.release.xcconfig"; path = "Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		D04A2DCE27E5C03C00D1C7D6 /* HomeTapmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTapmanViewController.swift; sourceTree = "<group>"; };
+		D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularityVC.swift; sourceTree = "<group>"; };
+		D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowingVC.swift; sourceTree = "<group>"; };
+		D04A2DD527E5C25F00D1C7D6 /* HomePhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoVC.swift; sourceTree = "<group>"; };
+		D04A2DD727E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHouseWarmingVC.swift; sourceTree = "<group>"; };
+		D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKnowHowVC.swift; sourceTree = "<group>"; };
+		D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExpertVC.swift; sourceTree = "<group>"; };
+		D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQnAVC.swift; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +69,7 @@
 		D0EA7F8127E5911B00948269 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D0EA7F8327E5913400948269 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		D0EA7F8A27E5958100948269 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,17 +77,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0164AC4A69706993E2EA7DBE /* Pods_RisingTestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D04A2DCD27E5C00000D1C7D6 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0910F5E27E56D9800793D90 /* HomeViewController.swift */,
+				D04A2DCE27E5C03C00D1C7D6 /* HomeTapmanViewController.swift */,
+				D04A2DD027E5C1BC00D1C7D6 /* HomeSubViews */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		D04A2DD027E5C1BC00D1C7D6 /* HomeSubViews */ = {
+			isa = PBXGroup;
+			children = (
+				D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */,
+				D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */,
+				D04A2DD527E5C25F00D1C7D6 /* HomePhotoVC.swift */,
+				D04A2DD727E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift */,
+				D04A2DD927E5C2F500D1C7D6 /* HomeKnowHowVC.swift */,
+				D04A2DDB27E5C34800D1C7D6 /* HomeExpertVC.swift */,
+				D04A2DDD27E5C3EC00D1C7D6 /* HomeQnAVC.swift */,
+			);
+			path = HomeSubViews;
+			sourceTree = "<group>";
+		};
 		D0910F4E27E56D9800793D90 = {
 			isa = PBXGroup;
 			children = (
 				D0910F5927E56D9800793D90 /* RisingTestProject */,
 				D0910F5827E56D9800793D90 /* Products */,
+				F6915DFCE52AE4DE4F1746A4 /* Pods */,
+				F9DF8751DEDCACC9EFBB0C04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,8 +228,8 @@
 		D0EA7F8627E5915400948269 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0910F5E27E56D9800793D90 /* HomeViewController.swift */,
 				D0EA7F8A27E5958100948269 /* InitialViewController.swift */,
+				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +249,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F6915DFCE52AE4DE4F1746A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3373D6D7D9CC2F5B66FA1122 /* Pods-RisingTestProject.debug.xcconfig */,
+				57A1119FE0DF7529DAB93FE8 /* Pods-RisingTestProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9DF8751DEDCACC9EFBB0C04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0910F6B27E56D9B00793D90 /* Build configuration list for PBXNativeTarget "RisingTestProject" */;
 			buildPhases = (
+				5060EAFE742609088365D33B /* [CP] Check Pods Manifest.lock */,
 				D0910F5327E56D9800793D90 /* Sources */,
 				D0910F5427E56D9800793D90 /* Frameworks */,
 				D0910F5527E56D9800793D90 /* Resources */,
+				502B5E7BE50745EC36C45D8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,23 +334,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		502B5E7BE50745EC36C45D8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5060EAFE742609088365D33B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RisingTestProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0910F5327E56D9800793D90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
+				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
 				D0EA7F7C27E590D300948269 /* String.swift in Sources */,
+				D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */,
+				D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */,
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
 				D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */,
+				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
+				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
+				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
+				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
@@ -430,6 +546,7 @@
 		};
 		D0910F6C27E56D9B00793D90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3373D6D7D9CC2F5B66FA1122 /* Pods-RisingTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +574,7 @@
 		};
 		D0910F6D27E56D9B00793D90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A1119FE0DF7529DAB93FE8 /* Pods-RisingTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

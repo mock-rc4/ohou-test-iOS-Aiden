@@ -16,9 +16,7 @@ class BaseViewController: UIViewController {
         
         
         // Navigation Bar
-//        self.navigationController?.navigationBar.titleTextAttributes = [
-//
-//        ]
+        self.navigationController?.navigationBar.isHidden = true
         
         
         // Background Color
