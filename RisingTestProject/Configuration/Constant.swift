@@ -11,6 +11,10 @@
 /// Contant.baseURL 형식으로 가져다가 사용
 struct Constant {
 
+    static var isUserLogged: Bool = false
+    static var isUserTapLookAroundButton: Bool = false
+    
+    
     static let baseURL = "https://www.kobis.or.kr/kobisopenapi/webservice/rest"
     
 }
