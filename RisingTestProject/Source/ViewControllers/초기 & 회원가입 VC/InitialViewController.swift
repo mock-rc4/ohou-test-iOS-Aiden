@@ -27,6 +27,7 @@ class InitialViewController: BaseViewController {
     
     // 카카오 로그인 버튼
     @IBAction func didTapKakaoLoginButton(_ sender: UIButton) {
+        KakaoLoginManager().kakaoLogin(self)
     }
     
     // 네이버 로그인 버튼
