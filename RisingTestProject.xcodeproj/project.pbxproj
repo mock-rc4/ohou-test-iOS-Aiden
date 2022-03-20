@@ -32,6 +32,7 @@
 		D0910F6227E56D9800793D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6027E56D9800793D90 /* Main.storyboard */; };
 		D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6327E56D9B00793D90 /* Assets.xcassets */; };
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
+		D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
 		D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6C27E58FF900948269 /* BaseViewController.swift */; };
 		D0EA7F7227E5904800948269 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F7127E5904800948269 /* Device.swift */; };
@@ -76,6 +77,7 @@
 		D0910F6327E56D9B00793D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0910F6627E56D9B00793D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D0EA7F6C27E58FF900948269 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0EA7F7127E5904800948269 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -297,6 +299,16 @@
 			path = RisingTestProject;
 			sourceTree = "<group>";
 		};
+		D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA7F8A27E5958100948269 /* InitialViewController.swift */,
+				D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */,
+			);
+			name = "초기 & 회원가입 VC";
+			path = "초기 & 회원가입 VC";
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +397,7 @@
 		D0EA7F8627E5915400948269 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0EA7F8A27E5958100948269 /* InitialViewController.swift */,
+				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
 			);
 			path = ViewControllers;
@@ -567,6 +579,7 @@
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
+				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,

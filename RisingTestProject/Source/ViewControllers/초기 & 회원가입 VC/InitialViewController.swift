@@ -49,5 +49,21 @@ class InitialViewController: BaseViewController {
         // 버튼 Text에 underLine작업
         emailLoginButton.addUnderLine()
         signUpByEmailButton.addUnderLine()
+        
+        
+        // 이메일로 회원가입 버튼 addTarget
+        signUpByEmailButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
+    }
+    
+    
+    
+    // MARK: - objc함수
+    
+    // 회원가입 버튼
+    @objc func didTapSignUpButton() {
+        guard let signUpVC = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 }

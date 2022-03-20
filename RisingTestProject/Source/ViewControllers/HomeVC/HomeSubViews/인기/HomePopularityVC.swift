@@ -43,9 +43,9 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        // 커스텀 세퍼레이터
+        // MARK: - Cell 구분선 커스텀
         let screenSize = UIScreen.main.bounds
-        let separatorHeight = CGFloat(3.0)
+        let separatorHeight = CGFloat(5.0)
         let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
         additionalSeparator.backgroundColor = UIColor.systemGray5
         cell.addSubview(additionalSeparator)
