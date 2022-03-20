@@ -25,6 +25,7 @@ class HomePopularityVC: BaseViewController {
         tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         tableView.register(UINib(nibName: "TodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayDealTableViewCell")
         tableView.register(UINib(nibName: "PopularityMediaTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityMediaTableViewCell")
+        tableView.register(UINib(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")
         
         
         // Header & Footer
@@ -40,7 +41,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     // Cell 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     // 사용할 Cell 설정
@@ -64,8 +65,14 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             }
             addSeparator(cell)
             return cell
-        }else {
+        }else if indexPath.row <= 6{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityMediaTableViewCell", for: indexPath) as? PopularityMediaTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
+        }else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as? ReviewTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
@@ -83,8 +90,10 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width / 1.8
         }else if indexPath.row == 4{
             return tableView.frame.width / 1.3
-        }else {
+        }else if indexPath.row <= 6 {
             return tableView.frame.width
+        }else {
+            return tableView.frame.width * 1.35
         }
     }
     

@@ -18,23 +18,23 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 동영상" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csj-Zh-ZUt">
-                        <rect key="frame" x="15" y="15" width="91.5" height="24"/>
+                        <rect key="frame" x="0.0" y="15" width="91.5" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매일 1,2,3위에게 최대 4000P 지급! &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuC-bC-a8e">
-                        <rect key="frame" x="15" y="46" width="229" height="18"/>
+                        <rect key="frame" x="0.0" y="46" width="229" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.074537627551020405" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ok-Wn-M65">
-                        <rect key="frame" x="330.5" y="15" width="78.5" height="31"/>
+                        <rect key="frame" x="335.5" y="15" width="73.5" height="30"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-6b-2Kk">
-                                <rect key="frame" x="5" y="5" width="68.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="5" y="5" width="63.5" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="올리기" image="camera.fill" catalog="system"/>
@@ -52,7 +52,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="Csj-Zh-ZUt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="1Ve-ec-WMD"/>
+                <constraint firstItem="Csj-Zh-ZUt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Ve-ec-WMD"/>
                 <constraint firstItem="Csj-Zh-ZUt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="JLx-cn-DLG"/>
                 <constraint firstAttribute="trailing" secondItem="5ok-Wn-M65" secondAttribute="trailing" constant="15" id="Oty-vh-cMe"/>
                 <constraint firstItem="OuC-bC-a8e" firstAttribute="leading" secondItem="Csj-Zh-ZUt" secondAttribute="leading" id="PIe-ot-N7L"/>
