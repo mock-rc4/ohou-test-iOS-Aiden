@@ -54,6 +54,7 @@
 		D0910F6227E56D9800793D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6027E56D9800793D90 /* Main.storyboard */; };
 		D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6327E56D9B00793D90 /* Assets.xcassets */; };
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
+		D0B8F21427E778C90085BEBD /* KakaoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21327E778C90085BEBD /* KakaoKey.swift */; };
 		D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */; };
 		D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA120627E6E34D007FD167 /* SignInViewController.swift */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -122,6 +123,7 @@
 		D0910F6327E56D9B00793D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0910F6627E56D9B00793D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B8F21327E778C90085BEBD /* KakaoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoKey.swift; sourceTree = "<group>"; };
 		D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D0CA120627E6E34D007FD167 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 		D0EA7F6927E58FB700948269 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
+				D0B8F21327E778C90085BEBD /* KakaoKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */,
 				D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */,
 				D044D91827E70B8F004E9EC6 /* TodayDealTableViewCell.swift in Sources */,
+				D0B8F21427E778C90085BEBD /* KakaoKey.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,

@@ -8,6 +8,10 @@ target 'RisingTestProject' do
   # Pods for RisingTestProject
 
 pod 'Tabman', '~> 2.11'
+pod 'KakaoSDKCommon'
+pod 'KakaoSDKAuth'
+pod 'KakaoSDKUser'
+
 
 
 end
