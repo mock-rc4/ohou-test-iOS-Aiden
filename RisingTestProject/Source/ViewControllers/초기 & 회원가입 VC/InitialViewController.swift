@@ -53,6 +53,9 @@ class InitialViewController: BaseViewController {
         
         // 이메일로 회원가입 버튼 addTarget
         signUpByEmailButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
+        
+        // 이메일로 로그인하기 버튼 addTarget
+        emailLoginButton.addTarget(self, action: #selector(didTapEmailLoginButton), for: .touchUpInside)
     }
     
     
@@ -65,5 +68,13 @@ class InitialViewController: BaseViewController {
             return
         }
         self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    // 로그인 버튼
+    @objc func didTapEmailLoginButton() {
+        guard let signInVC = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
 }
