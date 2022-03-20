@@ -8,3 +8,4 @@
 ### 3/20 (일)
 * 홈VC - 인기탭 - TableView) 제목과 4개의 Post를 보여주는 CollectionViewCell 생성
 * 회원가입 VC 생성
+* 이메일로 로그인 VC 생성
