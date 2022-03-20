@@ -41,4 +41,15 @@ extension UIButton {
         )
         setAttributedTitle(attributedString, for: .normal)
     }
+    
+    
+    
+    // 버튼 title크기 변경
+    func setFontSize(_ title: String, size: CGFloat) {
+        let buttonTitle = NSMutableAttributedString(string: title, attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: size)
+        ])
+        
+        self.setAttributedTitle(buttonTitle, for: .normal)
+    }
 }
