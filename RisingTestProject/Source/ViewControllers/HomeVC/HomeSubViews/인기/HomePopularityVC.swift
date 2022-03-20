@@ -23,6 +23,7 @@ class HomePopularityVC: BaseViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PopularityPostTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityPostTableViewCell")
         tableView.register(UINib(nibName: "PopularityTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewHeader")
+        tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         
     }
 }
@@ -34,28 +35,38 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     // 테이블뷰 설정
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // indexPath로 구분하여 다른 Cell 반환하기
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityPostTableViewCell", for: indexPath) as? PopularityPostTableViewCell else {
-            return UITableViewCell()
+        if indexPath.row <= 2 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityPostTableViewCell", for: indexPath) as? PopularityPostTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
+        }else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCategoryTableViewCell", for: indexPath) as? MainCategoryTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
         }
-        
-        // MARK: - Cell 구분선 커스텀
-        let screenSize = UIScreen.main.bounds
-        let separatorHeight = CGFloat(5.0)
-        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
-        additionalSeparator.backgroundColor = UIColor.systemGray5
-        cell.addSubview(additionalSeparator)
-        
-        return cell
     }
     
+    
+    
+    // 테이블뷰 셀 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width * 1.6
+        if indexPath.row <= 2 {
+            return tableView.frame.width * 1.6
+        }else {
+            return tableView.frame.width / 1.8
+        }
     }
+    
+    
     
     
     
@@ -72,5 +83,21 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.width * 0.85
+    }
+}
+
+
+
+
+
+
+// MARK: - Cell 구분선 커스텀
+extension HomePopularityVC {
+    func addSeparator(_ cell: UITableViewCell) {
+        let screenSize = UIScreen.main.bounds
+        let separatorHeight = CGFloat(5.0)
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
+        additionalSeparator.backgroundColor = UIColor.systemGray5
+        cell.addSubview(additionalSeparator)
     }
 }
