@@ -114,9 +114,9 @@ class SignUpViewController: BaseViewController {
         }else if nickNameTextField.text == "" {
             presentAlert(title: "별명을 입력해 주세요.")
         }else if essentialAgreeButton1.isSelected && essentialAgreeButton2.isSelected && essentialAgreeButton3.isSelected {
-            presentAlert(title: "회원가입이 완료되었습니다.") { _ in
-                self.navigationController?.popViewController(animated: true)
-            }
+            
+            let request = SignUpRequest(email: emailTextField.text!, password: passwordTextField.text!, nickname: nickNameTextField.text!)
+            SignUpDataManager().postSignIn(request, delegate: self)
         }else {
             presentAlert(title: "필수동의 사항에 체크해주세요.")
         }

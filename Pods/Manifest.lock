@@ -16,6 +16,7 @@ PODS:
     - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.5)
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
@@ -38,6 +39,6 @@ SPEC CHECKSUMS:
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: 9f8995759d34c61cfd4e96b15e1655533c9d9dc0
+PODFILE CHECKSUM: 7b082196f47aed4deb4bdef27f9ad70e13b3a7d3
 
 COCOAPODS: 1.11.2

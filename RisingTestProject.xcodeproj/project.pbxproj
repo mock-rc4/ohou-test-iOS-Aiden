@@ -56,6 +56,9 @@
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
 		D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21527E77CE40085BEBD /* KakaoKey.swift */; };
 		D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */; };
+		D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */; };
+		D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21E27E78B550085BEBD /* SignUpRequest.swift */; };
+		D0B8F22127E78B5C0085BEBD /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F22027E78B5C0085BEBD /* SignUpResponse.swift */; };
 		D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */; };
 		D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA120627E6E34D007FD167 /* SignInViewController.swift */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -126,6 +129,9 @@
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B8F21527E77CE40085BEBD /* KakaoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoKey.swift; sourceTree = "<group>"; };
 		D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
+		D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
+		D0B8F21E27E78B550085BEBD /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		D0B8F22027E78B5C0085BEBD /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D0CA120627E6E34D007FD167 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -519,6 +525,24 @@
 			path = KakaoLogin;
 			sourceTree = "<group>";
 		};
+		D0B8F21A27E78A3B0085BEBD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */,
+				D0B8F21D27E78B3D0085BEBD /* Entity */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		D0B8F21D27E78B3D0085BEBD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0B8F21E27E78B550085BEBD /* SignUpRequest.swift */,
+				D0B8F22027E78B5C0085BEBD /* SignUpResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -636,6 +660,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D0B8F21A27E78A3B0085BEBD /* SignUp */,
 				D0B8F21727E77E680085BEBD /* KakaoLogin */,
 			);
 			path = Network;
@@ -794,6 +819,7 @@
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
+				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
 				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
@@ -801,6 +827,7 @@
 				D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */,
 				D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */,
 				D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */,
+				D0B8F22127E78B5C0085BEBD /* SignUpResponse.swift in Sources */,
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
@@ -831,6 +858,7 @@
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
+				D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
 			);

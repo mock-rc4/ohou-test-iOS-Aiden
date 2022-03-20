@@ -11,7 +11,7 @@ pod 'Tabman', '~> 2.11'
 pod 'KakaoSDKCommon'
 pod 'KakaoSDKAuth'
 pod 'KakaoSDKUser'
-
+pod 'Alamofire', '~> 5.5'
 
 
 end
