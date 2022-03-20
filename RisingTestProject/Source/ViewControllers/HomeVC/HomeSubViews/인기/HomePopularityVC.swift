@@ -22,10 +22,12 @@ class HomePopularityVC: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PopularityPostTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityPostTableViewCell")
-        tableView.register(UINib(nibName: "PopularityTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewHeader")
         tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         tableView.register(UINib(nibName: "TodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayDealTableViewCell")
         
+        // Header & Footer
+        tableView.register(UINib(nibName: "PopularityTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewHeader")
+        tableView.register(UINib(nibName: "PopularityTableViewFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewFooter")
     }
 }
 
@@ -34,11 +36,12 @@ class HomePopularityVC: BaseViewController {
 // MARK: - TableView Protocol 채택
 extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
-    // 테이블뷰 설정
+    // Cell 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
+    // 사용할 Cell 설정
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // indexPath로 구분하여 다른 Cell 반환하기
         if indexPath.row <= 2 {
@@ -79,7 +82,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     
     
-    // 테이블뷰 헤더 설정
+    // 테이블뷰 Header 설정
     // Header에 사용할 view  return
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PopularityTableViewHeader") as? PopularityTableViewHeader else {
@@ -88,10 +91,22 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
 
         return headerView
     }
-    
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.width * 0.85
+    }
+    
+    
+    // 테이블뷰 Footer 설정
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PopularityTableViewFooter") as? PopularityTableViewFooter else {
+            return UIView()
+        }
+        return footerView
+    }
+    // Footer 높이값 주기
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return tableView.frame.width * 1.1
     }
 }
 

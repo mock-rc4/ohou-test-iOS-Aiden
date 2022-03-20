@@ -20,6 +20,8 @@
 		D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D91727E70B8F004E9EC6 /* TodayDealTableViewCell.xib */; };
 		D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D91A27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift */; };
 		D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D91B27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib */; };
+		D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D91F27E716AB004E9EC6 /* PopularityTableViewFooter.swift */; };
+		D044D92227E716B8004E9EC6 /* PopularityTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D92127E716B8004E9EC6 /* PopularityTableViewFooter.xib */; };
 		D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DCE27E5C03C00D1C7D6 /* HomeTapmanViewController.swift */; };
 		D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */; };
 		D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */; };
@@ -72,6 +74,8 @@
 		D044D91727E70B8F004E9EC6 /* TodayDealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayDealTableViewCell.xib; sourceTree = "<group>"; };
 		D044D91A27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealCollectionViewCell.swift; sourceTree = "<group>"; };
 		D044D91B27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayDealCollectionViewCell.xib; sourceTree = "<group>"; };
+		D044D91F27E716AB004E9EC6 /* PopularityTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityTableViewFooter.swift; sourceTree = "<group>"; };
+		D044D92127E716B8004E9EC6 /* PopularityTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityTableViewFooter.xib; sourceTree = "<group>"; };
 		D04A2DCE27E5C03C00D1C7D6 /* HomeTapmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTapmanViewController.swift; sourceTree = "<group>"; };
 		D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularityVC.swift; sourceTree = "<group>"; };
 		D04A2DD327E5C23600D1C7D6 /* HomeFollowingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowingVC.swift; sourceTree = "<group>"; };
@@ -225,6 +229,15 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
+		D044D91E27E7167D004E9EC6 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				D044D91F27E716AB004E9EC6 /* PopularityTableViewFooter.swift */,
+				D044D92127E716B8004E9EC6 /* PopularityTableViewFooter.xib */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
 		D04A2DCD27E5C00000D1C7D6 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				D04A2DD127E5C20C00D1C7D6 /* HomePopularityVC.swift */,
-				D04A2DE827E5CE9B00D1C7D6 /* Header */,
+				D04A2DE827E5CE9B00D1C7D6 /* Header&Footer */,
 				D005E26027E6056B0001B63C /* TableViewCell */,
 				D005E26827E617B80001B63C /* CollectionHeaderCell */,
 			);
@@ -315,13 +328,14 @@
 			path = "질문과답변";
 			sourceTree = "<group>";
 		};
-		D04A2DE827E5CE9B00D1C7D6 /* Header */ = {
+		D04A2DE827E5CE9B00D1C7D6 /* Header&Footer */ = {
 			isa = PBXGroup;
 			children = (
+				D044D91E27E7167D004E9EC6 /* FooterView */,
 				D04A2DEB27E5D51300D1C7D6 /* HeaderView */,
 				D04A2DF027E5D61900D1C7D6 /* Banner */,
 			);
-			path = Header;
+			path = "Header&Footer";
 			sourceTree = "<group>";
 		};
 		D04A2DEB27E5D51300D1C7D6 /* HeaderView */ = {
@@ -579,6 +593,7 @@
 				D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */,
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D005E26427E6070A0001B63C /* PopularityPostTableViewCell.xib in Resources */,
+				D044D92227E716B8004E9EC6 /* PopularityTableViewFooter.xib in Resources */,
 				D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */,
 				D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
@@ -660,6 +675,7 @@
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
+				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
 				D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */,
