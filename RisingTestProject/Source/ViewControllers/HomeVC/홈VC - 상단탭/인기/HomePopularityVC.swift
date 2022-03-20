@@ -24,6 +24,8 @@ class HomePopularityVC: BaseViewController {
         tableView.register(UINib(nibName: "PopularityPostTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityPostTableViewCell")
         tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         tableView.register(UINib(nibName: "TodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayDealTableViewCell")
+        tableView.register(UINib(nibName: "PopularityMediaTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityMediaTableViewCell")
+        
         
         // Header & Footer
         tableView.register(UINib(nibName: "PopularityTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewHeader")
@@ -38,7 +40,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     // Cell 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     // 사용할 Cell 설정
@@ -56,8 +58,14 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             }
             addSeparator(cell)
             return cell
-        }else {
+        }else if indexPath.row == 4{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodayDealTableViewCell", for: indexPath) as? TodayDealTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
+        }else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityMediaTableViewCell", for: indexPath) as? PopularityMediaTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
@@ -73,8 +81,10 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width * 1.5
         }else if indexPath.row == 3{
             return tableView.frame.width / 1.8
-        }else {
+        }else if indexPath.row == 4{
             return tableView.frame.width / 1.3
+        }else {
+            return tableView.frame.width
         }
     }
     
