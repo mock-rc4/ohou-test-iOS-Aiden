@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TodayDealCollectionViewCell" reuseIdentifier="TodayDealCollectionViewCell" id="gTV-IL-0wX" customClass="TodayDealCollectionViewCell" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="462" height="235"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="462" height="235"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="mOl-MO-rCL">
+                        <rect key="frame" x="241" y="8" width="60.5" height="27"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N일 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECQ-5j-i5P">
+                                <rect key="frame" x="5" y="5" width="50.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="ECQ-5j-i5P" firstAttribute="top" secondItem="mOl-MO-rCL" secondAttribute="top" constant="5" id="79L-kn-X0y"/>
+                            <constraint firstAttribute="trailing" secondItem="ECQ-5j-i5P" secondAttribute="trailing" constant="5" id="NB5-3c-ocI"/>
+                            <constraint firstAttribute="bottom" secondItem="ECQ-5j-i5P" secondAttribute="bottom" constant="5" id="Nsw-iX-Jdl"/>
+                            <constraint firstItem="ECQ-5j-i5P" firstAttribute="leading" secondItem="mOl-MO-rCL" secondAttribute="leading" constant="5" id="rn5-gf-BSH"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[반짝특가엥콜~3/22 종료] BLDC모터 차이슨 무선청소기 특가! (자동 충전거치대 포함)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-zb-2ez">
+                        <rect key="frame" x="241" y="43" width="216" height="54"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-9F-Lgg" customClass="CustomLabel" customModule="RisingTestProject" customModuleProvider="target">
+                        <rect key="frame" x="241" y="112" width="75" height="42"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                        <color key="textColor" systemColor="systemPinkColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특가 220개 더보기 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-HX-dFW">
+                        <rect key="frame" x="241" y="206" width="143" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" systemColor="systemPinkColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-5K-B0g">
+                        <rect key="frame" x="0.0" y="0.0" width="231" height="235"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="y6g-zb-2ez" firstAttribute="top" secondItem="mOl-MO-rCL" secondAttribute="bottom" constant="8" id="3jF-Hl-wcg"/>
+                <constraint firstItem="y6g-zb-2ez" firstAttribute="leading" secondItem="mOl-MO-rCL" secondAttribute="leading" id="Ctc-vA-6zQ"/>
+                <constraint firstItem="mxe-9F-Lgg" firstAttribute="top" secondItem="y6g-zb-2ez" secondAttribute="bottom" constant="15" id="VX5-Zr-Lpr"/>
+                <constraint firstItem="Abp-5K-B0g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VvZ-Ei-ic2"/>
+                <constraint firstAttribute="bottom" secondItem="Abp-5K-B0g" secondAttribute="bottom" id="W99-OG-8PM"/>
+                <constraint firstItem="Abp-5K-B0g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gen-Qo-kpV"/>
+                <constraint firstAttribute="trailing" secondItem="y6g-zb-2ez" secondAttribute="trailing" constant="5" id="gkH-tA-dl5"/>
+                <constraint firstItem="mxe-9F-Lgg" firstAttribute="leading" secondItem="y6g-zb-2ez" secondAttribute="leading" id="lBR-A7-mKg"/>
+                <constraint firstItem="mOl-MO-rCL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="qnr-hf-EJk"/>
+                <constraint firstItem="mOl-MO-rCL" firstAttribute="leading" secondItem="Abp-5K-B0g" secondAttribute="trailing" constant="10" id="tdl-hQ-2Ig"/>
+                <constraint firstItem="bcQ-HX-dFW" firstAttribute="leading" secondItem="mxe-9F-Lgg" secondAttribute="leading" id="v2Q-lC-AN6"/>
+                <constraint firstItem="Abp-5K-B0g" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.5" id="wwO-b4-lJv"/>
+                <constraint firstAttribute="bottom" secondItem="bcQ-HX-dFW" secondAttribute="bottom" constant="8" id="zuj-dW-TKd"/>
+            </constraints>
+            <size key="customSize" width="462" height="235"/>
+            <connections>
+                <outlet property="discountRate" destination="mxe-9F-Lgg" id="8s8-cj-3VO"/>
+                <outlet property="forRadiusView" destination="mOl-MO-rCL" id="hdO-KR-fH7"/>
+                <outlet property="nDayLeft" destination="ECQ-5j-i5P" id="x35-kO-6NZ"/>
+                <outlet property="productInfo" destination="y6g-zb-2ez" id="V4j-dn-d8P"/>
+            </connections>
+            <point key="canvasLocation" x="434.78260869565219" y="188.50446428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="오늘의딜 제품" width="544" height="555"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
