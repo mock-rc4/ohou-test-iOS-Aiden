@@ -799,13 +799,25 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="애플 로그인" translatesAutoresizingMaskIntoConstraints="NO" id="5bM-mX-7gi">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="55.5"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIF-5v-Vtk">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="55.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="didTapappleLoginButton:" destination="Szu-P3-DVy" eventType="touchUpInside" id="keJ-of-Iba"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="SIF-5v-Vtk" firstAttribute="top" secondItem="1gD-JC-Gyn" secondAttribute="top" id="Jbk-ri-7GA"/>
                                     <constraint firstItem="5bM-mX-7gi" firstAttribute="top" secondItem="1gD-JC-Gyn" secondAttribute="top" id="Jh2-me-xQw"/>
                                     <constraint firstItem="5bM-mX-7gi" firstAttribute="leading" secondItem="1gD-JC-Gyn" secondAttribute="leading" id="MhO-96-gNN"/>
+                                    <constraint firstItem="SIF-5v-Vtk" firstAttribute="leading" secondItem="1gD-JC-Gyn" secondAttribute="leading" id="PjT-A0-xm2"/>
                                     <constraint firstAttribute="bottom" secondItem="5bM-mX-7gi" secondAttribute="bottom" id="Vpn-rI-Em0"/>
                                     <constraint firstAttribute="trailing" secondItem="5bM-mX-7gi" secondAttribute="trailing" id="Vtf-cb-Pv9"/>
+                                    <constraint firstAttribute="trailing" secondItem="SIF-5v-Vtk" secondAttribute="trailing" id="YDn-ID-Vlg"/>
+                                    <constraint firstAttribute="bottom" secondItem="SIF-5v-Vtk" secondAttribute="bottom" id="Z8U-8p-k5I"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FDs-Li-mEP" userLabel="네이버 페이스북">
@@ -845,13 +857,25 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="페이스북 로그인" translatesAutoresizingMaskIntoConstraints="NO" id="Fsq-fj-urN">
                                                 <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLf-uo-a0F">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="didTapFacebookLoginButton:" destination="Szu-P3-DVy" eventType="touchUpInside" id="vL8-IR-FBg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Fsq-fj-urN" firstAttribute="leading" secondItem="O5a-bM-oSH" secondAttribute="leading" id="CIs-Lv-UQD"/>
+                                            <constraint firstAttribute="trailing" secondItem="FLf-uo-a0F" secondAttribute="trailing" id="Ec7-Nz-wzN"/>
+                                            <constraint firstItem="FLf-uo-a0F" firstAttribute="leading" secondItem="O5a-bM-oSH" secondAttribute="leading" id="KWD-CM-Jff"/>
                                             <constraint firstAttribute="trailing" secondItem="Fsq-fj-urN" secondAttribute="trailing" id="OKu-pO-EuL"/>
                                             <constraint firstItem="Fsq-fj-urN" firstAttribute="top" secondItem="O5a-bM-oSH" secondAttribute="top" id="c0a-U7-9ZC"/>
                                             <constraint firstAttribute="bottom" secondItem="Fsq-fj-urN" secondAttribute="bottom" id="fvc-z3-uae"/>
+                                            <constraint firstAttribute="bottom" secondItem="FLf-uo-a0F" secondAttribute="bottom" id="gog-Ph-Bbb"/>
+                                            <constraint firstItem="FLf-uo-a0F" firstAttribute="top" secondItem="O5a-bM-oSH" secondAttribute="top" id="rrE-If-BpW"/>
                                             <constraint firstAttribute="width" secondItem="O5a-bM-oSH" secondAttribute="height" multiplier="1:1" id="y4p-Co-bBg"/>
                                         </constraints>
                                     </view>

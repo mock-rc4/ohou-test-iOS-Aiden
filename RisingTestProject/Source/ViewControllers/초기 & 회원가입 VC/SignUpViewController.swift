@@ -116,7 +116,7 @@ class SignUpViewController: BaseViewController {
         }else if essentialAgreeButton1.isSelected && essentialAgreeButton2.isSelected && essentialAgreeButton3.isSelected {
             
             let request = SignUpRequest(email: emailTextField.text!, password: passwordTextField.text!, nickname: nickNameTextField.text!)
-            SignUpDataManager().postSignIn(request, delegate: self)
+            SignUpDataManager().postSignUp(request, delegate: self)
         }else {
             presentAlert(title: "필수동의 사항에 체크해주세요.")
         }

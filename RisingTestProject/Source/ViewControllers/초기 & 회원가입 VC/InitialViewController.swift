@@ -41,6 +41,14 @@ class InitialViewController: BaseViewController {
     
     
     
+    @IBAction func didTapappleLoginButton(_ sender: UIButton) {
+        presentAlert(title: "서비스 준비중입니다.")
+    }
+    @IBAction func didTapFacebookLoginButton(_ sender: UIButton) {
+        presentAlert(title: "서비스 준비중입니다.")
+    }
+    
+    
     
     
     

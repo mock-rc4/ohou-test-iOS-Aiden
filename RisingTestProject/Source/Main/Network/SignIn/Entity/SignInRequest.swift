@@ -8,8 +8,7 @@
 
 
 
-struct SignUpRequest: Encodable {
+struct SignInRequest: Encodable {
     var email: String
     var password: String
-    var nickname: String
 }

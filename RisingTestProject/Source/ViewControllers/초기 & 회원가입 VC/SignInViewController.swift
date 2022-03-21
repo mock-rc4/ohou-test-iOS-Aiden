@@ -42,13 +42,8 @@ class SignInViewController: BaseViewController {
             presentAlert(title: "비밀번호를 입력해 주세요.")
         }else {
             // API호출하여 이메일-비밀번호 맞는지 확인하고 UI 컨트롤
-            presentAlert(title: "로그인 성공") { _ in
-                guard let rootVC = self.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
-                    return
-                }
-                Constant.isUserLogged = true
-                self.changeRootViewController(rootVC)
-            }
+            let request: SignInRequest = SignInRequest(email: emailTextField.text!, password: passwordTextField.text!)
+            SignInDataManager().postSignIn(request, delegate: self)
         }
     }
 }

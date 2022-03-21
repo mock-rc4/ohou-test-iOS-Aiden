@@ -7,9 +7,15 @@
 
 
 
-struct SignUpResponse: Decodable {
+struct SignInResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
     var result: AccountID?
+}
+
+
+struct AccountID: Decodable {
+    var account_Id: Int
+    var jwt: String?
 }

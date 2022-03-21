@@ -7,12 +7,12 @@
 
 import Alamofire
 
-class SignUpDataManager {
+class SignInDataManager {
     
     // 매개변수(parameters)에 서버로 보낼 정보를 받아서 처리한다.
-    func postSignUp(_ parameters: SignUpRequest, delegate: SignUpViewController) {
+    func postSignIn(_ parameters: SignInRequest, delegate: SignInViewController) {
 
-        let url = "\(Constant.baseURL)/app/accounts/join"
+        let url = "\(Constant.baseURL)/app/accounts/login"
 
         AF.request(url,
                    method: .post,
@@ -26,19 +26,22 @@ class SignUpDataManager {
                 case .success(let response):
                     // 회원가입 성공
                     if response.isSuccess {
-                        print("회원가입 성공")
-                        delegate.presentAlert(title: "회원가입이 완료되었습니다.") { _ in
-                            delegate.navigationController?.popViewController(animated: true)
+                        print("로그인 성공")
+                        delegate.presentAlert(title: "로그인 성공") { _ in
+                            guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
+                                return
+                            }
+                            Constant.isUserLogged = true
+                            delegate.changeRootViewController(rootVC)
                         }
                     }
                     // 회원가입 실패
                     else {
                         // SignInResponse의 프로퍼티 code를 통해 적절한 오류 메시지 주기
                         switch response.code {
-                        case 2015: delegate.presentAlert(title: "이메일을 입력해주세요.")
-                        case 2016: delegate.presentAlert(title: "이메일 형식을 확인해주세요.")
-                        case 4000: delegate.presentAlert(title: "데이터데이스 에러.")
-                        case 4012: delegate.presentAlert(title: "비밀번호 복호화에 실패하였습니다.")
+                        case 3014: delegate.presentAlert(title: "없는 아이디거나 비밀번호가 틀렸습니다.")
+                        case 4011: delegate.presentAlert(title: "비밀번호 암호화에 실패하였습니다.")
+                        case 4000: delegate.presentAlert(title: "데이터베이스 에러.")
                         default: print("")
                         }
                     }
