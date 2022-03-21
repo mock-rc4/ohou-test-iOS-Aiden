@@ -22,7 +22,7 @@ class ProfileViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProfileTableViewHeader")
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "MyShoppingTableViewCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTableViewCell")
     }
 }
 
@@ -31,18 +31,47 @@ class ProfileViewController: BaseViewController {
 // MARK: - tableview Protocol 채택
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 11
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.row == 0 {
+            // 나의 쇼핑
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTableViewCell", for: indexPath) as? MyShoppingTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.updateCell(0, coupon: 0, point: 0)
+            return cell
+            
+        }else if indexPath.row == 1 {
+            // 사진
+            return UITableViewCell()
+        }else if indexPath.row == 1 {
+            // 광고
+            return UITableViewCell()
+        }else {
+            // 일반 셀
+            return UITableViewCell()
+        }
     }
     
     
     
     // 테이블뷰 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        if indexPath.row == 0 {
+            // 나의 쇼핑
+            return tableView.frame.width * 0.45
+        }else if indexPath.row == 1 {
+            // 사진
+            return 100
+        }else if indexPath.row == 1 {
+            // 광고
+            return 100
+        }else {
+            // 일반 셀
+            return 100
+        }
     }
     
     
@@ -59,6 +88,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 0.7
+        return tableView.frame.width * 0.6
     }
 }
