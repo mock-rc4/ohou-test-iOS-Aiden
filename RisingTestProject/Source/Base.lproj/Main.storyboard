@@ -439,10 +439,12 @@
                                                                 <state key="normal" image="square" catalog="system">
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                                 </state>
-                                                                <state key="selected" image="checkmark.square" catalog="system"/>
                                                                 <state key="highlighted">
                                                                     <color key="titleColor" systemColor="systemPinkColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="didTapAllAgree:" destination="SHf-oL-aQX" eventType="touchUpInside" id="9HI-Sz-Mcr"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7u-in-i2c">
                                                                 <rect key="frame" x="264.5" y="16" width="66" height="23"/>
@@ -487,7 +489,9 @@
                                                                         <state key="normal" image="square" catalog="system">
                                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                                         </state>
-                                                                        <state key="selected" image="checkmark.square" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="didTapEssentialAgree1:" destination="SHf-oL-aQX" eventType="touchUpInside" id="qXV-9y-j8u"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -522,7 +526,9 @@
                                                                         <state key="normal" image="square" catalog="system">
                                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                                         </state>
-                                                                        <state key="selected" image="checkmark.square" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="didTapEssentialAgree2:" destination="SHf-oL-aQX" eventType="touchUpInside" id="56j-vj-azI"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -557,7 +563,9 @@
                                                                         <state key="normal" image="square" catalog="system">
                                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                                         </state>
-                                                                        <state key="selected" image="checkmark.square" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="didTapEssentialAgree3:" destination="SHf-oL-aQX" eventType="touchUpInside" id="TLf-RR-7Rq"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -586,7 +594,9 @@
                                                                         <state key="normal" image="square" catalog="system">
                                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                                                         </state>
-                                                                        <state key="selected" image="checkmark.square" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="didTapChooseAgree:" destination="SHf-oL-aQX" eventType="touchUpInside" id="EE7-bG-1K4"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -1529,7 +1539,6 @@
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

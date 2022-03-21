@@ -13,6 +13,90 @@ import UIKit
 
 class SignUpViewController: BaseViewController {
     
+    func updateAllAgreeButton() {
+        allAgree = [essentialAgree1, essentialAgree2, essentialAgree3, chooseAgree].allSatisfy({$0})
+    }
+    
+    
+    // MARK: - 약관동의 관련
+    var allAgree: Bool = false {
+        didSet {
+            if allAgree {
+                allAgreeButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+            }else {
+                allAgreeButton.setImage(UIImage(systemName: "square"), for: .normal)
+            }
+        }
+    }
+    var essentialAgree1: Bool = false {
+        didSet {
+            if essentialAgree1 {
+                essentialAgreeButton1.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                updateAllAgreeButton()
+            }else {
+                essentialAgreeButton1.setImage(UIImage(systemName: "square"), for: .normal)
+                updateAllAgreeButton()
+            }
+        }
+    }
+    var essentialAgree2: Bool = false {
+        didSet {
+            if essentialAgree2 {
+                essentialAgreeButton2.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                updateAllAgreeButton()
+            }else {
+                essentialAgreeButton2.setImage(UIImage(systemName: "square"), for: .normal)
+                updateAllAgreeButton()
+            }
+        }
+    }
+    var essentialAgree3: Bool = false {
+        didSet {
+            if essentialAgree3 {
+                essentialAgreeButton3.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                updateAllAgreeButton()
+            }else {
+                essentialAgreeButton3.setImage(UIImage(systemName: "square"), for: .normal)
+                updateAllAgreeButton()
+            }
+        }
+    }
+    var chooseAgree: Bool = false {
+        didSet {
+            if chooseAgree {
+                chooseAgreeButton.setImage(UIImage(systemName: "checkmark.square"), for: .normal)
+                updateAllAgreeButton()
+            }else {
+                chooseAgreeButton.setImage(UIImage(systemName: "square"), for: .normal)
+                updateAllAgreeButton()
+            }
+        }
+    }
+    
+
+    
+    @IBAction func didTapAllAgree(_ sender: UIButton) {
+        allAgree.toggle()
+    }
+    @IBAction func didTapEssentialAgree1(_ sender: UIButton) {
+        essentialAgree1.toggle()
+    }
+    @IBAction func didTapEssentialAgree2(_ sender: UIButton) {
+        essentialAgree2.toggle()
+    }
+    @IBAction func didTapEssentialAgree3(_ sender: UIButton) {
+        essentialAgree3.toggle()
+    }
+    @IBAction func didTapChooseAgree(_ sender: UIButton) {
+        chooseAgree.toggle()
+    }
+    
+    
+    
+    
+    
+    
+    
     // MARK: - UI연결
     // 뒤로가기 버튼
     @IBAction func didTapPopVCButton(_ sender: UIButton) {
@@ -62,15 +146,11 @@ class SignUpViewController: BaseViewController {
         // 이메일 확인 버튼 addTarget
         checkEmailButton.addTarget(self, action: #selector(didTapCheckEmailButton), for: .touchUpInside)
         
-        // 약관동의 버튼 addTarget
-        allAgreeButton.addTarget(self, action: #selector(toggleAllAgreeButton(_:)), for: .touchUpInside)
-        essentialAgreeButton1.addTarget(self, action: #selector(toggleAgreeButton(_:)), for: .touchUpInside)
-        essentialAgreeButton2.addTarget(self, action: #selector(toggleAgreeButton(_:)), for: .touchUpInside)
-        essentialAgreeButton3.addTarget(self, action: #selector(toggleAgreeButton(_:)), for: .touchUpInside)
-        chooseAgreeButton.addTarget(self, action: #selector(toggleAgreeButton(_:)), for: .touchUpInside)
         
         // 회원가입 버튼 addTarget
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
+        
+        
     }
     
     
@@ -90,20 +170,6 @@ class SignUpViewController: BaseViewController {
     }
     
     
-    // 전체동의 버튼 isSelected 토글
-    @objc func toggleAllAgreeButton(_ sender: UIButton) {
-        sender.isSelected.toggle()
-        essentialAgreeButton1.isSelected = true
-        essentialAgreeButton2.isSelected = true
-        essentialAgreeButton3.isSelected = true
-        chooseAgreeButton.isSelected = true
-    }
-    // 개별동의 버튼 isSelected 토글
-    @objc func toggleAgreeButton(_ sender: UIButton) {
-        sender.isSelected.toggle()
-    }
-    
-    
     // 회원가입 완료 버튼
     @objc func didTapSignUpButton() {
         if emailTextField.text == "" {
@@ -116,7 +182,7 @@ class SignUpViewController: BaseViewController {
             presentAlert(title: "비밀번호가 일치하지 않습니다.")
         }else if nickNameTextField.text == "" {
             presentAlert(title: "별명을 입력해 주세요.")
-        }else if essentialAgreeButton1.isSelected && essentialAgreeButton2.isSelected && essentialAgreeButton3.isSelected {
+        }else if essentialAgree1 && essentialAgree2 && essentialAgree3 {
             
             let request = SignUpRequest(email: emailTextField.text!, password: passwordTextField.text!, nickname: nickNameTextField.text!)
             SignUpDataManager().postSignUp(request, delegate: self)
