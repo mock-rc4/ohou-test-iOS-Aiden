@@ -21,8 +21,11 @@ class ProfileViewController: BaseViewController {
         // TableView 세팅
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.register(UINib(nibName: "ProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProfileTableViewHeader")
+        
         tableView.register(UINib(nibName: "MyShoppingTableViewCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTableViewCell")
+        tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
     }
 }
 
@@ -45,7 +48,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             
         }else if indexPath.row == 1 {
             // 사진
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+            
         }else if indexPath.row == 1 {
             // 광고
             return UITableViewCell()
@@ -64,7 +71,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width * 0.45
         }else if indexPath.row == 1 {
             // 사진
-            return 100
+            return tableView.frame.width * 1.4
         }else if indexPath.row == 1 {
             // 광고
             return 100
