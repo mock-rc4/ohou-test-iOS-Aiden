@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ExhibitionCollectionViewCell" reuseIdentifier="ExhibitionCollectionViewCell" id="gTV-IL-0wX" customClass="ExhibitionCollectionViewCell" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="98"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="98"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기획전 테스트 이미지" translatesAutoresizingMaskIntoConstraints="NO" id="ODD-2h-zhh">
+                        <rect key="frame" x="0.0" y="0.0" width="137" height="98"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ODD-2h-zhh" secondAttribute="height" multiplier="14:10" id="n9M-0w-Un3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄맞이 전품목 파격특가 ~4/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-6q-ieG">
+                        <rect key="frame" x="147" y="8" width="152" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저가 도전! 홈 인테리어 빅 세일 ~ 8월부터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-cT-Sxb">
+                        <rect key="frame" x="147" y="32" width="252" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="692개 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPg-mc-8yA">
+                        <rect key="frame" x="147" y="61.5" width="57.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="wtq-cT-Sxb" firstAttribute="top" secondItem="ta7-6q-ieG" secondAttribute="bottom" constant="8" id="0hr-UA-Sab"/>
+                <constraint firstAttribute="bottom" secondItem="ODD-2h-zhh" secondAttribute="bottom" id="4Gy-Y7-H4J"/>
+                <constraint firstItem="vPg-mc-8yA" firstAttribute="leading" secondItem="wtq-cT-Sxb" secondAttribute="leading" id="Rbc-5G-Fg6"/>
+                <constraint firstItem="ODD-2h-zhh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Rjy-wY-t6W"/>
+                <constraint firstItem="vPg-mc-8yA" firstAttribute="top" secondItem="wtq-cT-Sxb" secondAttribute="bottom" constant="10" id="YAv-Xh-Pes"/>
+                <constraint firstItem="ta7-6q-ieG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="d2t-RO-gif"/>
+                <constraint firstAttribute="trailing" secondItem="wtq-cT-Sxb" secondAttribute="trailing" constant="5" id="nlI-bR-nqg"/>
+                <constraint firstItem="wtq-cT-Sxb" firstAttribute="leading" secondItem="ta7-6q-ieG" secondAttribute="leading" id="pGJ-lh-1U9"/>
+                <constraint firstItem="ta7-6q-ieG" firstAttribute="leading" secondItem="ODD-2h-zhh" secondAttribute="trailing" constant="10" id="qXi-MY-goG"/>
+                <constraint firstItem="ODD-2h-zhh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yXb-lu-Fs2"/>
+            </constraints>
+            <size key="customSize" width="404" height="98"/>
+            <connections>
+                <outlet property="image" destination="ODD-2h-zhh" id="SJY-Ji-8qb"/>
+                <outlet property="numberOfProduct" destination="vPg-mc-8yA" id="r2P-pK-w8Q"/>
+                <outlet property="subTitle" destination="ta7-6q-ieG" id="U4r-nk-I4I"/>
+                <outlet property="title" destination="wtq-cT-Sxb" id="uNH-ga-od3"/>
+            </connections>
+            <point key="canvasLocation" x="401.44927536231887" y="125.22321428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="기획전 테스트 이미지" width="325" height="218"/>
+    </resources>
+</document>
