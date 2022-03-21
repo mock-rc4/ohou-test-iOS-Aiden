@@ -11,6 +11,7 @@ class PopularityCollectionViewHeaderCell: UICollectionViewCell {
 
     // UI 연결
     @IBOutlet weak var headerText: UILabel!
+    @IBOutlet weak var subText: UILabel!
     
     
     override func awakeFromNib() {
@@ -19,7 +20,8 @@ class PopularityCollectionViewHeaderCell: UICollectionViewCell {
     }
 
     
-    func updateCell(_ title: String) {
+    func updateCell(_ title: String, _ sub: String = "") {
         headerText.text = title
+        subText.text = sub
     }
 }

@@ -69,6 +69,20 @@ class BaseViewController: UIViewController {
     
     
     
+    // UILabel
+    /// 특정 범위의 텍스트 글씨 색을 변경
+    func changeTextColor(_ label: UILabel, color: UIColor, range: String) {
+        guard let text = label.text else { return }
+        
+        let attributeString = NSMutableAttributedString(string: text)
+        
+        attributeString.addAttribute(.foregroundColor, value: color, range: (text as NSString).range(of: range))
+        
+        label.attributedText = attributeString
+    }
+    
+    
+    
     
     
     

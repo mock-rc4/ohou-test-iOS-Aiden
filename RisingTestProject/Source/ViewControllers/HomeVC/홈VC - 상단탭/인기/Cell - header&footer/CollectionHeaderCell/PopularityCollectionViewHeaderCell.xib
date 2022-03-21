@@ -22,16 +22,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-bc-teK">
+                        <rect key="frame" x="0.0" y="124.5" width="4.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="N57-0k-nhe" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="5HV-fT-rgE"/>
+                <constraint firstItem="Ikd-bc-teK" firstAttribute="leading" secondItem="N57-0k-nhe" secondAttribute="leading" id="8hq-c8-st7"/>
                 <constraint firstItem="N57-0k-nhe" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="MsT-zS-K32"/>
+                <constraint firstItem="Ikd-bc-teK" firstAttribute="top" secondItem="N57-0k-nhe" secondAttribute="bottom" constant="5" id="U3o-We-QZP"/>
             </constraints>
             <size key="customSize" width="339" height="169"/>
             <connections>
                 <outlet property="headerText" destination="N57-0k-nhe" id="83T-29-eOu"/>
+                <outlet property="subText" destination="Ikd-bc-teK" id="bHA-2B-2S5"/>
             </connections>
             <point key="canvasLocation" x="347.10144927536237" y="162.38839285714286"/>
         </collectionViewCell>

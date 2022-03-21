@@ -1427,6 +1427,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Unk-9E-fXJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6wb-Ud-xc0" firstAttribute="width" secondItem="6wb-Ud-xc0" secondAttribute="height" multiplier="7:1" id="0CB-6A-k80"/>
@@ -1458,23 +1459,26 @@
                                     <constraint firstAttribute="width" secondItem="pru-ha-QfC" secondAttribute="height" multiplier="7:1" id="MtC-Kx-Ckr"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vc1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hn-f5-CPJ">
-                                <rect key="frame" x="194.5" y="437.5" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-z8-VtC">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fIr-1O-aKU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fIr-1O-aKU" firstAttribute="bottom" secondItem="5wB-z8-VtC" secondAttribute="bottom" id="5og-O4-BVN"/>
                             <constraint firstItem="pru-ha-QfC" firstAttribute="leading" secondItem="fIr-1O-aKU" secondAttribute="leading" id="FuS-oB-j7s"/>
+                            <constraint firstItem="5wB-z8-VtC" firstAttribute="leading" secondItem="fIr-1O-aKU" secondAttribute="leading" id="GUD-Ma-BhQ"/>
                             <constraint firstItem="fIr-1O-aKU" firstAttribute="trailing" secondItem="pru-ha-QfC" secondAttribute="trailing" id="NhC-f0-YEF"/>
-                            <constraint firstItem="9Hn-f5-CPJ" firstAttribute="centerY" secondItem="JHF-v8-VWf" secondAttribute="centerY" id="aCQ-DF-mO8"/>
+                            <constraint firstItem="fIr-1O-aKU" firstAttribute="trailing" secondItem="5wB-z8-VtC" secondAttribute="trailing" id="PpT-Jf-cST"/>
+                            <constraint firstItem="5wB-z8-VtC" firstAttribute="top" secondItem="pru-ha-QfC" secondAttribute="bottom" id="l04-B6-x1r"/>
                             <constraint firstItem="pru-ha-QfC" firstAttribute="top" secondItem="fIr-1O-aKU" secondAttribute="top" id="rfJ-cy-6z4"/>
-                            <constraint firstItem="9Hn-f5-CPJ" firstAttribute="centerX" secondItem="JHF-v8-VWf" secondAttribute="centerX" id="tJc-Jo-oUJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="5wB-z8-VtC" id="4ed-A6-g0J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHN-03-qUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

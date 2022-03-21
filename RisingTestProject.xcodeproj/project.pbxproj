@@ -24,6 +24,8 @@
 		D0124A0527E7320B0035456F /* MediaRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0124A0327E7320B0035456F /* MediaRankCell.xib */; };
 		D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0124A0627E736520035456F /* MediaCollectionViewFooter.swift */; };
 		D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0124A0727E736520035456F /* MediaCollectionViewFooter.xib */; };
+		D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */; };
+		D0252C6827E83A6B00998372 /* ProfileTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */; };
 		D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */; };
 		D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */; };
 		D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */; };
@@ -109,6 +111,8 @@
 		D0124A0327E7320B0035456F /* MediaRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaRankCell.xib; sourceTree = "<group>"; };
 		D0124A0627E736520035456F /* MediaCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewFooter.swift; sourceTree = "<group>"; };
 		D0124A0727E736520035456F /* MediaCollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewFooter.xib; sourceTree = "<group>"; };
+		D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
+		D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewHeader.xib; sourceTree = "<group>"; };
 		D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -594,9 +598,111 @@
 			isa = PBXGroup;
 			children = (
 				D06B483A27E81C4700C881E0 /* ProfileViewController.swift */,
+				D06B483E27E8241900C881E0 /* Header */,
+				D06B483F27E8242500C881E0 /* TableViewCell */,
 			);
 			name = "프로필";
 			path = "프로필";
+			sourceTree = "<group>";
+		};
+		D06B483E27E8241900C881E0 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */,
+				D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D06B483F27E8242500C881E0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D06B484027E8244700C881E0 /* 나의쇼핑 */,
+				D06B484127E8244F00C881E0 /* 사진 */,
+				D06B484227E8245A00C881E0 /* 광고 */,
+				D06B484327E8246200C881E0 /* 정보 리스트 */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D06B484027E8244700C881E0 /* 나의쇼핑 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B484427E8248F00C881E0 /* TableCell */,
+				D06B484527E8249600C881E0 /* CollectionCell */,
+			);
+			name = "나의쇼핑";
+			path = "나의쇼핑";
+			sourceTree = "<group>";
+		};
+		D06B484127E8244F00C881E0 /* 사진 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B484727E824AB00C881E0 /* TableCell */,
+				D06B484627E824A600C881E0 /* CollectionCell */,
+			);
+			name = "사진";
+			path = "사진";
+			sourceTree = "<group>";
+		};
+		D06B484227E8245A00C881E0 /* 광고 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B484827E824BD00C881E0 /* TableCell */,
+				D06B484927E824C200C881E0 /* CollectionCell */,
+			);
+			name = "광고";
+			path = "광고";
+			sourceTree = "<group>";
+		};
+		D06B484327E8246200C881E0 /* 정보 리스트 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "정보 리스트";
+			path = "정보 리스트";
+			sourceTree = "<group>";
+		};
+		D06B484427E8248F00C881E0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D06B484527E8249600C881E0 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		D06B484627E824A600C881E0 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		D06B484727E824AB00C881E0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D06B484827E824BD00C881E0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D06B484927E824C200C881E0 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 		D0910F4E27E56D9800793D90 = {
@@ -878,6 +984,7 @@
 				D044D92227E716B8004E9EC6 /* PopularityTableViewFooter.xib in Resources */,
 				D06B482B27E8111D00C881E0 /* ExhibitionCollectionViewCell.xib in Resources */,
 				D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */,
+				D0252C6827E83A6B00998372 /* ProfileTableViewHeader.xib in Resources */,
 				D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
 				D01249FA27E72E380035456F /* PopularityMediaTableViewCell.xib in Resources */,
@@ -975,6 +1082,7 @@
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
+				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
 				D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */,

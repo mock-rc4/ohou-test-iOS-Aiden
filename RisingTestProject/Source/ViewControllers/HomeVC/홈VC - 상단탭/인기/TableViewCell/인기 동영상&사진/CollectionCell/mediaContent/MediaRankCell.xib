@@ -24,10 +24,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="231" height="300.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m6y-0K-kiW">
-                                <rect key="frame" x="0.0" y="-10" width="53" height="51"/>
+                                <rect key="frame" x="0.0" y="-10" width="53" height="60"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="m6y-0K-kiW" secondAttribute="height" multiplier="53:51" id="HDa-nM-ZY7"/>
+                                    <constraint firstAttribute="width" secondItem="m6y-0K-kiW" secondAttribute="height" multiplier="53:60" id="HDa-nM-ZY7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzZ-Vx-pRK">
