@@ -9,3 +9,15 @@
 * 홈VC - 인기탭 - TableView) 제목과 4개의 Post를 보여주는 CollectionViewCell 생성
 * 회원가입 VC 생성
 * 이메일로 로그인 VC 생성
+* 홈VC - 인기탭 - TableView Cell 생성
+    * 카테고리 리스트
+    * 오늘의 딜
+    * Footer
+    * 인기 동영상, 인기 사진 리스트
+    * 사용자 리뷰 리스트
+
+* 로그인 VC 생성
+* 카카오 로그인 API 연결
+* 회원가입 API 연결
+
+### 3/21 (월)
