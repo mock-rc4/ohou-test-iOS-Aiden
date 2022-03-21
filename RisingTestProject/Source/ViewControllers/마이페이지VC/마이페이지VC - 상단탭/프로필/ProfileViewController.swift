@@ -26,6 +26,7 @@ class ProfileViewController: BaseViewController {
         
         tableView.register(UINib(nibName: "MyShoppingTableViewCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTableViewCell")
         tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
+        tableView.register(UINib(nibName: "CommercialTableViewCell", bundle: nil), forCellReuseIdentifier: "CommercialTableViewCell")
     }
 }
 
@@ -53,9 +54,13 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
             
-        }else if indexPath.row == 1 {
+        }else if indexPath.row == 2 {
             // 광고
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommercialTableViewCell", for: indexPath) as? CommercialTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+            
         }else {
             // 일반 셀
             return UITableViewCell()
@@ -72,9 +77,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         }else if indexPath.row == 1 {
             // 사진
             return tableView.frame.width * 1.4
-        }else if indexPath.row == 1 {
+        }else if indexPath.row == 2 {
             // 광고
-            return 100
+            return tableView.frame.width / 2.6
         }else {
             // 일반 셀
             return 100

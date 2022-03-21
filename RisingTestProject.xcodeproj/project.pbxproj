@@ -78,6 +78,10 @@
 		D0910F6227E56D9800793D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6027E56D9800793D90 /* Main.storyboard */; };
 		D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6327E56D9B00793D90 /* Assets.xcassets */; };
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
+		D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7590F27E8636E00954FB3 /* CommercialTableViewCell.swift */; };
+		D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */; };
+		D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */; };
+		D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591427E864C800954FB3 /* CommercialCollectionViewCell.xib */; };
 		D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21527E77CE40085BEBD /* KakaoKey.swift */; };
 		D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */; };
 		D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */; };
@@ -175,6 +179,10 @@
 		D0910F6327E56D9B00793D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0910F6627E56D9B00793D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B7590F27E8636E00954FB3 /* CommercialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialTableViewCell.swift; sourceTree = "<group>"; };
+		D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialTableViewCell.xib; sourceTree = "<group>"; };
+		D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0B7591427E864C800954FB3 /* CommercialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0B8F21527E77CE40085BEBD /* KakaoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoKey.swift; sourceTree = "<group>"; };
 		D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
@@ -727,6 +735,8 @@
 		D06B484827E824BD00C881E0 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7590F27E8636E00954FB3 /* CommercialTableViewCell.swift */,
+				D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -734,6 +744,8 @@
 		D06B484927E824C200C881E0 /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */,
+				D0B7591427E864C800954FB3 /* CommercialCollectionViewCell.xib */,
 			);
 			path = CollectionCell;
 			sourceTree = "<group>";
@@ -1001,6 +1013,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */,
 				D011D0B527E75B6100E72072 /* ReviewCollectionViewCell.xib in Resources */,
 				D06B482727E80F9D00C881E0 /* ExhibitionTableViewCell.xib in Resources */,
 				D0252C7A27E8598700998372 /* PhotoCollectionViewFooter.xib in Resources */,
@@ -1008,6 +1021,7 @@
 				D0252C6C27E84A1900998372 /* MyShoppingTableViewCell.xib in Resources */,
 				D044D91227E7006C004E9EC6 /* MainCategoryCollectionViewCell.xib in Resources */,
 				D0124A0127E72FF60035456F /* MediaCollectionViewHeader.xib in Resources */,
+				D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */,
 				D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */,
 				D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */,
 				D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */,
@@ -1113,6 +1127,7 @@
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0252C7327E853CA00998372 /* PhotoCollectionViewCell.swift in Sources */,
+				D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */,
 				D06B481E27E80A3A00C881E0 /* SignInResponse.swift in Sources */,
 				D01249F927E72E380035456F /* PopularityMediaTableViewCell.swift in Sources */,
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
@@ -1137,6 +1152,7 @@
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
 				D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
+				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
