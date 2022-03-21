@@ -10,6 +10,16 @@ import UIKit
 
 class HomePopularityVC: BaseViewController {
     
+    // API로 가져올 데이터
+    var bannerImage: [UIImage] = [
+        UIImage(named: "광고1.jpg")!,
+        UIImage(named: "광고2.jpg")!
+    ]
+    
+    
+    
+    
+    
     // UI연결
     @IBOutlet weak var tableView: UITableView!
     
@@ -32,6 +42,10 @@ class HomePopularityVC: BaseViewController {
         // Header & Footer
         tableView.register(UINib(nibName: "PopularityTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewHeader")
         tableView.register(UINib(nibName: "PopularityTableViewFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewFooter")
+        
+        
+        
+        BannersDataManager().getBannerImage(delegate: self)
     }
 }
 
@@ -116,7 +130,8 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PopularityTableViewHeader") as? PopularityTableViewHeader else {
             return UIView()
         }
-
+        headerView.imageArray = bannerImage
+        headerView.commercialCollectionView.reloadData()
         return headerView
     }
     // header 높이값 주기

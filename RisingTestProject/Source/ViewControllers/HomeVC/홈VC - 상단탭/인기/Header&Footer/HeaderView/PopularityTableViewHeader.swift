@@ -14,13 +14,7 @@ class PopularityTableViewHeader: UITableViewHeaderFooterView {
     
     
     // 광고 이미지 데이터
-    var imageArray: [UIImage] = [
-        UIImage(named: "광고1.jpg")!,
-        UIImage(named: "광고2.jpg")!,
-        UIImage(named: "광고3.jpg")!,
-        UIImage(named: "광고4.jpg")!,
-        UIImage(named: "광고5.jpg")!
-    ]
+    var imageArray: [UIImage] = []
     
     
     // 현재 페이지 체크할 변수
@@ -35,11 +29,19 @@ class PopularityTableViewHeader: UITableViewHeaderFooterView {
         commercialCollectionView.dataSource = self
         commercialCollectionView.register(UINib(nibName: "CommercialBannerCell", bundle: nil), forCellWithReuseIdentifier: "CommercialBannerCell")
         
-        // 자동 스크롤 타이머 실행
+//        // 자동 스크롤 타이머 실행
         bannerTimer()
+
     }
+    
+    
+//    func convertUrlToUIImage(_ url: String) -> UIImage {
+//        let url = URL(string: url)
+//        let data = try Data(contentsOf: url!)
+//    }
 
 }
+
 
 
 

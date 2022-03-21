@@ -24,6 +24,8 @@
 		D0124A0527E7320B0035456F /* MediaRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0124A0327E7320B0035456F /* MediaRankCell.xib */; };
 		D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0124A0627E736520035456F /* MediaCollectionViewFooter.swift */; };
 		D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0124A0727E736520035456F /* MediaCollectionViewFooter.xib */; };
+		D01FB64F27E8C8D300D01FDF /* BannersDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FB64E27E8C8D300D01FDF /* BannersDataManager.swift */; };
+		D01FB65227E8C91E00D01FDF /* BannersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01FB65127E8C91E00D01FDF /* BannersResponse.swift */; };
 		D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */; };
 		D0252C6827E83A6B00998372 /* ProfileTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */; };
 		D0252C6B27E84A1900998372 /* MyShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0252C6927E84A1900998372 /* MyShoppingTableViewCell.swift */; };
@@ -131,6 +133,8 @@
 		D0124A0327E7320B0035456F /* MediaRankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaRankCell.xib; sourceTree = "<group>"; };
 		D0124A0627E736520035456F /* MediaCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewFooter.swift; sourceTree = "<group>"; };
 		D0124A0727E736520035456F /* MediaCollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewFooter.xib; sourceTree = "<group>"; };
+		D01FB64E27E8C8D300D01FDF /* BannersDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersDataManager.swift; sourceTree = "<group>"; };
+		D01FB65127E8C91E00D01FDF /* BannersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersResponse.swift; sourceTree = "<group>"; };
 		D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
 		D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewHeader.xib; sourceTree = "<group>"; };
 		D0252C6927E84A1900998372 /* MyShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingTableViewCell.swift; sourceTree = "<group>"; };
@@ -373,6 +377,44 @@
 				D01249FF27E72FF60035456F /* MediaCollectionViewHeader.xib */,
 			);
 			path = mediaHeader;
+			sourceTree = "<group>";
+		};
+		D01FB64B27E8C87300D01FDF /* 로그인 관련 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B481727E8050200C881E0 /* SignIn */,
+				D0B8F21A27E78A3B0085BEBD /* SignUp */,
+				D0B8F21727E77E680085BEBD /* KakaoLogin */,
+			);
+			name = "로그인 관련";
+			path = "로그인 관련";
+			sourceTree = "<group>";
+		};
+		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
+			isa = PBXGroup;
+			children = (
+				D01FB64D27E8C89200D01FDF /* 상단 광고배너 */,
+			);
+			name = "홈VC";
+			path = "광고배너";
+			sourceTree = "<group>";
+		};
+		D01FB64D27E8C89200D01FDF /* 상단 광고배너 */ = {
+			isa = PBXGroup;
+			children = (
+				D01FB64E27E8C8D300D01FDF /* BannersDataManager.swift */,
+				D01FB65027E8C8D700D01FDF /* Entity */,
+			);
+			name = "상단 광고배너";
+			path = "상단 광고배너";
+			sourceTree = "<group>";
+		};
+		D01FB65027E8C8D700D01FDF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D01FB65127E8C91E00D01FDF /* BannersResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D0252C7527E8595700998372 /* 사진 Cell */ = {
@@ -985,9 +1027,8 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				D06B481727E8050200C881E0 /* SignIn */,
-				D0B8F21A27E78A3B0085BEBD /* SignUp */,
-				D0B8F21727E77E680085BEBD /* KakaoLogin */,
+				D01FB64B27E8C87300D01FDF /* 로그인 관련 */,
+				D01FB64C27E8C87A00D01FDF /* 홈VC */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1201,7 +1242,9 @@
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
+				D01FB65227E8C91E00D01FDF /* BannersResponse.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
+				D01FB64F27E8C8D300D01FDF /* BannersDataManager.swift in Sources */,
 				D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */,
 				D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */,
 				D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */,
