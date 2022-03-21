@@ -53,6 +53,13 @@
 		D06B482727E80F9D00C881E0 /* ExhibitionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06B482527E80F9D00C881E0 /* ExhibitionTableViewCell.xib */; };
 		D06B482A27E8111D00C881E0 /* ExhibitionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B482827E8111D00C881E0 /* ExhibitionCollectionViewCell.swift */; };
 		D06B482B27E8111D00C881E0 /* ExhibitionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06B482927E8111D00C881E0 /* ExhibitionCollectionViewCell.xib */; };
+		D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B482C27E817F000C881E0 /* CustomTabBarController.swift */; };
+		D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B482E27E8185400C881E0 /* UITabBar.swift */; };
+		D06B483127E8189700C881E0 /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B483027E8189700C881E0 /* CALayer.swift */; };
+		D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B483327E8196000C881E0 /* MyPageViewController.swift */; };
+		D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B483527E81B3E00C881E0 /* MyPageTapmanViewController.swift */; };
+		D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B483A27E81C4700C881E0 /* ProfileViewController.swift */; };
+		D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B483C27E81C5F00C881E0 /* MyShoppingViewController.swift */; };
 		D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072BD7427E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift */; };
 		D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072BD7527E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
@@ -131,6 +138,13 @@
 		D06B482527E80F9D00C881E0 /* ExhibitionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExhibitionTableViewCell.xib; sourceTree = "<group>"; };
 		D06B482827E8111D00C881E0 /* ExhibitionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D06B482927E8111D00C881E0 /* ExhibitionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExhibitionCollectionViewCell.xib; sourceTree = "<group>"; };
+		D06B482C27E817F000C881E0 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		D06B482E27E8185400C881E0 /* UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBar.swift; sourceTree = "<group>"; };
+		D06B483027E8189700C881E0 /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		D06B483327E8196000C881E0 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		D06B483527E81B3E00C881E0 /* MyPageTapmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTapmanViewController.swift; sourceTree = "<group>"; };
+		D06B483A27E81C4700C881E0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D06B483C27E81C5F00C881E0 /* MyShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingViewController.swift; sourceTree = "<group>"; };
 		D072BD7427E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		D072BD7527E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityPostCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,6 +560,45 @@
 			path = CollectionCell;
 			sourceTree = "<group>";
 		};
+		D06B483227E8193B00C881E0 /* 마이페이지VC */ = {
+			isa = PBXGroup;
+			children = (
+				D06B483327E8196000C881E0 /* MyPageViewController.swift */,
+				D06B483527E81B3E00C881E0 /* MyPageTapmanViewController.swift */,
+				D06B483727E81B7900C881E0 /* 마이페이지VC - 상단탭 */,
+			);
+			name = "마이페이지VC";
+			path = "마이페이지VC";
+			sourceTree = "<group>";
+		};
+		D06B483727E81B7900C881E0 /* 마이페이지VC - 상단탭 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B483927E81C1B00C881E0 /* 프로필 */,
+				D06B483827E81C1200C881E0 /* 나의 쇼핑 */,
+			);
+			name = "마이페이지VC - 상단탭";
+			path = "마이페이지VC - 상단탭";
+			sourceTree = "<group>";
+		};
+		D06B483827E81C1200C881E0 /* 나의 쇼핑 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B483C27E81C5F00C881E0 /* MyShoppingViewController.swift */,
+			);
+			name = "나의 쇼핑";
+			path = "나의 쇼핑";
+			sourceTree = "<group>";
+		};
+		D06B483927E81C1B00C881E0 /* 프로필 */ = {
+			isa = PBXGroup;
+			children = (
+				D06B483A27E81C4700C881E0 /* ProfileViewController.swift */,
+			);
+			name = "프로필";
+			path = "프로필";
+			sourceTree = "<group>";
+		};
 		D0910F4E27E56D9800793D90 = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +730,8 @@
 				D0EA7F7F27E5910000948269 /* UIButton.swift */,
 				D0EA7F8127E5911B00948269 /* UIViewController.swift */,
 				D0EA7F8327E5913400948269 /* UINavigationBar.swift */,
+				D06B482E27E8185400C881E0 /* UITabBar.swift */,
+				D06B483027E8189700C881E0 /* CALayer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -687,6 +742,7 @@
 				D0EA7F7127E5904800948269 /* Device.swift */,
 				D0EA7F7327E5904F00948269 /* CustomLabel.swift */,
 				D0EA7F7527E5905A00948269 /* IndicatorView.swift */,
+				D06B482C27E817F000C881E0 /* CustomTabBarController.swift */,
 			);
 			path = CommonClass;
 			sourceTree = "<group>";
@@ -706,6 +762,7 @@
 			children = (
 				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
+				D06B483227E8193B00C881E0 /* 마이페이지VC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -897,9 +954,12 @@
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
 				D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */,
+				D06B483127E8189700C881E0 /* CALayer.swift in Sources */,
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
+				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
+				D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */,
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
@@ -912,10 +972,12 @@
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
+				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
+				D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */,
 				D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */,
 				D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */,
 				D044D91827E70B8F004E9EC6 /* TodayDealTableViewCell.swift in Sources */,
@@ -926,8 +988,10 @@
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
 				D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
+				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
+				D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
 				D06B482A27E8111D00C881E0 /* ExhibitionCollectionViewCell.swift in Sources */,
 			);
