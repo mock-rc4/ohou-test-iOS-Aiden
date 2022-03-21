@@ -13,6 +13,13 @@ class MyShoppingViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    // Cell 데이터
+    var beforeLoginCellData = ["비회원 주문 조회하기", "고객센터"]
+    var afterLoginCellData = ["주문배송내역 조회", "상품 스크랩북", "나의 문의내역", "나의 리뷰", "고객센터"]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +29,8 @@ class MyShoppingViewController: BaseViewController {
         
         tableView.register(UINib(nibName: "MyShoppingTapHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "MyShoppingTapHeader")
         
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "OngoingOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OngoingOrderTableViewCell")
+        tableView.register(UINib(nibName: "MyShoppingTapCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTapCell")
     }
 }
 
@@ -33,20 +40,46 @@ extension MyShoppingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if Constant.isUserLogged {
-            return 7
+            return afterLoginCellData.count+1
         }else {
-            return 2
+            return beforeLoginCellData.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if Constant.isUserLogged {
+            if indexPath.row == 0 {
+                guard let orderCell = tableView.dequeueReusableCell(withIdentifier: "OngoingOrderTableViewCell", for: indexPath) as? OngoingOrderTableViewCell else {
+                    return UITableViewCell()
+                }
+//                orderCell.updateCell()
+                return orderCell
+            }else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTapCell", for: indexPath) as? MyShoppingTapCell else {
+                    return UITableViewCell()
+                }
+                cell.updateCell(afterLoginCellData[indexPath.row-1])
+                return cell
+            }
+        }
+        else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTapCell", for: indexPath) as? MyShoppingTapCell else {
+                return UITableViewCell()
+            }
+            cell.updateCell(beforeLoginCellData[indexPath.row])
+            return cell
+        }
     }
+    
     
     // 셀 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if Constant.isUserLogged {
-            return 100
+            if indexPath.row == 0 {
+                return tableView.frame.width * 0.4
+            }else {
+                return 50
+            }
         }else {
             return 50
         }

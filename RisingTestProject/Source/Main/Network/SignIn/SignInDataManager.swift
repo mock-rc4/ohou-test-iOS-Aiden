@@ -32,6 +32,8 @@ class SignInDataManager {
                                 return
                             }
                             Constant.isUserLogged = true
+                            Constant.accoundID = response.result?.account_Id
+                            Constant.jwt = response.result?.jwt
                             delegate.changeRootViewController(rootVC)
                         }
                     }

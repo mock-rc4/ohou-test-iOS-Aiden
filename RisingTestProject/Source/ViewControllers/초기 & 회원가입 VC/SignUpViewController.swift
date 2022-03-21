@@ -8,6 +8,9 @@
 import UIKit
 
 
+
+// MARK: - 약관동의 데이터 [Bool] 형식으로 수정 -> didSet 사용
+
 class SignUpViewController: BaseViewController {
     
     // MARK: - UI연결

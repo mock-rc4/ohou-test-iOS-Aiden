@@ -82,6 +82,8 @@
 		D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */; };
 		D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */; };
 		D0B1D17627E89D9B0002823D /* OngoingOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17427E89D9B0002823D /* OngoingOrderTableViewCell.xib */; };
+		D0B1D17B27E8A4440002823D /* MyShoppingTapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D17927E8A4440002823D /* MyShoppingTapCell.swift */; };
+		D0B1D17C27E8A4440002823D /* MyShoppingTapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17A27E8A4440002823D /* MyShoppingTapCell.xib */; };
 		D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7590F27E8636E00954FB3 /* CommercialTableViewCell.swift */; };
 		D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */; };
 		D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */; };
@@ -189,6 +191,8 @@
 		D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShoppingTapHeader.xib; sourceTree = "<group>"; };
 		D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingOrderTableViewCell.swift; sourceTree = "<group>"; };
 		D0B1D17427E89D9B0002823D /* OngoingOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OngoingOrderTableViewCell.xib; sourceTree = "<group>"; };
+		D0B1D17927E8A4440002823D /* MyShoppingTapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingTapCell.swift; sourceTree = "<group>"; };
+		D0B1D17A27E8A4440002823D /* MyShoppingTapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShoppingTapCell.xib; sourceTree = "<group>"; };
 		D0B7590F27E8636E00954FB3 /* CommercialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialTableViewCell.swift; sourceTree = "<group>"; };
 		D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialTableViewCell.xib; sourceTree = "<group>"; };
 		D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -798,11 +802,29 @@
 			path = RisingTestProject;
 			sourceTree = "<group>";
 		};
-		D0B7591B27E874F700954FB3 /* TableViewCell */ = {
+		D0B1D17727E8A3B80002823D /* orderCell */ = {
 			isa = PBXGroup;
 			children = (
 				D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */,
 				D0B1D17427E89D9B0002823D /* OngoingOrderTableViewCell.xib */,
+			);
+			path = orderCell;
+			sourceTree = "<group>";
+		};
+		D0B1D17827E8A3CD0002823D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1D17927E8A4440002823D /* MyShoppingTapCell.swift */,
+				D0B1D17A27E8A4440002823D /* MyShoppingTapCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D0B7591B27E874F700954FB3 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0B1D17727E8A3B80002823D /* orderCell */,
+				D0B1D17827E8A3CD0002823D /* Cell */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1072,6 +1094,7 @@
 				D06B482B27E8111D00C881E0 /* ExhibitionCollectionViewCell.xib in Resources */,
 				D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */,
 				D0252C6827E83A6B00998372 /* ProfileTableViewHeader.xib in Resources */,
+				D0B1D17C27E8A4440002823D /* MyShoppingTapCell.xib in Resources */,
 				D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */,
 				D0B1D17627E89D9B0002823D /* OngoingOrderTableViewCell.xib in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
@@ -1165,6 +1188,7 @@
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0252C7327E853CA00998372 /* PhotoCollectionViewCell.swift in Sources */,
 				D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */,
+				D0B1D17B27E8A4440002823D /* MyShoppingTapCell.swift in Sources */,
 				D06B481E27E80A3A00C881E0 /* SignInResponse.swift in Sources */,
 				D01249F927E72E380035456F /* PopularityMediaTableViewCell.swift in Sources */,
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
