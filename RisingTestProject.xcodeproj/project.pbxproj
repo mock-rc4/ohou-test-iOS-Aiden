@@ -82,6 +82,8 @@
 		D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */; };
 		D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */; };
 		D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591427E864C800954FB3 /* CommercialCollectionViewCell.xib */; };
+		D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B7591727E86AB200954FB3 /* ProfileTableViewCell.swift */; };
+		D0B7591A27E86AB200954FB3 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B7591827E86AB200954FB3 /* ProfileTableViewCell.xib */; };
 		D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21527E77CE40085BEBD /* KakaoKey.swift */; };
 		D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */; };
 		D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */; };
@@ -183,6 +185,8 @@
 		D0B7591027E8636E00954FB3 /* CommercialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialTableViewCell.xib; sourceTree = "<group>"; };
 		D0B7591327E864C800954FB3 /* CommercialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0B7591427E864C800954FB3 /* CommercialCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0B7591727E86AB200954FB3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		D0B7591827E86AB200954FB3 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
 		D0B8F21527E77CE40085BEBD /* KakaoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoKey.swift; sourceTree = "<group>"; };
 		D0B8F21827E77E840085BEBD /* KakaoLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginManager.swift; sourceTree = "<group>"; };
 		D0B8F21B27E78A800085BEBD /* SignUpDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataManager.swift; sourceTree = "<group>"; };
@@ -700,6 +704,8 @@
 		D06B484327E8246200C881E0 /* 정보 리스트 */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7591727E86AB200954FB3 /* ProfileTableViewCell.swift */,
+				D0B7591827E86AB200954FB3 /* ProfileTableViewCell.xib */,
 			);
 			name = "정보 리스트";
 			path = "정보 리스트";
@@ -1024,6 +1030,7 @@
 				D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */,
 				D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */,
 				D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */,
+				D0B7591A27E86AB200954FB3 /* ProfileTableViewCell.xib in Resources */,
 				D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */,
 				D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */,
 				D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */,
@@ -1133,6 +1140,7 @@
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
+				D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,

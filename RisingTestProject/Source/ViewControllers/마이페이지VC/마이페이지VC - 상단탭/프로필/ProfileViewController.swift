@@ -13,6 +13,23 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    // 기본 셀 정보 데이터
+    var cellTitleArray: [String] = [
+        "스크랩북",
+        "집들이",
+        "노하우",
+        "질문과답변",
+        "리뷰쓰기",
+        "리뷰",
+        "인테리어시공 상담내역",
+        "고객센터"
+    ]
+    var cellCountArray: [String] = [
+        "0", "0", "0", "", "", "0", "0", ""
+    ]
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -27,6 +44,7 @@ class ProfileViewController: BaseViewController {
         tableView.register(UINib(nibName: "MyShoppingTableViewCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTableViewCell")
         tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
         tableView.register(UINib(nibName: "CommercialTableViewCell", bundle: nil), forCellReuseIdentifier: "CommercialTableViewCell")
+        tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
     }
 }
 
@@ -63,7 +81,11 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             
         }else {
             // 일반 셀
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.updateCell(cellTitleArray[indexPath.row-3], count: cellCountArray[indexPath.row-3])
+            return cell
         }
     }
     
@@ -82,7 +104,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width / 2.6
         }else {
             // 일반 셀
-            return 100
+            return 50
         }
     }
     
