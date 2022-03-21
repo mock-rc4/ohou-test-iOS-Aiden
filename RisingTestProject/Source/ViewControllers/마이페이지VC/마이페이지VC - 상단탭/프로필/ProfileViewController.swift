@@ -117,7 +117,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProfileTableViewHeader") as? ProfileTableViewHeader else {
             return UIView()
         }
-
+        
         return headerView
     }
     // header 높이값 주기

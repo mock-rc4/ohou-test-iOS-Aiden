@@ -20,13 +20,13 @@
                         <constraint firstAttribute="width" secondItem="YZG-1u-zJf" secondAttribute="height" multiplier="1:1" id="9Ds-xN-pvI"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-Dg-q3c">
-                    <rect key="frame" x="118.5" y="30" width="52" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 &amp; 가입하기 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-Dg-q3c">
+                    <rect key="frame" x="118.5" y="30" width="161.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jUj-go-YG9">
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jUj-go-YG9">
                     <rect key="frame" x="118.5" y="59" width="112" height="18"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vfO-iO-3tg">
@@ -65,7 +65,7 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcH-pf-zQH">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcH-pf-zQH">
                     <rect key="frame" x="118.5" y="87" width="174.5" height="31.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구 초대하고 5,000P 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INc-c5-mig">
@@ -165,16 +165,26 @@
                         <constraint firstAttribute="width" secondItem="oJj-ih-E75" secondAttribute="height" multiplier="35:10" id="crc-yh-ERn"/>
                     </constraints>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인하고 오늘의집 서비스를 자유롭게 이용해보세요" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-Qb-qty">
+                    <rect key="frame" x="118.5" y="59" width="223.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="dcH-pf-zQH" firstAttribute="top" secondItem="jUj-go-YG9" secondAttribute="bottom" constant="10" id="0TU-Cu-dts"/>
                 <constraint firstItem="jUj-go-YG9" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="5gJ-6E-gAN"/>
+                <constraint firstItem="KGC-Qb-qty" firstAttribute="top" secondItem="4m3-Dg-q3c" secondAttribute="bottom" constant="5" id="71d-XM-pWr"/>
                 <constraint firstItem="dcH-pf-zQH" firstAttribute="leading" secondItem="jUj-go-YG9" secondAttribute="leading" id="8JJ-mX-jEx"/>
+                <constraint firstItem="KGC-Qb-qty" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="8vo-Xo-ocD"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.75" id="CCK-rz-Tau"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KGC-Qb-qty" secondAttribute="trailing" constant="100" id="FTg-QD-BDk"/>
                 <constraint firstItem="dcH-pf-zQH" firstAttribute="bottom" secondItem="YZG-1u-zJf" secondAttribute="bottom" id="O2x-Lx-AKi"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.2" id="TDQ-WW-1D1"/>
-                <constraint firstItem="oJj-ih-E75" firstAttribute="top" secondItem="dcH-pf-zQH" secondAttribute="bottom" constant="20" id="euS-S8-Wth"/>
+                <constraint firstItem="oJj-ih-E75" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="bottom" constant="20" id="a3S-Z0-HJx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4m3-Dg-q3c" secondAttribute="trailing" constant="162" id="eGS-KN-HvB"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lxY-kS-GKB"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="leading" secondItem="YZG-1u-zJf" secondAttribute="trailing" constant="15" id="mFh-fT-o90"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="top" id="nK5-kR-9kC"/>
@@ -184,6 +194,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="followStackView" destination="jUj-go-YG9" id="AM0-IN-q7c"/>
                 <outlet property="followers" destination="4zc-G2-whc" id="54i-mu-aP9"/>
                 <outlet property="followings" destination="SCd-MC-Afi" id="l4l-8Q-oIi"/>
                 <outlet property="forRadius" destination="dcH-pf-zQH" id="LHJ-U5-SfB"/>

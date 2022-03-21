@@ -16,6 +16,7 @@ class ProfileTableViewHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var followings: UILabel!
     
     
+    @IBOutlet weak var followStackView: UIStackView!
     @IBOutlet weak var forRadius: UIView!
     
     
