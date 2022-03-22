@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,6 +125,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1568" y="942"/>
+        </scene>
+        <!--Store View Controller-->
+        <scene sceneID="pfN-et-5VD">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" id="U9D-aP-cxU" customClass="StoreViewController" customModule="RisingTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tfw-U3-53X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UvP-53-dfW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="evP-w1-yGk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="191-0q-V4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="942"/>
+        </scene>
+        <!--인테리어시공-->
+        <scene sceneID="OcG-ZL-nB5">
+            <objects>
+                <viewController id="QZT-ZR-ZRj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gDx-UF-FeQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jRr-HY-bgO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="인테리어시공" image="wrench.and.screwdriver" catalog="system" selectedImage="wrench.and.screwdriver.fill" id="lOt-uY-dqp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3p-RJ-Vfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="942"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="13s-4Y-nJ3">
+            <objects>
+                <viewController id="WAN-kD-VGc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U51-tX-7L2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="VRu-8e-uSk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="" id="MaQ-2P-a94">
+                        <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DwN-hK-oFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5781" y="112"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="2hA-oW-XgB">
@@ -984,7 +1036,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="aqG-4H-Rhz" kind="relationship" relationship="viewControllers" id="HHO-bc-Yts"/>
+                        <segue destination="8K0-4c-b4a" kind="relationship" relationship="viewControllers" id="yTW-ab-f5v"/>
+                        <segue destination="QZT-ZR-ZRj" kind="relationship" relationship="viewControllers" id="QQh-6O-eg4"/>
                         <segue destination="I8B-HT-h3t" kind="relationship" relationship="viewControllers" id="qlN-fV-KRN"/>
+                        <segue destination="WAN-kD-VGc" kind="relationship" relationship="viewControllers" id="ZyT-lr-uQs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbD-GU-E8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1085,7 +1140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85F-ZF-uox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3049.275362318841" y="941.51785714285711"/>
+            <point key="canvasLocation" x="4428" y="942"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="PMe-xZ-Ryj">
@@ -1148,7 +1203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWM-5i-cOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3959" y="942"/>
+            <point key="canvasLocation" x="5491" y="942"/>
         </scene>
         <!--Modify Profile View Controller-->
         <scene sceneID="OLf-8l-JJ5">
@@ -1325,7 +1380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSs-Gs-gIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4773.913043478261" y="941.51785714285711"/>
+            <point key="canvasLocation" x="6278" y="942"/>
         </scene>
         <!--홈-->
         <scene sceneID="pXa-lQ-gWK">
@@ -1673,7 +1728,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWl-UR-kdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277" y="942"/>
+            <point key="canvasLocation" x="3675" y="942"/>
         </scene>
         <!--My Page Tapman View Controller-->
         <scene sceneID="qnR-xK-qpg">
@@ -1703,7 +1758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS9-fv-xMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3051" y="1614"/>
+            <point key="canvasLocation" x="4429" y="1668"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="oMH-p7-vHS">
@@ -1743,7 +1798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHN-03-qUh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2664" y="2230"/>
+            <point key="canvasLocation" x="4078" y="2304"/>
         </scene>
         <!--My Shopping View Controller-->
         <scene sceneID="Eoh-Un-XmW">
@@ -1783,7 +1838,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDc-KX-gxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3507" y="2230"/>
+            <point key="canvasLocation" x="4799" y="2304"/>
+        </scene>
+        <!--스토어-->
+        <scene sceneID="83I-82-PLX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8K0-4c-b4a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="스토어" image="gift" catalog="system" selectedImage="gift.fill" id="Edh-9C-fe3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gIV-6K-VhD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U9D-aP-cxU" kind="relationship" relationship="rootViewController" id="6BI-MX-dn6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUJ-rY-hca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="942"/>
         </scene>
     </scenes>
     <resources>
@@ -1791,12 +1865,18 @@
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="gift" catalog="system" width="128" height="124"/>
+        <image name="gift.fill" catalog="system" width="128" height="124"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="wrench.and.screwdriver" catalog="system" width="128" height="120"/>
+        <image name="wrench.and.screwdriver.fill" catalog="system" width="128" height="120"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="기본 프로필" width="256" height="258"/>
         <image name="네이버 로그인" width="152" height="152"/>
         <image name="배경" width="650" height="433"/>

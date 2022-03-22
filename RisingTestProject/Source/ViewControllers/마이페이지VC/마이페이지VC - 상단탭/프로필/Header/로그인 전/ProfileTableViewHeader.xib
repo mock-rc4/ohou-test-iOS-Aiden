@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="442" height="302"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본 프로필" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-1u-zJf">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본 프로필" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-1u-zJf">
                     <rect key="frame" x="15" y="30" width="88.5" height="88.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="YZG-1u-zJf" secondAttribute="height" multiplier="1:1" id="9Ds-xN-pvI"/>
@@ -26,62 +26,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="jUj-go-YG9">
-                    <rect key="frame" x="118.5" y="59" width="112" height="18"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vfO-iO-3tg">
-                            <rect key="frame" x="0.0" y="0.0" width="49" height="18"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로워" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKE-yb-jJg">
-                                    <rect key="frame" x="0.0" y="0.0" width="34" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-G2-whc">
-                                    <rect key="frame" x="39" y="0.0" width="10" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-vw-357">
-                            <rect key="frame" x="63" y="0.0" width="49" height="18"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로잉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzM-T5-LKW">
-                                    <rect key="frame" x="0.0" y="0.0" width="34" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCd-MC-Afi">
-                                    <rect key="frame" x="39" y="0.0" width="10" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcH-pf-zQH">
-                    <rect key="frame" x="118.5" y="87" width="174.5" height="31.5"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구 초대하고 5,000P 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INc-c5-mig">
-                            <rect key="frame" x="15" y="7.5" width="144.5" height="16"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="0.21109271523178808" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="INc-c5-mig" secondAttribute="trailing" constant="15" id="X70-UZ-bZ0"/>
-                        <constraint firstItem="INc-c5-mig" firstAttribute="leading" secondItem="dcH-pf-zQH" secondAttribute="leading" constant="15" id="Zpn-9X-hjq"/>
-                        <constraint firstItem="INc-c5-mig" firstAttribute="centerY" secondItem="dcH-pf-zQH" secondAttribute="centerY" id="yuY-5a-ckb"/>
-                    </constraints>
-                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="oJj-ih-E75">
                     <rect key="frame" x="55.5" y="138.5" width="331.5" height="94.5"/>
                     <subviews>
@@ -174,30 +118,21 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
-                <constraint firstItem="dcH-pf-zQH" firstAttribute="top" secondItem="jUj-go-YG9" secondAttribute="bottom" constant="10" id="0TU-Cu-dts"/>
-                <constraint firstItem="jUj-go-YG9" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="5gJ-6E-gAN"/>
                 <constraint firstItem="KGC-Qb-qty" firstAttribute="top" secondItem="4m3-Dg-q3c" secondAttribute="bottom" constant="5" id="71d-XM-pWr"/>
-                <constraint firstItem="dcH-pf-zQH" firstAttribute="leading" secondItem="jUj-go-YG9" secondAttribute="leading" id="8JJ-mX-jEx"/>
                 <constraint firstItem="KGC-Qb-qty" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="8vo-Xo-ocD"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.75" id="CCK-rz-Tau"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KGC-Qb-qty" secondAttribute="trailing" constant="100" id="FTg-QD-BDk"/>
-                <constraint firstItem="dcH-pf-zQH" firstAttribute="bottom" secondItem="YZG-1u-zJf" secondAttribute="bottom" id="O2x-Lx-AKi"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.2" id="TDQ-WW-1D1"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="bottom" constant="20" id="a3S-Z0-HJx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4m3-Dg-q3c" secondAttribute="trailing" constant="162" id="eGS-KN-HvB"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lxY-kS-GKB"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="leading" secondItem="YZG-1u-zJf" secondAttribute="trailing" constant="15" id="mFh-fT-o90"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="top" id="nK5-kR-9kC"/>
-                <constraint firstItem="jUj-go-YG9" firstAttribute="top" secondItem="4m3-Dg-q3c" secondAttribute="bottom" constant="5" id="plx-Vo-CDf"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="yUh-oA-Pea"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="yr9-Bm-Jp2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="followStackView" destination="jUj-go-YG9" id="AM0-IN-q7c"/>
-                <outlet property="followers" destination="4zc-G2-whc" id="54i-mu-aP9"/>
-                <outlet property="followings" destination="SCd-MC-Afi" id="l4l-8Q-oIi"/>
-                <outlet property="forRadius" destination="dcH-pf-zQH" id="LHJ-U5-SfB"/>
                 <outlet property="nickName" destination="4m3-Dg-q3c" id="7q3-QX-j34"/>
                 <outlet property="profileImage" destination="YZG-1u-zJf" id="2y5-Oo-70c"/>
             </connections>

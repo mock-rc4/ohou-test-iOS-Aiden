@@ -17,6 +17,7 @@ class InitialViewController: BaseViewController {
         // Alert
         let lookAround: UIAlertAction = UIAlertAction(title: "둘러보기", style: .default) { _ in
             Constant.isUserTapLookAroundButton = true
+            Constant.isUserLogged = false
             self.dismiss(animated: true)
         }
         let signInNow: UIAlertAction = UIAlertAction(title: "지금 가입하기", style: .default) { _ in

@@ -40,6 +40,7 @@ class ProfileViewController: BaseViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "ProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProfileTableViewHeader")
+        tableView.register(UINib(nibName: "AfterLoginProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "AfterLoginProfileTableViewHeader")
         
         tableView.register(UINib(nibName: "MyShoppingTableViewCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTableViewCell")
         tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
@@ -118,11 +119,19 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     // 테이블뷰 Header 설정
     // Header에 사용할 view  return
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProfileTableViewHeader") as? ProfileTableViewHeader else {
-            return UIView()
+        if Constant.isUserLogged {
+            guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AfterLoginProfileTableViewHeader") as? AfterLoginProfileTableViewHeader else {
+                return UIView()
+            }
+//            headerView.updateCell(<#T##userInfo: UserInfo##UserInfo#>)
+            return headerView
+            
+        }else {
+            guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProfileTableViewHeader") as? ProfileTableViewHeader else {
+                return UIView()
+            }
+            return headerView
         }
-        
-        return headerView
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

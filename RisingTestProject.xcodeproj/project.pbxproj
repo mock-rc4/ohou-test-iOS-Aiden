@@ -39,6 +39,7 @@
 		D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6A727E9693F004E6703 /* ModifyProfileDataManager.swift */; };
 		D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */; };
 		D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */; };
+		D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6AE27E9727B004E6703 /* StoreViewController.swift */; };
 		D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */; };
 		D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */; };
 		D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */; };
@@ -83,6 +84,10 @@
 		D0910F6227E56D9800793D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6027E56D9800793D90 /* Main.storyboard */; };
 		D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6327E56D9B00793D90 /* Assets.xcassets */; };
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
+		D0A431A427E98AD800421A34 /* GetProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */; };
+		D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A527E98C5400421A34 /* GetProfileResponse.swift */; };
+		D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */; };
+		D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A431AF27E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib */; };
 		D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */; };
 		D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */; };
 		D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */; };
@@ -155,6 +160,7 @@
 		D02AA6A727E9693F004E6703 /* ModifyProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileDataManager.swift; sourceTree = "<group>"; };
 		D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileRequest.swift; sourceTree = "<group>"; };
 		D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileResponse.swift; sourceTree = "<group>"; };
+		D02AA6AE27E9727B004E6703 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -201,6 +207,10 @@
 		D0910F6327E56D9B00793D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0910F6627E56D9B00793D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileDataManager.swift; sourceTree = "<group>"; };
+		D0A431A527E98C5400421A34 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
+		D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginProfileTableViewHeader.swift; sourceTree = "<group>"; };
+		D0A431AF27E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterLoginProfileTableViewHeader.xib; sourceTree = "<group>"; };
 		D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingTapHeader.swift; sourceTree = "<group>"; };
 		D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShoppingTapHeader.xib; sourceTree = "<group>"; };
 		D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -453,6 +463,7 @@
 		D02AA6A427E9690F004E6703 /* 마이페이지 VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0A431A127E98A7100421A34 /* 유저 정보 조회 */,
 				D02AA6A527E96924004E6703 /* 프로필 수정 */,
 			);
 			name = "마이페이지 VC";
@@ -476,6 +487,15 @@
 				D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D02AA6AD27E9725A004E6703 /* 스토어 VC */ = {
+			isa = PBXGroup;
+			children = (
+				D02AA6AE27E9727B004E6703 /* StoreViewController.swift */,
+			);
+			name = "스토어 VC";
+			path = "스토어 VC";
 			sourceTree = "<group>";
 		};
 		D044D90827E6FCEE004E9EC6 /* Category */ = {
@@ -754,8 +774,8 @@
 		D06B483E27E8241900C881E0 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */,
-				D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */,
+				D0A431A727E9905F00421A34 /* 로그인 전 */,
+				D0A431A827E9906600421A34 /* 로그인 후 */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -885,6 +905,44 @@
 				D0910F6827E56D9B00793D90 /* Info.plist */,
 			);
 			path = RisingTestProject;
+			sourceTree = "<group>";
+		};
+		D0A431A127E98A7100421A34 /* 유저 정보 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */,
+				D0A431A227E98AC200421A34 /* Entity */,
+			);
+			name = "유저 정보 조회";
+			path = "유저 정보 조회";
+			sourceTree = "<group>";
+		};
+		D0A431A227E98AC200421A34 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431A527E98C5400421A34 /* GetProfileResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D0A431A727E9905F00421A34 /* 로그인 전 */ = {
+			isa = PBXGroup;
+			children = (
+				D0252C6527E83A5600998372 /* ProfileTableViewHeader.swift */,
+				D0252C6727E83A6B00998372 /* ProfileTableViewHeader.xib */,
+			);
+			name = "로그인 전";
+			path = "로그인 전";
+			sourceTree = "<group>";
+		};
+		D0A431A827E9906600421A34 /* 로그인 후 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */,
+				D0A431AF27E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib */,
+			);
+			name = "로그인 후";
+			path = "로그인 후";
 			sourceTree = "<group>";
 		};
 		D0B1D17727E8A3B80002823D /* orderCell */ = {
@@ -1090,6 +1148,7 @@
 			children = (
 				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
+				D02AA6AD27E9725A004E6703 /* 스토어 VC */,
 				D06B483227E8193B00C881E0 /* 마이페이지VC */,
 			);
 			path = ViewControllers;
@@ -1210,6 +1269,7 @@
 				D0252C7427E853CA00998372 /* PhotoCollectionViewCell.xib in Resources */,
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D0252C7027E851B700998372 /* PhotoTableViewCell.xib in Resources */,
+				D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */,
 				D011D0B127E7590B00E72072 /* ReviewTableViewCell.xib in Resources */,
 				D005E26427E6070A0001B63C /* PopularityPostTableViewCell.xib in Resources */,
 				D044D92227E716B8004E9EC6 /* PopularityTableViewFooter.xib in Resources */,
@@ -1300,6 +1360,7 @@
 				D06B483127E8189700C881E0 /* CALayer.swift in Sources */,
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
+				D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
 				D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */,
@@ -1319,6 +1380,7 @@
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
+				D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */,
 				D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
@@ -1334,6 +1396,7 @@
 				D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */,
 				D044D91827E70B8F004E9EC6 /* TodayDealTableViewCell.swift in Sources */,
 				D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */,
+				D0A431A427E98AD800421A34 /* GetProfileDataManager.swift in Sources */,
 				D0252C6F27E851B700998372 /* PhotoTableViewCell.swift in Sources */,
 				D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */,
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
@@ -1344,6 +1407,7 @@
 				D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */,
 				D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
+				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
