@@ -29,7 +29,7 @@ class StoreHomeViewController: BaseViewController {
         tableView.register(UINib(nibName: "StoreHomeTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "StoreHomeTableViewHeader")
         
         // cell
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "StoreTodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTodayDealTableViewCell")
     }
 }
 
@@ -39,15 +39,32 @@ class StoreHomeViewController: BaseViewController {
 // MARK: - TableView Protocol 채택
 extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // 테이블뷰 Cell 설정
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
+    // Cell 설정
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTodayDealTableViewCell", for: indexPath) as? StoreTodayDealTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        }else {
+            return UITableViewCell()
+        }
     }
     
- 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return tableView.frame.width * 2.25
+        }else {
+            return 100
+        }
+    }
+    
+    
     
     
     

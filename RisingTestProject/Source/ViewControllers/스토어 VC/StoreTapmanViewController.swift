@@ -72,7 +72,7 @@ class StoreTapmanViewController: TabmanViewController {
 
 
 
-// MARK: - 프로토콜 채택 & 함수 정의
+// MARK: - 탭맨 프로토콜 채택 & 함수 정의
 extension StoreTapmanViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     // 탭맨으로 보여줄 VC의 수

@@ -64,6 +64,10 @@
 		D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
+		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
+		D06AE19D27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19B27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.xib */; };
+		D06AE1A027E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19E27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift */; };
+		D06AE1A127E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19F27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.xib */; };
 		D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481927E808F000C881E0 /* SignInDataManager.swift */; };
 		D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481B27E80A1E00C881E0 /* SignInRequest.swift */; };
 		D06B481E27E80A3A00C881E0 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481D27E80A3A00C881E0 /* SignInResponse.swift */; };
@@ -190,6 +194,10 @@
 		D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialBannerCell.xib; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
+		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
+		D06AE19B27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTodayDealTableViewCell.xib; sourceTree = "<group>"; };
+		D06AE19E27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealCollectionViewCell.swift; sourceTree = "<group>"; };
+		D06AE19F27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTodayDealCollectionViewCell.xib; sourceTree = "<group>"; };
 		D06B481927E808F000C881E0 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		D06B481B27E80A1E00C881E0 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		D06B481D27E80A3A00C881E0 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
@@ -693,6 +701,34 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		D06AE19727E9CE7100F6EB3E /* 오늘의딜 */ = {
+			isa = PBXGroup;
+			children = (
+				D06AE19827E9CEAC00F6EB3E /* TableCell */,
+				D06AE19927E9CEB400F6EB3E /* CollectionCell */,
+			);
+			name = "오늘의딜";
+			path = "오늘의딜";
+			sourceTree = "<group>";
+		};
+		D06AE19827E9CEAC00F6EB3E /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */,
+				D06AE19B27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D06AE19927E9CEB400F6EB3E /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				D06AE19E27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift */,
+				D06AE19F27E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 		D06B481727E8050200C881E0 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -999,6 +1035,7 @@
 		D0A431BB27E9B5BD00421A34 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				D06AE19727E9CE7100F6EB3E /* 오늘의딜 */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1310,10 +1347,12 @@
 				D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */,
 				D011D0B527E75B6100E72072 /* ReviewCollectionViewCell.xib in Resources */,
 				D06B482727E80F9D00C881E0 /* ExhibitionTableViewCell.xib in Resources */,
+				D06AE19D27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.xib in Resources */,
 				D0252C7A27E8598700998372 /* PhotoCollectionViewFooter.xib in Resources */,
 				D005E26C27E6181B0001B63C /* PopularityCollectionViewHeaderCell.xib in Resources */,
 				D0252C6C27E84A1900998372 /* MyShoppingTableViewCell.xib in Resources */,
 				D044D91227E7006C004E9EC6 /* MainCategoryCollectionViewCell.xib in Resources */,
+				D06AE1A127E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.xib in Resources */,
 				D0124A0127E72FF60035456F /* MediaCollectionViewHeader.xib in Resources */,
 				D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */,
 				D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */,
@@ -1430,6 +1469,7 @@
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
 				D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */,
 				D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */,
+				D06AE1A027E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
@@ -1474,6 +1514,7 @@
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
+				D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */,
 				D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
 				D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */,
