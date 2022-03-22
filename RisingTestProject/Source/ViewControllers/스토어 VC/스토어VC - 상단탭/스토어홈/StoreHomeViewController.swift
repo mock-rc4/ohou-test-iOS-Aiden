@@ -30,6 +30,7 @@ class StoreHomeViewController: BaseViewController {
         
         // cell
         tableView.register(UINib(nibName: "StoreTodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTodayDealTableViewCell")
+        tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
     }
 }
 
@@ -50,6 +51,13 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTodayDealTableViewCell", for: indexPath) as? StoreTodayDealTableViewCell else {
                 return UITableViewCell()
             }
+            addSeparator(cell)
+            return cell
+        }else if indexPath.row <= 3{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
             return cell
         }else {
             return UITableViewCell()
@@ -58,9 +66,11 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return tableView.frame.width * 2.25
+            return tableView.frame.width * 2.2
+        }else if indexPath.row <= 3 {
+            return tableView.frame.width * 1.1
         }else {
-            return 100
+            return 50
         }
     }
     
@@ -88,12 +98,12 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 // MARK: - Cell 구분선 커스텀
-extension StoreHomeViewController {
-    func addSeparator(_ cell: UITableViewCell) {
-        let screenSize = UIScreen.main.bounds
-        let separatorHeight = CGFloat(5.0)
-        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
-        additionalSeparator.backgroundColor = UIColor.systemGray5
-        cell.addSubview(additionalSeparator)
-    }
-}
+//extension StoreHomeViewController {
+//    func addSeparator(_ cell: UITableViewCell) {
+//        let screenSize = UIScreen.main.bounds
+//        let separatorHeight = CGFloat(5.0)
+//        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
+//        additionalSeparator.backgroundColor = UIColor.systemGray5
+//        cell.addSubview(additionalSeparator)
+//    }
+//}

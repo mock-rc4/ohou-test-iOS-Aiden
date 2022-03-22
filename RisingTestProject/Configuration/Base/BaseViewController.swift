@@ -83,6 +83,16 @@ class BaseViewController: UIViewController {
     
     
     
+    // TableView 구분선 커스텀
+    func addSeparator(_ cell: UITableViewCell) {
+        let screenSize = UIScreen.main.bounds
+        let separatorHeight = CGFloat(5.0)
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
+        additionalSeparator.backgroundColor = UIColor.systemGray5
+        cell.addSubview(additionalSeparator)
+    }
+    
+    
     
     
     

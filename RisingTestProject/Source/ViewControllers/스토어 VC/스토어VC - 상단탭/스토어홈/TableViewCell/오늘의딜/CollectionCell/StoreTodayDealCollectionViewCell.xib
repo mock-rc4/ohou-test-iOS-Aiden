@@ -114,6 +114,7 @@
                 <outlet property="discountRate" destination="1bf-a0-zJx" id="Tjs-EV-MOV"/>
                 <outlet property="nDayLeft" destination="9wn-bD-uIF" id="p9h-ci-CLk"/>
                 <outlet property="price" destination="gLe-oL-6ET" id="RZR-G8-72S"/>
+                <outlet property="productImage" destination="Pdo-pc-bRK" id="ikP-rV-loH"/>
                 <outlet property="productName" destination="aeC-Rh-meE" id="gV0-sF-EPu"/>
                 <outlet property="rating" destination="LB8-zC-D5z" id="bk2-Kj-Be4"/>
                 <outlet property="reviews" destination="QQp-Ei-mBB" id="lYB-rs-0Hc"/>

@@ -1,5 +1,5 @@
 //
-//  StoreTodayDealCollectionViewCell.swift
+//  RecommendedProductCollectionViewCell.swift
 //  RisingTestProject
 //
 //  Created by 신동희 on 2022/03/22.
@@ -7,10 +7,9 @@
 
 import UIKit
 
-class StoreTodayDealCollectionViewCell: UICollectionViewCell {
-
+class RecommendedProductCollectionViewCell: UICollectionViewCell {
+    
     // UI 연결
-    @IBOutlet weak var nDayLeft: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var productName: UILabel!
@@ -24,15 +23,18 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var specialPrice: UILabel!
     
     
+    
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
         // Radius추가
         productImage.layer.cornerRadius = productImage.frame.height / 10
-        nDayLeft.clipsToBounds = true
-        nDayLeft.layer.cornerRadius = nDayLeft.frame.height / 10
         specialPrice.clipsToBounds = true
         specialPrice.layer.cornerRadius = specialPrice.frame.height / 10
+
     }
 
     
