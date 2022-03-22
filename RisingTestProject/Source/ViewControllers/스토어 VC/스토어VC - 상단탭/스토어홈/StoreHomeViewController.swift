@@ -31,6 +31,7 @@ class StoreHomeViewController: BaseViewController {
         // cell
         tableView.register(UINib(nibName: "StoreTodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTodayDealTableViewCell")
         tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
+        tableView.register(UINib(nibName: "PopularKeywordTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularKeywordTableViewCell")
     }
 }
 
@@ -59,6 +60,12 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             }
             addSeparator(cell)
             return cell
+        }else if indexPath.row == 4{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularKeywordTableViewCell", for: indexPath) as? PopularKeywordTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
         }else {
             return UITableViewCell()
         }
@@ -69,6 +76,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width * 2.2
         }else if indexPath.row <= 3 {
             return tableView.frame.width * 1.1
+        }else if indexPath.row == 4{
+            return tableView.frame.width * 0.75
         }else {
             return 50
         }
@@ -93,17 +102,3 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
         return tableView.frame.width * 2.1
     }
 }
-
-
-
-
-// MARK: - Cell 구분선 커스텀
-//extension StoreHomeViewController {
-//    func addSeparator(_ cell: UITableViewCell) {
-//        let screenSize = UIScreen.main.bounds
-//        let separatorHeight = CGFloat(5.0)
-//        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: cell.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
-//        additionalSeparator.backgroundColor = UIColor.systemGray5
-//        cell.addSubview(additionalSeparator)
-//    }
-//}
