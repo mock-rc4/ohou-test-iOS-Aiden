@@ -52,6 +52,7 @@ extension MyShoppingViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let orderCell = tableView.dequeueReusableCell(withIdentifier: "OngoingOrderTableViewCell", for: indexPath) as? OngoingOrderTableViewCell else {
                     return UITableViewCell()
                 }
+                orderCell.selectionStyle = .none
 //                orderCell.updateCell()
                 return orderCell
             }else {
@@ -59,6 +60,7 @@ extension MyShoppingViewController: UITableViewDelegate, UITableViewDataSource {
                     return UITableViewCell()
                 }
                 cell.updateCell(afterLoginCellData[indexPath.row-1])
+                cell.selectionStyle = .none
                 return cell
             }
         }
@@ -66,6 +68,7 @@ extension MyShoppingViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTapCell", for: indexPath) as? MyShoppingTapCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.updateCell(beforeLoginCellData[indexPath.row])
             return cell
         }

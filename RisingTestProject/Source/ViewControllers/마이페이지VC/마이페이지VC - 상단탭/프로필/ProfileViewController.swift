@@ -62,6 +62,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTableViewCell", for: indexPath) as? MyShoppingTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.updateCell(0, coupon: 0, point: 0)
             return cell
             
@@ -70,6 +71,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoTableViewCell", for: indexPath) as? PhotoTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
             
         }else if indexPath.row == 2 {
@@ -77,6 +79,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommercialTableViewCell", for: indexPath) as? CommercialTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             return cell
             
         }else {
@@ -84,6 +87,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
                 return UITableViewCell()
             }
+            cell.selectionStyle = .none
             cell.updateCell(cellTitleArray[indexPath.row-3], count: cellCountArray[indexPath.row-3])
             return cell
         }

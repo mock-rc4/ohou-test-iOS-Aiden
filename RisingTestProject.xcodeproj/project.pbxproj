@@ -36,6 +36,9 @@
 		D0252C7427E853CA00998372 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0252C7227E853CA00998372 /* PhotoCollectionViewCell.xib */; };
 		D0252C7927E8598700998372 /* PhotoCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0252C7727E8598700998372 /* PhotoCollectionViewFooter.swift */; };
 		D0252C7A27E8598700998372 /* PhotoCollectionViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0252C7827E8598700998372 /* PhotoCollectionViewFooter.xib */; };
+		D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6A727E9693F004E6703 /* ModifyProfileDataManager.swift */; };
+		D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */; };
+		D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */; };
 		D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */; };
 		D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */; };
 		D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */; };
@@ -149,6 +152,9 @@
 		D0252C7227E853CA00998372 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0252C7727E8598700998372 /* PhotoCollectionViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewFooter.swift; sourceTree = "<group>"; };
 		D0252C7827E8598700998372 /* PhotoCollectionViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewFooter.xib; sourceTree = "<group>"; };
+		D02AA6A727E9693F004E6703 /* ModifyProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileDataManager.swift; sourceTree = "<group>"; };
+		D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileRequest.swift; sourceTree = "<group>"; };
+		D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileResponse.swift; sourceTree = "<group>"; };
 		D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -442,6 +448,34 @@
 				D0252C7827E8598700998372 /* PhotoCollectionViewFooter.xib */,
 			);
 			path = Footer;
+			sourceTree = "<group>";
+		};
+		D02AA6A427E9690F004E6703 /* 마이페이지 VC */ = {
+			isa = PBXGroup;
+			children = (
+				D02AA6A527E96924004E6703 /* 프로필 수정 */,
+			);
+			name = "마이페이지 VC";
+			path = "마이페이지 VC";
+			sourceTree = "<group>";
+		};
+		D02AA6A527E96924004E6703 /* 프로필 수정 */ = {
+			isa = PBXGroup;
+			children = (
+				D02AA6A727E9693F004E6703 /* ModifyProfileDataManager.swift */,
+				D02AA6A627E9692C004E6703 /* Entity */,
+			);
+			name = "프로필 수정";
+			path = "프로필 수정";
+			sourceTree = "<group>";
+		};
+		D02AA6A627E9692C004E6703 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */,
+				D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D044D90827E6FCEE004E9EC6 /* Category */ = {
@@ -1074,6 +1108,7 @@
 			children = (
 				D01FB64B27E8C87300D01FDF /* 로그인 관련 */,
 				D01FB64C27E8C87A00D01FDF /* 홈VC */,
+				D02AA6A427E9690F004E6703 /* 마이페이지 VC */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1271,6 +1306,7 @@
 				D0252C7927E8598700998372 /* PhotoCollectionViewFooter.swift in Sources */,
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
+				D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
@@ -1299,6 +1335,7 @@
 				D044D91827E70B8F004E9EC6 /* TodayDealTableViewCell.swift in Sources */,
 				D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */,
 				D0252C6F27E851B700998372 /* PhotoTableViewCell.swift in Sources */,
+				D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */,
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
@@ -1310,6 +1347,7 @@
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
+				D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
 				D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,

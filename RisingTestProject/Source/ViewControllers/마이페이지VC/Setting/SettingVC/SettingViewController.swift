@@ -66,6 +66,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SettingTableViewCell", for: indexPath) as? SettingTableViewCell else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         cell.updateCell(settingArray[indexPath.section][indexPath.row])
         return cell
     }
@@ -86,4 +87,16 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         view.backgroundColor = UIColor.systemGray5
         return view
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            guard let modifyProfileVC = storyboard?.instantiateViewController(withIdentifier: "ModifyProfileViewController") as? ModifyProfileViewController else {
+                return
+            }
+            
+            self.navigationController?.pushViewController(modifyProfileVC, animated: true)
+        }
+    }
+    
 }
