@@ -99,6 +99,9 @@
 		D0B8F22127E78B5C0085BEBD /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8F22027E78B5C0085BEBD /* SignUpResponse.swift */; };
 		D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */; };
 		D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA120627E6E34D007FD167 /* SignInViewController.swift */; };
+		D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CC27E9549900E47DA6 /* SettingViewController.swift */; };
+		D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */; };
+		D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
 		D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6C27E58FF900948269 /* BaseViewController.swift */; };
 		D0EA7F7227E5904800948269 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F7127E5904800948269 /* Device.swift */; };
@@ -210,6 +213,9 @@
 		D0B8F22027E78B5C0085BEBD /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		D0BE89BF27E6BCDF00FE9451 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		D0CA120627E6E34D007FD167 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D0D771CC27E9549900E47DA6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D0EA7F6C27E58FF900948269 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0EA7F7127E5904800948269 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -671,6 +677,7 @@
 				D06B483327E8196000C881E0 /* MyPageViewController.swift */,
 				D06B483527E81B3E00C881E0 /* MyPageTapmanViewController.swift */,
 				D06B483727E81B7900C881E0 /* 마이페이지VC - 상단탭 */,
+				D0D771CB27E9547200E47DA6 /* Setting */,
 			);
 			name = "마이페이지VC";
 			path = "마이페이지VC";
@@ -917,6 +924,24 @@
 			path = "초기 & 회원가입 VC";
 			sourceTree = "<group>";
 		};
+		D0D771CB27E9547200E47DA6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D0D771CC27E9549900E47DA6 /* SettingViewController.swift */,
+				D0D771CE27E955C800E47DA6 /* TableViewCell */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D0D771CE27E955C800E47DA6 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */,
+				D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,6 +1149,7 @@
 				D0B7591A27E86AB200954FB3 /* ProfileTableViewCell.xib in Resources */,
 				D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */,
 				D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */,
+				D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */,
 				D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */,
 				D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */,
 				D0252C7427E853CA00998372 /* PhotoCollectionViewCell.xib in Resources */,
@@ -1196,6 +1222,7 @@
 			files = (
 				D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */,
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
+				D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */,
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
@@ -1265,6 +1292,7 @@
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
 				D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
+				D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */,
 				D06B482A27E8111D00C881E0 /* ExhibitionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
