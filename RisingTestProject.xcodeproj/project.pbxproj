@@ -102,6 +102,7 @@
 		D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CC27E9549900E47DA6 /* SettingViewController.swift */; };
 		D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */; };
 		D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */; };
+		D0DB6C7527E95BD500DC55D4 /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
 		D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6C27E58FF900948269 /* BaseViewController.swift */; };
 		D0EA7F7227E5904800948269 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F7127E5904800948269 /* Device.swift */; };
@@ -216,6 +217,7 @@
 		D0D771CC27E9549900E47DA6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileViewController.swift; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		D0EA7F6C27E58FF900948269 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0EA7F7127E5904800948269 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -927,8 +929,8 @@
 		D0D771CB27E9547200E47DA6 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D0D771CC27E9549900E47DA6 /* SettingViewController.swift */,
-				D0D771CE27E955C800E47DA6 /* TableViewCell */,
+				D0DB6C7227E95B8E00DC55D4 /* SettingVC */,
+				D0DB6C7327E95B9600DC55D4 /* 프로필 수정 */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -940,6 +942,24 @@
 				D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D0DB6C7227E95B8E00DC55D4 /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0D771CC27E9549900E47DA6 /* SettingViewController.swift */,
+				D0D771CE27E955C800E47DA6 /* TableViewCell */,
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		D0DB6C7327E95B9600DC55D4 /* 프로필 수정 */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */,
+			);
+			name = "프로필 수정";
+			path = "프로필 수정";
 			sourceTree = "<group>";
 		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
@@ -1232,6 +1252,7 @@
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
 				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
 				D0EA7F7C27E590D300948269 /* String.swift in Sources */,
+				D0DB6C7527E95BD500DC55D4 /* ModifyProfileViewController.swift in Sources */,
 				D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */,
 				D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */,
 				D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */,
