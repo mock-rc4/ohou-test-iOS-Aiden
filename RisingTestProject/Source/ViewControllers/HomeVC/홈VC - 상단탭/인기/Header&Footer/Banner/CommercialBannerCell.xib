@@ -30,7 +30,11 @@
             </constraints>
             <size key="customSize" width="184" height="145"/>
             <connections>
+                <outlet property="bottom" destination="XLD-uJ-wv2" id="hoO-du-Bu9"/>
                 <outlet property="commercialImage" destination="3zp-TQ-eIB" id="nLl-an-nwC"/>
+                <outlet property="leading" destination="zk4-ss-7OL" id="BaS-kc-nEo"/>
+                <outlet property="top" destination="eYu-Xy-Ev9" id="iXo-PS-BGh"/>
+                <outlet property="trailing" destination="fmL-lO-yOn" id="fy8-DW-Mrn"/>
             </connections>
             <point key="canvasLocation" x="234.78260869565219" y="139.62053571428569"/>
         </collectionViewCell>

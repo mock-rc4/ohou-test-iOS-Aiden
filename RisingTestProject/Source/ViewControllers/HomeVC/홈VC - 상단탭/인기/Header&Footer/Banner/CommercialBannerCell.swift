@@ -13,6 +13,14 @@ class CommercialBannerCell: UICollectionViewCell {
     @IBOutlet weak var commercialImage: UIImageView!
     
     
+    // Constraint 연결
+    @IBOutlet weak var bottom: NSLayoutConstraint!
+    @IBOutlet weak var top: NSLayoutConstraint!
+    @IBOutlet weak var trailing: NSLayoutConstraint!
+    @IBOutlet weak var leading: NSLayoutConstraint!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,5 +31,14 @@ class CommercialBannerCell: UICollectionViewCell {
     
     func updateCell(_ image: UIImage) {
         commercialImage.image = image
+    }
+    
+    
+    func setConstraintZero() {
+        bottom.constant = 0
+        top.constant = 0
+        trailing.constant = 0
+        leading.constant = 0
+        commercialImage.layer.cornerRadius = 0
     }
 }

@@ -1977,6 +1977,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7GB-y5-nez"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Toa-q6-DLO" firstAttribute="leading" secondItem="tb2-7r-6hx" secondAttribute="leading" id="QST-hK-g4t"/>
@@ -2007,15 +2008,26 @@
                                     <constraint firstAttribute="width" secondItem="c1i-7g-8bi" secondAttribute="height" multiplier="7:1" id="xx6-nl-Zgh"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AsH-Dj-rRf">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="10w-jy-b8j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="10w-jy-b8j" firstAttribute="trailing" secondItem="c1i-7g-8bi" secondAttribute="trailing" id="0a6-cb-DXP"/>
+                            <constraint firstItem="10w-jy-b8j" firstAttribute="trailing" secondItem="AsH-Dj-rRf" secondAttribute="trailing" id="6YK-al-KyT"/>
+                            <constraint firstItem="AsH-Dj-rRf" firstAttribute="leading" secondItem="10w-jy-b8j" secondAttribute="leading" id="FQ2-XA-UZo"/>
+                            <constraint firstItem="AsH-Dj-rRf" firstAttribute="top" secondItem="c1i-7g-8bi" secondAttribute="bottom" id="GJl-m6-paR"/>
                             <constraint firstItem="c1i-7g-8bi" firstAttribute="top" secondItem="10w-jy-b8j" secondAttribute="top" id="MV7-Sy-nih"/>
+                            <constraint firstItem="10w-jy-b8j" firstAttribute="bottom" secondItem="AsH-Dj-rRf" secondAttribute="bottom" id="XMx-9J-fkT"/>
                             <constraint firstItem="c1i-7g-8bi" firstAttribute="leading" secondItem="10w-jy-b8j" secondAttribute="leading" id="nup-Hi-QgG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="AsH-Dj-rRf" id="Hq7-Yb-b7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCp-wn-jhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

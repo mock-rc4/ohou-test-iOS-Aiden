@@ -62,6 +62,8 @@
 		D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */; };
 		D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DEC27E5D61400D1C7D6 /* CommercialBannerCell.swift */; };
 		D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */; };
+		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
+		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481927E808F000C881E0 /* SignInDataManager.swift */; };
 		D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481B27E80A1E00C881E0 /* SignInRequest.swift */; };
 		D06B481E27E80A3A00C881E0 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B481D27E80A3A00C881E0 /* SignInResponse.swift */; };
@@ -186,6 +188,8 @@
 		D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityTableViewHeader.xib; sourceTree = "<group>"; };
 		D04A2DEC27E5D61400D1C7D6 /* CommercialBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialBannerCell.swift; sourceTree = "<group>"; };
 		D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialBannerCell.xib; sourceTree = "<group>"; };
+		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
+		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06B481927E808F000C881E0 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
 		D06B481B27E80A1E00C881E0 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
 		D06B481D27E80A3A00C881E0 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
@@ -967,6 +971,8 @@
 			isa = PBXGroup;
 			children = (
 				D0A431B527E9B2AB00421A34 /* StoreHomeViewController.swift */,
+				D0A431BA27E9B5B900421A34 /* Header */,
+				D0A431BB27E9B5BD00421A34 /* TableViewCell */,
 			);
 			name = "스토어홈";
 			path = "스토어홈";
@@ -979,6 +985,22 @@
 			);
 			name = "베스트";
 			path = "베스트";
+			sourceTree = "<group>";
+		};
+		D0A431BA27E9B5B900421A34 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */,
+				D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		D0A431BB27E9B5BD00421A34 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		D0B1D17727E8A3B80002823D /* orderCell */ = {
@@ -1306,6 +1328,7 @@
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D0252C7027E851B700998372 /* PhotoTableViewCell.xib in Resources */,
 				D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */,
+				D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */,
 				D011D0B127E7590B00E72072 /* ReviewTableViewCell.xib in Resources */,
 				D005E26427E6070A0001B63C /* PopularityPostTableViewCell.xib in Resources */,
 				D044D92227E716B8004E9EC6 /* PopularityTableViewFooter.xib in Resources */,
@@ -1406,6 +1429,7 @@
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
 				D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */,
+				D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
