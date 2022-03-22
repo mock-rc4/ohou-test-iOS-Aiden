@@ -9,7 +9,15 @@ import UIKit
 
 
 class StoreViewController: BaseViewController {
+    
+    @IBOutlet weak var searchBar: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // UI 설정
+        addRadiusToUIView(searchBar, size: searchBar.frame.height / 10)
+
     }
 }

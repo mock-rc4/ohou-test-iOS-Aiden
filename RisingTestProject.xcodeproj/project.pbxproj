@@ -88,6 +88,9 @@
 		D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A527E98C5400421A34 /* GetProfileResponse.swift */; };
 		D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */; };
 		D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A431AF27E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib */; };
+		D0A431B227E9B10500421A34 /* StoreTapmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431B127E9B10500421A34 /* StoreTapmanViewController.swift */; };
+		D0A431B627E9B2AB00421A34 /* StoreHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431B527E9B2AB00421A34 /* StoreHomeViewController.swift */; };
+		D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431B827E9B33800421A34 /* StoreBestViewController.swift */; };
 		D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */; };
 		D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */; };
 		D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */; };
@@ -211,6 +214,9 @@
 		D0A431A527E98C5400421A34 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
 		D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginProfileTableViewHeader.swift; sourceTree = "<group>"; };
 		D0A431AF27E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AfterLoginProfileTableViewHeader.xib; sourceTree = "<group>"; };
+		D0A431B127E9B10500421A34 /* StoreTapmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTapmanViewController.swift; sourceTree = "<group>"; };
+		D0A431B527E9B2AB00421A34 /* StoreHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeViewController.swift; sourceTree = "<group>"; };
+		D0A431B827E9B33800421A34 /* StoreBestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestViewController.swift; sourceTree = "<group>"; };
 		D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingTapHeader.swift; sourceTree = "<group>"; };
 		D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShoppingTapHeader.xib; sourceTree = "<group>"; };
 		D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -493,6 +499,8 @@
 			isa = PBXGroup;
 			children = (
 				D02AA6AE27E9727B004E6703 /* StoreViewController.swift */,
+				D0A431B127E9B10500421A34 /* StoreTapmanViewController.swift */,
+				D0A431B327E9B26900421A34 /* 스토어VC - 상단탭 */,
 			);
 			name = "스토어 VC";
 			path = "스토어 VC";
@@ -945,6 +953,34 @@
 			path = "로그인 후";
 			sourceTree = "<group>";
 		};
+		D0A431B327E9B26900421A34 /* 스토어VC - 상단탭 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431B427E9B28400421A34 /* 스토어홈 */,
+				D0A431B727E9B32800421A34 /* 베스트 */,
+			);
+			name = "스토어VC - 상단탭";
+			path = "스토어VC - 상단탭";
+			sourceTree = "<group>";
+		};
+		D0A431B427E9B28400421A34 /* 스토어홈 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431B527E9B2AB00421A34 /* StoreHomeViewController.swift */,
+			);
+			name = "스토어홈";
+			path = "스토어홈";
+			sourceTree = "<group>";
+		};
+		D0A431B727E9B32800421A34 /* 베스트 */ = {
+			isa = PBXGroup;
+			children = (
+				D0A431B827E9B33800421A34 /* StoreBestViewController.swift */,
+			);
+			name = "베스트";
+			path = "베스트";
+			sourceTree = "<group>";
+		};
 		D0B1D17727E8A3B80002823D /* orderCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1361,8 +1397,10 @@
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
 				D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */,
+				D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
+				D0A431B227E9B10500421A34 /* StoreTapmanViewController.swift in Sources */,
 				D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */,
 				D0252C7927E8598700998372 /* PhotoCollectionViewFooter.swift in Sources */,
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
@@ -1407,6 +1445,7 @@
 				D0B8F21F27E78B550085BEBD /* SignUpRequest.swift in Sources */,
 				D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
+				D0A431B627E9B2AB00421A34 /* StoreHomeViewController.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
