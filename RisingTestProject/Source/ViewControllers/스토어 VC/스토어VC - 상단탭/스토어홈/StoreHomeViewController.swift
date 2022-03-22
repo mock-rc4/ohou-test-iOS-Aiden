@@ -32,6 +32,7 @@ class StoreHomeViewController: BaseViewController {
         tableView.register(UINib(nibName: "StoreTodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreTodayDealTableViewCell")
         tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
         tableView.register(UINib(nibName: "PopularKeywordTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularKeywordTableViewCell")
+        tableView.register(UINib(nibName: "PopularProductTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularProductTableViewCell")
     }
 }
 
@@ -43,7 +44,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 테이블뷰 Cell 설정
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
     
     // Cell 설정
@@ -67,7 +68,11 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             addSeparator(cell)
             return cell
         }else {
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            return cell
         }
     }
     
@@ -79,7 +84,9 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
         }else if indexPath.row == 4{
             return tableView.frame.width * 0.75
         }else {
-            return 50
+            // 인기상품 Cell 높이 조절 필요
+            // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
+            return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
         }
     }
     
