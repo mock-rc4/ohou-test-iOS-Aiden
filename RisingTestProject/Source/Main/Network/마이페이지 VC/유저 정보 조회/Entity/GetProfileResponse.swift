@@ -11,13 +11,13 @@ struct GetProfileResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: [UserInfo]
+    var result: UserInfo
 }
 
 
 struct UserInfo: Decodable {
     var nickname: String
-    var profile_Img: String
+    var profile_Img: String?
     var following_Cnt: Int
     var follower_Cnt: Int
     var scrap_Cnt: Int

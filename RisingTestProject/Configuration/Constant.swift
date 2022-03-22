@@ -26,4 +26,7 @@ struct Constant {
     static var accoundID: Int?
     static var jwt: String?
     
+    
+    // 유저 정보
+    static var userInfo: UserInfo?
 }

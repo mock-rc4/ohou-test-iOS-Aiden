@@ -46,6 +46,15 @@ class ProfileViewController: BaseViewController {
         tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
         tableView.register(UINib(nibName: "CommercialTableViewCell", bundle: nil), forCellReuseIdentifier: "CommercialTableViewCell")
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // 유저 정보 조회하기 API 호출
+        if Constant.isUserLogged && Constant.userInfo == nil {
+            GetProfileDataManager().getProfile(delegate: self)
+        }
     }
 }
 
@@ -123,7 +132,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AfterLoginProfileTableViewHeader") as? AfterLoginProfileTableViewHeader else {
                 return UIView()
             }
-//            headerView.updateCell(<#T##userInfo: UserInfo##UserInfo#>)
+            if let user = Constant.userInfo {
+                headerView.updateCell(user)
+            }
             return headerView
             
         }else {

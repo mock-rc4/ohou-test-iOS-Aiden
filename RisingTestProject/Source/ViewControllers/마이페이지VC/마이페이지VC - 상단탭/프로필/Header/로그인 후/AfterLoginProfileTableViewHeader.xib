@@ -161,7 +161,6 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Yqh-T0-8E0" firstAttribute="leading" secondItem="7sF-aa-4xK" secondAttribute="leading" id="4Yb-xo-I94"/>
                 <constraint firstItem="Y0I-6f-d5j" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="7jC-Uw-sKv"/>
