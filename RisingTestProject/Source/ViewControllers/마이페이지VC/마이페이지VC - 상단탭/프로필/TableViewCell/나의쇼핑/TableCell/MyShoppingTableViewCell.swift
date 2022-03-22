@@ -31,9 +31,9 @@ class MyShoppingTableViewCell: UITableViewCell {
     }
     
     
-    func updateCell(_ order: Int, coupon: Int, point: Int) {
-        self.orderCount.text = "\(order)"
-        self.coupon.text = "\(coupon)"
-        self.point.text = "\(point)"
+    func updateCell(_ userInfo: UserInfo) {
+        self.orderCount.text = "\(userInfo.order_Cnt)"
+        self.coupon.text = "\(userInfo.cupon_Cnt)"
+        self.point.text = "\(userInfo.point_Score)"
     }
 }

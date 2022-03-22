@@ -20,7 +20,7 @@
                         <constraint firstAttribute="width" secondItem="YZG-1u-zJf" secondAttribute="height" multiplier="1:1" id="9Ds-xN-pvI"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 &amp; 가입하기 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-Dg-q3c">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 &amp; 가입하기 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-Dg-q3c" userLabel="로그인 &amp; 가입하기">
                     <rect key="frame" x="118.5" y="30" width="161.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                     <nil key="textColor"/>
@@ -115,19 +115,31 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYA-js-Whr">
+                    <rect key="frame" x="118.5" y="30" width="161.5" height="65"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="didTapLoginButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="KFh-6f-CWd"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="KGC-Qb-qty" firstAttribute="top" secondItem="4m3-Dg-q3c" secondAttribute="bottom" constant="5" id="71d-XM-pWr"/>
+                <constraint firstItem="yYA-js-Whr" firstAttribute="top" secondItem="4m3-Dg-q3c" secondAttribute="top" id="8ab-Gb-CaQ"/>
                 <constraint firstItem="KGC-Qb-qty" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="8vo-Xo-ocD"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.75" id="CCK-rz-Tau"/>
+                <constraint firstItem="yYA-js-Whr" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="Cg7-J6-gfu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KGC-Qb-qty" secondAttribute="trailing" constant="100" id="FTg-QD-BDk"/>
+                <constraint firstItem="yYA-js-Whr" firstAttribute="trailing" secondItem="4m3-Dg-q3c" secondAttribute="trailing" id="PpQ-eM-CJF"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.2" id="TDQ-WW-1D1"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="bottom" constant="20" id="a3S-Z0-HJx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="4m3-Dg-q3c" secondAttribute="trailing" constant="162" id="eGS-KN-HvB"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="lxY-kS-GKB"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="leading" secondItem="YZG-1u-zJf" secondAttribute="trailing" constant="15" id="mFh-fT-o90"/>
                 <constraint firstItem="4m3-Dg-q3c" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="top" id="nK5-kR-9kC"/>
+                <constraint firstItem="yYA-js-Whr" firstAttribute="bottom" secondItem="KGC-Qb-qty" secondAttribute="bottom" id="vjt-j8-j0s"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="yUh-oA-Pea"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="yr9-Bm-Jp2"/>
             </constraints>

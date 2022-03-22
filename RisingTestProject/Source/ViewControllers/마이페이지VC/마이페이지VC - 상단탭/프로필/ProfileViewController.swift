@@ -73,7 +73,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
-            cell.updateCell(0, coupon: 0, point: 0)
+            if let user = Constant.userInfo {
+                cell.updateCell(user)
+            }
             return cell
             
         }else if indexPath.row == 1 {
@@ -141,6 +143,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProfileTableViewHeader") as? ProfileTableViewHeader else {
                 return UIView()
             }
+            headerView.delegate = self
             return headerView
         }
     }
@@ -148,4 +151,17 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.width * 0.6
     }
+}
+
+
+
+extension ProfileViewController: showLoginVC {
+    func presentLoginVC() {
+        guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "InitialNavigationController") as? UINavigationController else {
+            return
+        }
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
+    }
+    
 }
