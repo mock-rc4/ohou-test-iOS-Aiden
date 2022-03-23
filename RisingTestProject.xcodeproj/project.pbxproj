@@ -78,6 +78,7 @@
 		D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */; };
 		D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A2DEC27E5D61400D1C7D6 /* CommercialBannerCell.swift */; };
 		D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */; };
+		D0513FDA27EB6D780053714E /* TodayDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0513FD927EB6D780053714E /* TodayDealViewController.swift */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
@@ -161,6 +162,10 @@
 		D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F8A27E5958100948269 /* InitialViewController.swift */; };
 		D0ED008E27EB313000904DC7 /* PopularKeywordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED008D27EB313000904DC7 /* PopularKeywordDataManager.swift */; };
 		D0ED009127EB317D00904DC7 /* PopularKeywordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */; };
+		D0FDE80827EB727B00C4C2A3 /* TodayDealTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDE80727EB727B00C4C2A3 /* TodayDealTabHeader.swift */; };
+		D0FDE80A27EB728A00C4C2A3 /* TodayDealTabHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FDE80927EB728A00C4C2A3 /* TodayDealTabHeader.xib */; };
+		D0FDE80D27EB731B00C4C2A3 /* TodayDealTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDE80B27EB731B00C4C2A3 /* TodayDealTabCell.swift */; };
+		D0FDE80E27EB731B00C4C2A3 /* TodayDealTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FDE80C27EB731B00C4C2A3 /* TodayDealTabCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +241,7 @@
 		D04A2DE927E5CF1200D1C7D6 /* PopularityTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityTableViewHeader.xib; sourceTree = "<group>"; };
 		D04A2DEC27E5D61400D1C7D6 /* CommercialBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialBannerCell.swift; sourceTree = "<group>"; };
 		D04A2DED27E5D61400D1C7D6 /* CommercialBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommercialBannerCell.xib; sourceTree = "<group>"; };
+		D0513FD927EB6D780053714E /* TodayDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealViewController.swift; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +327,10 @@
 		D0EA7F8A27E5958100948269 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		D0ED008D27EB313000904DC7 /* PopularKeywordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularKeywordDataManager.swift; sourceTree = "<group>"; };
 		D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularKeywordResponse.swift; sourceTree = "<group>"; };
+		D0FDE80727EB727B00C4C2A3 /* TodayDealTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealTabHeader.swift; sourceTree = "<group>"; };
+		D0FDE80927EB728A00C4C2A3 /* TodayDealTabHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayDealTabHeader.xib; sourceTree = "<group>"; };
+		D0FDE80B27EB731B00C4C2A3 /* TodayDealTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealTabCell.swift; sourceTree = "<group>"; };
+		D0FDE80C27EB731B00C4C2A3 /* TodayDealTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayDealTabCell.xib; sourceTree = "<group>"; };
 		FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -891,6 +901,17 @@
 			path = Banner;
 			sourceTree = "<group>";
 		};
+		D0513FD827EB6D1B0053714E /* 오늘의 딜 */ = {
+			isa = PBXGroup;
+			children = (
+				D0513FD927EB6D780053714E /* TodayDealViewController.swift */,
+				D0FDE80627EB723D00C4C2A3 /* header */,
+				D0FDE80527EB722E00C4C2A3 /* TableCell */,
+			);
+			name = "오늘의 딜";
+			path = "오늘의 딜";
+			sourceTree = "<group>";
+		};
 		D06AE19727E9CE7100F6EB3E /* 오늘의딜 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1216,6 +1237,7 @@
 			children = (
 				D0A431B427E9B28400421A34 /* 스토어홈 */,
 				D0A431B727E9B32800421A34 /* 베스트 */,
+				D0513FD827EB6D1B0053714E /* 오늘의 딜 */,
 			);
 			name = "스토어VC - 상단탭";
 			path = "스토어VC - 상단탭";
@@ -1520,6 +1542,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D0FDE80527EB722E00C4C2A3 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDE80B27EB731B00C4C2A3 /* TodayDealTabCell.swift */,
+				D0FDE80C27EB731B00C4C2A3 /* TodayDealTabCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D0FDE80627EB723D00C4C2A3 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D0FDE80727EB727B00C4C2A3 /* TodayDealTabHeader.swift */,
+				D0FDE80927EB728A00C4C2A3 /* TodayDealTabHeader.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
 		F6915DFCE52AE4DE4F1746A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1625,6 +1665,7 @@
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D0252C7027E851B700998372 /* PhotoTableViewCell.xib in Resources */,
 				D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */,
+				D0FDE80A27EB728A00C4C2A3 /* TodayDealTabHeader.xib in Resources */,
 				D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */,
 				D011D0B127E7590B00E72072 /* ReviewTableViewCell.xib in Resources */,
 				D005E26427E6070A0001B63C /* PopularityPostTableViewCell.xib in Resources */,
@@ -1635,6 +1676,7 @@
 				D0252C6827E83A6B00998372 /* ProfileTableViewHeader.xib in Resources */,
 				D0B1D17C27E8A4440002823D /* MyShoppingTapCell.xib in Resources */,
 				D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */,
+				D0FDE80E27EB731B00C4C2A3 /* TodayDealTabCell.xib in Resources */,
 				D0B1D17627E89D9B0002823D /* OngoingOrderTableViewCell.xib in Resources */,
 				D0B66E4927EB5B89005776EB /* BottomSheetTableViewFooter.xib in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
@@ -1709,6 +1751,7 @@
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
 				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
 				D0EA7F7C27E590D300948269 /* String.swift in Sources */,
+				D0513FDA27EB6D780053714E /* TodayDealViewController.swift in Sources */,
 				D0DB6C7527E95BD500DC55D4 /* ModifyProfileViewController.swift in Sources */,
 				D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */,
 				D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */,
@@ -1753,6 +1796,7 @@
 				D01249F927E72E380035456F /* PopularityMediaTableViewCell.swift in Sources */,
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
+				D0FDE80827EB727B00C4C2A3 /* TodayDealTabHeader.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
 				D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */,
 				D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */,
@@ -1761,6 +1805,7 @@
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
 				D02FD0B127EAAB0B00E21319 /* CommercialImageDataManager.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
+				D0FDE80D27EB731B00C4C2A3 /* TodayDealTabCell.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,

@@ -18,6 +18,6 @@ class StoreViewController: BaseViewController {
         
         // UI 설정
         addRadiusToUIView(searchBar, size: searchBar.frame.height / 10)
-
     }
+    
 }

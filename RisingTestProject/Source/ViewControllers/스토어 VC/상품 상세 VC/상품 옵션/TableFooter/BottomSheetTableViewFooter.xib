@@ -56,7 +56,6 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IfL-1x-AZq" secondAttribute="bottom" constant="7" id="A4g-Wt-QeQ"/>
                 <constraint firstItem="IfL-1x-AZq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="nSS-g0-iJm"/>

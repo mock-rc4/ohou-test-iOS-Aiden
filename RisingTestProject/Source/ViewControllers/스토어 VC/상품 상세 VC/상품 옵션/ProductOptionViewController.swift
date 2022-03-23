@@ -33,9 +33,16 @@ class ProductOptionViewController: BaseViewController {
         // cell
         optionTableView.register(UINib(nibName: "BottomSheetTableViewCell", bundle: nil), forCellReuseIdentifier: "BottomSheetTableViewCell")
         
-        
     }
+    
+    
+//    func addRadiusToUIViewTop(_ view: UITableView, radiusSize: CGFloat) {
+//        view.layer.cornerRadius = radiusSize
+//        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//    }
 }
+
+
 
 
 
@@ -69,6 +76,6 @@ extension ProductOptionViewController: UITableViewDelegate, UITableViewDataSourc
     }
     // Footer 높이값 주기
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 0.7
+        return tableView.frame.width * 0.3
     }
 }

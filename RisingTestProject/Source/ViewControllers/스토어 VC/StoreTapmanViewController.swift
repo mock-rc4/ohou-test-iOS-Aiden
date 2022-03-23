@@ -26,7 +26,7 @@ class StoreTapmanViewController: TabmanViewController {
         viewControllers = [
             storyboard?.instantiateViewController(withIdentifier: "StoreHomeViewController") as! StoreHomeViewController,
             storyboard?.instantiateViewController(withIdentifier: "StoreBestViewController") as! StoreBestViewController,
-            storyboard?.instantiateViewController(withIdentifier: "StoreBestViewController") as! StoreBestViewController,
+            storyboard?.instantiateViewController(withIdentifier: "TodayDealViewController") as! TodayDealViewController,
             storyboard?.instantiateViewController(withIdentifier: "StoreBestViewController") as! StoreBestViewController,
             storyboard?.instantiateViewController(withIdentifier: "StoreBestViewController") as! StoreBestViewController,
             storyboard?.instantiateViewController(withIdentifier: "StoreBestViewController") as! StoreBestViewController,
