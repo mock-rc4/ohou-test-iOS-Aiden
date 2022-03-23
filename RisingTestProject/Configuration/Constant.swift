@@ -37,4 +37,8 @@ struct Constant {
     // 광고 이미지 배열
     static var storeViewBannerImage: [UIImage] = []
     static var myPageViewBannerImage: [UIImage] = []
+    
+    
+    // 오늘의 딜 데이터
+    static var todayDealProductInfo: [ProductCellInfo] = []
 }

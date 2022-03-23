@@ -9,11 +9,20 @@ import UIKit
 
 class StoreHomeViewController: BaseViewController {
     
+    // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
+    var isApiConnectionSuccess: [Bool] = [false, false] {
+        didSet {
+            if isApiConnectionSuccess.allSatisfy({$0}) {
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    
+    
     // MARK: - UI 연결
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
     
     
     
@@ -38,8 +47,12 @@ class StoreHomeViewController: BaseViewController {
         tableView.register(UINib(nibName: "PopularProductTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularProductTableViewCell")
         
         
+        // MARK: - API
         // 광고 이미지 API 호출
         CommercialImageDataManager().getBannerImage(CommercialImageRequest(location: "store"), delegate: self)
+        
+        // 오늘의딜 API 호출
+        TodayDealDataManager().getTodayDealProductInfo(delegate: self)
     }
 }
 
@@ -61,7 +74,11 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            // View 전환 delegate
             cell.delegate = self
+            if Constant.todayDealProductInfo.count >= 4 {
+                cell.collectionView.reloadData()
+            }
             return cell
         }else if indexPath.row <= 3{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {

@@ -102,6 +102,10 @@
 		D0910F6227E56D9800793D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6027E56D9800793D90 /* Main.storyboard */; };
 		D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6327E56D9B00793D90 /* Assets.xcassets */; };
 		D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0910F6527E56D9B00793D90 /* LaunchScreen.storyboard */; };
+		D092D32427EB087D00A5BAF2 /* TodayDealDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092D32327EB087D00A5BAF2 /* TodayDealDataManager.swift */; };
+		D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092D32627EB08BC00A5BAF2 /* TodayDealResponse.swift */; };
+		D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09D5BEF27EB26B800F4B9D0 /* UIImage.swift */; };
+		D09D5BF227EB2BC100F4B9D0 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09D5BF127EB2BC100F4B9D0 /* PaddingLabel.swift */; };
 		D0A431A427E98AD800421A34 /* GetProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */; };
 		D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A527E98C5400421A34 /* GetProfileResponse.swift */; };
 		D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */; };
@@ -250,6 +254,10 @@
 		D0910F6327E56D9B00793D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0910F6627E56D9B00793D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0910F6827E56D9B00793D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D092D32327EB087D00A5BAF2 /* TodayDealDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealDataManager.swift; sourceTree = "<group>"; };
+		D092D32627EB08BC00A5BAF2 /* TodayDealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealResponse.swift; sourceTree = "<group>"; };
+		D09D5BEF27EB26B800F4B9D0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		D09D5BF127EB2BC100F4B9D0 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileDataManager.swift; sourceTree = "<group>"; };
 		D0A431A527E98C5400421A34 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
 		D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginProfileTableViewHeader.swift; sourceTree = "<group>"; };
@@ -1100,6 +1108,33 @@
 			path = RisingTestProject;
 			sourceTree = "<group>";
 		};
+		D092D32127EB085200A5BAF2 /* 스토어VC */ = {
+			isa = PBXGroup;
+			children = (
+				D092D32227EB085A00A5BAF2 /* 오늘의 딜 */,
+			);
+			name = "스토어VC";
+			path = "스토어VC";
+			sourceTree = "<group>";
+		};
+		D092D32227EB085A00A5BAF2 /* 오늘의 딜 */ = {
+			isa = PBXGroup;
+			children = (
+				D092D32327EB087D00A5BAF2 /* TodayDealDataManager.swift */,
+				D092D32527EB089B00A5BAF2 /* Entity */,
+			);
+			name = "오늘의 딜";
+			path = "오늘의 딜";
+			sourceTree = "<group>";
+		};
+		D092D32527EB089B00A5BAF2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D092D32627EB08BC00A5BAF2 /* TodayDealResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0A431A127E98A7100421A34 /* 유저 정보 조회 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1361,6 +1396,7 @@
 				D0EA7F8327E5913400948269 /* UINavigationBar.swift */,
 				D06B482E27E8185400C881E0 /* UITabBar.swift */,
 				D06B483027E8189700C881E0 /* CALayer.swift */,
+				D09D5BEF27EB26B800F4B9D0 /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1372,6 +1408,7 @@
 				D0EA7F7327E5904F00948269 /* CustomLabel.swift */,
 				D0EA7F7527E5905A00948269 /* IndicatorView.swift */,
 				D06B482C27E817F000C881E0 /* CustomTabBarController.swift */,
+				D09D5BF127EB2BC100F4B9D0 /* PaddingLabel.swift */,
 			);
 			path = CommonClass;
 			sourceTree = "<group>";
@@ -1408,6 +1445,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D092D32127EB085200A5BAF2 /* 스토어VC */,
 				D02FD0AE27EAAA9000E21319 /* 광고 이미지 */,
 				D01FB64B27E8C87300D01FDF /* 로그인 관련 */,
 				D01FB64C27E8C87A00D01FDF /* 홈VC */,
@@ -1596,6 +1634,7 @@
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
+				D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */,
 				D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
@@ -1617,6 +1656,7 @@
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
 				D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */,
 				D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */,
+				D092D32427EB087D00A5BAF2 /* TodayDealDataManager.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
 				D0A431B227E9B10500421A34 /* StoreTapmanViewController.swift in Sources */,
@@ -1675,12 +1715,14 @@
 				D02FD0B827EAD35200E21319 /* ProductInfoViewController.swift in Sources */,
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
+				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
 				D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */,
 				D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
+				D09D5BF227EB2BC100F4B9D0 /* PaddingLabel.swift in Sources */,
 				D06B483D27E81C5F00C881E0 /* MyShoppingViewController.swift in Sources */,
 				D014810427EA13E100BD3BAA /* PopularKeywordTableViewCell.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,

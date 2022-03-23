@@ -23,15 +23,29 @@
                             <constraint firstAttribute="width" secondItem="Pdo-pc-bRK" secondAttribute="height" multiplier="1:1" id="eOk-x9-N2p"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n일 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-bD-uIF">
-                        <rect key="frame" x="8" y="8" width="42" height="14.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n일 남음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-bD-uIF" customClass="PaddingLabel" customModule="RisingTestProject" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="46" height="16.5"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-zj-xZn">
-                        <rect key="frame" x="186" y="8" width="211" height="144"/>
+                        <rect key="frame" x="186" y="8" width="211" height="146"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핼로우슬립" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwY-My-Jnp">
                                 <rect key="frame" x="0.0" y="0.0" width="48" height="13.5"/>
@@ -86,25 +100,75 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt8-3H-Hut">
-                                <rect key="frame" x="0.0" y="128" width="22.5" height="16"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-kH-1G2">
+                                <rect key="frame" x="0.0" y="128" width="85.5" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaV-Cg-PsC" customClass="PaddingLabel" customModule="RisingTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="18"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt8-3H-Hut" customClass="PaddingLabel" customModule="RisingTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="59" y="0.0" width="26.5" height="18"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                     </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-41-cJJ">
+                        <rect key="frame" x="146" y="146" width="20" height="20"/>
+                        <color key="tintColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="kxa-jv-LG6"/>
+                            <constraint firstAttribute="height" constant="20" id="xne-pF-rfx"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="9wn-bD-uIF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="6dx-Bu-1Xm"/>
                 <constraint firstAttribute="trailing" secondItem="WL6-zj-xZn" secondAttribute="trailing" constant="10" id="AbZ-ap-pGA"/>
+                <constraint firstItem="qcP-41-cJJ" firstAttribute="trailing" secondItem="Pdo-pc-bRK" secondAttribute="trailing" constant="-10" id="DVe-hc-yFc"/>
                 <constraint firstItem="9wn-bD-uIF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Doq-C0-mmp"/>
                 <constraint firstItem="WL6-zj-xZn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="N9i-eQ-AXf"/>
                 <constraint firstItem="Pdo-pc-bRK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PX3-S7-rIT"/>
                 <constraint firstAttribute="bottom" secondItem="Pdo-pc-bRK" secondAttribute="bottom" id="gFg-t8-HTJ"/>
+                <constraint firstItem="qcP-41-cJJ" firstAttribute="bottom" secondItem="Pdo-pc-bRK" secondAttribute="bottom" constant="-10" id="k0L-TG-fWs"/>
                 <constraint firstItem="Pdo-pc-bRK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wT3-i8-meM"/>
                 <constraint firstItem="WL6-zj-xZn" firstAttribute="leading" secondItem="Pdo-pc-bRK" secondAttribute="trailing" constant="10" id="yuw-xk-VNJ"/>
             </constraints>
@@ -112,22 +176,39 @@
             <connections>
                 <outlet property="companyName" destination="TwY-My-Jnp" id="319-Tl-MV5"/>
                 <outlet property="discountRate" destination="1bf-a0-zJx" id="Tjs-EV-MOV"/>
+                <outlet property="freeDelivery" destination="SaV-Cg-PsC" id="Lb4-ie-61c"/>
                 <outlet property="nDayLeft" destination="9wn-bD-uIF" id="p9h-ci-CLk"/>
                 <outlet property="price" destination="gLe-oL-6ET" id="RZR-G8-72S"/>
                 <outlet property="productImage" destination="Pdo-pc-bRK" id="ikP-rV-loH"/>
                 <outlet property="productName" destination="aeC-Rh-meE" id="gV0-sF-EPu"/>
                 <outlet property="rating" destination="LB8-zC-D5z" id="bk2-Kj-Be4"/>
                 <outlet property="reviews" destination="QQp-Ei-mBB" id="lYB-rs-0Hc"/>
+                <outlet property="scrapImage" destination="qcP-41-cJJ" id="FTu-3L-5c8"/>
                 <outlet property="specialPrice" destination="Gt8-3H-Hut" id="lGN-q1-YpH"/>
             </connections>
             <point key="canvasLocation" x="394.92753623188406" y="152.00892857142856"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="9wn-bD-uIF">
+            <size key="intrinsicContentSize" width="46" height="16.5"/>
+        </designable>
+        <designable name="Gt8-3H-Hut">
+            <size key="intrinsicContentSize" width="26.5" height="18"/>
+        </designable>
+        <designable name="SaV-Cg-PsC">
+            <size key="intrinsicContentSize" width="49" height="18"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="오늘의딜 제품" width="544" height="555"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

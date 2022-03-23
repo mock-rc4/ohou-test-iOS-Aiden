@@ -22,6 +22,9 @@ class StoreTodayDealTableViewCell: UITableViewCell {
     var delegate: ShowProductDetailPage?
     
     
+    // 오늘의딜 4개 데이터
+//    var todayDealData: [ProductCellInfo] = []
+    
     
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!
@@ -71,6 +74,10 @@ extension StoreTodayDealTableViewCell: UICollectionViewDelegate, UICollectionVie
         }else if indexPath.section == 1{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreTodayDealCollectionViewCell", for: indexPath) as? StoreTodayDealCollectionViewCell else {
                 return UICollectionViewCell()
+            }
+            // MARK: - 여기서 데이터 넘겨주기
+            if Constant.todayDealProductInfo.count >= 4 {
+                cell.updateCell(Constant.todayDealProductInfo[indexPath.row])
             }
             return cell
         }else {

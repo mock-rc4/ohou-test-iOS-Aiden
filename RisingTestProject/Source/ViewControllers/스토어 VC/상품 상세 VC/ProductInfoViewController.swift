@@ -75,6 +75,6 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 2.25
+        return tableView.frame.width * 2.4
     }
 }
