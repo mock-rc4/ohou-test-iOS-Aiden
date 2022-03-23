@@ -6,20 +6,45 @@
 //
 
 import UIKit
+import MaterialComponents
 
 
 class ProductInfoViewController: BaseViewController {
     
+    // 해당 상품 옵션 정보
+    var productOption: [String] = [
+        "사이즈선택",
+        "색상선택",
+        "추가 상품(선택)"
+    ]
+    
+    
     // UI연결
     @IBOutlet weak var tableView: UITableView!
     
-    
+    // 뒤로가기 버튼
     @IBAction func didTapPopButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     
+    // 구매하기 버튼 클릭
+    @IBAction func didTapPurchaseButton(_ sender: UIButton) {
+        guard let optionVC = storyboard?.instantiateViewController(withIdentifier: "ProductOptionViewController") as? ProductOptionViewController else {
+            return
+        }
+        optionVC.optionCellArray = productOption
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: optionVC)
+        
+        // bottomsheet의 높이를 100(여유) + 옵션 수 * 40으로 설정
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = CGFloat(100 + (productOption.count * 40))
+        present(bottomSheet, animated: true)
+    }
     
+    
+    
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         

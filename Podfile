@@ -12,6 +12,7 @@ pod 'KakaoSDKCommon'
 pod 'KakaoSDKAuth'
 pod 'KakaoSDKUser'
 pod 'Alamofire', '~> 5.5'
+pod 'MaterialComponents/BottomSheet'
 
 
 end

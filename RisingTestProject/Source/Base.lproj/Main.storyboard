@@ -2139,6 +2139,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="구매하기"/>
+                                        <connections>
+                                            <action selector="didTapPurchaseButton:" destination="Kcl-SF-tiB" eventType="touchUpInside" id="TNF-xA-m0v"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2179,6 +2182,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUU-gy-W3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="173.91304347826087" y="2966.5178571428569"/>
+        </scene>
+        <!--Product Option View Controller-->
+        <scene sceneID="GzX-FS-nxK">
+            <objects>
+                <viewController storyboardIdentifier="ProductOptionViewController" id="bAC-r3-QjB" customClass="ProductOptionViewController" customModule="RisingTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3NS-Bt-pZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-VD-xXY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d7k-LI-4UE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oyq-VD-xXY" firstAttribute="top" secondItem="d7k-LI-4UE" secondAttribute="top" id="2Bq-L3-LTR"/>
+                            <constraint firstItem="d7k-LI-4UE" firstAttribute="bottom" secondItem="Oyq-VD-xXY" secondAttribute="bottom" id="BbO-4V-R6Q"/>
+                            <constraint firstItem="Oyq-VD-xXY" firstAttribute="leading" secondItem="d7k-LI-4UE" secondAttribute="leading" id="NiB-m1-MDH"/>
+                            <constraint firstItem="d7k-LI-4UE" firstAttribute="trailing" secondItem="Oyq-VD-xXY" secondAttribute="trailing" id="ZaW-1N-wiJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="optionTableView" destination="Oyq-VD-xXY" id="7rV-R7-JMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09o-3D-t62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565" y="2967"/>
         </scene>
         <!--Store Best View Controller-->
         <scene sceneID="ckH-HP-toA">
