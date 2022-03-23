@@ -10,7 +10,7 @@ import UIKit
 class StoreHomeViewController: BaseViewController {
     
     // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
-    var isApiConnectionSuccess: [Bool] = [false, false] {
+    var isApiConnectionSuccess: [Bool] = [false, false, false] {
         didSet {
             if isApiConnectionSuccess.allSatisfy({$0}) {
                 tableView.reloadData()
@@ -18,7 +18,8 @@ class StoreHomeViewController: BaseViewController {
         }
     }
     
-    
+    // API로 받아오는 데이터
+    var popularKeywords: [PopularKeyword] = []
     
     
     // MARK: - UI 연결
@@ -53,6 +54,9 @@ class StoreHomeViewController: BaseViewController {
         
         // 오늘의딜 API 호출
         TodayDealDataManager().getTodayDealProductInfo(delegate: self)
+        
+        // 인기키워드 API 호출
+        PopularKeywordDataManager().getPopularKeyword(delegate: self)
     }
 }
 
@@ -91,6 +95,9 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if isApiConnectionSuccess[2] == true {
+                cell.updateCell(popularKeywords)
+            }
             return cell
         }else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {

@@ -153,6 +153,8 @@
 		D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F8127E5911B00948269 /* UIViewController.swift */; };
 		D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F8327E5913400948269 /* UINavigationBar.swift */; };
 		D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F8A27E5958100948269 /* InitialViewController.swift */; };
+		D0ED008E27EB313000904DC7 /* PopularKeywordDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED008D27EB313000904DC7 /* PopularKeywordDataManager.swift */; };
+		D0ED009127EB317D00904DC7 /* PopularKeywordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -305,6 +307,8 @@
 		D0EA7F8127E5911B00948269 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		D0EA7F8327E5913400948269 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		D0EA7F8A27E5958100948269 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		D0ED008D27EB313000904DC7 /* PopularKeywordDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularKeywordDataManager.swift; sourceTree = "<group>"; };
+		D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularKeywordResponse.swift; sourceTree = "<group>"; };
 		FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1112,6 +1116,7 @@
 			isa = PBXGroup;
 			children = (
 				D092D32227EB085A00A5BAF2 /* 오늘의 딜 */,
+				D0ED008C27EB2F8500904DC7 /* 인기키워드 */,
 			);
 			name = "스토어VC";
 			path = "스토어VC";
@@ -1454,6 +1459,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D0ED008C27EB2F8500904DC7 /* 인기키워드 */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED008D27EB313000904DC7 /* PopularKeywordDataManager.swift */,
+				D0ED008F27EB314A00904DC7 /* Entity */,
+			);
+			name = "인기키워드";
+			path = "인기키워드";
+			sourceTree = "<group>";
+		};
+		D0ED008F27EB314A00904DC7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		F6915DFCE52AE4DE4F1746A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1635,6 +1658,7 @@
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
 				D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */,
+				D0ED008E27EB313000904DC7 /* PopularKeywordDataManager.swift in Sources */,
 				D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
@@ -1655,6 +1679,7 @@
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
 				D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */,
+				D0ED009127EB317D00904DC7 /* PopularKeywordResponse.swift in Sources */,
 				D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */,
 				D092D32427EB087D00A5BAF2 /* TodayDealDataManager.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,

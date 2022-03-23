@@ -19,9 +19,9 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var reviews: UILabel!
     
     
-    // 특가인지 여부에 따라 히든: ture/false
+    // 특가, 무배, 해외직구
     @IBOutlet weak var specialPrice: UILabel!
-    
+    @IBOutlet weak var freeDelivery: UILabel!
     
     
     
