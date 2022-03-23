@@ -33,6 +33,10 @@ class StoreHomeViewController: BaseViewController {
         tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
         tableView.register(UINib(nibName: "PopularKeywordTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularKeywordTableViewCell")
         tableView.register(UINib(nibName: "PopularProductTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularProductTableViewCell")
+        
+        
+        // 광고 이미지 API 호출
+        CommercialImageDataManager().getBannerImage(CommercialImageRequest(location: "store"), delegate: self)
     }
 }
 
@@ -100,8 +104,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "StoreHomeTableViewHeader") as? StoreHomeTableViewHeader else {
             return UIView()
         }
-//        headerView.imageArray = bannerImage
-//        headerView.collectionView.reloadData()
+        headerView.imageArray = Constant.storeViewBannerImage
+        headerView.collectionView.reloadData()
         return headerView
     }
     // header 높이값 주기

@@ -48,6 +48,9 @@
 		D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */; };
 		D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */; };
 		D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02AA6AE27E9727B004E6703 /* StoreViewController.swift */; };
+		D02FD0B127EAAB0B00E21319 /* CommercialImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FD0B027EAAB0B00E21319 /* CommercialImageDataManager.swift */; };
+		D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FD0B227EAAB4300E21319 /* CommercialImageRequest.swift */; };
+		D02FD0B527EAAB4A00E21319 /* CommercialImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FD0B427EAAB4A00E21319 /* CommercialImageResponse.swift */; };
 		D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */; };
 		D044D90C27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */; };
 		D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */; };
@@ -188,6 +191,9 @@
 		D02AA6A927E96A25004E6703 /* ModifyProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileRequest.swift; sourceTree = "<group>"; };
 		D02AA6AB27E96A2C004E6703 /* ModifyProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileResponse.swift; sourceTree = "<group>"; };
 		D02AA6AE27E9727B004E6703 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		D02FD0B027EAAB0B00E21319 /* CommercialImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialImageDataManager.swift; sourceTree = "<group>"; };
+		D02FD0B227EAAB4300E21319 /* CommercialImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialImageRequest.swift; sourceTree = "<group>"; };
+		D02FD0B427EAAB4A00E21319 /* CommercialImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialImageResponse.swift; sourceTree = "<group>"; };
 		D044D90927E6FD15004E9EC6 /* MainCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		D044D90A27E6FD15004E9EC6 /* MainCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		D044D90F27E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -599,9 +605,37 @@
 				D02AA6AE27E9727B004E6703 /* StoreViewController.swift */,
 				D0A431B127E9B10500421A34 /* StoreTapmanViewController.swift */,
 				D0A431B327E9B26900421A34 /* 스토어VC - 상단탭 */,
+				D02FD0B627EABD9900E21319 /* 상품 상세 VC */,
 			);
 			name = "스토어 VC";
 			path = "스토어 VC";
+			sourceTree = "<group>";
+		};
+		D02FD0AE27EAAA9000E21319 /* 광고 이미지 */ = {
+			isa = PBXGroup;
+			children = (
+				D02FD0B027EAAB0B00E21319 /* CommercialImageDataManager.swift */,
+				D02FD0AF27EAAADA00E21319 /* Entity */,
+			);
+			name = "광고 이미지";
+			path = "광고 이미지";
+			sourceTree = "<group>";
+		};
+		D02FD0AF27EAAADA00E21319 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D02FD0B427EAAB4A00E21319 /* CommercialImageResponse.swift */,
+				D02FD0B227EAAB4300E21319 /* CommercialImageRequest.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D02FD0B627EABD9900E21319 /* 상품 상세 VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "상품 상세 VC";
+			path = "상품 상세 VC";
 			sourceTree = "<group>";
 		};
 		D044D90827E6FCEE004E9EC6 /* Category */ = {
@@ -1349,6 +1383,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D02FD0AE27EAAA9000E21319 /* 광고 이미지 */,
 				D01FB64B27E8C87300D01FDF /* 로그인 관련 */,
 				D01FB64C27E8C87A00D01FDF /* 홈VC */,
 				D02AA6A427E9690F004E6703 /* 마이페이지 VC */,
@@ -1565,6 +1600,7 @@
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
 				D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */,
 				D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */,
+				D02FD0B527EAAB4A00E21319 /* CommercialImageResponse.swift in Sources */,
 				D06AE1A027E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
@@ -1583,6 +1619,7 @@
 				D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
+				D02FD0B127EAAB0B00E21319 /* CommercialImageDataManager.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
@@ -1608,6 +1645,7 @@
 				D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */,
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
 				D0A431B627E9B2AB00421A34 /* StoreHomeViewController.swift in Sources */,
+				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,

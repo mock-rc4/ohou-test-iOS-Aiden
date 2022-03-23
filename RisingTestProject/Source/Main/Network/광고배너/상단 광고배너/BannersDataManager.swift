@@ -22,11 +22,16 @@ class BannersDataManager {
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess {
+                        
+                        // MARK: - 성공
                         print("데이터 가져오기 성공")
                         
+                        // url string 배열
                         let urlString: [String] = response.result.map({
                             $0.banner_Img
                         })
+                        
+                        // url(string) -> UIImage로 변환하는 함수
                         self.urlToUIimage(urlString, completion: {
                             delegate.bannerImage = self.urlImages
                             delegate.tableView.reloadData()

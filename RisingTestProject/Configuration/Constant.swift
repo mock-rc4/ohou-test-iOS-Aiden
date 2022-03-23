@@ -5,6 +5,8 @@
 //  Created by 신동희 on 2022/03/19.
 //
 
+import UIKit
+
 //import Alamofire
 
 /// 전역으로 사용되는 내용들을 저장하는 곳
@@ -29,4 +31,10 @@ struct Constant {
     
     // 유저 정보
     static var userInfo: UserInfo?
+    
+    
+    
+    // 광고 이미지 배열
+    static var storeViewBannerImage: [UIImage] = []
+    static var myPageViewBannerImage: [UIImage] = []
 }
