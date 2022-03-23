@@ -60,7 +60,7 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "ProductInfoTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProductInfoTableViewHeader")
         
         // cell
-//        tableView.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "UserStylingTableViewCell", bundle: nil), forCellReuseIdentifier: "UserStylingTableViewCell")
     }
     
     
@@ -79,11 +79,22 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserStylingTableViewCell", for: indexPath) as? UserStylingTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        }else {
+            return UITableViewCell()
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        if indexPath.row == 0 {
+            return tableView.frame.width * 1.2
+        }else {
+            return 50
+        }
     }
     
     
