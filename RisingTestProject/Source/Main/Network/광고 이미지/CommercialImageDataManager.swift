@@ -44,6 +44,8 @@ class CommercialImageDataManager {
                             storeVC.tableView.reloadData()
                         }else {
                             Constant.myPageViewBannerImage = self.urlImages
+                            let myPageVC = delegate as! ProfileViewController
+                            myPageVC.tableView.reloadData()
                         }
                     })
                 }

@@ -47,6 +47,9 @@ class ProfileViewController: BaseViewController {
         tableView.register(UINib(nibName: "CommercialTableViewCell", bundle: nil), forCellReuseIdentifier: "CommercialTableViewCell")
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         
+        
+        // 광고배너 API 호출
+        CommercialImageDataManager().getBannerImage(CommercialImageRequest(location: "myPage"), delegate: self)
     }
     
     
@@ -92,6 +95,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
+            cell.commercialArray = Constant.myPageViewBannerImage
+            cell.collectionView.reloadData()
             return cell
             
         }else {
