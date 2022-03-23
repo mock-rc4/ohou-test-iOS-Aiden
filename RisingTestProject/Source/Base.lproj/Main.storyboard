@@ -1280,9 +1280,10 @@
                                     <constraint firstItem="J5c-i0-kSq" firstAttribute="leading" secondItem="ubd-bj-ksA" secondAttribute="leading" id="ee9-MJ-QzZ"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-6x-rU1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-6x-rU1">
                                 <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gpU-6T-ge2"/>
@@ -1427,9 +1428,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFT-PS-5Uc">
                                 <rect key="frame" x="15" y="551" width="384" height="34.5"/>
-                                <color key="tintColor" systemColor="systemCyanColor"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="변경하기">
+                                <buttonConfiguration key="configuration" style="plain" title="변경하기">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -1879,6 +1881,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5wB-z8-VtC">
                                 <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fIr-1O-aKU"/>
@@ -1919,6 +1922,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s81-6e-PgA">
                                 <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZWF-L5-WUB"/>
@@ -2049,8 +2053,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-SM-mF7">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="37.5"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x5j-t6-Nlv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="37.5"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x5j-t6-Nlv">
+                                                        <rect key="frame" x="0.0" y="0.5" width="37" height="36"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp7-sq-QQ5">
@@ -2107,13 +2111,48 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="didTapPopButton:" destination="Kcl-SF-tiB" eventType="touchUpInside" id="Sxu-VV-JWT"/>
                                     <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="fXn-ca-dWl"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZqC-iy-oqY">
-                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZqC-iy-oqY">
+                                <rect key="frame" x="0.0" y="96" width="414" height="714.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-Dh-Mio" userLabel="구매버튼">
+                                <rect key="frame" x="0.0" y="810.5" width="414" height="51.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isQ-Te-xUu">
+                                        <rect key="frame" x="15" y="5" width="41.5" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" systemColor="systemCyanColor"/>
+                                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="87" image="bookmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0b-bI-Ebs">
+                                        <rect key="frame" x="71.5" y="8" width="327.5" height="35.5"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="구매하기"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="isQ-Te-xUu" firstAttribute="leading" secondItem="ArM-Dh-Mio" secondAttribute="leading" constant="15" id="52i-P1-8nG"/>
+                                    <constraint firstItem="H0b-bI-Ebs" firstAttribute="top" secondItem="ArM-Dh-Mio" secondAttribute="top" constant="8" id="Hrd-Hi-bks"/>
+                                    <constraint firstItem="H0b-bI-Ebs" firstAttribute="leading" secondItem="isQ-Te-xUu" secondAttribute="trailing" constant="15" id="JLs-av-a4Y"/>
+                                    <constraint firstItem="isQ-Te-xUu" firstAttribute="top" secondItem="ArM-Dh-Mio" secondAttribute="top" constant="5" id="SBs-qC-K4F"/>
+                                    <constraint firstAttribute="width" secondItem="ArM-Dh-Mio" secondAttribute="height" multiplier="8:1" id="ZNc-J3-1CO"/>
+                                    <constraint firstAttribute="bottom" secondItem="H0b-bI-Ebs" secondAttribute="bottom" constant="8" id="dyK-CW-nIf"/>
+                                    <constraint firstAttribute="trailing" secondItem="H0b-bI-Ebs" secondAttribute="trailing" constant="15" id="qRc-La-P3M"/>
+                                    <constraint firstAttribute="bottom" secondItem="isQ-Te-xUu" secondAttribute="bottom" constant="5" id="yo9-HQ-1Zy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MK5-wP-sSf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2121,13 +2160,16 @@
                             <constraint firstItem="cxE-o7-MYd" firstAttribute="width" secondItem="cxE-o7-MYd" secondAttribute="height" multiplier="8:1" id="658-uC-xbv"/>
                             <constraint firstItem="cxE-o7-MYd" firstAttribute="leading" secondItem="xVx-IH-2Z5" secondAttribute="leading" id="6wN-vo-0xe"/>
                             <constraint firstItem="MK5-wP-sSf" firstAttribute="trailing" secondItem="ZqC-iy-oqY" secondAttribute="trailing" id="7M4-X9-FbH"/>
-                            <constraint firstItem="MK5-wP-sSf" firstAttribute="bottom" secondItem="ZqC-iy-oqY" secondAttribute="bottom" id="FKd-iU-mmZ"/>
+                            <constraint firstItem="ArM-Dh-Mio" firstAttribute="top" secondItem="ZqC-iy-oqY" secondAttribute="bottom" id="AEE-cO-bEX"/>
                             <constraint firstItem="cXG-2r-xG2" firstAttribute="centerY" secondItem="cxE-o7-MYd" secondAttribute="centerY" id="Gnq-M5-lnM"/>
+                            <constraint firstItem="MK5-wP-sSf" firstAttribute="bottom" secondItem="ArM-Dh-Mio" secondAttribute="bottom" id="HTn-d1-eVX"/>
                             <constraint firstItem="ZqC-iy-oqY" firstAttribute="top" secondItem="cxE-o7-MYd" secondAttribute="bottom" id="K0I-Qg-m0x"/>
                             <constraint firstItem="cxE-o7-MYd" firstAttribute="top" secondItem="MK5-wP-sSf" secondAttribute="top" id="Lmn-y2-LT1"/>
                             <constraint firstItem="ZqC-iy-oqY" firstAttribute="leading" secondItem="MK5-wP-sSf" secondAttribute="leading" id="Noe-u1-pob"/>
                             <constraint firstItem="cXG-2r-xG2" firstAttribute="leading" secondItem="cxE-o7-MYd" secondAttribute="leading" id="OO6-bC-csV"/>
+                            <constraint firstItem="MK5-wP-sSf" firstAttribute="trailing" secondItem="ArM-Dh-Mio" secondAttribute="trailing" id="tHB-29-G6Q"/>
                             <constraint firstItem="MK5-wP-sSf" firstAttribute="trailing" secondItem="cxE-o7-MYd" secondAttribute="trailing" id="wsI-cW-bPW"/>
+                            <constraint firstItem="ArM-Dh-Mio" firstAttribute="leading" secondItem="MK5-wP-sSf" secondAttribute="leading" id="xFn-Pt-8sB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2136,7 +2178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUU-gy-W3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="2967"/>
+            <point key="canvasLocation" x="173.91304347826087" y="2966.5178571428569"/>
         </scene>
         <!--Store Best View Controller-->
         <scene sceneID="ckH-HP-toA">

@@ -48,6 +48,9 @@ class SettingViewController: BaseViewController {
         // 테이블뷰 세팅
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
+        
         tableView.register(UINib(nibName: "SettingTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingTableViewCell")
     }
 }

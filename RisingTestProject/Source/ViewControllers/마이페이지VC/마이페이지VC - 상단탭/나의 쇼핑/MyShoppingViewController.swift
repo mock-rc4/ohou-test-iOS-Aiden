@@ -26,6 +26,9 @@ class MyShoppingViewController: BaseViewController {
         // tableView 세팅
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
+
         
         tableView.register(UINib(nibName: "MyShoppingTapHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "MyShoppingTapHeader")
         

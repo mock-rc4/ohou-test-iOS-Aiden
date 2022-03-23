@@ -18,7 +18,7 @@ struct Constant {
     static var isUserLogged: Bool = false
     
     // 유저가 둘러보기 버튼을 눌렀는지?
-    static var isUserTapLookAroundButton: Bool = false
+    static var isUserTapLookAroundButton: Bool = true
     
     // API호출 기본 url
     static let baseURL = "https://prod.eun0-dev.com"

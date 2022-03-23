@@ -7,8 +7,22 @@
 
 import UIKit
 
+// 화면전환 프로토콜 생성
+protocol ShowProductDetailPage {
+    func showDetailPage()
+}
+
+
+
+
+
 class StoreTodayDealTableViewCell: UITableViewCell {
 
+    // 뷰 전환 위한 delegate
+    var delegate: ShowProductDetailPage?
+    
+    
+    
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -71,6 +85,14 @@ extension StoreTodayDealTableViewCell: UICollectionViewDelegate, UICollectionVie
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 3
+    }
+    
+    
+    
+    // 컬렉션뷰 셀 선택되면 호출 (View전환)
+    // 미완성 -> 식별가능한 데이터를 넘겨줘야됨
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.showDetailPage()
     }
 }
 

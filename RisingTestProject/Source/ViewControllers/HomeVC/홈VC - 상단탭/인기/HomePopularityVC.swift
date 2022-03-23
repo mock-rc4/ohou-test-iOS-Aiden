@@ -31,6 +31,10 @@ class HomePopularityVC: BaseViewController {
         // 테이블뷰 설정
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
+
+        
         tableView.register(UINib(nibName: "PopularityPostTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityPostTableViewCell")
         tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         tableView.register(UINib(nibName: "TodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayDealTableViewCell")

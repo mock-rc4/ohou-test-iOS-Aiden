@@ -38,6 +38,8 @@ class ProfileViewController: BaseViewController {
         // TableView 세팅
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
         
         tableView.register(UINib(nibName: "ProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ProfileTableViewHeader")
         tableView.register(UINib(nibName: "AfterLoginProfileTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "AfterLoginProfileTableViewHeader")

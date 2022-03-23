@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="434" height="892"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-bh-4Rj">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DuB-bh-4Rj">
                     <rect key="frame" x="0.0" y="0.0" width="434" height="289.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>

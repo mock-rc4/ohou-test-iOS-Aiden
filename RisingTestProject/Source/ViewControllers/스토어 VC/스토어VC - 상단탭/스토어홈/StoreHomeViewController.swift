@@ -24,6 +24,9 @@ class StoreHomeViewController: BaseViewController {
         // 테이블뷰 세팅
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
+
         
         // header
         tableView.register(UINib(nibName: "StoreHomeTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "StoreHomeTableViewHeader")
@@ -58,6 +61,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            cell.delegate = self
             return cell
         }else if indexPath.row <= 3{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
@@ -112,4 +116,18 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.width * 2.1
     }
+}
+
+
+
+
+// MARK: - View전환 프로토콜 채택
+extension StoreHomeViewController: ShowProductDetailPage {
+    func showDetailPage() {
+        guard let productInfoVC = storyboard?.instantiateViewController(withIdentifier: "ProductInfoViewController") as? ProductInfoViewController else{
+            return
+        }
+        self.navigationController?.pushViewController(productInfoVC, animated: true)
+    }
+    
 }

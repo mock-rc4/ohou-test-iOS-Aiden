@@ -14,9 +14,18 @@ class ProductInfoViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBAction func didTapPopButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 탭바 히든
+        self.tabBarController?.tabBar.isHidden = true
+        
         
         // tableView 세팅
         tableView.delegate = self
@@ -27,6 +36,11 @@ class ProductInfoViewController: BaseViewController {
         
         // cell
 //        tableView.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: <#T##String#>)
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -61,6 +75,6 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 2
+        return tableView.frame.width * 2.25
     }
 }
