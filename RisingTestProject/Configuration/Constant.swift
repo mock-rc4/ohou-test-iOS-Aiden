@@ -13,7 +13,6 @@ import UIKit
 /// Contant.baseURL 형식으로 가져다가 사용
 struct Constant {
     
-    
     // 유저가 로그인 상태인지?
     static var isUserLogged: Bool = false
     
@@ -25,6 +24,7 @@ struct Constant {
     
     
     // 로그인 성공하면 저장할 값
+    // MARK: - 유저디폴트로 바꾸기
     static var accoundID: Int?
     static var jwt: String?
     
@@ -36,6 +36,8 @@ struct Constant {
     // 프로필이 수정되었는지 여부 저장
     static var profileChanged: Bool = true
     
+    // 로그아웃 버튼을 눌렀는지 여부 저장
+    static var userDidTapLogoutButton: Bool = false
     
     
     // 광고 이미지 배열
@@ -52,5 +54,6 @@ struct Constant {
     // 추천상품 데이터
     static var recommendProductInfo: [ProductCellInfoNoRemain] = []
     
-    
+    // 최근 본 상품
+    static var recentlySeenProductInfo: [ProductCellInfoNoRemain] = []
 }

@@ -100,6 +100,13 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             
             self.navigationController?.pushViewController(modifyProfileVC, animated: true)
         }
+        // 로그아웃
+        if indexPath.section == 2 && indexPath.row == 0 && Constant.isUserLogged == true {
+            Constant.isUserLogged = false
+            Constant.jwt = nil
+            Constant.userDidTapLogoutButton = true
+            presentAlert(title: "로그아웃 되었습니다.")
+        }
     }
     
 }

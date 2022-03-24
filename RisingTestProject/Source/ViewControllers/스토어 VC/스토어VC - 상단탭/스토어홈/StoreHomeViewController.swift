@@ -118,6 +118,10 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            cell.headerTitle = "최근 본 상품"
+            if Constant.relatedUserSawProductInfo.count >= 1 {
+                cell.collectionView.reloadData()
+            }
             return cell
         }
         else if indexPath.row == 4{

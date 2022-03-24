@@ -48,6 +48,9 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
             if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
                 return Constant.relatedUserSawProductInfo.count
             }
+            if Constant.recentlySeenProductInfo.count >= 1 && headerTitle == "최근 본 상품" {
+                return Constant.recentlySeenProductInfo.count
+            }
             else {
                 return 1
             }
@@ -73,6 +76,9 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
             }
             if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
                 cell.updateCell(Constant.recommendProductInfo[indexPath.row])
+            }
+            if Constant.recentlySeenProductInfo.count >= 1 && headerTitle == "최근 본 상품" {
+                cell.updateCell(Constant.recentlySeenProductInfo[indexPath.row])
             }
             return cell
         }
