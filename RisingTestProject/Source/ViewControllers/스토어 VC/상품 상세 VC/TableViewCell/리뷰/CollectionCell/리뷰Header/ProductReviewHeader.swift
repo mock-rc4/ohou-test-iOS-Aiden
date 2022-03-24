@@ -51,4 +51,8 @@ class ProductReviewHeader: UICollectionViewCell {
         forRadius.layer.cornerRadius = forRadius.frame.height / 9
     }
 
+    
+    func updateCell() {
+        
+    }
 }

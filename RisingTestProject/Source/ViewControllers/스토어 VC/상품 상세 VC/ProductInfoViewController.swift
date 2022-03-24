@@ -181,7 +181,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
         }
         // 리뷰 Cell
         else if indexPath.section == 2{
-            return tableView.frame.width * 1.5
+            return tableView.frame.width * 2.4
         }
         else {
             return 50

@@ -9,9 +9,19 @@ import UIKit
 
 class ProductReviewFooter: UICollectionViewCell {
 
+    // UI 연결
+    @IBOutlet weak var seeMoreReviewButton: UIButton!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        seeMoreReviewButton.layer.cornerRadius = seeMoreReviewButton.frame.height / 10
     }
 
+    
+    func updateCell(_ reviewCount: Int) {
+        seeMoreReviewButton.setTitle("리뷰 더보기 (\(reviewCount)", for: .normal)
+    }
 }

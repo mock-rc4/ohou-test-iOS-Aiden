@@ -40,9 +40,9 @@ extension ProductInfoTableViewCell: ExpyTableViewHeaderCell {
         case .willCollapse:
             print("닫힐거다: willCollapse")
         case .didExpand:
-            exTitleLabel.text = "접기"
+            exTitleLabel.text = "상품정보 접기"
         case .didCollapse:
-            exTitleLabel.text = "펼치기"
+            exTitleLabel.text = "상품정보 펼치기"
         }
     }
     
