@@ -10,6 +10,7 @@ import UIKit
 class UserStylingCollectionViewHeader: UICollectionViewCell {
 
     // UI연결
+    @IBOutlet weak var photoTitle: UILabel!
     @IBOutlet weak var numberOfPhoto: UILabel!
     
     
@@ -19,7 +20,8 @@ class UserStylingCollectionViewHeader: UICollectionViewCell {
     }
 
     
-    func updateCell(_ numberOfPhoto: Int) {
+    func updateCell(title: String, _ numberOfPhoto: Int) {
+        photoTitle.text = title
         self.numberOfPhoto.text = "\(numberOfPhoto)"
     }
 }

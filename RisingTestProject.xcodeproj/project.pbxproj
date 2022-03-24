@@ -115,6 +115,8 @@
 		D072FAED27EC33EB007134C7 /* ProductBestReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAEB27EC33EB007134C7 /* ProductBestReviewCell.xib */; };
 		D072FAF027EC3401007134C7 /* ProductReviewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072FAEE27EC3401007134C7 /* ProductReviewFooter.swift */; };
 		D072FAF127EC3401007134C7 /* ProductReviewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */; };
+		D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */; };
+		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -298,6 +300,8 @@
 		D072FAEB27EC33EB007134C7 /* ProductBestReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductBestReviewCell.xib; sourceTree = "<group>"; };
 		D072FAEE27EC3401007134C7 /* ProductReviewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReviewFooter.swift; sourceTree = "<group>"; };
 		D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewFooter.xib; sourceTree = "<group>"; };
+		D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeliveryTableViewCell.swift; sourceTree = "<group>"; };
+		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -757,6 +761,7 @@
 				D0FDE80F27EB778900C4C2A3 /* 유저들의 스타일링샷 */,
 				D03BF35C27EBFABE006A0CE9 /* 상품정보 */,
 				D03BF36627EC13BA006A0CE9 /* 리뷰 */,
+				D072FAF227EC5898007134C7 /* 문의, 배송, 교환, 환불 */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1275,6 +1280,16 @@
 			);
 			name = "리뷰Header";
 			path = "리뷰Header";
+			sourceTree = "<group>";
+		};
+		D072FAF227EC5898007134C7 /* 문의, 배송, 교환, 환불 */ = {
+			isa = PBXGroup;
+			children = (
+				D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */,
+				D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */,
+			);
+			name = "문의, 배송, 교환, 환불";
+			path = "문의, 배송, 교환, 환불";
 			sourceTree = "<group>";
 		};
 		D0910F4E27E56D9800793D90 = {
@@ -1859,6 +1874,7 @@
 				D0FDE81527EB77FC00C4C2A3 /* UserStylingTableViewCell.xib in Resources */,
 				D072FAE127EC2E00007134C7 /* ProductReviewTableViewCell.xib in Resources */,
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
+				D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */,
 				D072FAE927EC33BA007134C7 /* ProductReviewPhotoCell.xib in Resources */,
 				D0252C7027E851B700998372 /* PhotoTableViewCell.xib in Resources */,
 				D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */,
@@ -2014,6 +2030,7 @@
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
 				D01FB65227E8C91E00D01FDF /* BannersResponse.swift in Sources */,
+				D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
 				D014810B27EA228100BD3BAA /* PopularProductTableViewCell.swift in Sources */,
 				D01FB64F27E8C8D300D01FDF /* BannersDataManager.swift in Sources */,

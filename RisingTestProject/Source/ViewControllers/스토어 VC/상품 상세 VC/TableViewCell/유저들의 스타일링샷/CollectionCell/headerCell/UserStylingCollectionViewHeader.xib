@@ -51,6 +51,7 @@
             <size key="customSize" width="414" height="127"/>
             <connections>
                 <outlet property="numberOfPhoto" destination="0zi-bA-q3E" id="LPI-E5-PGS"/>
+                <outlet property="photoTitle" destination="kKf-0F-kzH" id="Rtc-aI-haN"/>
             </connections>
             <point key="canvasLocation" x="401.44927536231887" y="128.23660714285714"/>
         </collectionViewCell>

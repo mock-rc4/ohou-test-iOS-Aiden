@@ -76,6 +76,7 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "ProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoTableViewCell")
         tableView.register(UINib(nibName: "EXProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EXProductInfoTableViewCell")
         tableView.register(UINib(nibName: "ProductReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductReviewTableViewCell")
+        tableView.register(UINib(nibName: "QuestionDeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionDeliveryTableViewCell")
     }
     
     
@@ -137,7 +138,26 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             }
             cell.selectionStyle = .none
             return cell
-        }else {
+        }
+        // 문의 셀
+        else if section == 3 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionDeliveryTableViewCell") as? QuestionDeliveryTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            cell.updateCell(title: "문의", 1043)
+            return cell
+        }
+        // 배송/교환/환불 셀
+        else if section == 4 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionDeliveryTableViewCell") as? QuestionDeliveryTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            cell.updateCell(title: "배송/교환/환불", nil)
+            return cell
+        }
+        else {
             return UITableViewCell()
         }
     }
@@ -180,10 +200,13 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             }
         }
         // 리뷰 Cell
-        else if indexPath.section == 2{
+        else if indexPath.section == 2 {
             return tableView.frame.width * 2.4
         }
-        else {
+        // 문의, 배송/교환/환불 셀
+        else if indexPath.section <= 4 {
+            return tableView.frame.width / 8
+        }else {
             return 50
         }
     }

@@ -51,7 +51,7 @@ extension UserStylingTableViewCell: UICollectionViewDelegate, UICollectionViewDa
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "UserStylingCollectionViewHeader", for: indexPath) as? UserStylingCollectionViewHeader else {
                 return UICollectionViewCell()
             }
-            header.updateCell(160)
+            header.updateCell(title: "유저들의 스타일링샷", 751)
             return header
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserStylingCollectionViewCell", for: indexPath) as? UserStylingCollectionViewCell else {
