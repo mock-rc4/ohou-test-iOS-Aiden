@@ -57,8 +57,9 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // 유저 정보 조회하기 API 호출
-        if Constant.isUserLogged && Constant.userInfo == nil {
+        if Constant.isUserLogged && Constant.profileChanged {
             GetProfileDataManager().getProfile(delegate: self)
+            Constant.profileChanged = false
         }
     }
 }

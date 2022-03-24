@@ -611,14 +611,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		D02504ED27EB4F7900A580BB /* 상품 옵션 */ = {
+		D02504ED27EB4F7900A580BB /* 상품 옵션 bottomsheet */ = {
 			isa = PBXGroup;
 			children = (
 				D02504EE27EB4FAC00A580BB /* ProductOptionViewController.swift */,
 				D02504F027EB514200A580BB /* TableCell */,
 				D0B66E4527EB5B3A005776EB /* TableFooter */,
 			);
-			name = "상품 옵션";
+			name = "상품 옵션 bottomsheet";
 			path = "상품 옵션";
 			sourceTree = "<group>";
 		};
@@ -716,7 +716,7 @@
 				D02FD0B727EAD35200E21319 /* ProductInfoViewController.swift */,
 				D02FD0B927EAD3A400E21319 /* Header */,
 				D02FD0BA27EAD3D400E21319 /* TableViewCell */,
-				D02504ED27EB4F7900A580BB /* 상품 옵션 */,
+				D02504ED27EB4F7900A580BB /* 상품 옵션 bottomsheet */,
 			);
 			name = "상품 상세 VC";
 			path = "상품 상세 VC";
@@ -736,6 +736,7 @@
 			children = (
 				D0FDE80F27EB778900C4C2A3 /* 유저들의 스타일링샷 */,
 				D03BF35C27EBFABE006A0CE9 /* 상품정보 */,
+				D03BF36627EC13BA006A0CE9 /* 리뷰 */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -768,6 +769,14 @@
 			);
 			name = "펼치기&닫기";
 			path = "펼치기&닫기";
+			sourceTree = "<group>";
+		};
+		D03BF36627EC13BA006A0CE9 /* 리뷰 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "리뷰";
+			path = "리뷰";
 			sourceTree = "<group>";
 		};
 		D044D90827E6FCEE004E9EC6 /* Category */ = {

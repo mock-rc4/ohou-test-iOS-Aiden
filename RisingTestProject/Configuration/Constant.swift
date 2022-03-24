@@ -33,6 +33,10 @@ struct Constant {
     static var userInfo: UserInfo?
     
     
+    // 프로필이 수정되었는지 여부 저장
+    static var profileChanged: Bool = true
+    
+    
     
     // 광고 이미지 배열
     static var storeViewBannerImage: [UIImage] = []

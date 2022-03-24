@@ -163,6 +163,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             if indexPath.row == 0 {
                 return 70
             }else {
+                // 펼쳐질 상품정보 Cell 높이
                 return tableView.frame.width
             }
         }
@@ -171,6 +172,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             return 50
         }
     }
+    
     
     
     // 섹션의 개수 설정

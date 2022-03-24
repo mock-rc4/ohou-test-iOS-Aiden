@@ -30,6 +30,7 @@ class ModifyProfileDataManager {
                 if response.isSuccess {
                     print("프로필 변경 성공")
                     delegate.presentAlert(title: "프로필이 변경되었습니다.") { _ in
+                        Constant.profileChanged = true
                         delegate.navigationController?.popViewController(animated: true)
                     }
                 }
