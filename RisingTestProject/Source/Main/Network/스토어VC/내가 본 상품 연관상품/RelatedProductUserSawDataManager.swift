@@ -1,17 +1,17 @@
 //
-//  GetProfileDataManager.swift
+//  RelatedProductUserSawDataManager.swift
 //  RisingTestProject
 //
-//  Created by 신동희 on 2022/03/22.
+//  Created by 신동희 on 2022/03/24.
 //
 
 import Alamofire
 
 
-class GetProfileDataManager {
+class RelatedProductUserSawDataManager {
     
-    func getProfile(delegate: ProfileViewController) {
-        let url = "\(Constant.baseURL)/app/accounts/profile"
+    func getRelatedProduct(delegate: StoreHomeViewController) {
+        let url = "\(Constant.baseURL)/store/goods/relation"
         
         var header = HTTPHeaders()
         header.add(name: "X-ACCESS-TOKEN", value: Constant.jwt ?? "")
@@ -20,13 +20,13 @@ class GetProfileDataManager {
                    method: .get,
                    parameters: nil,
                    headers: header)
-        .responseDecodable(of: GetProfileResponse.self) { response in
+        .responseDecodable(of: RelatedProductUserSawResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
                     print("데이터 가져오기 성공")
-                    Constant.userInfo = response.result
-                    delegate.tableView.reloadData()
+                    Constant.relatedUserSawProductInfo = response.result
+                    delegate.isApiConnectionSuccess[3] = true
                 }else {
                     switch response.code {
                     case 2001: delegate.presentAlert(title: "JWT가 입력되지 않았습니다.")

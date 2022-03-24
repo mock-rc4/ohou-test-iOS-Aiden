@@ -19,7 +19,7 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var reviews: UILabel!
     
     
-    // 특가, 무배, 해외직구
+    // 특가, 무배
     @IBOutlet weak var specialPrice: UILabel!
     @IBOutlet weak var freeDelivery: UILabel!
     
@@ -39,4 +39,19 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
 
     
     // MARK: - Update함수 만들기!
+    func updateCell(_ productInfo: ProductCellInfoNoRemain) {
+        productImage.load(url: URL(string: productInfo.productImg1)!)
+        companyName.text = productInfo.company
+        productName.text = productInfo.name
+        discountRate.text = "\(productInfo.sale)%"
+        price.text = "\(productInfo.salesPrice)"
+        rating.text = "\(productInfo.score)"
+        reviews.text = "리뷰 \(productInfo.reviewCnt)"
+        if productInfo.isFree == 0 {
+            freeDelivery.isHidden = true
+        }
+        if productInfo.isSpecial == 0 {
+            specialPrice.isHidden = true
+        }
+    }
 }

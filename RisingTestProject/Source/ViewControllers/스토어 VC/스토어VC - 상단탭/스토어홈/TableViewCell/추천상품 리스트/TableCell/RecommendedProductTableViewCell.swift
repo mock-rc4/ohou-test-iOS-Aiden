@@ -12,7 +12,8 @@ class RecommendedProductTableViewCell: UITableViewCell {
     // UI연결
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    // header타이틀
+    var headerTitle: String = ""
     
     
     override func awakeFromNib() {
@@ -41,8 +42,17 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
         if section == 1 {
             // 보여줄 아이템 수
             // return data.count
-            return 7
-        }else {
+            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "내가 본 상품의 연관 상품" {
+                return Constant.relatedUserSawProductInfo.count
+            }
+            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
+                return Constant.relatedUserSawProductInfo.count
+            }
+            else {
+                return 1
+            }
+        }
+        else {
             return 1
         }
     }
@@ -52,11 +62,17 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularityCollectionViewHeaderCell", for: indexPath) as? PopularityCollectionViewHeaderCell else {
                 return UICollectionViewCell()
             }
-            header.updateCell("최근 본 상품")
+            header.updateCell(headerTitle)
             return header
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedProductCollectionViewCell", for: indexPath) as? RecommendedProductCollectionViewCell else {
                 return UICollectionViewCell()
+            }
+            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "내가 본 상품의 연관 상품" {
+                cell.updateCell(Constant.relatedUserSawProductInfo[indexPath.row])
+            }
+            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
+                cell.updateCell(Constant.recommendProductInfo[indexPath.row])
             }
             return cell
         }

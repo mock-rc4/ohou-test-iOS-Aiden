@@ -45,4 +45,12 @@ struct Constant {
     
     // 오늘의 딜 데이터
     static var todayDealProductInfo: [ProductCellInfo] = []
+    
+    // 내가본 상품과 연관상품 데이터
+    static var relatedUserSawProductInfo: [ProductCellInfoNoRemain] = []
+    
+    // 추천상품 데이터
+    static var recommendProductInfo: [ProductCellInfoNoRemain] = []
+    
+    
 }

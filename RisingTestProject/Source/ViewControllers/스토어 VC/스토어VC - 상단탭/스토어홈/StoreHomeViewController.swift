@@ -10,7 +10,7 @@ import UIKit
 class StoreHomeViewController: BaseViewController {
     
     // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
-    var isApiConnectionSuccess: [Bool] = [false, false, false] {
+    var isApiConnectionSuccess: [Bool] = [false, false, false, false, false] {
         didSet {
             if isApiConnectionSuccess.allSatisfy({$0}) {
                 tableView.reloadData()
@@ -57,6 +57,12 @@ class StoreHomeViewController: BaseViewController {
         
         // 인기키워드 API 호출
         PopularKeywordDataManager().getPopularKeyword(delegate: self)
+        
+        // 내가본 상품과 연관상품 API 호출
+        RelatedProductUserSawDataManager().getRelatedProduct(delegate: self)
+        
+        // 추천상품 API 호출
+        RecommendProductDataManager().getRecommendProduct(delegate: self)
     }
 }
 
@@ -84,13 +90,37 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.collectionView.reloadData()
             }
             return cell
-        }else if indexPath.row <= 3{
+        }
+        else if indexPath.row == 1{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            cell.headerTitle = "내가 본 상품의 연관 상품"
+            if Constant.relatedUserSawProductInfo.count >= 1 {
+                cell.collectionView.reloadData()
+            }
+            return cell
+        }
+        else if indexPath.row == 2{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                return UITableViewCell()
+            }
+            addSeparator(cell)
+            cell.headerTitle = "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품"
+            if Constant.recommendProductInfo.count >= 1 {
+                cell.collectionView.reloadData()
+            }
+            return cell
+        }
+        else if indexPath.row == 3{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row == 4{
+        }
+        else if indexPath.row == 4{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularKeywordTableViewCell", for: indexPath) as? PopularKeywordTableViewCell else {
                 return UITableViewCell()
             }
@@ -99,7 +129,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.updateCell(popularKeywords)
             }
             return cell
-        }else {
+        }
+        else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
                 return UITableViewCell()
             }
@@ -107,6 +138,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
