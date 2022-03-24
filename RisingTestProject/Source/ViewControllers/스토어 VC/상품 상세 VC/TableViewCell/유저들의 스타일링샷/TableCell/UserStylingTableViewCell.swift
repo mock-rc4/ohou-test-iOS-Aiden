@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ExpyTableView
 
 class UserStylingTableViewCell: UITableViewCell {
 
@@ -65,6 +66,17 @@ extension UserStylingTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
+}
+
+
+
+// MARK: - Ex Tableview protocol
+extension UserStylingTableViewCell: ExpyTableViewHeaderCell {
+    func changeState(_ state: ExpyState, cellReuseStatus cellReuse: Bool) {
+        
+    }
+    
+    
 }
 
 

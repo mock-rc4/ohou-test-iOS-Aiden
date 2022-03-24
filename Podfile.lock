@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - ExpyTableView (1.2.1)
   - KakaoSDKAuth (2.8.6):
     - KakaoSDKCommon (= 2.8.6)
   - KakaoSDKCommon (2.8.6):
@@ -46,6 +47,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.5)
+  - ExpyTableView
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
@@ -55,6 +57,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ExpyTableView
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
@@ -64,6 +67,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  ExpyTableView: 19cf224c2ff04b1ec215ec52bc4ba6f81fa809ed
   KakaoSDKAuth: 53e747a3bf343a3f3e87b14478d5a865d6c2acae
   KakaoSDKCommon: 7e56600ff4c1bd82bed93fea4299b5a37f47e6a5
   KakaoSDKUser: e79480355fa789f42e628dfba359fc21e9914f4c
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: ae1f91ed8f49df358449d82a1a1debe943d4d3c9
+PODFILE CHECKSUM: 28fc4c7c24f8d12749d76829e2c25170e0f33c26
 
 COCOAPODS: 1.11.2

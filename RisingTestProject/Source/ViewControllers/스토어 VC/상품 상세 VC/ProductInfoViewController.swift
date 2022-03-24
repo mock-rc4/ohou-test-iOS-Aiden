@@ -6,7 +6,10 @@
 //
 
 import UIKit
+// 바텀시트
 import MaterialComponents
+// 테이블뷰확장
+import ExpyTableView
 
 
 class ProductInfoViewController: BaseViewController {
@@ -18,9 +21,15 @@ class ProductInfoViewController: BaseViewController {
         "추가 상품(선택)"
     ]
     
+    // 펼치기로 확장되는 Cell에 넣을 이미지 배열
+    var productInfoImageArray: [String] = []
     
-    // UI연결
-    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
+    // MARK: - UI 연결
+    @IBOutlet weak var tableView: ExpyTableView!
+    
     
     // 뒤로가기 버튼
     @IBAction func didTapPopButton(_ sender: UIButton) {
@@ -28,6 +37,8 @@ class ProductInfoViewController: BaseViewController {
     }
     
     
+    
+    // MARK: - Bottom Sheet
     // 구매하기 버튼 클릭
     @IBAction func didTapPurchaseButton(_ sender: UIButton) {
         guard let optionVC = storyboard?.instantiateViewController(withIdentifier: "ProductOptionViewController") as? ProductOptionViewController else {
@@ -44,13 +55,14 @@ class ProductInfoViewController: BaseViewController {
     
     
     
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 탭바 히든
         self.tabBarController?.tabBar.isHidden = true
-        
+
         
         // tableView 세팅
         tableView.delegate = self
@@ -61,6 +73,8 @@ class ProductInfoViewController: BaseViewController {
         
         // cell
         tableView.register(UINib(nibName: "UserStylingTableViewCell", bundle: nil), forCellReuseIdentifier: "UserStylingTableViewCell")
+        tableView.register(UINib(nibName: "ProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoTableViewCell")
+        tableView.register(UINib(nibName: "EXProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EXProductInfoTableViewCell")
     }
     
     
@@ -71,16 +85,55 @@ class ProductInfoViewController: BaseViewController {
 
 
 
-extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource {
+
+// MARK: - TableView Protocol 채택
+extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSource {
     
-    // MARK: - Cell
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    // MARK: - EXTableView
+    
+    // true로 안주면 Header셀 함수(expandableCellForSection) 호출 자체가 안되네..;; 뭐지
+    func tableView(_ tableView: ExpyTableView, canExpandSection section: Int) -> Bool {
+        return true
     }
     
+    // 열리고 닫히고 상태가 변경될 때 호출
+    func tableView(_ tableView: ExpyTableView, expyState state: ExpyState, changeForSection section: Int) {
+        // 매개변수 state로 열리고 닫히는 상태를 전달받음
+        switch state {
+        case .willExpand:
+            print("펼쳐질거다: willExpand")
+        case .willCollapse:
+            print("닫힐거다: willCollapse")
+        case .didExpand:
+            print("펼쳐졌다: didExpand")
+        case .didCollapse:
+            print("닫힘: didCollapse")
+        }
+    }
+    
+    // 헤더셀
+    func tableView(_ tableView: ExpyTableView, expandableCellForSection section: Int) -> UITableViewCell {
+        print(section)
+        if section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserStylingTableViewCell") as? UserStylingTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
+        }else if section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoTableViewCell") as? ProductInfoTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }else {
+            return UITableViewCell()
+        }
+    }
+    
+    // 내부셀
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserStylingTableViewCell", for: indexPath) as? UserStylingTableViewCell else {
+        if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EXProductInfoTableViewCell") as? EXProductInfoTableViewCell else {
                 return UITableViewCell()
             }
             return cell
@@ -89,13 +142,42 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return tableView.frame.width * 1.2
+    // 각 섹션(헤더셀)에 들어갈 내부셀(row)의 개수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 1{
+            return 2
         }else {
+            return 1
+        }
+    }
+    
+    // 테이블뷰 셀 높이 설정
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        // 유저 스타일링 Cell
+        if indexPath.section == 0 {
+            return tableView.frame.width * 1.2
+        }
+        // 상품정보 Cell
+        else if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                return 70
+            }else {
+                return tableView.frame.width
+            }
+        }
+        // 그 아래
+        else {
             return 50
         }
     }
+    
+    
+    // 섹션의 개수 설정
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 8
+    }
+    
     
     
     
@@ -103,14 +185,24 @@ extension ProductInfoViewController: UITableViewDelegate, UITableViewDataSource 
     // MARK: - header
     // Header에 사용할 view  return
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProductInfoTableViewHeader") as? ProductInfoTableViewHeader else {
-            return UIView()
+        if section == 0 {
+            guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProductInfoTableViewHeader") as? ProductInfoTableViewHeader else {
+                return UIView()
+            }
+            return headerView
+        }else {
+            let view = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 10))
+            view.backgroundColor = UIColor.systemGray5
+            return view
         }
-        return headerView
     }
     
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 2.4
+        if section == 0 {
+            return tableView.frame.width * 2.4
+        }else {
+            return 10
+        }
     }
 }
