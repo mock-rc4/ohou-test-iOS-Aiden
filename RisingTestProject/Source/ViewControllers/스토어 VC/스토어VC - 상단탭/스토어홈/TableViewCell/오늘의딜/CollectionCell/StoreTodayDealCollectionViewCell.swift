@@ -46,7 +46,7 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
         productImage.load(url: URL(string: data.productImg1)!)
         companyName.text = data.company
         discountRate.text = "\(data.sale)%"
-        price.text = "\(data.salesPrice)"
+        price.text = data.salesPrice.insertComma()
         rating.text = "\(data.score)"
         reviews.text = "리뷰 \(data.reviewCnt)"
         if data.isScrap == 1 {

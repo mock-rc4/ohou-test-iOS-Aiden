@@ -45,8 +45,8 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
             if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "내가 본 상품의 연관 상품" {
                 return Constant.relatedUserSawProductInfo.count
             }
-            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
-                return Constant.relatedUserSawProductInfo.count
+            if Constant.recommendProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
+                return Constant.recommendProductInfo.count
             }
             if Constant.recentlySeenProductInfo.count >= 1 && headerTitle == "최근 본 상품" {
                 return Constant.recentlySeenProductInfo.count

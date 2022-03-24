@@ -10,7 +10,7 @@ import UIKit
 class StoreHomeViewController: BaseViewController {
     
     // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
-    var isApiConnectionSuccess: [Bool] = [false, false, false, false, false] {
+    var isApiConnectionSuccess: [Bool] = [false, false, false, false, false, false] {
         didSet {
             if isApiConnectionSuccess.allSatisfy({$0}) {
                 tableView.reloadData()
@@ -63,6 +63,9 @@ class StoreHomeViewController: BaseViewController {
         
         // 추천상품 API 호출
         RecommendProductDataManager().getRecommendProduct(delegate: self)
+        
+        // 인기상품 API 호출
+        PopularProductDataManager().getPopularProduct(delegate: self)
     }
 }
 
@@ -139,6 +142,9 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if Constant.popularProductInfo.count >= 1 {
+                cell.collectionView.reloadData()
+            }
             return cell
         }
     }

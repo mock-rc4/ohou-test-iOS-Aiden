@@ -40,8 +40,11 @@ extension PopularProductTableViewCell: UICollectionViewDelegate, UICollectionVie
         if section == 0 {
             return 1
         }else {
-            // 데이터.count로 변경하기
-            return 8
+            if Constant.popularProductInfo.count >= 1 {
+                return Constant.popularProductInfo.count
+            }else {
+                return 3
+            }
         }
     }
     
@@ -55,6 +58,9 @@ extension PopularProductTableViewCell: UICollectionViewDelegate, UICollectionVie
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendedProductCollectionViewCell", for: indexPath) as? RecommendedProductCollectionViewCell else {
                 return UICollectionViewCell()
+            }
+            if Constant.popularProductInfo.count >= 1 {
+                cell.updateCell(Constant.popularProductInfo[indexPath.row])
             }
             return cell
         }
