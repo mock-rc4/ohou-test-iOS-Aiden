@@ -11,20 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendedProductCollectionViewCell" customModule="RisingTestProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="198" height="366"/>
+            <rect key="frame" x="0.0" y="0.0" width="218" height="390"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="198" height="366"/>
+                <rect key="frame" x="0.0" y="0.0" width="218" height="390"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-eo-uYE">
-                        <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                        <rect key="frame" x="0.0" y="0.0" width="218" height="218"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="9dF-eo-uYE" secondAttribute="height" multiplier="1:1" id="fAf-xh-Ad8"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-LZ-J9R">
-                        <rect key="frame" x="0.0" y="208" width="198" height="146"/>
+                        <rect key="frame" x="0.0" y="228" width="218" height="146"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핼로우슬립" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNM-Y1-LVc">
                                 <rect key="frame" x="0.0" y="0.0" width="48" height="13.5"/>
@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[10%쿠폰] 순면 피그먼트 워싱 줄누빔 이불겸패드 아무튼 좋은 상품입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-uT-tEB">
-                                <rect key="frame" x="0.0" y="22.5" width="192.5" height="36"/>
+                                <rect key="frame" x="0.0" y="22.5" width="211" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                 <constraint firstItem="dSg-LZ-J9R" firstAttribute="leading" secondItem="9dF-eo-uYE" secondAttribute="leading" id="scV-SB-lYb"/>
                 <constraint firstItem="9dF-eo-uYE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wvT-AC-rdK"/>
             </constraints>
-            <size key="customSize" width="198" height="366"/>
+            <size key="customSize" width="218" height="390"/>
             <connections>
                 <outlet property="companyName" destination="hNM-Y1-LVc" id="HVe-c3-9VT"/>
                 <outlet property="discountRate" destination="66e-x3-xdN" id="hTj-lH-uzC"/>
@@ -172,7 +172,7 @@
                 <outlet property="reviews" destination="bye-8x-sNx" id="Kje-BG-4yq"/>
                 <outlet property="specialPrice" destination="hKQ-Ek-PG5" id="acB-0q-6B5"/>
             </connections>
-            <point key="canvasLocation" x="244.92753623188409" y="214.95535714285714"/>
+            <point key="canvasLocation" x="259.4202898550725" y="222.99107142857142"/>
         </collectionViewCell>
     </objects>
     <designables>

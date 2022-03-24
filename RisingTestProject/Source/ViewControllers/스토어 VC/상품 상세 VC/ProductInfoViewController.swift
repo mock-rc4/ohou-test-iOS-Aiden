@@ -77,6 +77,7 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "EXProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EXProductInfoTableViewCell")
         tableView.register(UINib(nibName: "ProductReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductReviewTableViewCell")
         tableView.register(UINib(nibName: "QuestionDeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionDeliveryTableViewCell")
+        tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
     }
     
     
@@ -101,16 +102,16 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     // 열리고 닫히고 상태가 변경될 때 호출
     func tableView(_ tableView: ExpyTableView, expyState state: ExpyState, changeForSection section: Int) {
         // 매개변수 state로 열리고 닫히는 상태를 전달받음
-        switch state {
-        case .willExpand:
-            print("펼쳐질거다: willExpand")
-        case .willCollapse:
-            print("닫힐거다: willCollapse")
-        case .didExpand:
-            print("펼쳐졌다: didExpand")
-        case .didCollapse:
-            print("닫힘: didCollapse")
-        }
+//        switch state {
+//        case .willExpand:
+//            print("펼쳐질거다: willExpand")
+//        case .willCollapse:
+//            print("닫힐거다: willCollapse")
+//        case .didExpand:
+//            print("펼쳐졌다: didExpand")
+//        case .didCollapse:
+//            print("닫힘: didCollapse")
+//        }
     }
     
     // 헤더셀
@@ -157,8 +158,12 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             cell.updateCell(title: "배송/교환/환불", nil)
             return cell
         }
+        // 비슷한 상품.. 함께 보면 좋을 상품.. 등 3개?
         else {
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell") as? RecommendedProductTableViewCell else {
+                return UITableViewCell()
+            }
+            return cell
         }
     }
     
@@ -207,7 +212,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
         else if indexPath.section <= 4 {
             return tableView.frame.width / 8
         }else {
-            return 50
+            return tableView.frame.width * 1.1
         }
     }
     
