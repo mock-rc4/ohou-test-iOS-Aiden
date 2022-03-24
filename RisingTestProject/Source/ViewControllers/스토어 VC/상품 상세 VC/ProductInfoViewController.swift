@@ -75,6 +75,7 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "UserStylingTableViewCell", bundle: nil), forCellReuseIdentifier: "UserStylingTableViewCell")
         tableView.register(UINib(nibName: "ProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoTableViewCell")
         tableView.register(UINib(nibName: "EXProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EXProductInfoTableViewCell")
+        tableView.register(UINib(nibName: "ProductReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductReviewTableViewCell")
     }
     
     
@@ -114,13 +115,24 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     // 헤더셀
     func tableView(_ tableView: ExpyTableView, expandableCellForSection section: Int) -> UITableViewCell {
         print(section)
+        // 유저들의 스타일링(사진리뷰 셀)
         if section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserStylingTableViewCell") as? UserStylingTableViewCell else {
                 return UITableViewCell()
             }
             return cell
-        }else if section == 1 {
+        }
+        // 상품설명 셀 (펼치기, 접기)
+        else if section == 1 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoTableViewCell") as? ProductInfoTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.selectionStyle = .none
+            return cell
+        }
+        // 리뷰 셀
+        else if section == 2{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductReviewTableViewCell") as? ProductReviewTableViewCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
@@ -167,7 +179,10 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
                 return tableView.frame.width
             }
         }
-        // 그 아래
+        // 리뷰 Cell
+        else if indexPath.section == 2{
+            return tableView.frame.width * 1.5
+        }
         else {
             return 50
         }
