@@ -9,7 +9,7 @@ import UIKit
 
 // 화면전환 프로토콜 생성
 protocol ShowProductDetailPage {
-    func showDetailPage()
+    func showDetailPage(_ productID: Int)
 }
 
 
@@ -97,9 +97,10 @@ extension StoreTodayDealTableViewCell: UICollectionViewDelegate, UICollectionVie
     
     
     // 컬렉션뷰 셀 선택되면 호출 (View전환)
-    // 미완성 -> 식별가능한 데이터를 넘겨줘야됨
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.showDetailPage()
+        if Constant.todayDealProductInfo.count >= 1 {
+            delegate?.showDetailPage(Constant.todayDealProductInfo[indexPath.row].productId)
+        }
     }
 }
 

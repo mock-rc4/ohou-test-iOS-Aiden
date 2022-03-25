@@ -176,6 +176,9 @@
 		D0C0823C27ED9DE6008BABDF /* BasketTableViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C0823B27ED9DE6008BABDF /* BasketTableViewFooter.swift */; };
 		D0C0823E27ED9DEE008BABDF /* BasketTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C0823D27ED9DEE008BABDF /* BasketTableViewFooter.xib */; };
 		D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA120627E6E34D007FD167 /* SignInViewController.swift */; };
+		D0D5B65327EDD80700319E3D /* ProductInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65227EDD80700319E3D /* ProductInfoDataManager.swift */; };
+		D0D5B65627EDD85B00319E3D /* ProductInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65527EDD85B00319E3D /* ProductInfoRequest.swift */; };
+		D0D5B65827EDD86400319E3D /* ProductInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65727EDD86400319E3D /* ProductInfoResponse.swift */; };
 		D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CC27E9549900E47DA6 /* SettingViewController.swift */; };
 		D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */; };
 		D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */; };
@@ -386,6 +389,9 @@
 		D0C0823B27ED9DE6008BABDF /* BasketTableViewFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewFooter.swift; sourceTree = "<group>"; };
 		D0C0823D27ED9DEE008BABDF /* BasketTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewFooter.xib; sourceTree = "<group>"; };
 		D0CA120627E6E34D007FD167 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D0D5B65227EDD80700319E3D /* ProductInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoDataManager.swift; sourceTree = "<group>"; };
+		D0D5B65527EDD85B00319E3D /* ProductInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoRequest.swift; sourceTree = "<group>"; };
+		D0D5B65727EDD86400319E3D /* ProductInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoResponse.swift; sourceTree = "<group>"; };
 		D0D771CC27E9549900E47DA6 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -1693,6 +1699,25 @@
 			path = "초기 & 회원가입 VC";
 			sourceTree = "<group>";
 		};
+		D0D5B65127EDD7CB00319E3D /* 제품 상세 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5B65227EDD80700319E3D /* ProductInfoDataManager.swift */,
+				D0D5B65427EDD83E00319E3D /* Entity */,
+			);
+			name = "제품 상세 조회";
+			path = "제품 상세 조회";
+			sourceTree = "<group>";
+		};
+		D0D5B65427EDD83E00319E3D /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5B65527EDD85B00319E3D /* ProductInfoRequest.swift */,
+				D0D5B65727EDD86400319E3D /* ProductInfoResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0D771CB27E9547200E47DA6 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -1843,6 +1868,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D0D5B65127EDD7CB00319E3D /* 제품 상세 조회 */,
 				D092D32127EB085200A5BAF2 /* 스토어VC */,
 				D02FD0AE27EAAA9000E21319 /* 광고 이미지 */,
 				D01FB64B27E8C87300D01FDF /* 로그인 관련 */,
@@ -2225,6 +2251,7 @@
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
+				D0D5B65327EDD80700319E3D /* ProductInfoDataManager.swift in Sources */,
 				D0252C6B27E84A1900998372 /* MyShoppingTableViewCell.swift in Sources */,
 				D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */,
 				D02504EF27EB4FAC00A580BB /* ProductOptionViewController.swift in Sources */,
@@ -2239,6 +2266,7 @@
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D0FDE81E27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift in Sources */,
 				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
+				D0D5B65627EDD85B00319E3D /* ProductInfoRequest.swift in Sources */,
 				D0A431B227E9B10500421A34 /* StoreTapmanViewController.swift in Sources */,
 				D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */,
 				D0252C7927E8598700998372 /* PhotoCollectionViewFooter.swift in Sources */,
@@ -2264,6 +2292,7 @@
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D0FDE80827EB727B00C4C2A3 /* TodayDealTabHeader.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
+				D0D5B65827EDD86400319E3D /* ProductInfoResponse.swift in Sources */,
 				D072FAE027EC2E00007134C7 /* ProductReviewTableViewCell.swift in Sources */,
 				D0F6E21927EC97070058A7E7 /* RecommendProductDataManager.swift in Sources */,
 				D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */,

@@ -25,6 +25,11 @@ class ProductInfoViewController: BaseViewController {
     var productInfoImageArray: [String] = []
     
     
+    // 보여줄 제품의 ID
+    var productID: Int?
+    
+    // 보여줄 제품의 정보
+    var productDetail: ProductDetail?
     
     
     // MARK: - UI 연결
@@ -83,6 +88,12 @@ class ProductInfoViewController: BaseViewController {
         
         // 장바구니 버튼 addTarget
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
+        
+        
+        // 제품정보 가져오기 API 호출
+        if let id = productID {
+            ProductInfoDataManager().getProductInfo(ProductInfoRequest(productId: id), delegate: self)
+        }
     }
     
     
@@ -178,6 +189,9 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "EXProductInfoTableViewCell") as? EXProductInfoTableViewCell else {
                 return UITableViewCell()
             }
+            if productInfoImageArray.count >= 1 {
+                cell.updateCell(productInfoImageArray[indexPath.row])
+            }
             return cell
         }else {
             return UITableViewCell()
@@ -187,7 +201,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     // 각 섹션(헤더셀)에 들어갈 내부셀(row)의 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 1{
-            return 2
+            return 1 + productInfoImageArray.count
         }else {
             return 1
         }
@@ -239,6 +253,9 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ProductInfoTableViewHeader") as? ProductInfoTableViewHeader else {
                 return UIView()
             }
+            if let productInfo = productDetail {
+                headerView.updateCell(productInfo)
+            }
             return headerView
         }else {
             let view = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 10))
@@ -250,9 +267,10 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return tableView.frame.width * 2.4
+            return tableView.frame.width * 2.3
         }else {
             return 10
         }
     }
+    
 }

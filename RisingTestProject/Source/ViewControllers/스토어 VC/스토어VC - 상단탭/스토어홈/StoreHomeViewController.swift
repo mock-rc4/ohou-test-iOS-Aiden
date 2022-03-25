@@ -193,10 +193,11 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - View전환 프로토콜 채택
 extension StoreHomeViewController: ShowProductDetailPage {
-    func showDetailPage() {
+    func showDetailPage(_ productID: Int) {
         guard let productInfoVC = storyboard?.instantiateViewController(withIdentifier: "ProductInfoViewController") as? ProductInfoViewController else{
             return
         }
+        productInfoVC.productID = productID
         self.navigationController?.pushViewController(productInfoVC, animated: true)
     }
     
