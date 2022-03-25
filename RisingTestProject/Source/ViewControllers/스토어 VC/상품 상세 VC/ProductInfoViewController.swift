@@ -30,6 +30,8 @@ class ProductInfoViewController: BaseViewController {
     // MARK: - UI 연결
     @IBOutlet weak var tableView: ExpyTableView!
     
+    // 장바구니 버튼
+    @IBOutlet weak var basketButton: UIButton!
     
     // 뒤로가기 버튼
     @IBAction func didTapPopButton(_ sender: UIButton) {
@@ -78,6 +80,9 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "ProductReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductReviewTableViewCell")
         tableView.register(UINib(nibName: "QuestionDeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionDeliveryTableViewCell")
         tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
+        
+        // 장바구니 버튼 addTarget
+        basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
     }
     
     

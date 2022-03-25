@@ -117,10 +117,13 @@
 		D072FAF127EC3401007134C7 /* ProductReviewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */; };
 		D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */; };
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
+		D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */; };
+		D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */; };
 		D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */; };
 		D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */; };
 		D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */; };
 		D08DE46827ED564400B715C4 /* RealTimeBestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */; };
+		D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46A27ED65D500B715C4 /* BasketViewController.swift */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -314,10 +317,13 @@
 		D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewFooter.xib; sourceTree = "<group>"; };
 		D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
+		D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforePutInProductTableCell.swift; sourceTree = "<group>"; };
+		D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforePutInProductTableCell.xib; sourceTree = "<group>"; };
 		D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestTableViewHeader.swift; sourceTree = "<group>"; };
 		D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreBestTableViewHeader.xib; sourceTree = "<group>"; };
 		D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestTableViewCell.swift; sourceTree = "<group>"; };
 		D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealTimeBestTableViewCell.xib; sourceTree = "<group>"; };
+		D08DE46A27ED65D500B715C4 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -734,6 +740,7 @@
 				D0A431B127E9B10500421A34 /* StoreTapmanViewController.swift */,
 				D0A431B327E9B26900421A34 /* 스토어VC - 상단탭 */,
 				D02FD0B627EABD9900E21319 /* 상품 상세 VC */,
+				D08DE46927ED64F000B715C4 /* 장바구니VC */,
 			);
 			name = "스토어 VC";
 			path = "스토어 VC";
@@ -1317,6 +1324,24 @@
 			path = "문의, 배송, 교환, 환불";
 			sourceTree = "<group>";
 		};
+		D07AD6AC27ED6BF800268E90 /* 담기기 전 */ = {
+			isa = PBXGroup;
+			children = (
+				D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */,
+				D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */,
+			);
+			name = "담기기 전";
+			path = "담기기 전";
+			sourceTree = "<group>";
+		};
+		D07AD6AD27ED6C0300268E90 /* 담기기 후 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "담기기 후";
+			path = "담기기 후";
+			sourceTree = "<group>";
+		};
 		D08DE45F27ED4FF300B715C4 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1333,6 +1358,17 @@
 				D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */,
 			);
 			path = tableCell;
+			sourceTree = "<group>";
+		};
+		D08DE46927ED64F000B715C4 /* 장바구니VC */ = {
+			isa = PBXGroup;
+			children = (
+				D08DE46A27ED65D500B715C4 /* BasketViewController.swift */,
+				D07AD6AC27ED6BF800268E90 /* 담기기 전 */,
+				D07AD6AD27ED6C0300268E90 /* 담기기 후 */,
+			);
+			name = "장바구니VC";
+			path = "장바구니VC";
 			sourceTree = "<group>";
 		};
 		D0910F4E27E56D9800793D90 = {
@@ -2015,6 +2051,7 @@
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */,
 				D072FAE927EC33BA007134C7 /* ProductReviewPhotoCell.xib in Resources */,
+				D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */,
 				D0252C7027E851B700998372 /* PhotoTableViewCell.xib in Resources */,
 				D0A431B027E995CA00421A34 /* AfterLoginProfileTableViewHeader.xib in Resources */,
 				D0FDE80A27EB728A00C4C2A3 /* TodayDealTabHeader.xib in Resources */,
@@ -2095,6 +2132,7 @@
 				D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */,
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
 				D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */,
+				D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */,
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */,
 				D0FDE81427EB77FC00C4C2A3 /* UserStylingTableViewCell.swift in Sources */,
@@ -2219,6 +2257,7 @@
 				D014810427EA13E100BD3BAA /* PopularKeywordTableViewCell.swift in Sources */,
 				D03BF36427EBFD29006A0CE9 /* EXProductInfoTableViewCell.swift in Sources */,
 				D072FAE427EC3393007134C7 /* ProductReviewHeader.swift in Sources */,
+				D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
 				D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */,
 				D06B482A27E8111D00C881E0 /* ExhibitionCollectionViewCell.swift in Sources */,

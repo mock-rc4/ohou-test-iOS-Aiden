@@ -60,4 +60,12 @@ struct Constant {
     // 인기상품
     static var popularProductInfo: [ProductCellInfoNoRemain] = []
     
+    
+    
+    // 장바구니
+    static var inBasketProduct: [ProductCellInfoNoRemain] = []
+    
+    static var isProductInBasket: Bool {
+        return !Constant.inBasketProduct.isEmpty
+    }
 }

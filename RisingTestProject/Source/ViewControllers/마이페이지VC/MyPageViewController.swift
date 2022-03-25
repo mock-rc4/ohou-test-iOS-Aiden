@@ -9,7 +9,13 @@ import UIKit
 
 
 class MyPageViewController: BaseViewController {
+    
+    @IBOutlet weak var basketButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
     }
 }

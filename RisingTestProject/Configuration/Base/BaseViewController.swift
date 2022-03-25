@@ -99,4 +99,12 @@ class BaseViewController: UIViewController {
     @objc func didTouchedDismissButton(_ animation: Bool) {
         self.dismiss(animated: animation)
     }
+    
+    
+    @objc func showBasketVC() {
+        guard let basketVC = storyboard?.instantiateViewController(withIdentifier: "BasketViewController") as? BasketViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(basketVC, animated: true)
+    }
 }

@@ -12,6 +12,8 @@ class HomeViewController: BaseViewController {
     // MARK: - UI 연결
     @IBOutlet weak var searchBar: UIView!
     
+    // 장바구니 버튼
+    @IBOutlet weak var basketButton: UIButton!
     
     
     
@@ -21,6 +23,8 @@ class HomeViewController: BaseViewController {
         
         // UI 설정
         addRadiusToUIView(searchBar, size: searchBar.frame.height / 10)
+        
+        basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
     }
 
 
