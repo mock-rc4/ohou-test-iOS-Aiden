@@ -1,16 +1,15 @@
 //
-//  StoreTodayDealCollectionViewCell.swift
+//  RealTimeBestTableViewCell.swift
 //  RisingTestProject
 //
-//  Created by 신동희 on 2022/03/22.
+//  Created by 신동희 on 2022/03/25.
 //
 
 import UIKit
 
-class StoreTodayDealCollectionViewCell: UICollectionViewCell {
+class RealTimeBestTableViewCell: UITableViewCell {
 
     // UI 연결
-    @IBOutlet weak var nDayLeft: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var companyName: UILabel!
     @IBOutlet weak var productName: UILabel!
@@ -19,30 +18,33 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var reviews: UILabel!
     @IBOutlet weak var scrapImage: UIImageView!
+    @IBOutlet weak var rankLabel: UILabel!
+    
+    
+    // 특가인지 무배인지 여부에 따라 히든: ture/false
+    @IBOutlet weak var specialPrice: UILabel!
     @IBOutlet weak var freeDelivery: UILabel!
     
     
-    // 특가인지 여부에 따라 히든: ture/false
-    @IBOutlet weak var specialPrice: UILabel!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Radius추가
         productImage.layer.cornerRadius = productImage.frame.height / 8
-        nDayLeft.clipsToBounds = true
-        nDayLeft.layer.cornerRadius = nDayLeft.frame.height / 8
         specialPrice.clipsToBounds = true
         specialPrice.layer.cornerRadius = specialPrice.frame.height / 8
         freeDelivery.clipsToBounds = true
         freeDelivery.layer.cornerRadius = specialPrice.frame.height / 8
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
     
     // MARK: - Update함수 만들기!
-    func updateCell(_ data: ProductCellInfo) {
-        nDayLeft.text = "\(data.remainDays)일 남음"
+    func updateCell(_ data: ProductCellInfoNoRemain, rank: Int) {
         productImage.load(url: URL(string: data.productImg1)!)
         productName.text = data.name
         companyName.text = data.company
@@ -59,8 +61,10 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
         if data.isSpecial == 0 {
             specialPrice.isHidden = true
         }
-    }
-    
-    
-    
+        rankLabel.text = "\(rank)"
 }
+}
+    
+    
+
+

@@ -59,4 +59,5 @@ struct Constant {
     
     // 인기상품
     static var popularProductInfo: [ProductCellInfoNoRemain] = []
+    
 }

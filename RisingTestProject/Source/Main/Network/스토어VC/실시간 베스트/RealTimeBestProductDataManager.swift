@@ -10,7 +10,7 @@ import Alamofire
 class RealTimeBestProductDataManager {
     
     // delegate VC 변경 !!!!!
-    func getBestProduct(delegate: StoreHomeViewController) {
+    func getBestProduct(delegate: StoreBestViewController) {
         let url = "\(Constant.baseURL)/store/best"
         
         AF.request(url,
@@ -21,8 +21,8 @@ class RealTimeBestProductDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("데이터 가져오기 성공")
-//                    Constant.popularProductInfo = response.result
-//                    delegate.isApiConnectionSuccess[5] = true
+                    delegate.realTimeBestProductInfo = response.result
+                    delegate.tableView.reloadData()
                 }else {
                     switch response.code {
                     case 4000: delegate.presentAlert(title: "데이터베이스 에러.")

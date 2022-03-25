@@ -117,6 +117,10 @@
 		D072FAF127EC3401007134C7 /* ProductReviewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */; };
 		D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */; };
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
+		D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */; };
+		D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */; };
+		D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */; };
+		D08DE46827ED564400B715C4 /* RealTimeBestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -310,6 +314,10 @@
 		D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewFooter.xib; sourceTree = "<group>"; };
 		D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
+		D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestTableViewHeader.swift; sourceTree = "<group>"; };
+		D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreBestTableViewHeader.xib; sourceTree = "<group>"; };
+		D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestTableViewCell.swift; sourceTree = "<group>"; };
+		D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealTimeBestTableViewCell.xib; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1309,6 +1317,24 @@
 			path = "문의, 배송, 교환, 환불";
 			sourceTree = "<group>";
 		};
+		D08DE45F27ED4FF300B715C4 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */,
+				D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		D08DE46027ED4FFC00B715C4 /* tableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */,
+				D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */,
+			);
+			path = tableCell;
+			sourceTree = "<group>";
+		};
 		D0910F4E27E56D9800793D90 = {
 			isa = PBXGroup;
 			children = (
@@ -1437,6 +1463,8 @@
 			isa = PBXGroup;
 			children = (
 				D0A431B827E9B33800421A34 /* StoreBestViewController.swift */,
+				D08DE45F27ED4FF300B715C4 /* header */,
+				D08DE46027ED4FFC00B715C4 /* tableCell */,
 			);
 			name = "베스트";
 			path = "베스트";
@@ -1969,6 +1997,7 @@
 				D0124A0127E72FF60035456F /* MediaCollectionViewHeader.xib in Resources */,
 				D072FAF127EC3401007134C7 /* ProductReviewFooter.xib in Resources */,
 				D014810527EA13E100BD3BAA /* PopularKeywordTableViewCell.xib in Resources */,
+				D08DE46827ED564400B715C4 /* RealTimeBestTableViewCell.xib in Resources */,
 				D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */,
 				D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */,
 				D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */,
@@ -2008,6 +2037,7 @@
 				D0FDE81927EB783000C4C2A3 /* UserStylingCollectionViewCell.xib in Resources */,
 				D0124A0527E7320B0035456F /* MediaRankCell.xib in Resources */,
 				D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */,
+				D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */,
 				D0FDE81F27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2135,6 +2165,7 @@
 				D0F6E21927EC97070058A7E7 /* RecommendProductDataManager.swift in Sources */,
 				D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */,
 				D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */,
+				D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */,
 				D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
@@ -2164,6 +2195,7 @@
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
+				D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */,
 				D0F6E21427EC88B40058A7E7 /* RelatedProductUserSawDataManager.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
 				D0FDE81827EB783000C4C2A3 /* UserStylingCollectionViewCell.swift in Sources */,
