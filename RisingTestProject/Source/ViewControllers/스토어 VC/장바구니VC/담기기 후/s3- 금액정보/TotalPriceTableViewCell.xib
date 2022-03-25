@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="199" id="KGk-i7-Jjw" customClass="TotalPriceTableViewCell" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LBC-UU-PFC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krg-s3-xWn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 상품금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTG-h1-483">
+                                        <rect key="frame" x="15" y="20" width="69" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43,324원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqa-Gj-vTf">
+                                        <rect key="frame" x="239" y="23" width="66" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uqa-Gj-vTf" firstAttribute="centerY" secondItem="kTG-h1-483" secondAttribute="centerY" id="LQr-bc-TrP"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTG-h1-483" secondAttribute="bottom" constant="5" id="TfO-eO-9hx"/>
+                                    <constraint firstAttribute="trailing" secondItem="uqa-Gj-vTf" secondAttribute="trailing" constant="15" id="bMZ-30-aKo"/>
+                                    <constraint firstItem="kTG-h1-483" firstAttribute="leading" secondItem="krg-s3-xWn" secondAttribute="leading" constant="15" id="fSj-qB-gYH"/>
+                                    <constraint firstItem="kTG-h1-483" firstAttribute="top" secondItem="krg-s3-xWn" secondAttribute="top" constant="20" id="wE6-Jh-bRI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmy-4a-RZa">
+                                <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 배송비" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za1-bN-4VE">
+                                        <rect key="frame" x="15" y="5" width="56" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 3,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dev-Rb-sUG">
+                                        <rect key="frame" x="234.5" y="13" width="70.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="za1-bN-4VE" firstAttribute="top" secondItem="Qmy-4a-RZa" secondAttribute="top" constant="5" id="8wF-lN-Vxb"/>
+                                    <constraint firstItem="dev-Rb-sUG" firstAttribute="centerY" secondItem="za1-bN-4VE" secondAttribute="centerY" id="9KU-K7-kZt"/>
+                                    <constraint firstItem="za1-bN-4VE" firstAttribute="leading" secondItem="Qmy-4a-RZa" secondAttribute="leading" constant="15" id="WQG-el-qnx"/>
+                                    <constraint firstAttribute="bottom" secondItem="za1-bN-4VE" secondAttribute="bottom" constant="10" id="ujA-Rz-Nf1"/>
+                                    <constraint firstAttribute="trailing" secondItem="dev-Rb-sUG" secondAttribute="trailing" constant="15" id="vtv-7x-mja"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJO-1n-Lyu">
+                                <rect key="frame" x="0.0" y="100" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 할인금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soK-WC-dUG">
+                                        <rect key="frame" x="15" y="5" width="69" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 5,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z92-IV-O6r">
+                                        <rect key="frame" x="237.5" y="13" width="67.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="soK-WC-dUG" firstAttribute="top" secondItem="lJO-1n-Lyu" secondAttribute="top" constant="5" id="8D6-Bd-XWf"/>
+                                    <constraint firstItem="z92-IV-O6r" firstAttribute="centerY" secondItem="soK-WC-dUG" secondAttribute="centerY" id="CdX-G5-DYG"/>
+                                    <constraint firstItem="soK-WC-dUG" firstAttribute="leading" secondItem="lJO-1n-Lyu" secondAttribute="leading" constant="15" id="EpZ-ks-RHg"/>
+                                    <constraint firstAttribute="bottom" secondItem="soK-WC-dUG" secondAttribute="bottom" constant="10" id="fOk-AH-Vkb"/>
+                                    <constraint firstAttribute="trailing" secondItem="z92-IV-O6r" secondAttribute="trailing" constant="15" id="w89-l2-eoT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsJ-43-9uP">
+                                <rect key="frame" x="0.0" y="150" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 할인금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-Tk-aKr">
+                                        <rect key="frame" x="15" y="10" width="73.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="286,542원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-Lz-kUj">
+                                        <rect key="frame" x="225.5" y="15" width="79.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FEb-Lz-kUj" firstAttribute="centerY" secondItem="WEk-Tk-aKr" secondAttribute="centerY" id="1aV-FE-V8V"/>
+                                    <constraint firstItem="WEk-Tk-aKr" firstAttribute="leading" secondItem="rsJ-43-9uP" secondAttribute="leading" constant="15" id="BfN-8H-eQb"/>
+                                    <constraint firstAttribute="trailing" secondItem="FEb-Lz-kUj" secondAttribute="trailing" constant="15" id="EwO-tc-UOa"/>
+                                    <constraint firstItem="WEk-Tk-aKr" firstAttribute="top" secondItem="rsJ-43-9uP" secondAttribute="top" constant="10" id="onu-po-SfF"/>
+                                    <constraint firstAttribute="bottom" secondItem="WEk-Tk-aKr" secondAttribute="bottom" constant="10" id="t7g-Or-3V3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LBC-UU-PFC" secondAttribute="trailing" id="6eu-MH-hIG"/>
+                    <constraint firstItem="LBC-UU-PFC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6lV-K8-Ypf"/>
+                    <constraint firstItem="LBC-UU-PFC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="97c-rn-0hO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="137.68115942028987" y="178.45982142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

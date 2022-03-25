@@ -66,6 +66,6 @@ struct Constant {
     static var inBasketProduct: [ProductCellInfoNoRemain] = []
     
     static var isProductInBasket: Bool {
-        return !Constant.inBasketProduct.isEmpty
+        return Constant.inBasketProduct.isEmpty
     }
 }
