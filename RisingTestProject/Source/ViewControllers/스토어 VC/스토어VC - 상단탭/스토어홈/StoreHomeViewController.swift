@@ -58,18 +58,23 @@ class StoreHomeViewController: BaseViewController {
         // 인기키워드 API 호출
         PopularKeywordDataManager().getPopularKeyword(delegate: self)
         
-        // 내가본 상품과 연관상품 API 호출
-        RelatedProductUserSawDataManager().getRelatedProduct(delegate: self)
-        
-        // 추천상품 API 호출
-        RecommendProductDataManager().getRecommendProduct(delegate: self)
-        
         // 인기상품 API 호출
         PopularProductDataManager().getPopularProduct(delegate: self)
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        // MARK: - API
+        if Constant.isUserLogged {
+            // 내가본 상품과 연관상품 API 호출
+            RelatedProductUserSawDataManager().getRelatedProduct(delegate: self)
+            
+            // 추천상품 API 호출
+            RecommendProductDataManager().getRecommendProduct(delegate: self)
+        }
+        
+        
         if Constant.didUserSeeProduct {
             tableView.reloadData()
             Constant.didUserSeeProduct = false
@@ -85,101 +90,161 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 테이블뷰 Cell 설정
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        if Constant.isUserLogged {
+            return 6
+        }else {
+            return 3
+        }
     }
     
     // Cell 설정
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTodayDealTableViewCell", for: indexPath) as? StoreTodayDealTableViewCell else {
-                return UITableViewCell()
+        if Constant.isUserLogged {
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTodayDealTableViewCell", for: indexPath) as? StoreTodayDealTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                if Constant.todayDealProductInfo.count >= 4 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
             }
-            addSeparator(cell)
-            // View 전환 delegate
-            cell.delegate = self
-            if Constant.todayDealProductInfo.count >= 4 {
-                cell.collectionView.reloadData()
+            else if indexPath.row == 1{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                cell.headerTitle = "내가 본 상품의 연관 상품"
+                if Constant.relatedUserSawProductInfo.count >= 1 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
             }
-            return cell
+            else if indexPath.row == 2{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                cell.headerTitle = "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품"
+                if Constant.recommendProductInfo.count >= 1 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
+            }
+            else if indexPath.row == 3{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                cell.headerTitle = "최근 본 상품"
+                if Constant.relatedUserSawProductInfo.count >= 1 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
+            }
+            else if indexPath.row == 4{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularKeywordTableViewCell", for: indexPath) as? PopularKeywordTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                if isApiConnectionSuccess[2] == true {
+                    cell.updateCell(popularKeywords)
+                }
+                return cell
+            }
+            else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                if Constant.popularProductInfo.count >= 1 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
+            }
         }
-        else if indexPath.row == 1{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
-                return UITableViewCell()
-            }
-            addSeparator(cell)
-            // View 전환 delegate
-            cell.delegate = self
-            cell.headerTitle = "내가 본 상품의 연관 상품"
-            if Constant.relatedUserSawProductInfo.count >= 1 {
-                cell.collectionView.reloadData()
-            }
-            return cell
-        }
-        else if indexPath.row == 2{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
-                return UITableViewCell()
-            }
-            addSeparator(cell)
-            // View 전환 delegate
-            cell.delegate = self
-            cell.headerTitle = "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품"
-            if Constant.recommendProductInfo.count >= 1 {
-                cell.collectionView.reloadData()
-            }
-            return cell
-        }
-        else if indexPath.row == 3{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell", for: indexPath) as? RecommendedProductTableViewCell else {
-                return UITableViewCell()
-            }
-            addSeparator(cell)
-            // View 전환 delegate
-            cell.delegate = self
-            cell.headerTitle = "최근 본 상품"
-            if Constant.relatedUserSawProductInfo.count >= 1 {
-                cell.collectionView.reloadData()
-            }
-            return cell
-        }
-        else if indexPath.row == 4{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularKeywordTableViewCell", for: indexPath) as? PopularKeywordTableViewCell else {
-                return UITableViewCell()
-            }
-            addSeparator(cell)
-            if isApiConnectionSuccess[2] == true {
-                cell.updateCell(popularKeywords)
-            }
-            return cell
-        }
+        // 로그인 상태가 아닐때 (cell 3개만 보여주기)
         else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
-                return UITableViewCell()
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "StoreTodayDealTableViewCell", for: indexPath) as? StoreTodayDealTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                if Constant.todayDealProductInfo.count >= 4 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
             }
-            addSeparator(cell)
-            // View 전환 delegate
-            cell.delegate = self
-            if Constant.popularProductInfo.count >= 1 {
-                cell.collectionView.reloadData()
+            else if indexPath.row == 1{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularKeywordTableViewCell", for: indexPath) as? PopularKeywordTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                if isApiConnectionSuccess[2] == true {
+                    cell.updateCell(popularKeywords)
+                }
+                return cell
             }
-            return cell
+            else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
+                    return UITableViewCell()
+                }
+                addSeparator(cell)
+                // View 전환 delegate
+                cell.delegate = self
+                if Constant.popularProductInfo.count >= 1 {
+                    cell.collectionView.reloadData()
+                }
+                return cell
+            }
         }
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return tableView.frame.width * 2.2
-        }else if indexPath.row <= 3 {
-            return tableView.frame.width * 1.1
-        }else if indexPath.row == 4{
-            return tableView.frame.width * 0.75
-        }else {
-            // 인기상품 Cell 높이 조절 필요
-            // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
-            if Constant.popularProductInfo.count >= 1 {
-                return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+        if Constant.isUserLogged {
+            if indexPath.row == 0 {
+                return tableView.frame.width * 2.2
+            }else if indexPath.row <= 3 {
+                return tableView.frame.width * 1.1
+            }else if indexPath.row == 4{
+                return tableView.frame.width * 0.75
             }else {
-                return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
+                // 인기상품 Cell 높이 조절 필요
+                // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
+                if Constant.popularProductInfo.count >= 1 {
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+                }else {
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
+                }
+            }
+        }
+        else {
+            if indexPath.row == 0 {
+                return tableView.frame.width * 2.2
+            }else if indexPath.row == 1{
+                return tableView.frame.width * 0.75
+            }else {
+                // 인기상품 Cell 높이 조절 필요
+                // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
+                if Constant.popularProductInfo.count >= 1 {
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+                }else {
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
+                }
             }
         }
     }

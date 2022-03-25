@@ -42,6 +42,7 @@ class CommercialImageDataManager {
                             Constant.storeViewBannerImage = self.urlImages
                             let storeVC = delegate as! StoreHomeViewController
                             storeVC.isApiConnectionSuccess[0] = true
+                            storeVC.tableView.reloadData()
                         }else {
                             Constant.myPageViewBannerImage = self.urlImages
                             let myPageVC = delegate as! ProfileViewController

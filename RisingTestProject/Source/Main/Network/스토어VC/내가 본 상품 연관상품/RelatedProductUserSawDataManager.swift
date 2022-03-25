@@ -26,7 +26,9 @@ class RelatedProductUserSawDataManager {
                 if response.isSuccess {
                     print("데이터 가져오기 성공")
                     Constant.relatedUserSawProductInfo = response.result
-                    Constant.recentlySeenProductInfo.append(response.result[0])
+                    if Constant.recentlySeenProductInfo.isEmpty {
+                        Constant.recentlySeenProductInfo.append(response.result[0])
+                    }
                     delegate.isApiConnectionSuccess[3] = true
                 }else {
                     switch response.code {

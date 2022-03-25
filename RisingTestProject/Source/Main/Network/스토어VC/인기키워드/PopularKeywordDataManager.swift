@@ -25,6 +25,7 @@ class PopularKeywordDataManager {
                         print("데이터 가져오기 성공")
                         delegate.popularKeywords = response.result
                         delegate.isApiConnectionSuccess[2] = true
+                        delegate.tableView.reloadData()
                     }
                     else {
                         switch response.code {

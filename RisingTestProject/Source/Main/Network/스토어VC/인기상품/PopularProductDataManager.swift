@@ -24,6 +24,7 @@ class PopularProductDataManager {
                     print("데이터 가져오기 성공")
                     Constant.popularProductInfo = response.result
                     delegate.isApiConnectionSuccess[5] = true
+                    delegate.tableView.reloadData()
                 }else {
                     switch response.code {
                     case 2001: delegate.presentAlert(title: "JWT가 입력되지 않았습니다.")

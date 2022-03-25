@@ -24,6 +24,7 @@ class TodayDealDataManager {
                         print("데이터 가져오기 성공")
                         Constant.todayDealProductInfo = response.result
                         delegate.isApiConnectionSuccess[1] = true
+                        delegate.tableView.reloadData()
                     }
                     else {
                         switch response.code {

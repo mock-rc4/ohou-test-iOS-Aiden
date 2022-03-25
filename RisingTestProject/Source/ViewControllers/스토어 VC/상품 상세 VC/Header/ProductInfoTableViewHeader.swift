@@ -76,6 +76,8 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
         
         // 별 조절
         switch data.score {
+        case 5:
+            return
         case 4..<5:
             star5.image = UIImage(systemName: "star")
         case 3..<4:
