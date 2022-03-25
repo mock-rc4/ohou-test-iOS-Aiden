@@ -14,13 +14,6 @@ import ExpyTableView
 
 class ProductInfoViewController: BaseViewController {
     
-    // 해당 상품 옵션 정보
-    var productOption: [String] = [
-        "사이즈선택",
-        "색상선택",
-        "추가 상품(선택)"
-    ]
-    
     // 펼치기로 확장되는 Cell에 넣을 이미지 배열
     var productInfoImageArray: [String] = []
     
@@ -66,11 +59,11 @@ class ProductInfoViewController: BaseViewController {
         guard let optionVC = storyboard?.instantiateViewController(withIdentifier: "ProductOptionViewController") as? ProductOptionViewController else {
             return
         }
-        optionVC.optionCellArray = productOption
+        optionVC.basePrice = productDetail!.salesPrice
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: optionVC)
         
-        // bottomsheet의 높이를 100(여유) + 옵션 수 * 40으로 설정
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = CGFloat(100 + (productOption.count * 40))
+        // bottomsheet의 높이
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = view.frame.width / 3
         present(bottomSheet, animated: true)
     }
     

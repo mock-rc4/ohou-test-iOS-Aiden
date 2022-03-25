@@ -11,71 +11,49 @@ import UIKit
 
 class ProductOptionViewController: BaseViewController {
     
-    // 옵션 데이터
-    var optionCellArray: [String] = []
+    // MARK: - UI연결
+    
+    @IBOutlet weak var orderCount: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
+    
+    
+    @IBAction func minusButton(_ sender: UIButton) {
+        let currentCount: Int = Int(orderCount.text!)!
+        if currentCount > 1 {
+            orderCount.text = String(currentCount-1)
+            updateOrderPrice()
+        }
+    }
+    @IBAction func plusButton(_ sender: UIButton) {
+        orderCount.text = String(Int(orderCount.text!)!+1)
+        updateOrderPrice()
+    }
+    
+    
+    @IBOutlet var forRadius: [UIView]!
     
     
     
-    // UI연결
-    @IBOutlet weak var optionTableView: UITableView!
+    // 기준가격
+    var basePrice: Int = 0
     
     
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // tableView 세팅
-        optionTableView.delegate = self
-        optionTableView.dataSource = self
+        forRadius.forEach({
+            $0.layer.cornerRadius = forRadius[0].frame.height / 10
+        })
+        forRadius[1].layer.borderColor = UIColor.systemCyan.cgColor
+        forRadius[1].layer.borderWidth = 1
         
-        // footer
-        optionTableView.register(UINib(nibName: "BottomSheetTableViewFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "BottomSheetTableViewFooter")
-        
-        // cell
-        optionTableView.register(UINib(nibName: "BottomSheetTableViewCell", bundle: nil), forCellReuseIdentifier: "BottomSheetTableViewCell")
-        
+        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma()
     }
     
     
-//    func addRadiusToUIViewTop(_ view: UITableView, radiusSize: CGFloat) {
-//        view.layer.cornerRadius = radiusSize
-//        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-//    }
-}
-
-
-
-
-
-extension ProductOptionViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return optionCellArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "BottomSheetTableViewCell", for: indexPath) as? BottomSheetTableViewCell else {
-            return UITableViewCell()
-        }
-        cell.selectionStyle = .none
-        cell.updateCell(optionCellArray[indexPath.row])
-        return cell
-    }
-    
-    // 셀 높이
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
-    }
-    
-    
-    
-    // 테이블뷰 Footer 설정
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "BottomSheetTableViewFooter") as? BottomSheetTableViewFooter else {
-            return UIView()
-        }
-        return footerView
-    }
-    // Footer 높이값 주기
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 0.3
+    func updateOrderPrice() {
+        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
     }
 }
