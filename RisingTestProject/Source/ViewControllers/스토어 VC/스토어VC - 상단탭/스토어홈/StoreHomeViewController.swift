@@ -67,6 +67,14 @@ class StoreHomeViewController: BaseViewController {
         // 인기상품 API 호출
         PopularProductDataManager().getPopularProduct(delegate: self)
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if Constant.didUserSeeProduct {
+            tableView.reloadData()
+            Constant.didUserSeeProduct = false
+        }
+    }
 }
 
 

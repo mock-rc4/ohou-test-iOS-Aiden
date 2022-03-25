@@ -29,7 +29,22 @@ class ProductInfoViewController: BaseViewController {
     var productID: Int?
     
     // 보여줄 제품의 정보
-    var productDetail: ProductDetail?
+    var productDetail: ProductDetail? {
+        didSet {
+            if let idNum = productDetail?.productId {
+                let productInfo = Constant.popularProductInfo.filter({
+                    $0.productId == idNum
+                })
+                let isAlready = Constant.recentlySeenProductInfo.contains(where: {
+                    $0.productId == idNum
+                })
+                if !isAlready {
+                    Constant.recentlySeenProductInfo.insert(productInfo[0], at: 0)
+                    Constant.didUserSeeProduct = true
+                }
+            }
+        }
+    }
     
     
     // MARK: - UI 연결

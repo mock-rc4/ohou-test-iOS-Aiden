@@ -56,6 +56,7 @@ struct Constant {
     
     // 최근 본 상품
     static var recentlySeenProductInfo: [ProductCellInfoNoRemain] = []
+    static var didUserSeeProduct: Bool = false
     
     // 인기상품
     static var popularProductInfo: [ProductCellInfoNoRemain] = []
