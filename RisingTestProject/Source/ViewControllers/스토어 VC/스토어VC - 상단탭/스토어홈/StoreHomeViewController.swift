@@ -160,7 +160,11 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
         }else {
             // 인기상품 Cell 높이 조절 필요
             // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
-            return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
+            if Constant.popularProductInfo.count >= 1 {
+                return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+            }else {
+                return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
+            }
         }
     }
     

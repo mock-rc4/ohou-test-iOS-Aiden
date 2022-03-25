@@ -138,6 +138,8 @@
 		D0A871F827EAD61800144BD8 /* ProductInfoTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A871F727EAD61800144BD8 /* ProductInfoTableViewHeader.xib */; };
 		D0AE5E6827ECC0ED0091DA72 /* PopularProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6727ECC0ED0091DA72 /* PopularProductDataManager.swift */; };
 		D0AE5E6B27ECC1490091DA72 /* PopularProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6A27ECC1490091DA72 /* PopularProductResponse.swift */; };
+		D0AE5E6E27ECCC230091DA72 /* RealTimeBestProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6D27ECCC230091DA72 /* RealTimeBestProductDataManager.swift */; };
+		D0AE5E7127ECCC410091DA72 /* RealTimeBestProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E7027ECCC410091DA72 /* RealTimeBestProductResponse.swift */; };
 		D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */; };
 		D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */; };
 		D0B1D17527E89D9B0002823D /* OngoingOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */; };
@@ -331,6 +333,8 @@
 		D0A871F727EAD61800144BD8 /* ProductInfoTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInfoTableViewHeader.xib; sourceTree = "<group>"; };
 		D0AE5E6727ECC0ED0091DA72 /* PopularProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductDataManager.swift; sourceTree = "<group>"; };
 		D0AE5E6A27ECC1490091DA72 /* PopularProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductResponse.swift; sourceTree = "<group>"; };
+		D0AE5E6D27ECCC230091DA72 /* RealTimeBestProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestProductDataManager.swift; sourceTree = "<group>"; };
+		D0AE5E7027ECCC410091DA72 /* RealTimeBestProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestProductResponse.swift; sourceTree = "<group>"; };
 		D0B1D16F27E890810002823D /* MyShoppingTapHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShoppingTapHeader.swift; sourceTree = "<group>"; };
 		D0B1D17127E8909C0002823D /* MyShoppingTapHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyShoppingTapHeader.xib; sourceTree = "<group>"; };
 		D0B1D17327E89D9B0002823D /* OngoingOrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingOrderTableViewCell.swift; sourceTree = "<group>"; };
@@ -1340,6 +1344,7 @@
 		D092D32127EB085200A5BAF2 /* 스토어VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0AE5E6C27ECCB7F0091DA72 /* 실시간 베스트 */,
 				D0F6E21D27ECC0770058A7E7 /* 인기상품 */,
 				D0F6E21727EC96EF0058A7E7 /* 추천상품 */,
 				D0F6E21127EC87F60058A7E7 /* 내가 본 상품 연관상품 */,
@@ -1461,6 +1466,24 @@
 			isa = PBXGroup;
 			children = (
 				D0AE5E6A27ECC1490091DA72 /* PopularProductResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D0AE5E6C27ECCB7F0091DA72 /* 실시간 베스트 */ = {
+			isa = PBXGroup;
+			children = (
+				D0AE5E6D27ECCC230091DA72 /* RealTimeBestProductDataManager.swift */,
+				D0AE5E6F27ECCC2E0091DA72 /* Entity */,
+			);
+			name = "실시간 베스트";
+			path = "실시간 베스트";
+			sourceTree = "<group>";
+		};
+		D0AE5E6F27ECCC2E0091DA72 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0AE5E7027ECCC410091DA72 /* RealTimeBestProductResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2098,6 +2121,7 @@
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0A871F627EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift in Sources */,
+				D0AE5E6E27ECCC230091DA72 /* RealTimeBestProductDataManager.swift in Sources */,
 				D0252C7327E853CA00998372 /* PhotoCollectionViewCell.swift in Sources */,
 				D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */,
 				D0B1D17B27E8A4440002823D /* MyShoppingTapCell.swift in Sources */,
@@ -2128,6 +2152,7 @@
 				D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */,
 				D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */,
 				D0F6E21C27EC972A0058A7E7 /* RecommendProductResponse.swift in Sources */,
+				D0AE5E7127ECCC410091DA72 /* RealTimeBestProductResponse.swift in Sources */,
 				D0124A0827E736520035456F /* MediaCollectionViewFooter.swift in Sources */,
 				D044D91827E70B8F004E9EC6 /* TodayDealTableViewCell.swift in Sources */,
 				D0B1D17027E890810002823D /* MyShoppingTapHeader.swift in Sources */,

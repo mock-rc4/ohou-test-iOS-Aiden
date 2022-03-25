@@ -44,7 +44,7 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
         companyName.text = productInfo.company
         productName.text = productInfo.name
         discountRate.text = "\(productInfo.sale)%"
-        price.text = "\(productInfo.salesPrice)"
+        price.text = productInfo.salesPrice.insertComma()
         rating.text = "\(productInfo.score)"
         reviews.text = "리뷰 \(productInfo.reviewCnt)"
         if productInfo.isFree == 0 {
