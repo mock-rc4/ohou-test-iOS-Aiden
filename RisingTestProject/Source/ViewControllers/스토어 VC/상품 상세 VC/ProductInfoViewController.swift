@@ -84,7 +84,7 @@ class ProductInfoViewController: BaseViewController {
         tableView.register(UINib(nibName: "EXProductInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "EXProductInfoTableViewCell")
         tableView.register(UINib(nibName: "ProductReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductReviewTableViewCell")
         tableView.register(UINib(nibName: "QuestionDeliveryTableViewCell", bundle: nil), forCellReuseIdentifier: "QuestionDeliveryTableViewCell")
-        tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
+//        tableView.register(UINib(nibName: "RecommendedProductTableViewCell", bundle: nil), forCellReuseIdentifier: "RecommendedProductTableViewCell")
         
         // 장바구니 버튼 addTarget
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
@@ -166,19 +166,12 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             return cell
         }
         // 배송/교환/환불 셀
-        else if section == 4 {
+        else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionDeliveryTableViewCell") as? QuestionDeliveryTableViewCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             cell.updateCell(title: "배송/교환/환불", nil)
-            return cell
-        }
-        // 비슷한 상품.. 함께 보면 좋을 상품.. 등 3개?
-        else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecommendedProductTableViewCell") as? RecommendedProductTableViewCell else {
-                return UITableViewCell()
-            }
             return cell
         }
     }
@@ -190,7 +183,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
                 return UITableViewCell()
             }
             if productInfoImageArray.count >= 1 {
-                cell.updateCell(productInfoImageArray[indexPath.row])
+                cell.updateCell(productInfoImageArray[indexPath.row-1])
             }
             return cell
         }else {
@@ -228,10 +221,8 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             return tableView.frame.width * 2.4
         }
         // 문의, 배송/교환/환불 셀
-        else if indexPath.section <= 4 {
+        else {
             return tableView.frame.width / 8
-        }else {
-            return tableView.frame.width * 1.1
         }
     }
     
@@ -239,7 +230,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     
     // 섹션의 개수 설정
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 8
+        return 5
     }
     
     

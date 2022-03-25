@@ -815,7 +815,6 @@
 				D03BF35C27EBFABE006A0CE9 /* 상품정보 */,
 				D03BF36627EC13BA006A0CE9 /* 리뷰 */,
 				D072FAF227EC5898007134C7 /* 문의, 배송, 교환, 환불 */,
-				D0F6E20E27EC85270058A7E7 /* 비슷한상품, 인기상품 */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1894,23 +1893,6 @@
 				D0ED009027EB317D00904DC7 /* PopularKeywordResponse.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		D0F6E20E27EC85270058A7E7 /* 비슷한상품, 인기상품 */ = {
-			isa = PBXGroup;
-			children = (
-				D0F6E21027EC854C0058A7E7 /* 스토어홈 Cell 재사용 */,
-			);
-			name = "비슷한상품, 인기상품";
-			path = "비슷한상품, 인기상품";
-			sourceTree = "<group>";
-		};
-		D0F6E21027EC854C0058A7E7 /* 스토어홈 Cell 재사용 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "스토어홈 Cell 재사용";
-			path = "스토어홈 Cell 재사용";
 			sourceTree = "<group>";
 		};
 		D0F6E21127EC87F60058A7E7 /* 내가 본 상품 연관상품 */ = {

@@ -15,6 +15,9 @@ class RecommendedProductTableViewCell: UITableViewCell {
     // header타이틀
     var headerTitle: String = ""
     
+    // 뷰 전환 위한 delegate
+    var delegate: ShowProductDetailPage?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -74,7 +77,7 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
             if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "내가 본 상품의 연관 상품" {
                 cell.updateCell(Constant.relatedUserSawProductInfo[indexPath.row])
             }
-            if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
+            if Constant.recommendProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
                 cell.updateCell(Constant.recommendProductInfo[indexPath.row])
             }
             if Constant.recentlySeenProductInfo.count >= 1 && headerTitle == "최근 본 상품" {
@@ -86,6 +89,20 @@ extension RecommendedProductTableViewCell: UICollectionViewDelegate, UICollectio
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
+    }
+    
+    
+    // 컬렉션뷰 셀 선택되면 호출 (View전환)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if Constant.relatedUserSawProductInfo.count >= 1 && headerTitle == "내가 본 상품의 연관 상품" {
+            delegate?.showDetailPage(Constant.relatedUserSawProductInfo[indexPath.row].productId)
+        }
+        if Constant.recommendProductInfo.count >= 1 && headerTitle == "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품" {
+            delegate?.showDetailPage(Constant.recommendProductInfo[indexPath.row].productId)
+        }
+        if Constant.recentlySeenProductInfo.count >= 1 && headerTitle == "최근 본 상품" {
+            delegate?.showDetailPage(Constant.recentlySeenProductInfo[indexPath.row].productId)
+        }
     }
 }
 

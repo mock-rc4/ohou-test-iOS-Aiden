@@ -99,6 +99,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            // View 전환 delegate
+            cell.delegate = self
             cell.headerTitle = "내가 본 상품의 연관 상품"
             if Constant.relatedUserSawProductInfo.count >= 1 {
                 cell.collectionView.reloadData()
@@ -110,6 +112,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            // View 전환 delegate
+            cell.delegate = self
             cell.headerTitle = "\(Constant.userInfo?.nickname ?? "")님을 위한 추천상품"
             if Constant.recommendProductInfo.count >= 1 {
                 cell.collectionView.reloadData()
@@ -121,6 +125,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            // View 전환 delegate
+            cell.delegate = self
             cell.headerTitle = "최근 본 상품"
             if Constant.relatedUserSawProductInfo.count >= 1 {
                 cell.collectionView.reloadData()
@@ -142,6 +148,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            // View 전환 delegate
+            cell.delegate = self
             if Constant.popularProductInfo.count >= 1 {
                 cell.collectionView.reloadData()
             }

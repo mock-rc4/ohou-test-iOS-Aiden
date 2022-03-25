@@ -13,6 +13,9 @@ class PopularProductTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
+    // 뷰 전환 위한 delegate
+    var delegate: ShowProductDetailPage?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -69,6 +72,14 @@ extension PopularProductTableViewCell: UICollectionViewDelegate, UICollectionVie
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
+    }
+    
+    
+    // 컬렉션뷰 셀 선택되면 호출 (View전환)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if Constant.popularProductInfo.count >= 1 {
+            delegate?.showDetailPage(Constant.popularProductInfo[indexPath.row].productId)
+        }
     }
 }
 
