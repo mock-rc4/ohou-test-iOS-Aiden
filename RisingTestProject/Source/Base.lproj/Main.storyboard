@@ -2286,7 +2286,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRq-sN-3jO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="3752"/>
+            <point key="canvasLocation" x="174" y="3643"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="qMt-r4-tnG">
+            <objects>
+                <viewController storyboardIdentifier="PaymentViewController" id="gWn-TW-YXy" customClass="PaymentViewController" customModule="RisingTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fUs-Rt-KOx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rf0-ye-Ss8" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-tt-ACj">
+                                        <rect key="frame" x="0.0" y="7" width="53.5" height="38"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapPopButton:" destination="Kcl-SF-tiB" eventType="touchUpInside" id="3td-GV-n9y"/>
+                                            <action selector="didTapPopButton:" destination="m2Y-6G-8ou" eventType="touchUpInside" id="LjP-R4-2Md"/>
+                                            <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="n0A-ca-GO9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문/결제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHX-Ty-Yr9">
+                                        <rect key="frame" x="177" y="16" width="60.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-84-iCD">
+                                        <rect key="frame" x="0.0" y="47" width="414" height="5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="1dv-xQ-iQg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VLL-tt-ACj" firstAttribute="leading" secondItem="rf0-ye-Ss8" secondAttribute="leading" id="5PW-Tb-S00"/>
+                                    <constraint firstItem="DIg-84-iCD" firstAttribute="leading" secondItem="rf0-ye-Ss8" secondAttribute="leading" id="F56-b8-msR"/>
+                                    <constraint firstAttribute="trailing" secondItem="DIg-84-iCD" secondAttribute="trailing" id="NWX-le-uPv"/>
+                                    <constraint firstAttribute="bottom" secondItem="DIg-84-iCD" secondAttribute="bottom" id="TWL-V2-v3u"/>
+                                    <constraint firstItem="VLL-tt-ACj" firstAttribute="centerY" secondItem="rf0-ye-Ss8" secondAttribute="centerY" id="dzj-Tt-qLX"/>
+                                    <constraint firstItem="rHX-Ty-Yr9" firstAttribute="centerX" secondItem="rf0-ye-Ss8" secondAttribute="centerX" id="rSN-dW-i5r"/>
+                                    <constraint firstItem="rHX-Ty-Yr9" firstAttribute="centerY" secondItem="rf0-ye-Ss8" secondAttribute="centerY" id="zj1-rz-JIs"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jtr-47-qzn">
+                                <rect key="frame" x="0.0" y="96" width="414" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Ea-oW-JM4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Ea-oW-JM4" firstAttribute="trailing" secondItem="rf0-ye-Ss8" secondAttribute="trailing" id="5nx-L9-r7e"/>
+                            <constraint firstItem="jtr-47-qzn" firstAttribute="top" secondItem="rf0-ye-Ss8" secondAttribute="bottom" id="Ad5-mr-wBO"/>
+                            <constraint firstItem="rf0-ye-Ss8" firstAttribute="top" secondItem="4Ea-oW-JM4" secondAttribute="top" id="Iz7-IX-aJJ"/>
+                            <constraint firstItem="jtr-47-qzn" firstAttribute="leading" secondItem="4Ea-oW-JM4" secondAttribute="leading" id="SZx-wV-x4S"/>
+                            <constraint firstItem="4Ea-oW-JM4" firstAttribute="bottom" secondItem="jtr-47-qzn" secondAttribute="bottom" id="qBC-zP-awm"/>
+                            <constraint firstItem="4Ea-oW-JM4" firstAttribute="trailing" secondItem="jtr-47-qzn" secondAttribute="trailing" id="scm-5D-BEW"/>
+                            <constraint firstItem="rf0-ye-Ss8" firstAttribute="width" secondItem="rf0-ye-Ss8" secondAttribute="height" multiplier="8:1" id="v31-ar-NWO"/>
+                            <constraint firstItem="rf0-ye-Ss8" firstAttribute="leading" secondItem="fUs-Rt-KOx" secondAttribute="leading" id="wUY-1m-lds"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jtr-47-qzn" id="qdP-0O-vO3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfu-Fv-tht" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="4334"/>
         </scene>
         <!--Product Option View Controller-->
         <scene sceneID="GzX-FS-nxK">
@@ -2339,23 +2413,20 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-gs-RyD">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIt-QF-sAY">
                                                         <rect key="frame" x="0.0" y="0.0" width="193.5" height="49"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
-                                                        <connections>
-                                                            <action selector="buyNowButton:" destination="bAC-r3-QjB" eventType="touchUpInside" id="pjP-me-w5e"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="oTA-gs-RyD" firstAttribute="leading" secondItem="J0u-vh-mCb" secondAttribute="leading" id="3mE-ux-zEr"/>
-                                                    <constraint firstAttribute="trailing" secondItem="oTA-gs-RyD" secondAttribute="trailing" id="7ro-fe-ijM"/>
                                                     <constraint firstItem="oFH-ah-q75" firstAttribute="centerY" secondItem="J0u-vh-mCb" secondAttribute="centerY" id="Clh-Fx-lIM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fIt-QF-sAY" secondAttribute="trailing" id="Ef7-c4-iHY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="fIt-QF-sAY" secondAttribute="bottom" id="FCa-on-09l"/>
+                                                    <constraint firstItem="fIt-QF-sAY" firstAttribute="leading" secondItem="J0u-vh-mCb" secondAttribute="leading" id="ScN-44-cjb"/>
                                                     <constraint firstItem="oFH-ah-q75" firstAttribute="centerX" secondItem="J0u-vh-mCb" secondAttribute="centerX" id="iRd-Sd-1wT"/>
-                                                    <constraint firstItem="oTA-gs-RyD" firstAttribute="top" secondItem="J0u-vh-mCb" secondAttribute="top" id="qVO-Dn-ZxQ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="oTA-gs-RyD" secondAttribute="bottom" id="uaq-Qg-qib"/>
+                                                    <constraint firstItem="fIt-QF-sAY" firstAttribute="top" secondItem="J0u-vh-mCb" secondAttribute="top" id="sSv-jg-iFp"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -2432,6 +2503,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowButton" destination="fIt-QF-sAY" id="mA7-tN-V1c"/>
                         <outlet property="orderCount" destination="F4A-l6-qjL" id="gSp-jD-YXK"/>
                         <outlet property="productName" destination="llG-Y2-vaV" id="7CW-kS-4V5"/>
                         <outlet property="totalPrice" destination="pbQ-kU-MlZ" id="FAh-Cd-yj0"/>

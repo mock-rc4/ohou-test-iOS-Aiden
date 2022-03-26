@@ -14,14 +14,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2개 | 283,234원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdP-s2-fCq">
-                    <rect key="frame" x="15" y="62" width="108" height="18"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZp-HM-gwy">
-                    <rect key="frame" x="138" y="49" width="266" height="44"/>
+                    <rect key="frame" x="10" y="49" width="394" height="44"/>
                     <color key="backgroundColor" systemColor="systemCyanColor"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,11 +27,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="SZp-HM-gwy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="0kX-xn-sa9"/>
-                <constraint firstItem="SZp-HM-gwy" firstAttribute="leading" secondItem="VdP-s2-fCq" secondAttribute="trailing" constant="15" id="DgD-CA-uoo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SZp-HM-gwy" secondAttribute="trailing" constant="10" id="WoU-dm-iOp"/>
-                <constraint firstItem="VdP-s2-fCq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="cha-vR-dMq"/>
+                <constraint firstItem="SZp-HM-gwy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="XTw-5m-WTq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SZp-HM-gwy" secondAttribute="bottom" constant="5" id="mS9-SQ-ixx"/>
-                <constraint firstItem="VdP-s2-fCq" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="wWe-io-Bgv"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="358.92857142857139"/>

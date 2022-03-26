@@ -43,9 +43,8 @@ class ProductOptionViewController: BaseViewController {
     
     
     // 바로구매 버튼
-    @IBAction func buyNowButton(_ sender: UIButton) {
-        // 구매 API 호출
-    }
+    @IBOutlet weak var buyNowButton: UIButton!
+    
     
     
     
@@ -69,6 +68,27 @@ class ProductOptionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        forRadius.forEach({
+//            $0.layer.cornerRadius = forRadius[0].frame.height / 10
+//        })
+//        forRadius[1].layer.borderColor = UIColor.systemCyan.cgColor
+//        forRadius[1].layer.borderWidth = 1
+//
+//        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
+//
+//        // 버튼 addTarget
+//        buyNowButton.addTarget(self, action: #selector(showPaymentVC), for: .touchUpInside)
+    }
+    
+    
+    func updateOrderPrice() {
+        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
+    }
+    
+    
+    
+    // MARK: - 왜 ViewDidLoad가 호출되지 않는지 찾아보기 !!! -> willAppear는 잘 작동함
+    override func viewWillAppear(_ animated: Bool) {
         forRadius.forEach({
             $0.layer.cornerRadius = forRadius[0].frame.height / 10
         })
@@ -76,11 +96,9 @@ class ProductOptionViewController: BaseViewController {
         forRadius[1].layer.borderWidth = 1
         
         totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
-    }
-    
-    
-    func updateOrderPrice() {
-        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
+        
+        // 버튼 addTarget
+        buyNowButton.addTarget(self, action: #selector(showPaymentVC), for: .touchUpInside)
     }
     
     

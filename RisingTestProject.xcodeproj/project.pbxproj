@@ -122,6 +122,15 @@
 		D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */; };
 		D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */; };
 		D088EA0927EF2C2A00C129C0 /* DeleteProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */; };
+		D088EA0D27EF3D7B00C129C0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0C27EF3D7B00C129C0 /* PaymentViewController.swift */; };
+		D088EA1227EF463300C129C0 /* DeliveryAddressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA1027EF463300C129C0 /* DeliveryAddressTableViewCell.swift */; };
+		D088EA1327EF463300C129C0 /* DeliveryAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D088EA1127EF463300C129C0 /* DeliveryAddressTableViewCell.xib */; };
+		D088EA1C27EF51C400C129C0 /* OrdererTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA1A27EF51C400C129C0 /* OrdererTableViewCell.swift */; };
+		D088EA1D27EF51C400C129C0 /* OrdererTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D088EA1B27EF51C400C129C0 /* OrdererTableViewCell.xib */; };
+		D088EA2027EF53A500C129C0 /* OrderProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA1E27EF53A500C129C0 /* OrderProductTableViewCell.swift */; };
+		D088EA2127EF53A500C129C0 /* OrderProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D088EA1F27EF53A500C129C0 /* OrderProductTableViewCell.xib */; };
+		D088EA2427EF55AB00C129C0 /* PaymentMethodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA2227EF55AB00C129C0 /* PaymentMethodTableViewCell.swift */; };
+		D088EA2527EF55AB00C129C0 /* PaymentMethodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D088EA2327EF55AB00C129C0 /* PaymentMethodTableViewCell.xib */; };
 		D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */; };
 		D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */; };
 		D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */; };
@@ -340,6 +349,15 @@
 		D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataManager.swift; sourceTree = "<group>"; };
 		D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductRequest.swift; sourceTree = "<group>"; };
 		D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductResponse.swift; sourceTree = "<group>"; };
+		D088EA0C27EF3D7B00C129C0 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		D088EA1027EF463300C129C0 /* DeliveryAddressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressTableViewCell.swift; sourceTree = "<group>"; };
+		D088EA1127EF463300C129C0 /* DeliveryAddressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryAddressTableViewCell.xib; sourceTree = "<group>"; };
+		D088EA1A27EF51C400C129C0 /* OrdererTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdererTableViewCell.swift; sourceTree = "<group>"; };
+		D088EA1B27EF51C400C129C0 /* OrdererTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdererTableViewCell.xib; sourceTree = "<group>"; };
+		D088EA1E27EF53A500C129C0 /* OrderProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderProductTableViewCell.swift; sourceTree = "<group>"; };
+		D088EA1F27EF53A500C129C0 /* OrderProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderProductTableViewCell.xib; sourceTree = "<group>"; };
+		D088EA2227EF55AB00C129C0 /* PaymentMethodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodTableViewCell.swift; sourceTree = "<group>"; };
+		D088EA2327EF55AB00C129C0 /* PaymentMethodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodTableViewCell.xib; sourceTree = "<group>"; };
 		D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestTableViewHeader.swift; sourceTree = "<group>"; };
 		D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreBestTableViewHeader.xib; sourceTree = "<group>"; };
 		D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestTableViewCell.swift; sourceTree = "<group>"; };
@@ -766,6 +784,7 @@
 				D0A431B327E9B26900421A34 /* 스토어VC - 상단탭 */,
 				D02FD0B627EABD9900E21319 /* 상품 상세 VC */,
 				D08DE46927ED64F000B715C4 /* 장바구니VC */,
+				D088EA0B27EF3A3700C129C0 /* 결제하기 VC */,
 			);
 			name = "스토어 VC";
 			path = "스토어 VC";
@@ -1418,6 +1437,101 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D088EA0A27EF394800C129C0 /* 결제하기 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "결제하기";
+			path = "결제하기";
+			sourceTree = "<group>";
+		};
+		D088EA0B27EF3A3700C129C0 /* 결제하기 VC */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA0C27EF3D7B00C129C0 /* PaymentViewController.swift */,
+				D088EA0E27EF3E3E00C129C0 /* TableCell */,
+				D088EA0F27EF3E4700C129C0 /* Footer */,
+			);
+			name = "결제하기 VC";
+			path = "결제하기 VC";
+			sourceTree = "<group>";
+		};
+		D088EA0E27EF3E3E00C129C0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA1427EF511E00C129C0 /* 배송지Cell */,
+				D088EA1527EF513500C129C0 /* 주문자Cell */,
+				D088EA1627EF515800C129C0 /* 주문상품 Cell */,
+				D088EA1727EF516200C129C0 /* 결제수단 Cell */,
+				D088EA1827EF517500C129C0 /* 결제금액 Cell */,
+				D088EA1927EF518200C129C0 /* 동의 Cell */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D088EA0F27EF3E4700C129C0 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		D088EA1427EF511E00C129C0 /* 배송지Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA1027EF463300C129C0 /* DeliveryAddressTableViewCell.swift */,
+				D088EA1127EF463300C129C0 /* DeliveryAddressTableViewCell.xib */,
+			);
+			name = "배송지Cell";
+			path = "배송지Cell";
+			sourceTree = "<group>";
+		};
+		D088EA1527EF513500C129C0 /* 주문자Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA1A27EF51C400C129C0 /* OrdererTableViewCell.swift */,
+				D088EA1B27EF51C400C129C0 /* OrdererTableViewCell.xib */,
+			);
+			name = "주문자Cell";
+			path = "주문자Cell";
+			sourceTree = "<group>";
+		};
+		D088EA1627EF515800C129C0 /* 주문상품 Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA1E27EF53A500C129C0 /* OrderProductTableViewCell.swift */,
+				D088EA1F27EF53A500C129C0 /* OrderProductTableViewCell.xib */,
+			);
+			name = "주문상품 Cell";
+			path = "주문상품 Cell";
+			sourceTree = "<group>";
+		};
+		D088EA1727EF516200C129C0 /* 결제수단 Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA2227EF55AB00C129C0 /* PaymentMethodTableViewCell.swift */,
+				D088EA2327EF55AB00C129C0 /* PaymentMethodTableViewCell.xib */,
+			);
+			name = "결제수단 Cell";
+			path = "결제수단 Cell";
+			sourceTree = "<group>";
+		};
+		D088EA1827EF517500C129C0 /* 결제금액 Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "결제금액 Cell";
+			path = "결제금액 Cell";
+			sourceTree = "<group>";
+		};
+		D088EA1927EF518200C129C0 /* 동의 Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "동의 Cell";
+			path = "동의 Cell";
+			sourceTree = "<group>";
+		};
 		D08DE45F27ED4FF300B715C4 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1878,6 +1992,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D088EA0A27EF394800C129C0 /* 결제하기 */,
 				D0FE01E927EEA007005D5C4F /* 장바구니 */,
 				D0D5B65127EDD7CB00319E3D /* 제품 상세 조회 */,
 				D092D32127EB085200A5BAF2 /* 스토어VC */,
@@ -2184,12 +2299,14 @@
 				D014810527EA13E100BD3BAA /* PopularKeywordTableViewCell.xib in Resources */,
 				D08DE46827ED564400B715C4 /* RealTimeBestTableViewCell.xib in Resources */,
 				D0562EF327ED8A1F00AAACE9 /* SelectAllTableViewCell.xib in Resources */,
+				D088EA2127EF53A500C129C0 /* OrderProductTableViewCell.xib in Resources */,
 				D0B7591627E864C800954FB3 /* CommercialCollectionViewCell.xib in Resources */,
 				D044D91D27E70CD1004E9EC6 /* TodayDealCollectionViewCell.xib in Resources */,
 				D0124A0927E736520035456F /* MediaCollectionViewFooter.xib in Resources */,
 				D0B7591A27E86AB200954FB3 /* ProfileTableViewCell.xib in Resources */,
 				D0B1D17227E8909C0002823D /* MyShoppingTapHeader.xib in Resources */,
 				D014810027EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.xib in Resources */,
+				D088EA2527EF55AB00C129C0 /* PaymentMethodTableViewCell.xib in Resources */,
 				D0910F6727E56D9B00793D90 /* LaunchScreen.storyboard in Resources */,
 				D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */,
 				D03BF36127EBFBAF006A0CE9 /* ProductInfoTableViewCell.xib in Resources */,
@@ -2219,11 +2336,13 @@
 				D04A2DEF27E5D61400D1C7D6 /* CommercialBannerCell.xib in Resources */,
 				D0FDE80E27EB731B00C4C2A3 /* TodayDealTabCell.xib in Resources */,
 				D0B1D17627E89D9B0002823D /* OngoingOrderTableViewCell.xib in Resources */,
+				D088EA1D27EF51C400C129C0 /* OrdererTableViewCell.xib in Resources */,
 				D0910F6227E56D9800793D90 /* Main.storyboard in Resources */,
 				D014810C27EA228100BD3BAA /* PopularProductTableViewCell.xib in Resources */,
 				D01249FA27E72E380035456F /* PopularityMediaTableViewCell.xib in Resources */,
 				D0FDE81927EB783000C4C2A3 /* UserStylingCollectionViewCell.xib in Resources */,
 				D0124A0527E7320B0035456F /* MediaRankCell.xib in Resources */,
+				D088EA1327EF463300C129C0 /* DeliveryAddressTableViewCell.xib in Resources */,
 				D04A2DEA27E5CF1200D1C7D6 /* PopularityTableViewHeader.xib in Resources */,
 				D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */,
 				D0FDE81F27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib in Resources */,
@@ -2281,6 +2400,7 @@
 			files = (
 				D0AE5E6827ECC0ED0091DA72 /* PopularProductDataManager.swift in Sources */,
 				D0C0823927ED9B93008BABDF /* TotalPriceTableViewCell.swift in Sources */,
+				D088EA1227EF463300C129C0 /* DeliveryAddressTableViewCell.swift in Sources */,
 				D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */,
 				D0ABD7E527EEAEED00F85DBF /* BasketProductResponse.swift in Sources */,
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
@@ -2315,12 +2435,14 @@
 				D03BF36027EBFBAF006A0CE9 /* ProductInfoTableViewCell.swift in Sources */,
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
+				D088EA1C27EF51C400C129C0 /* OrdererTableViewCell.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
 				D0D5B65327EDD80700319E3D /* ProductInfoDataManager.swift in Sources */,
 				D0252C6B27E84A1900998372 /* MyShoppingTableViewCell.swift in Sources */,
 				D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */,
 				D02504EF27EB4FAC00A580BB /* ProductOptionViewController.swift in Sources */,
 				D06B483127E8189700C881E0 /* CALayer.swift in Sources */,
+				D088EA2027EF53A500C129C0 /* OrderProductTableViewCell.swift in Sources */,
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
 				D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */,
 				D02AA6AF27E9727B004E6703 /* StoreViewController.swift in Sources */,
@@ -2410,6 +2532,7 @@
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
+				D088EA0D27EF3D7B00C129C0 /* PaymentViewController.swift in Sources */,
 				D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */,
 				D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
@@ -2417,6 +2540,7 @@
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
 				D0C0823527ED8F85008BABDF /* ProductInBasketTableViewCell.swift in Sources */,
 				D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */,
+				D088EA2427EF55AB00C129C0 /* PaymentMethodTableViewCell.swift in Sources */,
 				D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */,
 				D04A2DEE27E5D61400D1C7D6 /* CommercialBannerCell.swift in Sources */,
 				D09D5BF227EB2BC100F4B9D0 /* PaddingLabel.swift in Sources */,

@@ -111,4 +111,16 @@ class BaseViewController: UIViewController {
             presentAlert(title: "로그인 후 진행해주세요.")
         }
     }
+    
+    
+    @objc func showPaymentVC() {
+        if Constant.isUserLogged {
+            guard let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(paymentVC, animated: true)
+        }else {
+            presentAlert(title: "로그인 후 진행해주세요.")
+        }
+    }
 }
