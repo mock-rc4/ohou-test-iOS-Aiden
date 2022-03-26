@@ -11,7 +11,11 @@ import UIKit
 protocol TableViewReload {
     func tableViewReload()
     
+    // 제품 개수 변경
     func productCountUpdate(_ productID: Int, count: Int)
+    
+    // 제품 삭제버튼 클릭
+    func deleteProduct(_ productID: Int)
 }
 
 
@@ -63,6 +67,15 @@ class ProductInBasketTableViewCell: UITableViewCell {
             deliveryCharge.text = "배송비 " + data.deliveryCharge.insertComma() + "원"
         }
     }
+    
+    
+    // 상품 삭제 버튼
+    @IBAction func didTapDeleteProductButton(_ sender: UIButton) {
+        delegate?.deleteProduct(productID)
+    }
+    
+    
+    
     
     // basePrice
     var basePrice: Int = 0

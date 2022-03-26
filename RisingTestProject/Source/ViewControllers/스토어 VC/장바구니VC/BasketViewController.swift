@@ -221,10 +221,18 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
 
 // 테이블뷰 리로드 프로토콜
 extension BasketViewController: TableViewReload {
+    func deleteProduct(_ productID: Int) {
+        presentAlert(title: "정말 삭제하시겠습니까?", isCancelActionIncluded: true, preferredStyle: .alert, handler: { _ in
+            DeleteProductDataManager().deleteProduct(DeleteProductRequest(status: 0), delegate: self, productID: productID)
+        })
+    }
+    
+    // 장바구니에 있는 상품 개수 수정
     func productCountUpdate(_ productID: Int, count: Int) {
         ModifyProductCountDataManager().modifyProductCount(ModifyProductCountRequest(productCnt: count), delegate: self, productID: productID)
     }
     
+    // 테이블뷰 리로드
     func tableViewReload() {
         BasketProductDataManager().getBasketProductInfo(delegate: self)
     }

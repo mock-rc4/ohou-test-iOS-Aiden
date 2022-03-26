@@ -112,6 +112,9 @@
                                                 <state key="normal" image="xmark" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didTapDeleteProductButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YQx-xv-sJe"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="214,500원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-em-jeO">
                                                 <rect key="frame" x="270.5" y="45.5" width="64.5" height="17"/>

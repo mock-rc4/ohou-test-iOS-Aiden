@@ -119,6 +119,9 @@
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
 		D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */; };
 		D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */; };
+		D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */; };
+		D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */; };
+		D088EA0927EF2C2A00C129C0 /* DeleteProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */; };
 		D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */; };
 		D08DE46427ED515F00B715C4 /* StoreBestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */; };
 		D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */; };
@@ -334,6 +337,9 @@
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
 		D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforePutInProductTableCell.swift; sourceTree = "<group>"; };
 		D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforePutInProductTableCell.xib; sourceTree = "<group>"; };
+		D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataManager.swift; sourceTree = "<group>"; };
+		D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductRequest.swift; sourceTree = "<group>"; };
+		D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductResponse.swift; sourceTree = "<group>"; };
 		D08DE46127ED514B00B715C4 /* StoreBestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestTableViewHeader.swift; sourceTree = "<group>"; };
 		D08DE46327ED515F00B715C4 /* StoreBestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreBestTableViewHeader.xib; sourceTree = "<group>"; };
 		D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestTableViewCell.swift; sourceTree = "<group>"; };
@@ -1403,6 +1409,15 @@
 			path = "담기기 후";
 			sourceTree = "<group>";
 		};
+		D088EA0527EF2BAF00C129C0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */,
+				D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D08DE45F27ED4FF300B715C4 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1957,6 +1972,16 @@
 			path = Emtity;
 			sourceTree = "<group>";
 		};
+		D0FC805027EF2AB700A1A650 /* 장바구니 상품 삭제 */ = {
+			isa = PBXGroup;
+			children = (
+				D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */,
+				D088EA0527EF2BAF00C129C0 /* Entity */,
+			);
+			name = "장바구니 상품 삭제";
+			path = "장바구니 상품 삭제";
+			sourceTree = "<group>";
+		};
 		D0FDE80527EB722E00C4C2A3 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2024,6 +2049,7 @@
 		D0FE01E927EEA007005D5C4F /* 장바구니 */ = {
 			isa = PBXGroup;
 			children = (
+				D0FC805027EF2AB700A1A650 /* 장바구니 상품 삭제 */,
 				D0FC804827EF1E3C00A1A650 /* 장바구니 상품 개수 수정 */,
 				D0FE01EB27EEA090005D5C4F /* 장바구니 조회 */,
 				D0FE01EA27EEA08A005D5C4F /* 장바구니 담기 */,
@@ -2266,6 +2292,7 @@
 				D0FDE81427EB77FC00C4C2A3 /* UserStylingTableViewCell.swift in Sources */,
 				D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
+				D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
 				D0AE5E6B27ECC1490091DA72 /* PopularProductResponse.swift in Sources */,
@@ -2339,6 +2366,7 @@
 				D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */,
 				D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */,
 				D0B7591927E86AB200954FB3 /* ProfileTableViewCell.swift in Sources */,
+				D088EA0927EF2C2A00C129C0 /* DeleteProductResponse.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
 				D02FD0B127EAAB0B00E21319 /* CommercialImageDataManager.swift in Sources */,
@@ -2383,6 +2411,7 @@
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
 				D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */,
+				D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
