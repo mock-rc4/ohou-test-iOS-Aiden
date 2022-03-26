@@ -34,7 +34,11 @@ class ProductOptionViewController: BaseViewController {
     // 장바구니에 담기 버튼
     @IBAction func putInBasketButton(_ sender: UIButton) {
         // 장바구니 담기 API 호출
-        PutInBasketDataManager().putInBasket(PutInBasketRequest(productId: orderProductID ?? 0, productCnt: Int(orderCount.text!)!), delegate: self)
+        if Constant.isUserLogged {
+            PutInBasketDataManager().putInBasket(PutInBasketRequest(productId: orderProductID ?? 0, productCnt: Int(orderCount.text!)!), delegate: self)
+        }else {
+            presentAlert(title: "로그인 후 진행해주세요.")
+        }
     }
     
     

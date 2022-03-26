@@ -20,6 +20,12 @@ class BasketViewController: BaseViewController {
     
     
     
+    // 장바구니에 담긴 상품들 배열
+    var inBasketProduct: [BasketProductInfo] = []
+    
+    
+    
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,13 @@ class BasketViewController: BaseViewController {
         if #available(iOS 15, *) {
             tableView.sectionHeaderTopPadding = 0
         }
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // 장바구니 조회 API 호출
+        BasketProductDataManager().getBasketProductInfo(delegate: self)
     }
 }
 
@@ -59,14 +72,14 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     // 섹션별 아이템 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 상품이 담기기 전
-        if Constant.isProductInBasket == false {
+        if inBasketProduct.isEmpty {
             return 1
         }
         // 상품이 담긴 후
         else {
             if section == 1{
                 // 장바구니에 담긴 아이템의 개수
-                return 3
+                return inBasketProduct.count
             }else {
                 return 1
             }
@@ -76,7 +89,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     // 사용할 Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 상품이 담기기 전
-        if Constant.isProductInBasket == false {
+        if inBasketProduct.isEmpty {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "BeforePutInProductTableCell", for: indexPath) as? BeforePutInProductTableCell else {
                 return UITableViewCell()
             }
@@ -84,18 +97,22 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // 상품이 담긴 후
         else {
+            // 전체선택 버튼이 있는 Cell
             if indexPath.section == 0 {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SelectAllTableViewCell", for: indexPath) as? SelectAllTableViewCell else {
                     return UITableViewCell()
                 }
                 return cell
             }
+            // 장바구니에 담긴 아이템들 보여주는 cell
             else if indexPath.section == 1 {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInBasketTableViewCell", for: indexPath) as? ProductInBasketTableViewCell else {
                     return UITableViewCell()
                 }
+                cell.updateCell(inBasketProduct[indexPath.row])
                 return cell
             }
+            // 금액정보를 보여주는 cell
             else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "TotalPriceTableViewCell", for: indexPath) as? TotalPriceTableViewCell else {
                     return UITableViewCell()
@@ -108,7 +125,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     // 섹션의 개수
     func numberOfSections(in tableView: UITableView) -> Int {
         // 상품이 담기기 전
-        if Constant.isProductInBasket == false {
+        if inBasketProduct.isEmpty {
             return 1
         }
         // 상품이 담긴 후
@@ -120,7 +137,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     // 셀의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 상품이 담기기 전
-        if Constant.isProductInBasket == false {
+        if inBasketProduct.isEmpty {
             return tableView.frame.height
         }
         // 상품이 담긴 후
@@ -141,7 +158,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Footer (장바구니에 아이템이 있는지 여부에 따라 footer 생성 여부 결정)
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         // 상품이 담기기 전
-        if Constant.isProductInBasket == false {
+        if inBasketProduct.isEmpty {
             return nil
         }
         // 상품이 담긴 후

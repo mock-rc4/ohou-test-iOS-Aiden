@@ -102,9 +102,13 @@ class BaseViewController: UIViewController {
     
     
     @objc func showBasketVC() {
-        guard let basketVC = storyboard?.instantiateViewController(withIdentifier: "BasketViewController") as? BasketViewController else {
-            return
+        if Constant.isUserLogged {
+            guard let basketVC = storyboard?.instantiateViewController(withIdentifier: "BasketViewController") as? BasketViewController else {
+                return
+            }
+            self.navigationController?.pushViewController(basketVC, animated: true)
+        }else {
+            presentAlert(title: "로그인 후 진행해주세요.")
         }
-        self.navigationController?.pushViewController(basketVC, animated: true)
     }
 }

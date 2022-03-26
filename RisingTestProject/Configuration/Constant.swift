@@ -64,9 +64,9 @@ struct Constant {
     
     
     // 장바구니
-    static var inBasketProduct: [ProductCellInfoNoRemain] = []
-    
-    static var isProductInBasket: Bool {
-        return !Constant.inBasketProduct.isEmpty
-    }
+//    static var inBasketProduct: [ProductCellInfoNoRemain] = []
+//    
+//    static var isProductInBasket: Bool {
+//        return Constant.inBasketProduct.isEmpty
+//    }
 }

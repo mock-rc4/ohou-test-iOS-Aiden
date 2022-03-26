@@ -72,8 +72,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송/일반택배" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy5-4m-djf">
-                                        <rect key="frame" x="125" y="70.5" width="87" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송 | 일반택배" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy5-4m-djf">
+                                        <rect key="frame" x="125" y="70.5" width="93" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -240,7 +240,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="company" destination="Hbe-4a-vBh" id="gQh-fD-slL"/>
+                <outlet property="deliveryCharge" destination="dH7-qn-1cc" id="icj-Oh-ck7"/>
+                <outlet property="deliveryType" destination="Iy5-4m-djf" id="ttG-u5-9Bv"/>
+                <outlet property="price" destination="9yd-em-jeO" id="aUB-Bj-CVd"/>
                 <outlet property="productCountButton" destination="7jA-G2-7ul" id="ZqD-qt-b2G"/>
+                <outlet property="productImage" destination="JFO-FU-YVi" id="9NV-76-lWH"/>
+                <outlet property="productName" destination="Elk-ho-0fr" id="1VE-Mr-LGV"/>
+                <outlet property="productSubName" destination="wlA-7M-BXO" id="ItE-4t-S6r"/>
+                <outlet property="totalPrice" destination="EC1-Te-evD" id="EOq-PK-Z0Q"/>
             </connections>
             <point key="canvasLocation" x="188.40579710144928" y="225"/>
         </tableViewCell>

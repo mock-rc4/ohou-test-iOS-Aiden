@@ -143,6 +143,8 @@
 		D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431B827E9B33800421A34 /* StoreBestViewController.swift */; };
 		D0A871F627EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A871F527EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift */; };
 		D0A871F827EAD61800144BD8 /* ProductInfoTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A871F727EAD61800144BD8 /* ProductInfoTableViewHeader.xib */; };
+		D0ABD7E227EEAEB700F85DBF /* BasketProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABD7E127EEAEB700F85DBF /* BasketProductDataManager.swift */; };
+		D0ABD7E527EEAEED00F85DBF /* BasketProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ABD7E427EEAEED00F85DBF /* BasketProductResponse.swift */; };
 		D0AE5E6827ECC0ED0091DA72 /* PopularProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6727ECC0ED0091DA72 /* PopularProductDataManager.swift */; };
 		D0AE5E6B27ECC1490091DA72 /* PopularProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6A27ECC1490091DA72 /* PopularProductResponse.swift */; };
 		D0AE5E6E27ECCC230091DA72 /* RealTimeBestProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AE5E6D27ECCC230091DA72 /* RealTimeBestProductDataManager.swift */; };
@@ -355,6 +357,8 @@
 		D0A431B827E9B33800421A34 /* StoreBestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBestViewController.swift; sourceTree = "<group>"; };
 		D0A871F527EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoTableViewHeader.swift; sourceTree = "<group>"; };
 		D0A871F727EAD61800144BD8 /* ProductInfoTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductInfoTableViewHeader.xib; sourceTree = "<group>"; };
+		D0ABD7E127EEAEB700F85DBF /* BasketProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductDataManager.swift; sourceTree = "<group>"; };
+		D0ABD7E427EEAEED00F85DBF /* BasketProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductResponse.swift; sourceTree = "<group>"; };
 		D0AE5E6727ECC0ED0091DA72 /* PopularProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductDataManager.swift; sourceTree = "<group>"; };
 		D0AE5E6A27ECC1490091DA72 /* PopularProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductResponse.swift; sourceTree = "<group>"; };
 		D0AE5E6D27ECCC230091DA72 /* RealTimeBestProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestProductDataManager.swift; sourceTree = "<group>"; };
@@ -1577,6 +1581,14 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		D0ABD7E327EEAEC200F85DBF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0ABD7E427EEAEED00F85DBF /* BasketProductResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0AE5E6927ECC1320091DA72 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -2007,6 +2019,8 @@
 		D0FE01EB27EEA090005D5C4F /* 장바구니 조회 */ = {
 			isa = PBXGroup;
 			children = (
+				D0ABD7E127EEAEB700F85DBF /* BasketProductDataManager.swift */,
+				D0ABD7E327EEAEC200F85DBF /* Entity */,
 			);
 			name = "장바구니 조회";
 			path = "장바구니 조회";
@@ -2216,6 +2230,7 @@
 				D0AE5E6827ECC0ED0091DA72 /* PopularProductDataManager.swift in Sources */,
 				D0C0823927ED9B93008BABDF /* TotalPriceTableViewCell.swift in Sources */,
 				D044D90B27E6FD15004E9EC6 /* MainCategoryTableViewCell.swift in Sources */,
+				D0ABD7E527EEAEED00F85DBF /* BasketProductResponse.swift in Sources */,
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
 				D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */,
 				D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */,
@@ -2280,6 +2295,7 @@
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0A871F627EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift in Sources */,
 				D0AE5E6E27ECCC230091DA72 /* RealTimeBestProductDataManager.swift in Sources */,
+				D0ABD7E227EEAEB700F85DBF /* BasketProductDataManager.swift in Sources */,
 				D0252C7327E853CA00998372 /* PhotoCollectionViewCell.swift in Sources */,
 				D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */,
 				D0B1D17B27E8A4440002823D /* MyShoppingTapCell.swift in Sources */,
