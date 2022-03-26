@@ -29,9 +29,13 @@ class BasketViewController: BaseViewController {
     var finalPrice: Int = 0
     
     func updatePrice() {
-        totalPrice = inBasketProduct.map({$0.price}).reduce(0, +)
+        totalPrice = inBasketProduct.map({
+            $0.price * $0.productCnt
+        }).reduce(0, +)
         totalDeliveryCharge = inBasketProduct.map({$0.deliveryCharge}).reduce(0, +)
-        discountPrice = inBasketProduct.filter({$0.salesPrice != 0}).map({$0.price - $0.salesPrice}).reduce(0, +)
+        discountPrice = inBasketProduct.filter({$0.salesPrice != 0}).map({
+            ($0.price - $0.salesPrice) * $0.productCnt
+        }).reduce(0, +)
         finalPrice = totalPrice + totalDeliveryCharge - discountPrice
     }
     
@@ -75,6 +79,7 @@ class BasketViewController: BaseViewController {
         BasketProductDataManager().getBasketProductInfo(delegate: self)
     }
 }
+
 
 
 
@@ -216,6 +221,10 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
 
 // 테이블뷰 리로드 프로토콜
 extension BasketViewController: TableViewReload {
+    func productCountUpdate(_ productID: Int, count: Int) {
+        ModifyProductCountDataManager().modifyProductCount(ModifyProductCountRequest(productCnt: count), delegate: self, productID: productID)
+    }
+    
     func tableViewReload() {
         BasketProductDataManager().getBasketProductInfo(delegate: self)
     }

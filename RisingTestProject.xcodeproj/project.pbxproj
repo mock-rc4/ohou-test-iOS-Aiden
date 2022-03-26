@@ -202,6 +202,9 @@
 		D0F6E21627EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21527EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift */; };
 		D0F6E21927EC97070058A7E7 /* RecommendProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21827EC97060058A7E7 /* RecommendProductDataManager.swift */; };
 		D0F6E21C27EC972A0058A7E7 /* RecommendProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21B27EC972A0058A7E7 /* RecommendProductResponse.swift */; };
+		D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */; };
+		D0FC804D27EF1ECD00A1A650 /* ModifyProductCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */; };
+		D0FC804F27EF1ED500A1A650 /* ModifyProductCountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */; };
 		D0FDE80827EB727B00C4C2A3 /* TodayDealTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDE80727EB727B00C4C2A3 /* TodayDealTabHeader.swift */; };
 		D0FDE80A27EB728A00C4C2A3 /* TodayDealTabHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FDE80927EB728A00C4C2A3 /* TodayDealTabHeader.xib */; };
 		D0FDE80D27EB731B00C4C2A3 /* TodayDealTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDE80B27EB731B00C4C2A3 /* TodayDealTabCell.swift */; };
@@ -416,6 +419,9 @@
 		D0F6E21527EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedProductUserSawResponse.swift; sourceTree = "<group>"; };
 		D0F6E21827EC97060058A7E7 /* RecommendProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductDataManager.swift; sourceTree = "<group>"; };
 		D0F6E21B27EC972A0058A7E7 /* RecommendProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductResponse.swift; sourceTree = "<group>"; };
+		D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountDataManager.swift; sourceTree = "<group>"; };
+		D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountResponse.swift; sourceTree = "<group>"; };
+		D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountRequest.swift; sourceTree = "<group>"; };
 		D0FDE80727EB727B00C4C2A3 /* TodayDealTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealTabHeader.swift; sourceTree = "<group>"; };
 		D0FDE80927EB728A00C4C2A3 /* TodayDealTabHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayDealTabHeader.xib; sourceTree = "<group>"; };
 		D0FDE80B27EB731B00C4C2A3 /* TodayDealTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealTabCell.swift; sourceTree = "<group>"; };
@@ -1932,6 +1938,25 @@
 			path = "인기상품";
 			sourceTree = "<group>";
 		};
+		D0FC804827EF1E3C00A1A650 /* 장바구니 상품 개수 수정 */ = {
+			isa = PBXGroup;
+			children = (
+				D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */,
+				D0FC804B27EF1E9900A1A650 /* Emtity */,
+			);
+			name = "장바구니 상품 개수 수정";
+			path = "장바구니 상품 개수 수정";
+			sourceTree = "<group>";
+		};
+		D0FC804B27EF1E9900A1A650 /* Emtity */ = {
+			isa = PBXGroup;
+			children = (
+				D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */,
+				D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */,
+			);
+			path = Emtity;
+			sourceTree = "<group>";
+		};
 		D0FDE80527EB722E00C4C2A3 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1999,6 +2024,7 @@
 		D0FE01E927EEA007005D5C4F /* 장바구니 */ = {
 			isa = PBXGroup;
 			children = (
+				D0FC804827EF1E3C00A1A650 /* 장바구니 상품 개수 수정 */,
 				D0FE01EB27EEA090005D5C4F /* 장바구니 조회 */,
 				D0FE01EA27EEA08A005D5C4F /* 장바구니 담기 */,
 			);
@@ -2282,6 +2308,7 @@
 				D06B482D27E817F000C881E0 /* CustomTabBarController.swift in Sources */,
 				D0252C7927E8598700998372 /* PhotoCollectionViewFooter.swift in Sources */,
 				D0EA7F8427E5913500948269 /* UINavigationBar.swift in Sources */,
+				D0FC804F27EF1ED500A1A650 /* ModifyProductCountRequest.swift in Sources */,
 				D04A2DD627E5C25F00D1C7D6 /* HomePhotoVC.swift in Sources */,
 				D072FAE827EC33BA007134C7 /* ProductReviewPhotoCell.swift in Sources */,
 				D02AA6AA27E96A25004E6703 /* ModifyProfileRequest.swift in Sources */,
@@ -2319,6 +2346,7 @@
 				D0FDE80D27EB731B00C4C2A3 /* TodayDealTabCell.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
+				D0FC804D27EF1ECD00A1A650 /* ModifyProductCountResponse.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
 				D01FB65227E8C91E00D01FDF /* BannersResponse.swift in Sources */,
 				D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */,
@@ -2354,6 +2382,7 @@
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
+				D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,
 				D06B483627E81B3E00C881E0 /* MyPageTapmanViewController.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,

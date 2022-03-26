@@ -10,6 +10,8 @@ import UIKit
 
 protocol TableViewReload {
     func tableViewReload()
+    
+    func productCountUpdate(_ productID: Int, count: Int)
 }
 
 
@@ -81,39 +83,48 @@ class ProductInBasketTableViewCell: UITableViewCell {
         // Pull Down버튼 설정
         let number1 = UIAction(title: "1", handler: {_ in
             self.productCountButton.setTitle("1", for: .normal)
-            self.priceUpdate(count: 1)
+//            self.priceUpdate(count: 1)
+            self.delegate?.productCountUpdate(self.productID, count: 1)
         })
         let number2 = UIAction(title: "2", handler: {_ in
             self.productCountButton.setTitle("2", for: .normal)
-            self.priceUpdate(count: 2)
+//            self.priceUpdate(count: 2)
+            self.delegate?.productCountUpdate(self.productID, count: 2)
         })
         let number3 = UIAction(title: "3", handler: {_ in
             self.productCountButton.setTitle("3", for: .normal)
-            self.priceUpdate(count: 3)
+//            self.priceUpdate(count: 3)
+            self.delegate?.productCountUpdate(self.productID, count: 3)
         })
         let number4 = UIAction(title: "4", handler: {_ in
             self.productCountButton.setTitle("4", for: .normal)
-            self.priceUpdate(count: 4)
+//            self.priceUpdate(count: 4)
+            self.delegate?.productCountUpdate(self.productID, count: 4)
         })
         let number5 = UIAction(title: "5", handler: {_ in
             self.productCountButton.setTitle("5", for: .normal)
-            self.priceUpdate(count: 5)
+//            self.priceUpdate(count: 5)
+            self.delegate?.productCountUpdate(self.productID, count: 5)
         })
         let number6 = UIAction(title: "6", handler: {_ in
             self.productCountButton.setTitle("6", for: .normal)
-            self.priceUpdate(count: 6)
+//            self.priceUpdate(count: 6)
+            self.delegate?.productCountUpdate(self.productID, count: 6)
         })
         let number7 = UIAction(title: "7", handler: {_ in
             self.productCountButton.setTitle("7", for: .normal)
-            self.priceUpdate(count: 7)
+//            self.priceUpdate(count: 7)
+            self.delegate?.productCountUpdate(self.productID, count: 7)
         })
         let number8 = UIAction(title: "8", handler: {_ in
             self.productCountButton.setTitle("8", for: .normal)
-            self.priceUpdate(count: 8)
+//            self.priceUpdate(count: 8)
+            self.delegate?.productCountUpdate(self.productID, count: 8)
         })
         let number9 = UIAction(title: "9", handler: {_ in
             self.productCountButton.setTitle("9", for: .normal)
-            self.priceUpdate(count: 9)
+//            self.priceUpdate(count: 9)
+            self.delegate?.productCountUpdate(self.productID, count: 9)
         })
         let buttonMenu = UIMenu(title: "개수 선택", children: [number1, number2, number3, number4, number5, number6, number7, number8, number9])
         productCountButton.menu = buttonMenu
@@ -126,9 +137,9 @@ class ProductInBasketTableViewCell: UITableViewCell {
     }
     
     
-    func priceUpdate(count: Int) {
-        let orderPrice: Int = basePrice * count
-        price.text = orderPrice.insertComma() + "원"
-        totalPrice.text = (orderPrice + delivery).insertComma() + "원"
-    }
+//    func priceUpdate(count: Int) {
+//        let orderPrice: Int = basePrice * count
+//        price.text = orderPrice.insertComma() + "원"
+//        totalPrice.text = (orderPrice + delivery).insertComma() + "원"
+//    }
 }
