@@ -109,6 +109,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInBasketTableViewCell", for: indexPath) as? ProductInBasketTableViewCell else {
                     return UITableViewCell()
                 }
+                cell.delegate = self
                 cell.updateCell(inBasketProduct[indexPath.row])
                 return cell
             }
@@ -195,4 +196,15 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         .leastNormalMagnitude
     }
+}
+
+
+
+
+extension BasketViewController: TableViewReload {
+    func tableViewReload() {
+        BasketProductDataManager().getBasketProductInfo(delegate: self)
+    }
+    
+    
 }

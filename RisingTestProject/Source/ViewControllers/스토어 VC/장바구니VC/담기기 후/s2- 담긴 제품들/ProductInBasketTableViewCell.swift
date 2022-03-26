@@ -7,6 +7,14 @@
 
 import UIKit
 
+
+protocol TableViewReload {
+    func tableViewReload()
+}
+
+
+
+
 class ProductInBasketTableViewCell: UITableViewCell {
 
     // MARK: - UI연결
@@ -30,6 +38,7 @@ class ProductInBasketTableViewCell: UITableViewCell {
     @IBOutlet weak var deliveryCharge: UILabel!
     
     func updateCell(_ data: BasketProductInfo) {
+        productID = data.productId
         productCountButton.setTitle("\(data.productCnt)", for: .normal)
         if data.salesPrice == 0 {
             basePrice = data.price
@@ -56,6 +65,12 @@ class ProductInBasketTableViewCell: UITableViewCell {
     // basePrice
     var basePrice: Int = 0
     var delivery: Int = 0
+    
+    // 제품 ID
+    var productID: Int = 0
+    
+    // delegate: 테이블뷰 리로드 위한
+    var delegate: TableViewReload?
     
     
     
