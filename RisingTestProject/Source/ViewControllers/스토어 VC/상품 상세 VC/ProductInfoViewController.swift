@@ -59,7 +59,11 @@ class ProductInfoViewController: BaseViewController {
         guard let optionVC = storyboard?.instantiateViewController(withIdentifier: "ProductOptionViewController") as? ProductOptionViewController else {
             return
         }
+        optionVC.loadView()
         optionVC.basePrice = productDetail!.salesPrice
+        optionVC.orderProductName = productDetail!.name
+        optionVC.orderProductID = productDetail!.productId
+        
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: optionVC)
         
         // bottomsheet의 높이

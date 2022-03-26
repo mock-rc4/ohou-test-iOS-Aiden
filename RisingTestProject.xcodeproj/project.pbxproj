@@ -210,6 +210,9 @@
 		D0FDE81927EB783000C4C2A3 /* UserStylingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FDE81727EB783000C4C2A3 /* UserStylingCollectionViewCell.xib */; };
 		D0FDE81E27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDE81C27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift */; };
 		D0FDE81F27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FDE81D27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib */; };
+		D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE01ED27EEA0BB005D5C4F /* PutInBasketDataManager.swift */; };
+		D0FE01F027EEA0E8005D5C4F /* PutInBasketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE01EF27EEA0E8005D5C4F /* PutInBasketResponse.swift */; };
+		D0FE01F227EEA0F4005D5C4F /* PutInBasketRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE01F127EEA0F4005D5C4F /* PutInBasketRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -419,6 +422,9 @@
 		D0FDE81727EB783000C4C2A3 /* UserStylingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserStylingCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0FDE81C27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStylingCollectionViewHeader.swift; sourceTree = "<group>"; };
 		D0FDE81D27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserStylingCollectionViewHeader.xib; sourceTree = "<group>"; };
+		D0FE01ED27EEA0BB005D5C4F /* PutInBasketDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutInBasketDataManager.swift; sourceTree = "<group>"; };
+		D0FE01EF27EEA0E8005D5C4F /* PutInBasketResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutInBasketResponse.swift; sourceTree = "<group>"; };
+		D0FE01F127EEA0F4005D5C4F /* PutInBasketRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutInBasketRequest.swift; sourceTree = "<group>"; };
 		FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1839,6 +1845,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE01E927EEA007005D5C4F /* 장바구니 */,
 				D0D5B65127EDD7CB00319E3D /* 제품 상세 조회 */,
 				D092D32127EB085200A5BAF2 /* 스토어VC */,
 				D02FD0AE27EAAA9000E21319 /* 광고 이미지 */,
@@ -1975,6 +1982,43 @@
 				D0FDE81D27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.xib */,
 			);
 			path = headerCell;
+			sourceTree = "<group>";
+		};
+		D0FE01E927EEA007005D5C4F /* 장바구니 */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE01EB27EEA090005D5C4F /* 장바구니 조회 */,
+				D0FE01EA27EEA08A005D5C4F /* 장바구니 담기 */,
+			);
+			name = "장바구니";
+			path = "장바구니";
+			sourceTree = "<group>";
+		};
+		D0FE01EA27EEA08A005D5C4F /* 장바구니 담기 */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE01ED27EEA0BB005D5C4F /* PutInBasketDataManager.swift */,
+				D0FE01EC27EEA097005D5C4F /* Entity */,
+			);
+			name = "장바구니 담기";
+			path = "장바구니 담기";
+			sourceTree = "<group>";
+		};
+		D0FE01EB27EEA090005D5C4F /* 장바구니 조회 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "장바구니 조회";
+			path = "장바구니 조회";
+			sourceTree = "<group>";
+		};
+		D0FE01EC27EEA097005D5C4F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE01EF27EEA0E8005D5C4F /* PutInBasketResponse.swift */,
+				D0FE01F127EEA0F4005D5C4F /* PutInBasketRequest.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		F6915DFCE52AE4DE4F1746A4 /* Pods */ = {
@@ -2179,6 +2223,7 @@
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */,
 				D0FDE81427EB77FC00C4C2A3 /* UserStylingTableViewCell.swift in Sources */,
+				D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
@@ -2230,6 +2275,7 @@
 				D06AE1A027E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
+				D0FE01F027EEA0E8005D5C4F /* PutInBasketResponse.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0A871F627EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift in Sources */,
@@ -2275,6 +2321,7 @@
 				D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */,
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
+				D0FE01F227EEA0F4005D5C4F /* PutInBasketRequest.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
 				D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */,

@@ -15,7 +15,7 @@ class ProductOptionViewController: BaseViewController {
     
     @IBOutlet weak var orderCount: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
-    
+    @IBOutlet weak var productName: UILabel!
     
     @IBAction func minusButton(_ sender: UIButton) {
         let currentCount: Int = Int(orderCount.text!)!
@@ -28,15 +28,37 @@ class ProductOptionViewController: BaseViewController {
         orderCount.text = String(Int(orderCount.text!)!+1)
         updateOrderPrice()
     }
-    
-    
     @IBOutlet var forRadius: [UIView]!
     
     
+    // 장바구니에 담기 버튼
+    @IBAction func putInBasketButton(_ sender: UIButton) {
+        // 장바구니 담기 API 호출
+        PutInBasketDataManager().putInBasket(PutInBasketRequest(productId: orderProductID ?? 0, productCnt: Int(orderCount.text!)!), delegate: self)
+    }
+    
+    
+    // 바로구매 버튼
+    @IBAction func buyNowButton(_ sender: UIButton) {
+        // 구매 API 호출
+    }
+    
+    
+    
+    // 주문하는 제품 이름
+    var orderProductName: String? {
+        didSet {
+            if let name = orderProductName {
+                self.productName.text = name
+            }
+        }
+    }
     
     // 기준가격
     var basePrice: Int = 0
     
+    // 주문할 제품
+    var orderProductID: Int?
     
     
     // MARK: - View Did Load
@@ -49,11 +71,14 @@ class ProductOptionViewController: BaseViewController {
         forRadius[1].layer.borderColor = UIColor.systemCyan.cgColor
         forRadius[1].layer.borderWidth = 1
         
-        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma()
+        totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
     }
     
     
     func updateOrderPrice() {
         totalPrice.text = (basePrice * Int(orderCount.text!)!).insertComma() + "원"
     }
+    
+    
+    
 }

@@ -2297,10 +2297,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4u-2b-jYw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="165.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7fu-Kn-HW1">
-                                        <rect key="frame" x="10" y="84" width="394" height="49"/>
+                                        <rect key="frame" x="10" y="91.5" width="394" height="49"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQh-TM-1HN">
                                                 <rect key="frame" x="0.0" y="0.0" width="193.5" height="49"/>
@@ -2311,11 +2311,23 @@
                                                         <color key="textColor" systemColor="systemCyanColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1t-O5-Vy4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="193.5" height="49"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="putInBasketButton:" destination="bAC-r3-QjB" eventType="touchUpInside" id="RmL-40-LbW"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="K1t-O5-Vy4" firstAttribute="top" secondItem="TQh-TM-1HN" secondAttribute="top" id="1kV-tB-Ih2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="K1t-O5-Vy4" secondAttribute="trailing" id="HSm-oP-RLm"/>
                                                     <constraint firstItem="T7s-9T-fC6" firstAttribute="centerX" secondItem="TQh-TM-1HN" secondAttribute="centerX" id="RPy-U4-V1o"/>
+                                                    <constraint firstItem="K1t-O5-Vy4" firstAttribute="leading" secondItem="TQh-TM-1HN" secondAttribute="leading" id="Yhp-vW-sEq"/>
                                                     <constraint firstItem="T7s-9T-fC6" firstAttribute="centerY" secondItem="TQh-TM-1HN" secondAttribute="centerY" id="fRX-KE-f28"/>
+                                                    <constraint firstAttribute="bottom" secondItem="K1t-O5-Vy4" secondAttribute="bottom" id="zkG-pL-5hb"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0u-vh-mCb">
@@ -2327,17 +2339,29 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-gs-RyD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="193.5" height="49"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="buyNowButton:" destination="bAC-r3-QjB" eventType="touchUpInside" id="pjP-me-w5e"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="oTA-gs-RyD" firstAttribute="leading" secondItem="J0u-vh-mCb" secondAttribute="leading" id="3mE-ux-zEr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oTA-gs-RyD" secondAttribute="trailing" id="7ro-fe-ijM"/>
                                                     <constraint firstItem="oFH-ah-q75" firstAttribute="centerY" secondItem="J0u-vh-mCb" secondAttribute="centerY" id="Clh-Fx-lIM"/>
                                                     <constraint firstItem="oFH-ah-q75" firstAttribute="centerX" secondItem="J0u-vh-mCb" secondAttribute="centerX" id="iRd-Sd-1wT"/>
+                                                    <constraint firstItem="oTA-gs-RyD" firstAttribute="top" secondItem="J0u-vh-mCb" secondAttribute="top" id="qVO-Dn-ZxQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oTA-gs-RyD" secondAttribute="bottom" id="uaq-Qg-qib"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cVK-h8-5ua">
-                                        <rect key="frame" x="15" y="31" width="122.5" height="38"/>
+                                        <rect key="frame" x="15" y="43.5" width="122.5" height="38"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLf-E1-slP">
                                                 <rect key="frame" x="0.0" y="0.0" width="54.5" height="38"/>
@@ -2370,19 +2394,28 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34,235원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbQ-kU-MlZ">
-                                        <rect key="frame" x="316" y="38" width="83" height="24"/>
+                                        <rect key="frame" x="316" y="50.5" width="83" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베이킹소다 2개 그린레몬 암튼 좋은거" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llG-Y2-vaV">
+                                        <rect key="frame" x="25" y="19" width="364" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="llG-Y2-vaV" secondAttribute="trailing" constant="25" id="8oj-8K-DwW"/>
                                     <constraint firstItem="7fu-Kn-HW1" firstAttribute="leading" secondItem="G4u-2b-jYw" secondAttribute="leading" constant="10" id="ABg-8w-38j"/>
-                                    <constraint firstAttribute="width" secondItem="G4u-2b-jYw" secondAttribute="height" multiplier="3:1" id="ArG-YZ-6JS"/>
-                                    <constraint firstAttribute="bottom" secondItem="7fu-Kn-HW1" secondAttribute="bottom" constant="5" id="BIk-lz-8Ea"/>
+                                    <constraint firstAttribute="width" secondItem="G4u-2b-jYw" secondAttribute="height" multiplier="2.5:1" id="ArG-YZ-6JS"/>
+                                    <constraint firstAttribute="bottom" secondItem="7fu-Kn-HW1" secondAttribute="bottom" constant="25" id="BIk-lz-8Ea"/>
+                                    <constraint firstItem="cLf-E1-slP" firstAttribute="top" secondItem="llG-Y2-vaV" secondAttribute="bottom" constant="5" id="FBp-vY-Jtt"/>
+                                    <constraint firstItem="llG-Y2-vaV" firstAttribute="leading" secondItem="G4u-2b-jYw" secondAttribute="leading" constant="25" id="VRw-3D-5Ld"/>
                                     <constraint firstAttribute="trailing" secondItem="7fu-Kn-HW1" secondAttribute="trailing" constant="10" id="aJ0-m0-fuA"/>
-                                    <constraint firstItem="7fu-Kn-HW1" firstAttribute="top" secondItem="cVK-h8-5ua" secondAttribute="bottom" constant="15" id="cyD-EQ-Ggx"/>
+                                    <constraint firstItem="7fu-Kn-HW1" firstAttribute="top" secondItem="cVK-h8-5ua" secondAttribute="bottom" constant="10" id="cyD-EQ-Ggx"/>
                                     <constraint firstAttribute="trailing" secondItem="pbQ-kU-MlZ" secondAttribute="trailing" constant="15" id="gqE-NJ-ZTF"/>
                                     <constraint firstItem="cVK-h8-5ua" firstAttribute="leading" secondItem="G4u-2b-jYw" secondAttribute="leading" constant="15" id="jNr-u8-Abm"/>
                                     <constraint firstItem="7fu-Kn-HW1" firstAttribute="width" secondItem="7fu-Kn-HW1" secondAttribute="height" multiplier="8:1" id="pPH-bd-q5h"/>
@@ -2400,6 +2433,7 @@
                     </view>
                     <connections>
                         <outlet property="orderCount" destination="F4A-l6-qjL" id="gSp-jD-YXK"/>
+                        <outlet property="productName" destination="llG-Y2-vaV" id="7CW-kS-4V5"/>
                         <outlet property="totalPrice" destination="pbQ-kU-MlZ" id="FAh-Cd-yj0"/>
                         <outletCollection property="forRadius" destination="J0u-vh-mCb" collectionClass="NSMutableArray" id="aff-4D-H2y"/>
                         <outletCollection property="forRadius" destination="TQh-TM-1HN" collectionClass="NSMutableArray" id="hIY-NO-Xe0"/>
