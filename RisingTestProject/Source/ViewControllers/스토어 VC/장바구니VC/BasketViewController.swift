@@ -23,6 +23,18 @@ class BasketViewController: BaseViewController {
     // 장바구니에 담긴 상품들 배열
     var inBasketProduct: [BasketProductInfo] = []
     
+    var totalPrice: Int = 0
+    var totalDeliveryCharge: Int = 0
+    var discountPrice: Int = 0
+    var finalPrice: Int = 0
+    
+    func updatePrice() {
+        totalPrice = inBasketProduct.map({$0.price}).reduce(0, +)
+        totalDeliveryCharge = inBasketProduct.map({$0.deliveryCharge}).reduce(0, +)
+        discountPrice = inBasketProduct.filter({$0.salesPrice != 0}).map({$0.price - $0.salesPrice}).reduce(0, +)
+        finalPrice = totalPrice + totalDeliveryCharge - discountPrice
+    }
+    
     
     
     
@@ -57,6 +69,7 @@ class BasketViewController: BaseViewController {
     }
     
     
+    // MARK: - View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         // 장바구니 조회 API 호출
         BasketProductDataManager().getBasketProductInfo(delegate: self)
@@ -118,6 +131,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "TotalPriceTableViewCell", for: indexPath) as? TotalPriceTableViewCell else {
                     return UITableViewCell()
                 }
+                cell.updateCell(totalP: totalPrice, totalD: totalDeliveryCharge, discount: discountPrice, finalP: finalPrice)
                 return cell
             }
         }
@@ -200,11 +214,9 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 
-
+// 테이블뷰 리로드 프로토콜
 extension BasketViewController: TableViewReload {
     func tableViewReload() {
         BasketProductDataManager().getBasketProductInfo(delegate: self)
     }
-    
-    
 }

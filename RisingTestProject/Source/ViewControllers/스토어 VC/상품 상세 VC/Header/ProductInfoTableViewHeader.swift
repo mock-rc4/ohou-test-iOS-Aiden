@@ -61,7 +61,7 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
         companyName.forEach({
             $0.text = data.company
         })
-        reviewCount.text = "\(data.reviewCnt)"
+        reviewCount.text = "(\(data.reviewCnt))"
         discountRate.text = "\(data.sale)%"
         beforeDiscountPrice.text = data.price.insertComma() + "원"
         afterDiscountPrice.text = data.salesPrice.insertComma() + "원"

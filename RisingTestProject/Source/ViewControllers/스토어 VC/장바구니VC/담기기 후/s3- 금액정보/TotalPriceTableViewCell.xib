@@ -94,8 +94,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsJ-43-9uP">
                                 <rect key="frame" x="0.0" y="150" width="320" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 할인금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-Tk-aKr">
-                                        <rect key="frame" x="15" y="10" width="73.5" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-Tk-aKr">
+                                        <rect key="frame" x="15" y="10" width="55.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -125,6 +125,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="discountPrice" destination="z92-IV-O6r" id="lKG-ZP-qy1"/>
+                <outlet property="finalPrice" destination="FEb-Lz-kUj" id="jJW-nb-3CF"/>
+                <outlet property="totalDelivery" destination="dev-Rb-sUG" id="jog-Ih-ZNe"/>
+                <outlet property="totalPrice" destination="uqa-Gj-vTf" id="9ix-Ij-vM7"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="178.45982142857142"/>
         </tableViewCell>
     </objects>

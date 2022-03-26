@@ -26,6 +26,7 @@ class BasketProductDataManager {
                 if response.isSuccess {
                     print("장바구니 조회 성공")
                     delegate.inBasketProduct = response.result
+                    delegate.updatePrice()
                     delegate.tableView.reloadData()
                 }else {
                     switch response.code {
@@ -41,4 +42,7 @@ class BasketProductDataManager {
             }
         }
     }
+    
+    
+    
 }
