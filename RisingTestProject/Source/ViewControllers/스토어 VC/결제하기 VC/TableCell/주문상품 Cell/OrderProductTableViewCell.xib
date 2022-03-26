@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEu-KN-F5g">
-                        <rect key="frame" x="10" y="5" width="389" height="139"/>
+                        <rect key="frame" x="10" y="10" width="389" height="129"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkX-kW-oXf" userLabel="header">
                                 <rect key="frame" x="0.0" y="0.0" width="389" height="43"/>
@@ -91,11 +91,14 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="oEu-KN-F5g" secondAttribute="trailing" constant="10" id="4x8-3Z-xX2"/>
                     <constraint firstItem="oEu-KN-F5g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ERV-sB-f9q"/>
-                    <constraint firstItem="oEu-KN-F5g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="mTa-TI-1VX"/>
-                    <constraint firstAttribute="bottom" secondItem="oEu-KN-F5g" secondAttribute="bottom" constant="5" id="qoo-vy-MVp"/>
+                    <constraint firstItem="oEu-KN-F5g" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mTa-TI-1VX"/>
+                    <constraint firstAttribute="bottom" secondItem="oEu-KN-F5g" secondAttribute="bottom" constant="10" id="qoo-vy-MVp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="forBorder" destination="oEu-KN-F5g" id="hUS-HC-SUb"/>
+            </connections>
             <point key="canvasLocation" x="202.17391304347828" y="144.30803571428569"/>
         </tableViewCell>
     </objects>

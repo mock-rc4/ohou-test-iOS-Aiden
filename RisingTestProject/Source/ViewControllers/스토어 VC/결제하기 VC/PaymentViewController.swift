@@ -13,6 +13,9 @@ class PaymentViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBAction func didTapPopButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     // MARK: - View Did Load
@@ -49,6 +52,7 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    
     // 사용할 cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 배송지 cell
@@ -72,7 +76,7 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderProductTableViewCell", for: indexPath) as? OrderProductTableViewCell else {
                 return UITableViewCell()
             }
-            addSeparator(cell)
+//            addSeparator(cell)
             return cell
         }
         // 결제수단 cell
@@ -100,24 +104,28 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    
+    
     // 섹션의 개수
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
+    
+    
     // 셀의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // 배송지 cell
         if indexPath.section == 0 {
-            return tableView.frame.width / 2
+            return tableView.frame.width / 1.5
         }
         // 주문자 cell
         else if indexPath.section == 1 {
-            return tableView.frame.width / 2.5
+            return tableView.frame.width / 1.9
         }
         // 주문상품 cell
         else if indexPath.section == 2 {
-            return tableView.frame.width / 4
+            return tableView.frame.width / 2.4
         }
         // 결제수단 cell
         else if indexPath.section == 3 {

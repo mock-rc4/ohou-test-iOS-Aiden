@@ -9,9 +9,14 @@ import UIKit
 
 class OrderProductTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var forBorder: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        forBorder.layer.borderColor = UIColor.systemGray5.cgColor
+        forBorder.layer.borderWidth = 1
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

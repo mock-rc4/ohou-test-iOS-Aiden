@@ -187,6 +187,7 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "BasketTableViewFooter") as? BasketTableViewFooter else {
                     return UIView()
                 }
+                footerView.delegate = self
                 return footerView
             }else {
                 return nil
@@ -236,4 +237,16 @@ extension BasketViewController: TableViewReload {
     func tableViewReload() {
         BasketProductDataManager().getBasketProductInfo(delegate: self)
     }
+}
+
+
+// 결제창 띄우려는 프로토콜
+extension BasketViewController: showPeymentVC {
+    func showPeymentVC() {
+        guard let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(paymentVC, animated: true)
+    }
+    
 }

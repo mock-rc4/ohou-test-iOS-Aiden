@@ -7,8 +7,22 @@
 
 import UIKit
 
+protocol showPeymentVC {
+    func showPeymentVC()
+}
+
+
+
 class BasketTableViewFooter: UITableViewHeaderFooterView {
 
+    var delegate: showPeymentVC?
+    
+    @IBAction func didTapBuyNowButton(_ sender: UIButton) {
+        delegate?.showPeymentVC()
+    }
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
