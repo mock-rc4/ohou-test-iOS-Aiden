@@ -41,12 +41,13 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeFollowingTableViewCell", for: indexPath) as? HomeFollowingTableViewCell else {
             return UITableViewCell()
         }
+        addSeparator(cell)
         cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width / 2.2
+        return tableView.frame.width * 1.5
     }
     
     
@@ -65,6 +66,7 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width / 2.3
+        return tableView.frame.width * 0.3
+        
     }
 }

@@ -11,56 +11,69 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="HomeFollowingTableViewHeader" id="iN0-l3-epB" customClass="HomeFollowingTableViewHeader" customModule="RisingTestProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+            <rect key="frame" x="0.0" y="0.0" width="399" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로잉 피드가 비어있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-qE-2Gz">
-                    <rect key="frame" x="119.5" y="54" width="175.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-Bm-GcN">
-                    <rect key="frame" x="0.0" y="105" width="414" height="5"/>
+                    <rect key="frame" x="0.0" y="44" width="399" height="7"/>
                     <color key="backgroundColor" systemColor="systemGray5Color"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="5" id="6Eu-O5-BcW"/>
+                        <constraint firstAttribute="height" constant="7" id="6Eu-O5-BcW"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO님을 위한 추천 유저" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LZ-ux-hKp">
-                    <rect key="frame" x="113" y="130" width="188" height="23"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유저를 팔로우하고 새 소식을 확인하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVK-aC-Qno">
-                    <rect key="frame" x="78.5" y="163" width="257" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="해시태그 누끼" translatesAutoresizingMaskIntoConstraints="NO" id="Owj-aV-PJl">
+                    <rect key="frame" x="329" y="86.5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="Lvb-3Z-Qxf"/>
+                        <constraint firstAttribute="width" secondItem="Owj-aV-PJl" secondAttribute="height" multiplier="1:1" id="z3b-s9-UWE"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-VQ-KIK">
+                    <rect key="frame" x="0.0" y="177" width="399" height="7"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="7" id="lkF-X6-IeX"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-z7-jQF">
+                    <rect key="frame" x="10" y="94.5" width="309" height="39"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심 있는 해시태그를 팔로우해보세요 &gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpI-Im-AhS">
+                            <rect key="frame" x="0.0" y="0.0" width="262.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 주제의 콘텐츠를 모아볼 수 있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-Oj-6Nf">
+                            <rect key="frame" x="0.0" y="24.5" width="197" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="2LZ-ux-hKp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1ah-0N-5Q7"/>
-                <constraint firstItem="uVK-aC-Qno" firstAttribute="centerX" secondItem="2LZ-ux-hKp" secondAttribute="centerX" id="3tq-jR-HKJ"/>
-                <constraint firstItem="jDX-Bm-GcN" firstAttribute="top" secondItem="hPb-qE-2Gz" secondAttribute="bottom" constant="30" id="Fsf-Zq-bdm"/>
-                <constraint firstItem="2LZ-ux-hKp" firstAttribute="top" secondItem="jDX-Bm-GcN" secondAttribute="bottom" constant="20" id="TaA-CA-LAx"/>
-                <constraint firstItem="hPb-qE-2Gz" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="cNt-rh-QWB"/>
-                <constraint firstItem="uVK-aC-Qno" firstAttribute="top" secondItem="2LZ-ux-hKp" secondAttribute="bottom" constant="10" id="rKX-G5-sev"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jDX-Bm-GcN" secondAttribute="trailing" id="tL0-6u-9pa"/>
-                <constraint firstItem="jDX-Bm-GcN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vFC-LT-QM2"/>
-                <constraint firstItem="hPb-qE-2Gz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="y8l-95-gSm"/>
+                <constraint firstItem="Owj-aV-PJl" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-15" id="12d-aU-u74"/>
+                <constraint firstItem="Cdg-z7-jQF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="1Cj-92-UJW"/>
+                <constraint firstItem="zcX-VQ-KIK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="89K-uV-d0E"/>
+                <constraint firstItem="Owj-aV-PJl" firstAttribute="leading" secondItem="Cdg-z7-jQF" secondAttribute="trailing" constant="10" id="8Xd-f7-xal"/>
+                <constraint firstItem="zcX-VQ-KIK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="C5r-kh-mdu"/>
+                <constraint firstItem="Cdg-z7-jQF" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="DMF-mE-hbd"/>
+                <constraint firstItem="jDX-Bm-GcN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LSj-hx-t6p"/>
+                <constraint firstItem="jDX-Bm-GcN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nHQ-lA-bS7"/>
+                <constraint firstItem="Owj-aV-PJl" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="pqB-sk-NTW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zcX-VQ-KIK" secondAttribute="bottom" id="q6C-gH-dwr"/>
+                <constraint firstItem="jDX-Bm-GcN" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rSE-Uz-ZE9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="headerTitle" destination="2LZ-ux-hKp" id="Lcf-5D-4Gs"/>
-            </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="424.88839285714283"/>
+            <point key="canvasLocation" x="126.81159420289856" y="397.76785714285711"/>
         </view>
     </objects>
     <resources>
+        <image name="해시태그 누끼" width="161" height="162"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
