@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="HouseWarmingTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseWarmingTableViewCell" rowHeight="365" id="KGk-i7-Jjw" customClass="HouseWarmingTableViewCell" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="365"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="365"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="반려식물" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-qq-SS5">
+                        <rect key="frame" x="15" y="0.0" width="369" height="230.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vKA-qq-SS5" secondAttribute="height" multiplier="4:2.5" id="sJJ-sA-XX9"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new이미지" translatesAutoresizingMaskIntoConstraints="NO" id="eOk-57-A6c">
+                        <rect key="frame" x="30" y="15" width="40" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="eOk-57-A6c" secondAttribute="height" multiplier="15:8" id="Pja-w3-YDf"/>
+                            <constraint firstAttribute="width" constant="40" id="rGK-Cd-byZ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-AV-SoL">
+                        <rect key="frame" x="329" y="190" width="40" height="25.5"/>
+                        <color key="tintColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="UrD-38-VAR"/>
+                            <constraint firstAttribute="width" secondItem="fXZ-AV-SoL" secondAttribute="height" multiplier="14:9" id="ipX-5j-TZ0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데스크테리어에 진.심. 가구 웹디자이너의 오피스텔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Zd-60g">
+                        <rect key="frame" x="15" y="245.5" width="369" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7rg-ii-b2O">
+                        <rect key="frame" x="161" y="276" width="77" height="20"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본 프로필" translatesAutoresizingMaskIntoConstraints="NO" id="Xaf-RS-69t">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xaf-RS-69t" secondAttribute="height" multiplier="1:1" id="1Ax-vH-CHY"/>
+                                    <constraint firstAttribute="width" constant="20" id="ljR-3H-pzg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pa_nng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvq-nT-JGI">
+                                <rect key="frame" x="25" y="0.0" width="52" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29명 스크랩 | 1,124명 조회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-GR-nu4">
+                        <rect key="frame" x="123" y="306" width="153.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eOk-57-A6c" firstAttribute="top" secondItem="vKA-qq-SS5" secondAttribute="top" constant="15" id="22h-ew-4zy"/>
+                    <constraint firstItem="xK6-GR-nu4" firstAttribute="centerX" secondItem="7rg-ii-b2O" secondAttribute="centerX" id="F5G-4t-iCd"/>
+                    <constraint firstItem="xK6-GR-nu4" firstAttribute="top" secondItem="7rg-ii-b2O" secondAttribute="bottom" constant="10" id="IRr-Km-wAF"/>
+                    <constraint firstItem="vKA-qq-SS5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="QMq-HI-vsz"/>
+                    <constraint firstItem="eOk-57-A6c" firstAttribute="leading" secondItem="vKA-qq-SS5" secondAttribute="leading" constant="15" id="Qzv-Zw-Fm1"/>
+                    <constraint firstItem="7rg-ii-b2O" firstAttribute="top" secondItem="anh-Zd-60g" secondAttribute="bottom" constant="10" id="UDj-rP-GEE"/>
+                    <constraint firstItem="vKA-qq-SS5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XyZ-on-INR"/>
+                    <constraint firstItem="7rg-ii-b2O" firstAttribute="centerX" secondItem="anh-Zd-60g" secondAttribute="centerX" id="YRN-jp-VqY"/>
+                    <constraint firstAttribute="trailing" secondItem="anh-Zd-60g" secondAttribute="trailing" constant="15" id="dHD-n2-GYt"/>
+                    <constraint firstItem="anh-Zd-60g" firstAttribute="top" secondItem="vKA-qq-SS5" secondAttribute="bottom" constant="15" id="kCf-qg-JK7"/>
+                    <constraint firstAttribute="trailing" secondItem="vKA-qq-SS5" secondAttribute="trailing" constant="15" id="oV6-VY-dEF"/>
+                    <constraint firstItem="fXZ-AV-SoL" firstAttribute="trailing" secondItem="vKA-qq-SS5" secondAttribute="trailing" constant="-15" id="oav-4w-uhP"/>
+                    <constraint firstItem="anh-Zd-60g" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="qtj-7P-2Tb"/>
+                    <constraint firstItem="fXZ-AV-SoL" firstAttribute="bottom" secondItem="vKA-qq-SS5" secondAttribute="bottom" constant="-15" id="w4m-jE-CxL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookmarkImage" destination="fXZ-AV-SoL" id="ncM-61-4Ga"/>
+                <outlet property="newImage" destination="eOk-57-A6c" id="MeA-bq-P1b"/>
+                <outlet property="nickName" destination="gvq-nT-JGI" id="wGs-LI-MsV"/>
+                <outlet property="postingImage" destination="vKA-qq-SS5" id="oMp-Kc-zqp"/>
+                <outlet property="postingTitle" destination="anh-Zd-60g" id="LHO-zb-foi"/>
+                <outlet property="profileImage" destination="Xaf-RS-69t" id="Tzb-22-CGm"/>
+                <outlet property="scrapsAndViews" destination="xK6-GR-nu4" id="zRH-GS-bRQ"/>
+            </connections>
+            <point key="canvasLocation" x="194.92753623188406" y="217.29910714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="new이미지" width="108" height="60"/>
+        <image name="기본 프로필" width="256" height="258"/>
+        <image name="반려식물" width="503" height="284"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

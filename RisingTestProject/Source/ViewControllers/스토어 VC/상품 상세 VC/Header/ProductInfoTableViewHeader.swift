@@ -87,11 +87,17 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
             star5.image = UIImage(systemName: "star")
             star4.image = UIImage(systemName: "star")
             star3.image = UIImage(systemName: "star")
+        case 1..<2:
+            star5.image = UIImage(systemName: "star")
+            star4.image = UIImage(systemName: "star")
+            star3.image = UIImage(systemName: "star")
+            star2.image = UIImage(systemName: "star")
         default:
             star5.image = UIImage(systemName: "star")
             star4.image = UIImage(systemName: "star")
             star3.image = UIImage(systemName: "star")
             star2.image = UIImage(systemName: "star")
+            star1.image = UIImage(systemName: "star")
         }
     }
 }
