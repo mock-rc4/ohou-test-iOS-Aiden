@@ -7,8 +7,17 @@
 
 import UIKit
 
+protocol PaymentDelegateProtocol {
+    func payment()
+}
+
+
 class PaymentTableViewFooter: UITableViewHeaderFooterView {
 
+    // 결제 API호출 delegate
+    var delegate: PaymentDelegateProtocol?
+    
+    
     // 결제금액
     var totalPrice: Int?
     
@@ -20,6 +29,7 @@ class PaymentTableViewFooter: UITableViewHeaderFooterView {
         super.awakeFromNib()
         
         paymentButton.layer.cornerRadius = paymentButton.frame.height / 10
+        paymentButton.addTarget(self, action: #selector(didTapPaymentButton), for: .touchUpInside)
     }
 
     
@@ -29,9 +39,6 @@ class PaymentTableViewFooter: UITableViewHeaderFooterView {
     }
     
     @objc func didTapPaymentButton() {
-        // API 호출
-        if let price = totalPrice {
-            // 여기서 호출
-        }
+        delegate?.payment()
     }
 }

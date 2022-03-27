@@ -220,6 +220,9 @@
 		D0F6E21627EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21527EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift */; };
 		D0F6E21927EC97070058A7E7 /* RecommendProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21827EC97060058A7E7 /* RecommendProductDataManager.swift */; };
 		D0F6E21C27EC972A0058A7E7 /* RecommendProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E21B27EC972A0058A7E7 /* RecommendProductResponse.swift */; };
+		D0F7C1A227F010E8009918A1 /* PaymentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A127F010E8009918A1 /* PaymentDataManager.swift */; };
+		D0F7C1A527F01100009918A1 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A427F01100009918A1 /* PaymentResponse.swift */; };
+		D0F7C1A727F0110A009918A1 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A627F0110A009918A1 /* PaymentRequest.swift */; };
 		D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */; };
 		D0FC804D27EF1ECD00A1A650 /* ModifyProductCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */; };
 		D0FC804F27EF1ED500A1A650 /* ModifyProductCountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */; };
@@ -455,6 +458,9 @@
 		D0F6E21527EC88CB0058A7E7 /* RelatedProductUserSawResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedProductUserSawResponse.swift; sourceTree = "<group>"; };
 		D0F6E21827EC97060058A7E7 /* RecommendProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductDataManager.swift; sourceTree = "<group>"; };
 		D0F6E21B27EC972A0058A7E7 /* RecommendProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductResponse.swift; sourceTree = "<group>"; };
+		D0F7C1A127F010E8009918A1 /* PaymentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataManager.swift; sourceTree = "<group>"; };
+		D0F7C1A427F01100009918A1 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
+		D0F7C1A627F0110A009918A1 /* PaymentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
 		D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountDataManager.swift; sourceTree = "<group>"; };
 		D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountResponse.swift; sourceTree = "<group>"; };
 		D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountRequest.swift; sourceTree = "<group>"; };
@@ -1452,6 +1458,8 @@
 		D088EA0A27EF394800C129C0 /* 결제하기 */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7C1A127F010E8009918A1 /* PaymentDataManager.swift */,
+				D0F7C1A327F010EC009918A1 /* Entity */,
 			);
 			name = "결제하기";
 			path = "결제하기";
@@ -2086,6 +2094,15 @@
 			path = "인기상품";
 			sourceTree = "<group>";
 		};
+		D0F7C1A327F010EC009918A1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7C1A627F0110A009918A1 /* PaymentRequest.swift */,
+				D0F7C1A427F01100009918A1 /* PaymentResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0FC804827EF1E3C00A1A650 /* 장바구니 상품 개수 수정 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2536,6 +2553,7 @@
 				D0A431A427E98AD800421A34 /* GetProfileDataManager.swift in Sources */,
 				D0252C6F27E851B700998372 /* PhotoTableViewCell.swift in Sources */,
 				D02AA6A827E9693F004E6703 /* ModifyProfileDataManager.swift in Sources */,
+				D0F7C1A227F010E8009918A1 /* PaymentDataManager.swift in Sources */,
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0FE01F227EEA0F4005D5C4F /* PutInBasketRequest.swift in Sources */,
@@ -2575,6 +2593,8 @@
 				D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
 				D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */,
+				D0F7C1A527F01100009918A1 /* PaymentResponse.swift in Sources */,
+				D0F7C1A727F0110A009918A1 /* PaymentRequest.swift in Sources */,
 				D06B482A27E8111D00C881E0 /* ExhibitionCollectionViewCell.swift in Sources */,
 				D072FAEC27EC33EB007134C7 /* ProductBestReviewCell.swift in Sources */,
 			);

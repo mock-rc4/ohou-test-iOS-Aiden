@@ -180,7 +180,7 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
             guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PaymentTableViewFooter") as? PaymentTableViewFooter else {
                 return UIView()
             }
-            
+            footerView.delegate = self
             footerView.updateCell(finalPrice)
             
             return footerView
@@ -197,5 +197,17 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
+    
+}
+
+
+
+// MARK: - 결제 API호출 Protocol 채택
+extension PaymentViewController: PaymentDelegateProtocol {
+    func payment() {
+        presentAlert(title: finalPrice.insertComma() + "원 결제하시겠습니까?") { _ in
+            PaymentDataManager().payment(PaymentRequest(paymentAmount: self.finalPrice), delegate: self)
+        }
+    }
     
 }
