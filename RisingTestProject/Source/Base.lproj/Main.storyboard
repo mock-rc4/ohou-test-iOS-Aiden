@@ -2058,7 +2058,7 @@
                                                                 <rect key="frame" x="5" y="5" width="48" height="31.5"/>
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" image="rectangle.grid.1x2.fill" catalog="system"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="square.grid.2x2.fill" catalog="system"/>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3215,6 +3215,7 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="wrench.and.screwdriver" catalog="system" width="128" height="120"/>
         <image name="wrench.and.screwdriver.fill" catalog="system" width="128" height="120"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

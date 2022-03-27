@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import MaterialComponents.MaterialBottomSheet
 
 class HomeExpertVC: BaseViewController {
     
@@ -16,6 +16,13 @@ class HomeExpertVC: BaseViewController {
     
     // 정렬버튼
     @IBAction func didTapAlignmentButton(_ sender: UIButton) {
+        guard let alignmentVC = storyboard?.instantiateViewController(withIdentifier: "AlignmentBottomSheetVC") as? AlignmentBottomSheetVC else {
+            return
+        }
+        alignmentVC.delegate = self
+        let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: alignmentVC)
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 300
+        present(bottomSheet, animated: true)
     }
     
     // UI연결
@@ -102,4 +109,13 @@ extension HomeExpertVC {
             
         return layout
     }
+}
+
+
+
+extension HomeExpertVC: ApiDelegate {
+    func didTapAlignmentButton(_ filter: Int) {
+        HomeExpertDataManager().getPost(filter, delegate: self)
+    }
+    
 }
