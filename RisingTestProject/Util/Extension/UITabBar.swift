@@ -13,5 +13,33 @@ extension UITabBar {
         UITabBar.appearance().shadowImage = UIImage()
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().backgroundColor = UIColor.white
+        
+    }
+    
+}
+
+
+extension UITabBar: UITabBarControllerDelegate {
+    public func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+
+        // Check if bar item selected is center
+                if viewController.tabBarItem.tag == 2 {
+
+
+                    // Do Something Here ...
+                    print("가운데 버튼")
+
+                    // Present View Controller
+//                    guard let navigationController = storyboard?.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return false }
+//
+//                    present(navigationController, animated: true)
+
+                    // Returning false will not open the connected tab bar item view controller you attached to it
+                    return false
+
+                }
+
+                // Return true to open the connected tab bar item view controller you attached to it (e.x. everything but the center item)
+                return true
     }
 }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="HomeFollowingTableViewHeader" id="iN0-l3-epB" customClass="HomeFollowingTableViewHeader" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로잉 피드가 비어있어요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPb-qE-2Gz">
+                    <rect key="frame" x="119.5" y="54" width="175.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-Bm-GcN">
+                    <rect key="frame" x="0.0" y="105" width="414" height="5"/>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="6Eu-O5-BcW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO님을 위한 추천 유저" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2LZ-ux-hKp">
+                    <rect key="frame" x="113" y="130" width="188" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유저를 팔로우하고 새 소식을 확인하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVK-aC-Qno">
+                    <rect key="frame" x="78.5" y="163" width="257" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2LZ-ux-hKp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1ah-0N-5Q7"/>
+                <constraint firstItem="uVK-aC-Qno" firstAttribute="centerX" secondItem="2LZ-ux-hKp" secondAttribute="centerX" id="3tq-jR-HKJ"/>
+                <constraint firstItem="jDX-Bm-GcN" firstAttribute="top" secondItem="hPb-qE-2Gz" secondAttribute="bottom" constant="30" id="Fsf-Zq-bdm"/>
+                <constraint firstItem="2LZ-ux-hKp" firstAttribute="top" secondItem="jDX-Bm-GcN" secondAttribute="bottom" constant="20" id="TaA-CA-LAx"/>
+                <constraint firstItem="hPb-qE-2Gz" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="cNt-rh-QWB"/>
+                <constraint firstItem="uVK-aC-Qno" firstAttribute="top" secondItem="2LZ-ux-hKp" secondAttribute="bottom" constant="10" id="rKX-G5-sev"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jDX-Bm-GcN" secondAttribute="trailing" id="tL0-6u-9pa"/>
+                <constraint firstItem="jDX-Bm-GcN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vFC-LT-QM2"/>
+                <constraint firstItem="hPb-qE-2Gz" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="y8l-95-gSm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerTitle" destination="2LZ-ux-hKp" id="Lcf-5D-4Gs"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="424.88839285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -13,6 +13,8 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
+        
+        self.delegate = self
     }
     
     func setupStyle() {
@@ -25,15 +27,17 @@ class CustomTabBarController: UITabBarController {
 }
 
 
-//extension CustomTabBarController: UITabBarControllerDelegate {
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//
-//        if viewController.tabBarItem.tag == 2{
-//
-//            print("3번째 탭바")
-//            return false
-//        }
-//
-//        return true
-//    }
-//}
+extension CustomTabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+
+        if viewController.tabBarItem.tag == 4{
+
+            print("+버튼")
+            return false
+        }
+
+        return true
+    }
+}
+
+

@@ -2348,12 +2348,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="팔로잉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp1-sf-Znj">
-                                <rect key="frame" x="185" y="437.5" width="44.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l2-bx-TZF">
                                 <rect key="frame" x="0.0" y="44" width="414" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2361,17 +2355,26 @@
                                     <constraint firstAttribute="width" secondItem="5l2-bx-TZF" secondAttribute="height" multiplier="7:1" id="OIA-gf-BIR"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A6k-kh-srE">
+                                <rect key="frame" x="0.0" y="103" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="csM-L1-Gzs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kp1-sf-Znj" firstAttribute="centerX" secondItem="81I-5C-ilP" secondAttribute="centerX" id="DxD-3s-Wpv"/>
-                            <constraint firstItem="Kp1-sf-Znj" firstAttribute="centerY" secondItem="81I-5C-ilP" secondAttribute="centerY" id="ViT-sZ-GVj"/>
+                            <constraint firstItem="csM-L1-Gzs" firstAttribute="trailing" secondItem="A6k-kh-srE" secondAttribute="trailing" id="30s-US-eLM"/>
+                            <constraint firstItem="A6k-kh-srE" firstAttribute="leading" secondItem="csM-L1-Gzs" secondAttribute="leading" id="7MI-0t-Cxc"/>
+                            <constraint firstItem="csM-L1-Gzs" firstAttribute="bottom" secondItem="A6k-kh-srE" secondAttribute="bottom" id="WdH-SJ-Uyv"/>
                             <constraint firstItem="csM-L1-Gzs" firstAttribute="trailing" secondItem="5l2-bx-TZF" secondAttribute="trailing" id="Yjl-LO-NyI"/>
                             <constraint firstItem="5l2-bx-TZF" firstAttribute="top" secondItem="csM-L1-Gzs" secondAttribute="top" id="jhX-Xa-6Os"/>
+                            <constraint firstItem="A6k-kh-srE" firstAttribute="top" secondItem="5l2-bx-TZF" secondAttribute="bottom" id="ont-RR-uwr"/>
                             <constraint firstItem="5l2-bx-TZF" firstAttribute="leading" secondItem="81I-5C-ilP" secondAttribute="leading" id="rDP-bZ-o7r"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="A6k-kh-srE" id="ifD-I7-QgX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJ9-SK-yGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
