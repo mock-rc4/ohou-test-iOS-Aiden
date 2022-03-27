@@ -56,7 +56,9 @@ extension MyShoppingViewController: UITableViewDelegate, UITableViewDataSource {
                     return UITableViewCell()
                 }
                 orderCell.selectionStyle = .none
-//                orderCell.updateCell()
+                if let info = Constant.userInfo {
+                    orderCell.updateCell(info)
+                }
                 return orderCell
             }else {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyShoppingTapCell", for: indexPath) as? MyShoppingTapCell else {

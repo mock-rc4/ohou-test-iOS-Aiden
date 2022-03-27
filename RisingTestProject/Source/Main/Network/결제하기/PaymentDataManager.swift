@@ -30,6 +30,7 @@ class PaymentDataManager {
                 if response.isSuccess {
                     // 결제 성공
                     print("결제 성공")
+                    Constant.didUserOrderProduct = true
                     delegate.presentAlert(title: "결제 성공") { _ in
                         guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
                             return

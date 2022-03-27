@@ -62,11 +62,6 @@ struct Constant {
     static var popularProductInfo: [ProductCellInfoNoRemain] = []
     
     
-    
-    // 장바구니
-//    static var inBasketProduct: [ProductCellInfoNoRemain] = []
-//    
-//    static var isProductInBasket: Bool {
-//        return Constant.inBasketProduct.isEmpty
-//    }
+    // 결제가 완료되었는지 여부 저장
+    static var didUserOrderProduct: Bool = false
 }

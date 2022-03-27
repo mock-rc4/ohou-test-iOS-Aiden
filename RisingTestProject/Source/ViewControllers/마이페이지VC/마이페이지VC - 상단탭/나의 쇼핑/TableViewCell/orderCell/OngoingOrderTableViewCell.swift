@@ -32,7 +32,7 @@ class OngoingOrderTableViewCell: UITableViewCell {
     }
     
     
-    func updateCell() {
-        
+    func updateCell(_ userInfo: UserInfo) {
+        paymentCompleted.text = "\(userInfo.order_Cnt)"
     }
 }

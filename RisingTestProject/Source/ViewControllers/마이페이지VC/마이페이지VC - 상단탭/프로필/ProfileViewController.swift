@@ -65,6 +65,10 @@ class ProfileViewController: BaseViewController {
             tableView.reloadData()
             Constant.userDidTapLogoutButton = false
         }
+        if Constant.isUserLogged && Constant.didUserOrderProduct {
+            GetProfileDataManager().getProfile(delegate: self)
+            Constant.didUserOrderProduct = false
+        }
     }
 }
 
