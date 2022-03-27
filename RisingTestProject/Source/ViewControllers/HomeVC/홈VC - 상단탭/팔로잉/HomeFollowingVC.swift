@@ -14,6 +14,11 @@ class HomeFollowingVC: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    // tableview 데이터
+    var followingPost: [FollowingPost] = []
+    
+    
+    
     
     // MARK: - View Did Load
     override func viewDidLoad() {
@@ -28,13 +33,16 @@ class HomeFollowingVC: BaseViewController {
         
         // header
         tableView.register(UINib(nibName: "HomeFollowingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeFollowingTableViewHeader")
+        
+        // API 호출
+        HomeFollowingDataManager().getFollowingPost(delegate: self)
     }
 }
 
 
 extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return followingPost.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,11 +51,14 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
         }
         addSeparator(cell)
         cell.selectionStyle = .none
+        if followingPost.count >= 1 {
+            cell.updateCell(followingPost[indexPath.row])
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width * 1.5
+        return tableView.frame.width * 1.43
     }
     
     
@@ -58,9 +69,6 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HomeFollowingTableViewHeader") as? HomeFollowingTableViewHeader else {
             return UIView()
-        }
-        if let nickName = Constant.userInfo?.nickname {
-            headerView.updateCell(nickName)
         }
         return headerView
     }
