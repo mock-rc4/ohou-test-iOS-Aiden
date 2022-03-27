@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="D3u-aw-DS3">
-                        <rect key="frame" x="0.0" y="0.0" width="406" height="263.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="406" height="268.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3E-Zy-zkd">
                                 <rect key="frame" x="0.0" y="0.0" width="406" height="51"/>
@@ -46,26 +46,26 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yq-L6-YhO">
-                                <rect key="frame" x="0.0" y="51" width="406" height="172.5"/>
+                                <rect key="frame" x="0.0" y="51" width="406" height="177.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14u-PG-Iuq">
-                                        <rect key="frame" x="15" y="5" width="44.5" height="20.5"/>
+                                        <rect key="frame" x="15" y="10" width="44.5" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPc-LX-1aW">
-                                        <rect key="frame" x="10" y="40.5" width="386" height="34"/>
+                                        <rect key="frame" x="10" y="45.5" width="386" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="연락처" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vlx-3M-zyk">
-                                        <rect key="frame" x="10" y="84.5" width="386" height="34"/>
+                                        <rect key="frame" x="10" y="89.5" width="386" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="배송 요청사항" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Zb-y5-mVc">
-                                        <rect key="frame" x="10" y="128.5" width="386" height="34"/>
+                                        <rect key="frame" x="10" y="133.5" width="386" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -74,10 +74,10 @@
                                 <constraints>
                                     <constraint firstItem="5Zb-y5-mVc" firstAttribute="leading" secondItem="9yq-L6-YhO" secondAttribute="leading" constant="10" id="4pf-Uo-Z2f"/>
                                     <constraint firstAttribute="trailing" secondItem="vlx-3M-zyk" secondAttribute="trailing" constant="10" id="FLV-WN-t8d"/>
-                                    <constraint firstItem="MPc-LX-1aW" firstAttribute="top" secondItem="14u-PG-Iuq" secondAttribute="bottom" constant="15" id="Ruc-Kp-w5P"/>
+                                    <constraint firstItem="MPc-LX-1aW" firstAttribute="top" secondItem="14u-PG-Iuq" secondAttribute="bottom" constant="10" id="Ruc-Kp-w5P"/>
                                     <constraint firstAttribute="trailing" secondItem="5Zb-y5-mVc" secondAttribute="trailing" constant="10" id="XZs-Uk-9we"/>
                                     <constraint firstItem="vlx-3M-zyk" firstAttribute="top" secondItem="MPc-LX-1aW" secondAttribute="bottom" constant="10" id="Zf9-qh-KKW"/>
-                                    <constraint firstItem="14u-PG-Iuq" firstAttribute="top" secondItem="9yq-L6-YhO" secondAttribute="top" constant="5" id="aqc-sx-LDs"/>
+                                    <constraint firstItem="14u-PG-Iuq" firstAttribute="top" secondItem="9yq-L6-YhO" secondAttribute="top" constant="10" id="aqc-sx-LDs"/>
                                     <constraint firstAttribute="bottom" secondItem="5Zb-y5-mVc" secondAttribute="bottom" constant="10" id="fzg-qX-iqN"/>
                                     <constraint firstItem="5Zb-y5-mVc" firstAttribute="top" secondItem="vlx-3M-zyk" secondAttribute="bottom" constant="10" id="lDn-Re-Ice"/>
                                     <constraint firstItem="vlx-3M-zyk" firstAttribute="leading" secondItem="9yq-L6-YhO" secondAttribute="leading" constant="10" id="mit-Bb-1iV"/>
@@ -87,7 +87,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLh-y2-CeZ">
-                                <rect key="frame" x="0.0" y="223.5" width="406" height="40"/>
+                                <rect key="frame" x="0.0" y="228.5" width="406" height="40"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cDJ-TI-hwI">
                                         <rect key="frame" x="10" y="11" width="20" height="17.5"/>
@@ -103,13 +103,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVd-6h-pC9">
+                                        <rect key="frame" x="10" y="0.0" width="115" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="didTapAgreeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bXe-bo-jWW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="cDJ-TI-hwI" firstAttribute="top" secondItem="sLh-y2-CeZ" secondAttribute="top" constant="10" id="2F8-ej-lFs"/>
                                     <constraint firstItem="cDJ-TI-hwI" firstAttribute="leading" secondItem="sLh-y2-CeZ" secondAttribute="leading" constant="10" id="DiY-3q-Y1E"/>
                                     <constraint firstItem="5T4-qG-hFP" firstAttribute="centerY" secondItem="cDJ-TI-hwI" secondAttribute="centerY" id="FKD-2o-3Ye"/>
+                                    <constraint firstAttribute="bottom" secondItem="zVd-6h-pC9" secondAttribute="bottom" id="Ji4-wg-Ch6"/>
+                                    <constraint firstItem="zVd-6h-pC9" firstAttribute="leading" secondItem="cDJ-TI-hwI" secondAttribute="leading" id="RbX-c2-VK5"/>
+                                    <constraint firstItem="zVd-6h-pC9" firstAttribute="trailing" secondItem="5T4-qG-hFP" secondAttribute="trailing" id="SAb-ok-keV"/>
                                     <constraint firstItem="5T4-qG-hFP" firstAttribute="leading" secondItem="cDJ-TI-hwI" secondAttribute="trailing" constant="5" id="eQC-c0-Z56"/>
+                                    <constraint firstItem="zVd-6h-pC9" firstAttribute="top" secondItem="sLh-y2-CeZ" secondAttribute="top" id="ldJ-0j-HsC"/>
                                     <constraint firstAttribute="bottom" secondItem="cDJ-TI-hwI" secondAttribute="bottom" constant="10" id="xnr-XW-F9T"/>
                                 </constraints>
                             </view>
@@ -123,6 +135,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="setDefaultImage" destination="cDJ-TI-hwI" id="Q9e-wp-rmK"/>
+                <outlet property="userNickName" destination="14u-PG-Iuq" id="jYa-LL-iZH"/>
+            </connections>
             <point key="canvasLocation" x="200.00000000000003" y="168.08035714285714"/>
         </tableViewCell>
     </objects>

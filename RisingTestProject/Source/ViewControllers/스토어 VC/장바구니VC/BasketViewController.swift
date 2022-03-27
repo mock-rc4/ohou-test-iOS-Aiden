@@ -77,6 +77,12 @@ class BasketViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         // 장바구니 조회 API 호출
         BasketProductDataManager().getBasketProductInfo(delegate: self)
+        
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -246,6 +252,12 @@ extension BasketViewController: showPeymentVC {
         guard let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else {
             return
         }
+        paymentVC.forPaymentProductInfo = inBasketProduct
+        paymentVC.totalPrice = self.totalPrice
+        paymentVC.totalDeliveryCharge = self.totalDeliveryCharge
+        paymentVC.discountPrice = self.discountPrice
+        paymentVC.finalPrice = self.finalPrice
+        
         self.navigationController?.pushViewController(paymentVC, animated: true)
     }
     

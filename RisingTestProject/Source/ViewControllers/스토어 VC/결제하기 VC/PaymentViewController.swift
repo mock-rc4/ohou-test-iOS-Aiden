@@ -18,6 +18,17 @@ class PaymentViewController: BaseViewController {
     }
     
     
+    
+    // UI 업데이트 정보
+    var forPaymentProductInfo: [BasketProductInfo] = []
+    var totalPrice: Int = 0
+    var totalDeliveryCharge: Int = 0
+    var discountPrice: Int = 0
+    var finalPrice: Int = 0
+    
+    
+    
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +42,25 @@ class PaymentViewController: BaseViewController {
         tableView.register(UINib(nibName: "OrdererTableViewCell", bundle: nil), forCellReuseIdentifier: "OrdererTableViewCell")
         tableView.register(UINib(nibName: "OrderProductTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderProductTableViewCell")
         tableView.register(UINib(nibName: "PaymentMethodTableViewCell", bundle: nil), forCellReuseIdentifier: "PaymentMethodTableViewCell")
+        tableView.register(UINib(nibName: "PaymentPriceTableViewCell", bundle: nil), forCellReuseIdentifier: "PaymentPriceTableViewCell")
+        tableView.register(UINib(nibName: "AgreeTableViewCell", bundle: nil), forCellReuseIdentifier: "AgreeTableViewCell")
         
         // footer
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forHeaderFooterViewReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "PaymentTableViewFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "PaymentTableViewFooter")
+        
+        
+        // 여백제거
+        tableView.contentInset = .zero
+        tableView.contentInsetAdjustmentBehavior = .never
+    }
+    
+    
+    // MARK: - Tabbar 처리
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -78,6 +105,7 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
 //            addSeparator(cell)
+            cell.updateCellUseBasketProductInfo(forPaymentProductInfo[indexPath.row])
             return cell
         }
         // 결제수단 cell
@@ -90,15 +118,16 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // 결제금액 cell
         else if indexPath.section == 4 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as? DeliveryAddressTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentPriceTableViewCell", for: indexPath) as? PaymentPriceTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            cell.updateCell(totalP: totalPrice, deliveryP: totalDeliveryCharge, discountP: discountPrice, finalP: finalPrice)
             return cell
         }
         // 동의 cell
         else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as? DeliveryAddressTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AgreeTableViewCell", for: indexPath) as? AgreeTableViewCell else {
                 return UITableViewCell()
             }
             return cell
@@ -109,13 +138,14 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 섹션의 개수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 6
     }
     
     
     
     // 셀의 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         // 배송지 cell
         if indexPath.section == 0 {
             return tableView.frame.width / 1.4
@@ -134,25 +164,38 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         }
         // 결제금액 cell
         else if indexPath.section == 4 {
-            return tableView.frame.width / 2
+            return tableView.frame.width * 0.55
         }
         // 동의 cell
         else {
-            return tableView.frame.width / 2
+            return tableView.frame.width / 3
         }
     }
     
     
     
 //    // MARK: - Footer
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//
-//    }
-//
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 5 {
+            guard let footerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PaymentTableViewFooter") as? PaymentTableViewFooter else {
+                return UIView()
+            }
+            
+            footerView.updateCell(finalPrice)
+            
+            return footerView
+        }else {
+            return nil
+        }
+    }
+
 //    // Footer 높이
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//
-//    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 5 {
+            return tableView.frame.width / 7
+        }
+        return 0
+    }
     
     
 }

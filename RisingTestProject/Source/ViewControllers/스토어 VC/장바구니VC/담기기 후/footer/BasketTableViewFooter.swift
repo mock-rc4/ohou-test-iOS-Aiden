@@ -21,10 +21,14 @@ class BasketTableViewFooter: UITableViewHeaderFooterView {
         delegate?.showPeymentVC()
     }
     
+    @IBOutlet weak var buyNowButton: UIButton!
+    
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        buyNowButton.layer.cornerRadius = buyNowButton.frame.height / 10
     }
 
 }

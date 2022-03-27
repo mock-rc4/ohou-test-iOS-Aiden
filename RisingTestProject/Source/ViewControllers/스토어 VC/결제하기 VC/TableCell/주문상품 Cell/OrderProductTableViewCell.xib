@@ -97,7 +97,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="company" destination="tJr-uR-1Z8" id="uJQ-5j-sIa"/>
+                <outlet property="deliveryCharge" destination="oGo-AY-9Rp" id="K5f-Pg-OxA"/>
                 <outlet property="forBorder" destination="oEu-KN-F5g" id="hUS-HC-SUb"/>
+                <outlet property="orderCount" destination="WLp-ue-Slc" id="T5e-jP-mGJ"/>
+                <outlet property="productImage" destination="84X-Nb-1FC" id="gME-eb-5z8"/>
+                <outlet property="productName" destination="I7o-bt-IgI" id="mIE-o0-KuD"/>
+                <outlet property="productPrice" destination="8Ow-6U-hBr" id="1Rw-34-L3i"/>
             </connections>
             <point key="canvasLocation" x="202.17391304347828" y="144.30803571428569"/>
         </tableViewCell>
