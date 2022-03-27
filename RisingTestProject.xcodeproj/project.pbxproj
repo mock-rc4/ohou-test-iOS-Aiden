@@ -60,6 +60,11 @@
 		D0392E5427F091360053F6F0 /* HomeFollowingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0392E5227F091360053F6F0 /* HomeFollowingTableViewCell.xib */; };
 		D0392E5727F0AD010053F6F0 /* HomeFollowingDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0392E5627F0AD010053F6F0 /* HomeFollowingDataManager.swift */; };
 		D0392E5A27F0AD170053F6F0 /* HomeFollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0392E5927F0AD170053F6F0 /* HomeFollowingResponse.swift */; };
+		D0392E5D27F0B5790053F6F0 /* HouseWarmingDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0392E5C27F0B5790053F6F0 /* HouseWarmingDetailVC.swift */; };
+		D0392E6227F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0392E6027F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift */; };
+		D0392E6327F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0392E6127F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.xib */; };
+		D0392E6527F0BA900053F6F0 /* HouseWarmingDetailTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0392E6427F0BA900053F6F0 /* HouseWarmingDetailTableHeader.swift */; };
+		D0392E6727F0BAA20053F6F0 /* HouseWarmingDetailTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0392E6627F0BAA20053F6F0 /* HouseWarmingDetailTableHeader.xib */; };
 		D03B6C6C27EFF3C200241222 /* PaymentPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6C6A27EFF3C200241222 /* PaymentPriceTableViewCell.swift */; };
 		D03B6C6D27EFF3C200241222 /* PaymentPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03B6C6B27EFF3C200241222 /* PaymentPriceTableViewCell.xib */; };
 		D03B6C7027F0001E00241222 /* AgreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6C6E27F0001E00241222 /* AgreeTableViewCell.swift */; };
@@ -313,6 +318,11 @@
 		D0392E5227F091360053F6F0 /* HomeFollowingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFollowingTableViewCell.xib; sourceTree = "<group>"; };
 		D0392E5627F0AD010053F6F0 /* HomeFollowingDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowingDataManager.swift; sourceTree = "<group>"; };
 		D0392E5927F0AD170053F6F0 /* HomeFollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFollowingResponse.swift; sourceTree = "<group>"; };
+		D0392E5C27F0B5790053F6F0 /* HouseWarmingDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWarmingDetailVC.swift; sourceTree = "<group>"; };
+		D0392E6027F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWarmingDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D0392E6127F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseWarmingDetailTableViewCell.xib; sourceTree = "<group>"; };
+		D0392E6427F0BA900053F6F0 /* HouseWarmingDetailTableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWarmingDetailTableHeader.swift; sourceTree = "<group>"; };
+		D0392E6627F0BAA20053F6F0 /* HouseWarmingDetailTableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseWarmingDetailTableHeader.xib; sourceTree = "<group>"; };
 		D03B6C6A27EFF3C200241222 /* PaymentPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPriceTableViewCell.swift; sourceTree = "<group>"; };
 		D03B6C6B27EFF3C200241222 /* PaymentPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentPriceTableViewCell.xib; sourceTree = "<group>"; };
 		D03B6C6E27F0001E00241222 /* AgreeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeTableViewCell.swift; sourceTree = "<group>"; };
@@ -932,6 +942,35 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D0392E5B27F0B54A0053F6F0 /* 집들이 - 상세조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0392E5C27F0B5790053F6F0 /* HouseWarmingDetailVC.swift */,
+				D0392E5F27F0B81F0053F6F0 /* header */,
+				D0392E5E27F0B8190053F6F0 /* TableCell */,
+			);
+			name = "집들이 - 상세조회";
+			path = "집들이 - 상세조회";
+			sourceTree = "<group>";
+		};
+		D0392E5E27F0B8190053F6F0 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0392E6027F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift */,
+				D0392E6127F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		D0392E5F27F0B81F0053F6F0 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				D0392E6427F0BA900053F6F0 /* HouseWarmingDetailTableHeader.swift */,
+				D0392E6627F0BAA20053F6F0 /* HouseWarmingDetailTableHeader.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
 		D03BF35B27EBFA95006A0CE9 /* 확장하는Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1129,6 +1168,7 @@
 				D04A2DE327E5CB9E00D1C7D6 /* 노하우 */,
 				D04A2DE427E5CBA300D1C7D6 /* 전문가집들이 */,
 				D04A2DE527E5CBA800D1C7D6 /* 질문과답변 */,
+				D0392E5B27F0B54A0053F6F0 /* 집들이 - 상세조회 */,
 			);
 			name = "홈VC - 상단탭";
 			path = "홈VC - 상단탭";
@@ -2468,6 +2508,7 @@
 				D03BF36527EBFD29006A0CE9 /* EXProductInfoTableViewCell.xib in Resources */,
 				D0B7591227E8636E00954FB3 /* CommercialTableViewCell.xib in Resources */,
 				D011D0B527E75B6100E72072 /* ReviewCollectionViewCell.xib in Resources */,
+				D0392E6327F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.xib in Resources */,
 				D072FAED27EC33EB007134C7 /* ProductBestReviewCell.xib in Resources */,
 				D06B482727E80F9D00C881E0 /* ExhibitionTableViewCell.xib in Resources */,
 				D0C0823A27ED9B93008BABDF /* TotalPriceTableViewCell.xib in Resources */,
@@ -2506,6 +2547,7 @@
 				D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */,
 				D0252C7427E853CA00998372 /* PhotoCollectionViewCell.xib in Resources */,
 				D0FDE81527EB77FC00C4C2A3 /* UserStylingTableViewCell.xib in Resources */,
+				D0392E6727F0BAA20053F6F0 /* HouseWarmingDetailTableHeader.xib in Resources */,
 				D072FAE127EC2E00007134C7 /* ProductReviewTableViewCell.xib in Resources */,
 				D044D91927E70B8F004E9EC6 /* TodayDealTableViewCell.xib in Resources */,
 				D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */,
@@ -2608,8 +2650,10 @@
 				D0FDE81427EB77FC00C4C2A3 /* UserStylingTableViewCell.swift in Sources */,
 				D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
+				D0392E6227F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift in Sources */,
 				D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
+				D0392E5D27F0B5790053F6F0 /* HouseWarmingDetailVC.swift in Sources */,
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
 				D0AE5E6B27ECC1490091DA72 /* PopularProductResponse.swift in Sources */,
 				D047897727F05AB200DEA095 /* HomeExpertDataManager.swift in Sources */,
@@ -2673,6 +2717,7 @@
 				D0AE5E6E27ECCC230091DA72 /* RealTimeBestProductDataManager.swift in Sources */,
 				D0ABD7E227EEAEB700F85DBF /* BasketProductDataManager.swift in Sources */,
 				D0252C7327E853CA00998372 /* PhotoCollectionViewCell.swift in Sources */,
+				D0392E6527F0BA900053F6F0 /* HouseWarmingDetailTableHeader.swift in Sources */,
 				D0B7591527E864C800954FB3 /* CommercialCollectionViewCell.swift in Sources */,
 				D0B1D17B27E8A4440002823D /* MyShoppingTapCell.swift in Sources */,
 				D06B481E27E80A3A00C881E0 /* SignInResponse.swift in Sources */,
