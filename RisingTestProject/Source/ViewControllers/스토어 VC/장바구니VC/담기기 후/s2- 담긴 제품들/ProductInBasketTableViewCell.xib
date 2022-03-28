@@ -78,19 +78,31 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjs-Jh-aHt">
+                                        <rect key="frame" x="10" y="10" width="25" height="25"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="didTapSelectButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="COz-cX-7so"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Iy5-4m-djf" firstAttribute="leading" secondItem="Elk-ho-0fr" secondAttribute="leading" id="1kK-LH-Wg4"/>
+                                    <constraint firstItem="jjs-Jh-aHt" firstAttribute="top" secondItem="hI6-4X-CDy" secondAttribute="top" id="44r-fn-Tpb"/>
                                     <constraint firstItem="Elk-ho-0fr" firstAttribute="top" secondItem="JFO-FU-YVi" secondAttribute="top" constant="3" id="54F-BI-hjx"/>
                                     <constraint firstItem="JFO-FU-YVi" firstAttribute="top" secondItem="QMZ-Xs-51Y" secondAttribute="top" constant="10" id="7du-za-4bf"/>
                                     <constraint firstAttribute="bottom" secondItem="JFO-FU-YVi" secondAttribute="bottom" constant="10" id="95o-lo-ptG"/>
+                                    <constraint firstItem="jjs-Jh-aHt" firstAttribute="bottom" secondItem="hI6-4X-CDy" secondAttribute="bottom" id="a2b-g8-gAh"/>
+                                    <constraint firstItem="jjs-Jh-aHt" firstAttribute="trailing" secondItem="hI6-4X-CDy" secondAttribute="trailing" id="dPl-K7-olZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Elk-ho-0fr" secondAttribute="trailing" constant="10" id="e3g-pP-eNV"/>
                                     <constraint firstItem="hI6-4X-CDy" firstAttribute="top" secondItem="QMZ-Xs-51Y" secondAttribute="top" constant="10" id="fVH-r9-uwF"/>
                                     <constraint firstItem="Iy5-4m-djf" firstAttribute="bottom" secondItem="JFO-FU-YVi" secondAttribute="bottom" id="iiW-NM-FKm"/>
                                     <constraint firstItem="JFO-FU-YVi" firstAttribute="leading" secondItem="hI6-4X-CDy" secondAttribute="trailing" constant="5" id="keE-hX-UzR"/>
                                     <constraint firstItem="hI6-4X-CDy" firstAttribute="leading" secondItem="QMZ-Xs-51Y" secondAttribute="leading" constant="10" id="nkd-h9-y7S"/>
                                     <constraint firstItem="Elk-ho-0fr" firstAttribute="leading" secondItem="JFO-FU-YVi" secondAttribute="trailing" constant="10" id="pUo-t3-Ola"/>
+                                    <constraint firstItem="jjs-Jh-aHt" firstAttribute="leading" secondItem="hI6-4X-CDy" secondAttribute="leading" id="szV-Tp-w9c"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-JU-5lJ" userLabel="선택 속성">
@@ -243,6 +255,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkImage" destination="hI6-4X-CDy" id="tSj-K8-OQc"/>
                 <outlet property="company" destination="Hbe-4a-vBh" id="gQh-fD-slL"/>
                 <outlet property="deliveryCharge" destination="dH7-qn-1cc" id="icj-Oh-ck7"/>
                 <outlet property="deliveryType" destination="Iy5-4m-djf" id="ttG-u5-9Bv"/>

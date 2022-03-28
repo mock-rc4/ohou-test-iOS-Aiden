@@ -11,6 +11,10 @@ import UIKit
 
 class BasketViewController: BaseViewController {
     
+    // 전체선택 bool
+    var isAllSelected: Bool?
+    
+    
     // UI 연결
     @IBAction func didTapPopButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
@@ -126,12 +130,22 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SelectAllTableViewCell", for: indexPath) as? SelectAllTableViewCell else {
                     return UITableViewCell()
                 }
+                cell.delegate = self
                 return cell
             }
             // 장바구니에 담긴 아이템들 보여주는 cell
             else if indexPath.section == 1 {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInBasketTableViewCell", for: indexPath) as? ProductInBasketTableViewCell else {
                     return UITableViewCell()
+                }
+                if let selected = isAllSelected {
+                    // MARK: - 여기서 토글을 해줄까..
+                    cell.isButtonSelected = selected
+                    if selected {
+                        cell.checkImage.image = UIImage(systemName: "checkmark.square.fill")
+                    }else {
+                        cell.checkImage.image = UIImage(systemName: "square")
+                    }
                 }
                 cell.delegate = self
                 cell.updateCell(inBasketProduct[indexPath.row])
@@ -259,6 +273,16 @@ extension BasketViewController: showPeymentVC {
         paymentVC.finalPrice = self.finalPrice
         
         self.navigationController?.pushViewController(paymentVC, animated: true)
+    }
+    
+}
+
+
+// 전체선택 버튼 구현을 위한 프로토콜 채택
+extension BasketViewController: selectAllButtonDelegate {
+    func selectAll(_ isSelect: Bool) {
+        self.isAllSelected = isSelect
+        self.tableView.reloadData()
     }
     
 }

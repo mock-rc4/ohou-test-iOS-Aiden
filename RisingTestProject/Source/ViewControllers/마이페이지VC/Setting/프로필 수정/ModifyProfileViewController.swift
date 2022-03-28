@@ -33,5 +33,12 @@ class ModifyProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let userNickName = Constant.userInfo?.nickname {
+            nickNameTextField.text = userNickName
+        }
+        if let introduce = Constant.userInfo?.introduce {
+            introduceTextField.text = introduce
+        }
     }
 }

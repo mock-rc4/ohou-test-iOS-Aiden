@@ -25,6 +25,19 @@ class ProductInBasketTableViewCell: UITableViewCell {
 
     // MARK: - UI연결
     
+    @IBOutlet weak var checkImage: UIImageView!
+    var isButtonSelected: Bool = true
+    // 모두선택 버튼
+    @IBAction func didTapSelectButton(_ sender: UIButton) {
+        isButtonSelected.toggle()
+        if isButtonSelected {
+            checkImage.image = UIImage(systemName: "checkmark.square.fill")
+        }else {
+            checkImage.image = UIImage(systemName: "square")
+        }
+    }
+    
+    
     // 주문수량, 가격
     @IBOutlet weak var productCountButton: UIButton!
     @IBOutlet weak var price: UILabel!
