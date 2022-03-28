@@ -10,11 +10,22 @@ import UIKit
 
 class HomePopularityVC: BaseViewController {
     
-    // API로 가져올 데이터
+    // MARK: - API로 가져올 데이터
+    
+    // 광고 이미지
     var bannerImage: [UIImage] = [
         UIImage(named: "광고1.jpg")!,
         UIImage(named: "광고2.jpg")!
     ]
+    
+    // 인기탭 상단 게시글 (우리들의 아지트)
+    var popularityPostList1: [PopularityPost] = []
+    
+    // 인기탭 상단 게시글 (집꾸미기)
+    var popularityPostList2: [PopularityPost] = []
+    
+    // 인기탭 상단 게시글 (집을 휴식공간으로)
+    var popularityPostList3: [PopularityPost] = []
     
     
     
@@ -48,8 +59,10 @@ class HomePopularityVC: BaseViewController {
         tableView.register(UINib(nibName: "PopularityTableViewFooter", bundle: nil), forHeaderFooterViewReuseIdentifier: "PopularityTableViewFooter")
         
         
-        
+        // API 호출
         BannersDataManager().getBannerImage(delegate: self)
+        
+        PopularityPostDataManager().getPopularityPost(delegate: self)
     }
 }
 
@@ -71,32 +84,47 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if popularityPostList1.count >= 1 {
+                if indexPath.row == 0 {
+                    cell.postInfo = popularityPostList1
+                }else if indexPath.row == 1{
+                    cell.postInfo = popularityPostList2
+                }else {
+                    cell.postInfo = popularityPostList3
+                }
+                cell.postCollectionView.reloadData()
+            }
             return cell
-        }else if indexPath.row == 3{
+        }
+        else if indexPath.row == 3{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainCategoryTableViewCell", for: indexPath) as? MainCategoryTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row == 4{
+        }
+        else if indexPath.row == 4{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TodayDealTableViewCell", for: indexPath) as? TodayDealTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row == 5{
+        }
+        else if indexPath.row == 5{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityMediaTableViewCell", for: indexPath) as? PopularityMediaTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row == 6{
+        }
+        else if indexPath.row == 6{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as? ReviewTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else {
+        }
+        else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExhibitionTableViewCell", for: indexPath) as? ExhibitionTableViewCell else {
                 return UITableViewCell()
             }

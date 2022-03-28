@@ -24,4 +24,10 @@ class PopularityPostCollectionViewCell: UICollectionViewCell {
         postImage.image = image
         postTitle.text = title
     }
+    
+    
+    func updateCell(_ data: PopularityPost) {
+        postImage.load(url: URL(string: data.houseImage)!)
+        postTitle.text = data.title
+    }
 }

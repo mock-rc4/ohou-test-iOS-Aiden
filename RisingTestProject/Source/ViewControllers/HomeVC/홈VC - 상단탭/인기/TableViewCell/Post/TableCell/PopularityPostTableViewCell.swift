@@ -9,6 +9,11 @@ import UIKit
 
 class PopularityPostTableViewCell: UITableViewCell {
 
+    // 셀에 넣을 데이터
+    var postInfo: [PopularityPost] = []
+    
+    
+    
     // UI 연결
     @IBOutlet weak var postCollectionView: UICollectionView!
     
@@ -42,7 +47,7 @@ extension PopularityPostTableViewCell: UICollectionViewDelegate, UICollectionVie
         if section == 0 {
             return 1
         }else {
-            return 4
+            return postInfo.count
         }
     }
 
@@ -54,14 +59,18 @@ extension PopularityPostTableViewCell: UICollectionViewDelegate, UICollectionVie
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularityCollectionViewHeaderCell", for: indexPath) as? PopularityCollectionViewHeaderCell else {
                 return UICollectionViewCell()
             }
-            header.updateCell("Header 제목으로 들어갈 글씨")
+            if postInfo.count >= 1 {
+                header.updateCell(postInfo[0].headerTitle)
+            }
             return header
         }else {
             // 내용
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularityPostCollectionViewCell", for: indexPath) as? PopularityPostCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            
+            if postInfo.count >= 1 {
+                cell.updateCell(postInfo[indexPath.row])
+            }
             return cell
         }
     }

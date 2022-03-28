@@ -230,6 +230,8 @@
 		D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */; };
 		D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */; };
 		D0DB6C7527E95BD500DC55D4 /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */; };
+		D0E1065627F1998B008F4D3B /* PopularityPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065527F1998B008F4D3B /* PopularityPostDataManager.swift */; };
+		D0E1065927F199A2008F4D3B /* PopularityPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */; };
 		D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */; };
 		D0E5857027EA2932004CB81A /* PopularProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -499,6 +501,8 @@
 		D0D771CF27E955DC00E47DA6 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		D0D771D027E955DC00E47DA6 /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileViewController.swift; sourceTree = "<group>"; };
+		D0E1065527F1998B008F4D3B /* PopularityPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostDataManager.swift; sourceTree = "<group>"; };
+		D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostResponse.swift; sourceTree = "<group>"; };
 		D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -841,6 +845,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0E1065427F19942008F4D3B /* 인기 게시물 조회 */,
 				D0053D6A27F133DD005F9982 /* 집들이 상세조회 */,
 				D0392E5527F0ACDF0053F6F0 /* 팔로잉 탭 조회 */,
 				D047897527F05A9E00DEA095 /* 전문가 집들이 조회 */,
@@ -2200,6 +2205,24 @@
 			path = "프로필 수정";
 			sourceTree = "<group>";
 		};
+		D0E1065427F19942008F4D3B /* 인기 게시물 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1065527F1998B008F4D3B /* PopularityPostDataManager.swift */,
+				D0E1065727F1998F008F4D3B /* Entity */,
+			);
+			name = "인기 게시물 조회";
+			path = "인기 게시물 조회";
+			sourceTree = "<group>";
+		};
+		D0E1065727F1998F008F4D3B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -2802,6 +2825,7 @@
 				D0ED009127EB317D00904DC7 /* PopularKeywordResponse.swift in Sources */,
 				D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */,
 				D092D32427EB087D00A5BAF2 /* TodayDealDataManager.swift in Sources */,
+				D0E1065927F199A2008F4D3B /* PopularityPostResponse.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D0FDE81E27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift in Sources */,
 				D06B483427E8196000C881E0 /* MyPageViewController.swift in Sources */,
@@ -2835,6 +2859,7 @@
 				D044D91127E7006C004E9EC6 /* MainCategoryCollectionViewCell.swift in Sources */,
 				D0EA7F7227E5904800948269 /* Device.swift in Sources */,
 				D0FDE80827EB727B00C4C2A3 /* TodayDealTabHeader.swift in Sources */,
+				D0E1065627F1998B008F4D3B /* PopularityPostDataManager.swift in Sources */,
 				D0392E5727F0AD010053F6F0 /* HomeFollowingDataManager.swift in Sources */,
 				D044D92027E716AB004E9EC6 /* PopularityTableViewFooter.swift in Sources */,
 				D0D5B65827EDD86400319E3D /* ProductInfoResponse.swift in Sources */,
