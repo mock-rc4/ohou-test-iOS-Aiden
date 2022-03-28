@@ -222,6 +222,7 @@
 		D0C0823E27ED9DEE008BABDF /* BasketTableViewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C0823D27ED9DEE008BABDF /* BasketTableViewFooter.xib */; };
 		D0CA120727E6E34D007FD167 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CA120627E6E34D007FD167 /* SignInViewController.swift */; };
 		D0CD0A8727F176E100472295 /* ReviewProductListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD0A8627F176E100472295 /* ReviewProductListDataManager.swift */; };
+		D0CD0A8927F17A7200472295 /* WritingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD0A8827F17A7200472295 /* WritingReviewViewController.swift */; };
 		D0D5B65327EDD80700319E3D /* ProductInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65227EDD80700319E3D /* ProductInfoDataManager.swift */; };
 		D0D5B65627EDD85B00319E3D /* ProductInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65527EDD85B00319E3D /* ProductInfoRequest.swift */; };
 		D0D5B65827EDD86400319E3D /* ProductInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5B65727EDD86400319E3D /* ProductInfoResponse.swift */; };
@@ -490,6 +491,7 @@
 		D0C0823D27ED9DEE008BABDF /* BasketTableViewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewFooter.xib; sourceTree = "<group>"; };
 		D0CA120627E6E34D007FD167 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0CD0A8627F176E100472295 /* ReviewProductListDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewProductListDataManager.swift; sourceTree = "<group>"; };
+		D0CD0A8827F17A7200472295 /* WritingReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewViewController.swift; sourceTree = "<group>"; };
 		D0D5B65227EDD80700319E3D /* ProductInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoDataManager.swift; sourceTree = "<group>"; };
 		D0D5B65527EDD85B00319E3D /* ProductInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoRequest.swift; sourceTree = "<group>"; };
 		D0D5B65727EDD86400319E3D /* ProductInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoResponse.swift; sourceTree = "<group>"; };
@@ -583,6 +585,7 @@
 		D0053D7127F15943005F9982 /* 리뷰작성 */ = {
 			isa = PBXGroup;
 			children = (
+				D0CD0A8827F17A7200472295 /* WritingReviewViewController.swift */,
 			);
 			name = "리뷰작성";
 			path = "리뷰작성";
@@ -2875,6 +2878,7 @@
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0FE01F227EEA0F4005D5C4F /* PutInBasketRequest.swift in Sources */,
+				D0CD0A8927F17A7200472295 /* WritingReviewViewController.swift in Sources */,
 				D0EA7F7627E5905A00948269 /* IndicatorView.swift in Sources */,
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
 				D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */,

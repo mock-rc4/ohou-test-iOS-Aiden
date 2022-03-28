@@ -79,7 +79,15 @@ extension ChooseProductToReviewVC: UITableViewDelegate, UITableViewDataSource {
     
     // 셀 선택
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // MARK: - VC modal로 띄우기!
+        // MARK: - VC modal로 띄우기!, 상품 고유번호 넘겨주기
+        guard let reviewVC = storyboard?.instantiateViewController(withIdentifier: "WritingReviewViewController") as? WritingReviewViewController else {
+            return
+        }
+        reviewVC.loadView()
+        reviewVC.productID = productInfo[indexPath.row].productId
+        reviewVC.updateProductInfo(productInfo[indexPath.row])
+        
+        self.present(reviewVC, animated: true)
     }
     
     
