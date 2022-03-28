@@ -19,14 +19,19 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        companyImage.layer.cornerRadius = companyImage.frame.height / 2
     }
 
     
-    func updateCell(_ img: UIImage, text: String, _ companyImg: UIImage, company: String) {
-        reviewImage.image = img
-        reviewText.text = text
-        companyImage.image = companyImg
-        companyName.text = company
+    func updateCell(_ data: InteriorReview) {
+        reviewImage.load(url: URL(string: data.img)!)
+        reviewText.text = data.contents
+        companyName.text = data.name
+        if let profileImg = data.profileImg {
+            if !profileImg.isEmpty {
+                companyImage.load(url: URL(string: profileImg)!)
+            }
+        }
     }
 }

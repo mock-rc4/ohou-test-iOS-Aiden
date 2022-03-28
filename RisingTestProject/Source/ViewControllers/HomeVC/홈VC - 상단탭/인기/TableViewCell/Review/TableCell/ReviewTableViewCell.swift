@@ -9,10 +9,12 @@ import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
 
+    // 인테리어 시공 리뷰 데이터
+    var interiorReviewPost: [InteriorReview] = []
+    
+    
     // UI 연결
     @IBOutlet weak var reviewCollectionView: UICollectionView!
-    
-    
     
     
     override func awakeFromNib() {
@@ -54,7 +56,9 @@ extension ReviewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCollectionViewCell", for: indexPath) as? ReviewCollectionViewCell else {
                 return UICollectionViewCell()
             }
-//            cell.updateCell(<#T##img: UIImage##UIImage#>, text: <#T##String#>, <#T##companyImg: UIImage##UIImage#>, company: <#T##String#>)
+            if interiorReviewPost.count >= 1 {
+                cell.updateCell(interiorReviewPost[indexPath.row])
+            }
             return cell
         }else if indexPath.section == 0 {
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularityCollectionViewHeaderCell", for: indexPath) as? PopularityCollectionViewHeaderCell else {

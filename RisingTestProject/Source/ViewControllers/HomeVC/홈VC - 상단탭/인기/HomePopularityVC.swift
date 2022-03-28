@@ -27,7 +27,8 @@ class HomePopularityVC: BaseViewController {
     // 인기탭 상단 게시글 (집을 휴식공간으로)
     var popularityPostList3: [PopularityPost] = []
     
-    
+    // 인테리어 리뷰 게시글
+    var interiorReviewPost: [InteriorReview] = []
     
     
     
@@ -63,6 +64,8 @@ class HomePopularityVC: BaseViewController {
         BannersDataManager().getBannerImage(delegate: self)
         
         PopularityPostDataManager().getPopularityPost(delegate: self)
+        
+        InteriorReviewDataManager().getInteriorReview(delegate: self)
     }
 }
 
@@ -122,6 +125,9 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if interiorReviewPost.count >= 1 {
+                cell.interiorReviewPost = self.interiorReviewPost
+            }
             return cell
         }
         else {

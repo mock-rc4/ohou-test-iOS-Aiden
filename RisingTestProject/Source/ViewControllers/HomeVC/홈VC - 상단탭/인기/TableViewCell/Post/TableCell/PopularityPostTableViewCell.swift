@@ -109,7 +109,7 @@ extension PopularityPostTableViewCell {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                     
                 // 아이템 간의 간격 설정
-                item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 10, bottom: 2, trailing: 10)
                     
                 // 그룹 사이즈
                 let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.4/2))

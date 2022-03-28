@@ -232,6 +232,8 @@
 		D0DB6C7527E95BD500DC55D4 /* ModifyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */; };
 		D0E1065627F1998B008F4D3B /* PopularityPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065527F1998B008F4D3B /* PopularityPostDataManager.swift */; };
 		D0E1065927F199A2008F4D3B /* PopularityPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */; };
+		D0E1065C27F1A3BC008F4D3B /* InteriorReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065B27F1A3BC008F4D3B /* InteriorReviewDataManager.swift */; };
+		D0E1065F27F1A3D9008F4D3B /* InteriorReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */; };
 		D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */; };
 		D0E5857027EA2932004CB81A /* PopularProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -503,6 +505,8 @@
 		D0DB6C7427E95BD500DC55D4 /* ModifyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProfileViewController.swift; sourceTree = "<group>"; };
 		D0E1065527F1998B008F4D3B /* PopularityPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostDataManager.swift; sourceTree = "<group>"; };
 		D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostResponse.swift; sourceTree = "<group>"; };
+		D0E1065B27F1A3BC008F4D3B /* InteriorReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorReviewDataManager.swift; sourceTree = "<group>"; };
+		D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorReviewResponse.swift; sourceTree = "<group>"; };
 		D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -845,6 +849,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0E1065A27F1A020008F4D3B /* 인테리어 시공 리뷰 조회 */,
 				D0E1065427F19942008F4D3B /* 인기 게시물 조회 */,
 				D0053D6A27F133DD005F9982 /* 집들이 상세조회 */,
 				D0392E5527F0ACDF0053F6F0 /* 팔로잉 탭 조회 */,
@@ -2223,6 +2228,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D0E1065A27F1A020008F4D3B /* 인테리어 시공 리뷰 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1065B27F1A3BC008F4D3B /* InteriorReviewDataManager.swift */,
+				D0E1065D27F1A3CD008F4D3B /* Entity */,
+			);
+			name = "인테리어 시공 리뷰 조회";
+			path = "인테리어 시공 리뷰 조회";
+			sourceTree = "<group>";
+		};
+		D0E1065D27F1A3CD008F4D3B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -2777,6 +2800,7 @@
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D03B6C6C27EFF3C200241222 /* PaymentPriceTableViewCell.swift in Sources */,
 				D072BD7627E61A18000FB9C4 /* PopularityPostCollectionViewCell.swift in Sources */,
+				D0E1065F27F1A3D9008F4D3B /* InteriorReviewResponse.swift in Sources */,
 				D0FDE81427EB77FC00C4C2A3 /* UserStylingTableViewCell.swift in Sources */,
 				D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
@@ -2825,6 +2849,7 @@
 				D0ED009127EB317D00904DC7 /* PopularKeywordResponse.swift in Sources */,
 				D0A431B927E9B33800421A34 /* StoreBestViewController.swift in Sources */,
 				D092D32427EB087D00A5BAF2 /* TodayDealDataManager.swift in Sources */,
+				D0E1065C27F1A3BC008F4D3B /* InteriorReviewDataManager.swift in Sources */,
 				D0E1065927F199A2008F4D3B /* PopularityPostResponse.swift in Sources */,
 				D0EA7F7427E5904F00948269 /* CustomLabel.swift in Sources */,
 				D0FDE81E27EB7BB200C4C2A3 /* UserStylingCollectionViewHeader.swift in Sources */,

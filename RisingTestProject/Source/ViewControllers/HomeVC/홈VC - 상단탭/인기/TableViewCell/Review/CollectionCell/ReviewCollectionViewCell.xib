@@ -28,7 +28,7 @@
                         <color key="textColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="네이버 로그인" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-X3-wtv">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본 프로필" translatesAutoresizingMaskIntoConstraints="NO" id="tdz-X3-wtv">
                         <rect key="frame" x="166" y="125.5" width="21" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="tdz-X3-wtv" secondAttribute="height" multiplier="1:1" id="F5V-eq-aJm"/>
@@ -67,7 +67,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="네이버 로그인" width="152" height="152"/>
+        <image name="기본 프로필" width="256" height="258"/>
         <image name="순위 테스트 이미지" width="1125" height="1404"/>
     </resources>
 </document>
