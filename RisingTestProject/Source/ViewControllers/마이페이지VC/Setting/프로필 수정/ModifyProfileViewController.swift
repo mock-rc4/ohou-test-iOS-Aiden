@@ -21,8 +21,12 @@ class ModifyProfileViewController: BaseViewController {
     
     @IBAction func didTapModifyButton(_ sender: UIButton) {
         // API 호출
-        let request = ModifyProfileRequest(nickname: nickNameTextField.text, profile_Img: nil, Introduce: introduceTextField.text)
-        ModifyProfileDataManager().modifyProtile(request, delegate: self)
+        if Constant.isUserLogged {
+            let request = ModifyProfileRequest(nickname: nickNameTextField.text, profile_Img: nil, Introduce: introduceTextField.text)
+            ModifyProfileDataManager().modifyProtile(request, delegate: self)
+        }else {
+            presentAlert(title: "로그인 상태가 아닙니다.")
+        }
     }
     
     

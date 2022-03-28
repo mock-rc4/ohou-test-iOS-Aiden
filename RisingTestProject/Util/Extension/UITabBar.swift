@@ -27,7 +27,7 @@ extension UITabBar: UITabBarControllerDelegate {
 
 
                     // Do Something Here ...
-                    print("가운데 버튼")
+                    print("3번 VC")
 
                     // Present View Controller
 //                    guard let navigationController = storyboard?.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return false }

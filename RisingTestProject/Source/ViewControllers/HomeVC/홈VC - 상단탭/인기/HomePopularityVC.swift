@@ -60,7 +60,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     
     // Cell 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 8
     }
     
     // 사용할 Cell 설정
@@ -84,13 +84,13 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row <= 6{
+        }else if indexPath.row == 5{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularityMediaTableViewCell", for: indexPath) as? PopularityMediaTableViewCell else {
                 return UITableViewCell()
             }
             addSeparator(cell)
             return cell
-        }else if indexPath.row == 7{
+        }else if indexPath.row == 6{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as? ReviewTableViewCell else {
                 return UITableViewCell()
             }
@@ -115,9 +115,9 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
             return tableView.frame.width / 1.8
         }else if indexPath.row == 4{
             return tableView.frame.width / 1.3
-        }else if indexPath.row <= 6 {
+        }else if indexPath.row == 5 {
             return tableView.frame.width
-        }else if indexPath.row == 7{
+        }else if indexPath.row == 6{
             return tableView.frame.width * 1.35
         }else {
             return tableView.frame.width * 2.3

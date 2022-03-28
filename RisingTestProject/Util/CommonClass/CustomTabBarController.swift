@@ -14,7 +14,7 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
         setupStyle()
         
-        self.delegate = self
+//        self.delegate = self
     }
     
     func setupStyle() {

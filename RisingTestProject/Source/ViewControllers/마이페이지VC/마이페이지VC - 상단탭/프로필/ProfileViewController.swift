@@ -141,6 +141,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+    // 리뷰VC로 이동
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // MARK: - 로그인해야 이동할 수 있도록 수정
+        if indexPath.row == 7 {
+            guard let reviewVC = storyboard?.instantiateViewController(withIdentifier: "ChooseProductToReviewVC") as? ChooseProductToReviewVC else {
+                return
+            }
+            self.navigationController?.pushViewController(reviewVC, animated: true)
+        }
+    }
+    
+    
     
     
     // 테이블뷰 Header 설정

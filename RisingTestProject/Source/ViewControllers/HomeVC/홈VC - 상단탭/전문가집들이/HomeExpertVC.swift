@@ -61,6 +61,14 @@ extension HomeExpertVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "HouseWarmingDetailVC") as? HouseWarmingDetailVC else {
+            return
+        }
+        detailVC.postNumber = expertPosts[indexPath.row].houseId
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
 

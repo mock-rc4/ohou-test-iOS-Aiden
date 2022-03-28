@@ -16,17 +16,19 @@ struct Constant {
     // 유저가 로그인 상태인지?
     static var isUserLogged: Bool = false
     
-    // 유저가 둘러보기 버튼을 눌렀는지?
+    // 유저가 둘러보기 버튼을 눌렀는지?  -> 영상찍기 전 false로 변경해두기
     static var isUserTapLookAroundButton: Bool = true
+    
     
     // API호출 기본 url
     static let baseURL = "https://prod.eun0-dev.com"
     
     
     // 로그인 성공하면 저장할 값
-    // MARK: - 유저디폴트로 바꾸기
+    // 로그인 성공하면 userDefault에도 jwt 저장
     static var accoundID: Int?
     static var jwt: String?
+    
     
     
     // 유저 정보

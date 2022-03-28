@@ -14,10 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
+    // 앱 실행 직후, 사용자에게 화면 보여지기 전에 호출
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         KakaoSDK.initSDK(appKey: KakaoKey.kakaoKey)
         
+        Constant.jwt = UserDefaults.standard.string(forKey: "jwt")
         
         return true
     }
