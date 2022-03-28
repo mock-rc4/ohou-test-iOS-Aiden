@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0164AC4A69706993E2EA7DBE /* Pods_RisingTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB17C0B8FCCD7F01363220B6 /* Pods_RisingTestProject.framework */; };
+		D0053D6C27F13418005F9982 /* HouseWarmingDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0053D6B27F13418005F9982 /* HouseWarmingDetailDataManager.swift */; };
+		D0053D6F27F1343E005F9982 /* HouseWarmingDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0053D6E27F1343E005F9982 /* HouseWarmingDetailResponse.swift */; };
 		D005E26327E6070A0001B63C /* PopularityPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E26127E6070A0001B63C /* PopularityPostTableViewCell.swift */; };
 		D005E26427E6070A0001B63C /* PopularityPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D005E26227E6070A0001B63C /* PopularityPostTableViewCell.xib */; };
 		D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D005E26927E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift */; };
@@ -266,6 +268,8 @@
 /* Begin PBXFileReference section */
 		3373D6D7D9CC2F5B66FA1122 /* Pods-RisingTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTestProject.debug.xcconfig"; path = "Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		57A1119FE0DF7529DAB93FE8 /* Pods-RisingTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTestProject.release.xcconfig"; path = "Target Support Files/Pods-RisingTestProject/Pods-RisingTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		D0053D6B27F13418005F9982 /* HouseWarmingDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWarmingDetailDataManager.swift; sourceTree = "<group>"; };
+		D0053D6E27F1343E005F9982 /* HouseWarmingDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseWarmingDetailResponse.swift; sourceTree = "<group>"; };
 		D005E26127E6070A0001B63C /* PopularityPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostTableViewCell.swift; sourceTree = "<group>"; };
 		D005E26227E6070A0001B63C /* PopularityPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularityPostTableViewCell.xib; sourceTree = "<group>"; };
 		D005E26927E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityCollectionViewHeaderCell.swift; sourceTree = "<group>"; };
@@ -536,6 +540,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0053D6A27F133DD005F9982 /* 집들이 상세조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0053D6B27F13418005F9982 /* HouseWarmingDetailDataManager.swift */,
+				D0053D6D27F1342E005F9982 /* Entity */,
+			);
+			name = "집들이 상세조회";
+			path = "집들이 상세조회";
+			sourceTree = "<group>";
+		};
+		D0053D6D27F1342E005F9982 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0053D6E27F1343E005F9982 /* HouseWarmingDetailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D005E26027E6056B0001B63C /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -757,6 +779,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0053D6A27F133DD005F9982 /* 집들이 상세조회 */,
 				D0392E5527F0ACDF0053F6F0 /* 팔로잉 탭 조회 */,
 				D047897527F05A9E00DEA095 /* 전문가 집들이 조회 */,
 				D047896027F03C1F00DEA095 /* 집들이 글 조회 */,
@@ -2659,6 +2682,7 @@
 				D047897727F05AB200DEA095 /* HomeExpertDataManager.swift in Sources */,
 				D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */,
 				D0392E5A27F0AD170053F6F0 /* HomeFollowingResponse.swift in Sources */,
+				D0053D6C27F13418005F9982 /* HouseWarmingDetailDataManager.swift in Sources */,
 				D0ED008E27EB313000904DC7 /* PopularKeywordDataManager.swift in Sources */,
 				D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
@@ -2771,6 +2795,7 @@
 				D005E26B27E6181B0001B63C /* PopularityCollectionViewHeaderCell.swift in Sources */,
 				D08DE46227ED514B00B715C4 /* StoreBestTableViewHeader.swift in Sources */,
 				D0C0823C27ED9DE6008BABDF /* BasketTableViewFooter.swift in Sources */,
+				D0053D6F27F1343E005F9982 /* HouseWarmingDetailResponse.swift in Sources */,
 				D0F6E21427EC88B40058A7E7 /* RelatedProductUserSawDataManager.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
 				D0FDE81827EB783000C4C2A3 /* UserStylingCollectionViewCell.swift in Sources */,

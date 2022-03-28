@@ -161,6 +161,16 @@
                 <constraint firstItem="8Zh-GK-yaf" firstAttribute="centerY" secondItem="7iy-k9-fnz" secondAttribute="centerY" id="wNA-1X-ei7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="familyType" destination="X3z-TQ-g6y" id="Lhb-JB-bG1"/>
+                <outlet property="field" destination="cnD-bV-kLo" id="Egr-Ax-kZs"/>
+                <outlet property="housingType" destination="GCm-Mh-1PI" id="vSe-CP-9qW"/>
+                <outlet property="nickName" destination="Shk-EJ-d1P" id="CFy-vB-8Ui"/>
+                <outlet property="postImage" destination="bNA-nt-a0X" id="yE6-Wu-Fjk"/>
+                <outlet property="profileImage" destination="NKJ-uV-CCK" id="YfS-xd-Xgu"/>
+                <outlet property="space" destination="KJf-ko-cmH" id="Z93-NV-fMC"/>
+                <outlet property="title" destination="ejn-Xa-cmU" id="f9A-xj-pbl"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="255.13392857142856"/>
         </view>
     </objects>

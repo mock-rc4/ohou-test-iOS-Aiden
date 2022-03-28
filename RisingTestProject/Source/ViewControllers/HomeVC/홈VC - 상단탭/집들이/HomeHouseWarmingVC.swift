@@ -68,7 +68,18 @@ extension HomeHouseWarmingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.frame.width * 0.9
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "HouseWarmingDetailVC") as? HouseWarmingDetailVC else {
+            return
+        }
+        detailVC.postNumber = houseWarmingPosts[indexPath.row].houseId
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
+
+
 
 
 
