@@ -10,8 +10,16 @@ import UIKit
 
 class ChooseProductToReviewVC: BaseViewController {
     
+    // 셀 구성할 데이터
+    var productInfo: [ProductCellInfoNoRemain] = []
+    
+    
     // UI연결
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func didTapPopButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     
@@ -26,19 +34,52 @@ class ChooseProductToReviewVC: BaseViewController {
         tableView.register(UINib(nibName: "ChooseProductToReviewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "ChooseProductToReviewHeader")
         
         // cell
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "ChooseProductToReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ChooseProductToReviewTableViewCell")
+        
+        // API호출
+        ReviewProductListDataManager().getReviewProductList(delegate: self)
+    }
+    
+    
+    // 탭바 컨트롤
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 
 
 extension ChooseProductToReviewVC: UITableViewDelegate, UITableViewDataSource {
-    
+    // 셀 개수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return productInfo.count
     }
     
+    // 무슨 셀 사용할지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if productInfo.count >= 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseProductToReviewTableViewCell", for: indexPath) as? ChooseProductToReviewTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.updateCell(productInfo[indexPath.row])
+            cell.selectionStyle = .none
+            return cell
+        }else {
+            return UITableViewCell()
+        }
+    }
+    
+    // 셀 높이
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.width / 4
+    }
+    
+    
+    // 셀 선택
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // MARK: - VC modal로 띄우기!
     }
     
     
@@ -53,6 +94,6 @@ extension ChooseProductToReviewVC: UITableViewDelegate, UITableViewDataSource {
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width / 3
+        return tableView.frame.width / 2.5
     }
 }

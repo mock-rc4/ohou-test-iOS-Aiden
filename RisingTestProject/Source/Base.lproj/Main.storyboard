@@ -2791,7 +2791,7 @@
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="fYX-Ce-Frv"/>
+                                            <action selector="didTapPopButton:" destination="x1h-mm-Nuq" eventType="touchUpInside" id="PcS-ZF-sL0"/>
                                         </connections>
                                     </button>
                                 </subviews>
