@@ -113,7 +113,7 @@ extension PopularityMediaTableViewCell {
                 item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)
                     
                 // 그룹 사이즈
-                let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalWidth(1/2))
+                let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.85), heightDimension: .fractionalWidth(1/2))
                     
                 // 그룹사이즈로 그룹 만들기 (horizontal, vertical 선택 가능)
                 let groub = NSCollectionLayoutGroup.horizontal(layoutSize: groubSize, subitem: item, count: 2)

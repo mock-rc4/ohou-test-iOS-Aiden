@@ -24,14 +24,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="231" height="300.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m6y-0K-kiW">
-                                <rect key="frame" x="0.0" y="-10" width="53" height="60"/>
+                                <rect key="frame" x="15" y="-10" width="53" height="60"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="m6y-0K-kiW" secondAttribute="height" multiplier="53:60" id="HDa-nM-ZY7"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzZ-Vx-pRK">
-                                <rect key="frame" x="23.5" y="5" width="6" height="16"/>
+                                <rect key="frame" x="38.5" y="5" width="6" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="TWb-do-mXp" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" id="Wdu-Ce-RKz"/>
                             <constraint firstItem="m6y-0K-kiW" firstAttribute="top" secondItem="QOK-pk-jr7" secondAttribute="top" constant="-10" id="XB6-li-PFu"/>
                             <constraint firstItem="oxo-uq-2pY" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" constant="10" id="aUc-Em-xFR"/>
-                            <constraint firstItem="m6y-0K-kiW" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" id="sOX-Vb-yo6"/>
+                            <constraint firstItem="m6y-0K-kiW" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" constant="15" id="sOX-Vb-yo6"/>
                             <constraint firstItem="VzZ-Vx-pRK" firstAttribute="top" secondItem="QOK-pk-jr7" secondAttribute="top" constant="5" id="yrE-CQ-PTd"/>
                             <constraint firstAttribute="trailing" secondItem="TWb-do-mXp" secondAttribute="trailing" id="zHp-rZ-tmI"/>
                         </constraints>

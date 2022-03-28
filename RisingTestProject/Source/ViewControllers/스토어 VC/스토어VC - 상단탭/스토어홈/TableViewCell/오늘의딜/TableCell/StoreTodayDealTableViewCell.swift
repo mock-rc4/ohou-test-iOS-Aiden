@@ -14,8 +14,6 @@ protocol ShowProductDetailPage {
 
 
 
-
-
 class StoreTodayDealTableViewCell: UITableViewCell {
 
     // 뷰 전환 위한 delegate

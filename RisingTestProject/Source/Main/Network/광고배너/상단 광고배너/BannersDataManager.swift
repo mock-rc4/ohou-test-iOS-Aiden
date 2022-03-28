@@ -33,6 +33,7 @@ class BannersDataManager {
                         
                         // url(string) -> UIImage로 변환하는 함수
                         self.urlToUIimage(urlString, completion: {
+                            Constant.interiorBannerImage = self.urlImages
                             delegate.bannerImage = self.urlImages
                             delegate.tableView.reloadData()
                         })

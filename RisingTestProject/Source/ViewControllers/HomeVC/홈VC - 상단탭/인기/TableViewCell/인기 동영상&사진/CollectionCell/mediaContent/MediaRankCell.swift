@@ -18,6 +18,8 @@ class MediaRankCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        postImage.layer.cornerRadius = postImage.frame.height / 15
     }
 
     

@@ -20,6 +20,7 @@ class ExhibitionCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        image.layer.cornerRadius = image.frame.height / 10
     }
 
     

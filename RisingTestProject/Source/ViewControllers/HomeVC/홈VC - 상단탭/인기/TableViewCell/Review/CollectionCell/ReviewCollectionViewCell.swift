@@ -20,6 +20,7 @@ class ReviewCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        reviewImage.layer.cornerRadius = reviewImage.frame.height / 10
         companyImage.layer.cornerRadius = companyImage.frame.height / 2
     }
 

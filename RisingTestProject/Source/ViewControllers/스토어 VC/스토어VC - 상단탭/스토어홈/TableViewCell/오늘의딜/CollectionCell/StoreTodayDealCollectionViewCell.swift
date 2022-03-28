@@ -38,6 +38,12 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
         freeDelivery.clipsToBounds = true
         freeDelivery.layer.cornerRadius = specialPrice.frame.height / 8
     }
+    
+    
+    override func prepareForReuse() {
+        productImage.image = UIImage(named: "오늘의집 아이콘.png")
+    }
+    
 
     
     // MARK: - Update함수 만들기!
@@ -60,7 +66,4 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
             specialPrice.isHidden = true
         }
     }
-    
-    
-    
 }

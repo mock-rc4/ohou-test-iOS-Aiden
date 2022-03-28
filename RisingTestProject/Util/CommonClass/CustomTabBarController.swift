@@ -47,6 +47,36 @@ extension CustomTabBarController: UITabBarControllerDelegate {
     
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+
+//        self.tabBarController?.selectedIndex = 2
+        for tabBarItem in (self.tabBar.items)!{
+
+            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
+
+            let  imgView = viewTabBar?.subviews[0] as? UIImageView
+//            viewTabBar?.origin.y  = 6
+            imgView?.frame.size.height = 24
+            imgView?.frame.size.width = 24
+            imgView?.clipsToBounds = true
+            imgView?.contentMode = .scaleAspectFit
+        }
+    }
+
+
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        for tabBarItem in (self.tabBar.items)!{
+
+            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
+            let  imgView = viewTabBar?.subviews[0] as? UIImageView
+            imgView?.frame.size.height = 24
+            imgView?.frame.size.width = 24
+
+            imgView?.clipsToBounds = true
+            imgView?.contentMode = .scaleAspectFit
+        }
+    }
 }
 
 

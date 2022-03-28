@@ -112,7 +112,7 @@ extension PopularityPostTableViewCell {
                 item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 10, bottom: 2, trailing: 10)
                     
                 // 그룹 사이즈
-                let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.4/2))
+                let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.25/2))
                     
                 // 그룹사이즈로 그룹 만들기 (horizontal, vertical 선택 가능)
                 let groub = NSCollectionLayoutGroup.horizontal(layoutSize: groubSize, subitem: item, count: 2)

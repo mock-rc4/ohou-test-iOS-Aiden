@@ -18,7 +18,7 @@ class StoreViewController: BaseViewController {
         super.viewDidLoad()
         
         // UI 설정
-        addRadiusToUIView(searchBar, size: searchBar.frame.height / 10)
+        addRadiusToUIView(searchBar, size: searchBar.frame.height / 5)
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
     }
     

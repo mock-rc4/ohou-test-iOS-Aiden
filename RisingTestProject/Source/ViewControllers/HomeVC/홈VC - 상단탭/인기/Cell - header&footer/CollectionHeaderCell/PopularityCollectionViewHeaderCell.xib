@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 가족의 아지트예요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N57-0k-nhe">
-                        <rect key="frame" x="0.0" y="94.5" width="182.5" height="24"/>
+                        <rect key="frame" x="10" y="94.5" width="182.5" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikd-bc-teK">
-                        <rect key="frame" x="0.0" y="123.5" width="4" height="17"/>
+                        <rect key="frame" x="10" y="123.5" width="4" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="N57-0k-nhe" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="5HV-fT-rgE"/>
+                <constraint firstItem="N57-0k-nhe" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="5HV-fT-rgE"/>
                 <constraint firstItem="Ikd-bc-teK" firstAttribute="leading" secondItem="N57-0k-nhe" secondAttribute="leading" id="8hq-c8-st7"/>
                 <constraint firstItem="N57-0k-nhe" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="MsT-zS-K32"/>
                 <constraint firstItem="Ikd-bc-teK" firstAttribute="top" secondItem="N57-0k-nhe" secondAttribute="bottom" constant="5" id="U3o-We-QZP"/>

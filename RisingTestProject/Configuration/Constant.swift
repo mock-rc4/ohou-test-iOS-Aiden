@@ -46,6 +46,7 @@ struct Constant {
     static var storeViewBannerImage: [UIImage] = []
     static var myPageViewBannerImage: [UIImage] = []
     
+    static var interiorBannerImage: [UIImage] = []
     
     // 오늘의 딜 데이터
     static var todayDealProductInfo: [ProductCellInfo] = []
