@@ -65,19 +65,95 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
                     </buttonConfiguration>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Dd-I2-4pD" userLabel="주거형태">
+                    <rect key="frame" x="10" y="446.5" width="136" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주거형태" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpK-Q4-w6U">
+                            <rect key="frame" x="0.0" y="0.0" width="48.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원룸&amp;오피스텔" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCm-Mh-1PI">
+                            <rect key="frame" x="53.5" y="0.0" width="82.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="systemCyanColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YMQ-nf-1GT" userLabel="평수">
+                    <rect key="frame" x="161" y="446.5" width="49.5" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="평수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0k-jk-F8S">
+                            <rect key="frame" x="0.0" y="0.0" width="24.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7평" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-ko-cmH">
+                            <rect key="frame" x="29.5" y="0.0" width="20" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="systemCyanColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l9f-WH-Sm2" userLabel="분야">
+                    <rect key="frame" x="10" y="470.5" width="90.5" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVj-kV-lId">
+                            <rect key="frame" x="0.0" y="0.0" width="24.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홈스타일링" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnD-bV-kLo">
+                            <rect key="frame" x="29.5" y="0.0" width="61" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="systemCyanColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gyB-nd-pR7" userLabel="가족형태">
+                    <rect key="frame" x="115.5" y="470.5" width="114.5" height="17"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가족형태" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b65-KL-f0V">
+                            <rect key="frame" x="0.0" y="0.0" width="48.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="싱글라이프" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3z-TQ-g6y">
+                            <rect key="frame" x="53.5" y="0.0" width="61" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="systemCyanColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bNA-nt-a0X" secondAttribute="trailing" id="6oo-do-bwL"/>
+                <constraint firstItem="gyB-nd-pR7" firstAttribute="centerY" secondItem="l9f-WH-Sm2" secondAttribute="centerY" id="9Q4-MP-cFN"/>
                 <constraint firstItem="NKJ-uV-CCK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="B3y-Bf-804"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Zh-GK-yaf" secondAttribute="trailing" constant="15" id="Bp3-2k-EIl"/>
                 <constraint firstItem="ejn-Xa-cmU" firstAttribute="top" secondItem="bjg-1j-hjF" secondAttribute="bottom" constant="7" id="Dd1-tH-oBe"/>
                 <constraint firstItem="bNA-nt-a0X" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GM3-Eg-Hsk"/>
+                <constraint firstItem="gyB-nd-pR7" firstAttribute="leading" secondItem="l9f-WH-Sm2" secondAttribute="trailing" constant="15" id="Gjv-3F-ckv"/>
                 <constraint firstItem="7iy-k9-fnz" firstAttribute="leading" secondItem="NKJ-uV-CCK" secondAttribute="trailing" constant="10" id="GsQ-MX-dnc"/>
+                <constraint firstItem="l9f-WH-Sm2" firstAttribute="top" secondItem="8Dd-I2-4pD" secondAttribute="bottom" constant="7" id="JrZ-3r-yE4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ejn-Xa-cmU" secondAttribute="trailing" constant="10" id="N1x-AP-8jg"/>
+                <constraint firstItem="YMQ-nf-1GT" firstAttribute="leading" secondItem="8Dd-I2-4pD" secondAttribute="trailing" constant="15" id="PCo-nm-81o"/>
                 <constraint firstItem="bjg-1j-hjF" firstAttribute="top" secondItem="bNA-nt-a0X" secondAttribute="bottom" constant="10" id="QAr-nz-5ta"/>
                 <constraint firstItem="ejn-Xa-cmU" firstAttribute="leading" secondItem="bjg-1j-hjF" secondAttribute="leading" id="Ttg-8a-gSp"/>
+                <constraint firstItem="YMQ-nf-1GT" firstAttribute="centerY" secondItem="8Dd-I2-4pD" secondAttribute="centerY" id="Tu4-QE-pNL"/>
+                <constraint firstItem="8Dd-I2-4pD" firstAttribute="top" secondItem="NKJ-uV-CCK" secondAttribute="bottom" constant="15" id="XcC-nH-di8"/>
+                <constraint firstItem="l9f-WH-Sm2" firstAttribute="leading" secondItem="8Dd-I2-4pD" secondAttribute="leading" id="a2P-x5-DyQ"/>
+                <constraint firstItem="8Dd-I2-4pD" firstAttribute="leading" secondItem="NKJ-uV-CCK" secondAttribute="leading" id="aGl-67-26d"/>
                 <constraint firstItem="bjg-1j-hjF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ekC-yh-c4l"/>
                 <constraint firstItem="NKJ-uV-CCK" firstAttribute="top" secondItem="ejn-Xa-cmU" secondAttribute="bottom" constant="15" id="iCU-qZ-TnN"/>
                 <constraint firstItem="7iy-k9-fnz" firstAttribute="centerY" secondItem="NKJ-uV-CCK" secondAttribute="centerY" id="kCG-Zi-hZP"/>
