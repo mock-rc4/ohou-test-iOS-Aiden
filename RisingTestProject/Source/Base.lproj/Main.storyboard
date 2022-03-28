@@ -290,7 +290,7 @@
                         <viewLayoutGuide key="safeArea" id="VRu-8e-uSk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="" id="MaQ-2P-a94">
+                    <tabBarItem key="tabBarItem" tag="4" title="" id="MaQ-2P-a94">
                         <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
                         <imageReference key="selectedImage" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>

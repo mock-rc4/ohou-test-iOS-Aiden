@@ -12,11 +12,16 @@ class CustomTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 그림자 설정
         setupStyle()
         
-//        self.delegate = self
+        // delegate 지정
+        self.delegate = self
     }
     
+    
+    // 기본 탭바 스타일 (그림자)
     func setupStyle() {
         UITabBar.clearShadow()
         tabBar.layer.applyShadow(color: .gray, alpha: 0.3, x: 0, y: 0, blur: 12)
@@ -38,6 +43,10 @@ extension CustomTabBarController: UITabBarControllerDelegate {
 
         return true
     }
+    
+    
+    
+    
 }
 
 
