@@ -236,6 +236,8 @@
 		D0E1065F27F1A3D9008F4D3B /* InteriorReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */; };
 		D0E1300627F1A9B3005E0D75 /* PopularityPhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300527F1A9B3005E0D75 /* PopularityPhotoDataManager.swift */; };
 		D0E1300927F1A9CD005E0D75 /* PopularityPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300827F1A9CD005E0D75 /* PopularityPhotoResponse.swift */; };
+		D0E1300C27F1ADFE005E0D75 /* ExhibitionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300B27F1ADFE005E0D75 /* ExhibitionDataManager.swift */; };
+		D0E1300F27F1AE14005E0D75 /* ExhibitionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300E27F1AE14005E0D75 /* ExhibitionResponse.swift */; };
 		D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */; };
 		D0E5857027EA2932004CB81A /* PopularProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -511,6 +513,8 @@
 		D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorReviewResponse.swift; sourceTree = "<group>"; };
 		D0E1300527F1A9B3005E0D75 /* PopularityPhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPhotoDataManager.swift; sourceTree = "<group>"; };
 		D0E1300827F1A9CD005E0D75 /* PopularityPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPhotoResponse.swift; sourceTree = "<group>"; };
+		D0E1300B27F1ADFE005E0D75 /* ExhibitionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionDataManager.swift; sourceTree = "<group>"; };
+		D0E1300E27F1AE14005E0D75 /* ExhibitionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExhibitionResponse.swift; sourceTree = "<group>"; };
 		D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -853,6 +857,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0E1300A27F1ADCE005E0D75 /* 기획전 조회 */,
 				D0E1066027F1A96E008F4D3B /* 인기 사진 조회 */,
 				D0E1065A27F1A020008F4D3B /* 인테리어 시공 리뷰 조회 */,
 				D0E1065427F19942008F4D3B /* 인기 게시물 조회 */,
@@ -2269,6 +2274,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D0E1300A27F1ADCE005E0D75 /* 기획전 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1300B27F1ADFE005E0D75 /* ExhibitionDataManager.swift */,
+				D0E1300D27F1AE0A005E0D75 /* Entity */,
+			);
+			name = "기획전 조회";
+			path = "기획전 조회";
+			sourceTree = "<group>";
+		};
+		D0E1300D27F1AE0A005E0D75 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1300E27F1AE14005E0D75 /* ExhibitionResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -2865,6 +2888,7 @@
 				D0252C6B27E84A1900998372 /* MyShoppingTableViewCell.swift in Sources */,
 				D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */,
 				D02504EF27EB4FAC00A580BB /* ProductOptionViewController.swift in Sources */,
+				D0E1300F27F1AE14005E0D75 /* ExhibitionResponse.swift in Sources */,
 				D06B483127E8189700C881E0 /* CALayer.swift in Sources */,
 				D088EA2027EF53A500C129C0 /* OrderProductTableViewCell.swift in Sources */,
 				D04A2DDE27E5C3EC00D1C7D6 /* HomeQnAVC.swift in Sources */,
@@ -2974,6 +2998,7 @@
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
 				D088EA0D27EF3D7B00C129C0 /* PaymentViewController.swift in Sources */,
 				D03B6C7027F0001E00241222 /* AgreeTableViewCell.swift in Sources */,
+				D0E1300C27F1ADFE005E0D75 /* ExhibitionDataManager.swift in Sources */,
 				D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */,
 				D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */,
 				D0B7591127E8636E00954FB3 /* CommercialTableViewCell.swift in Sources */,

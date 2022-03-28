@@ -8,6 +8,10 @@
 import UIKit
 
 class ExhibitionTableViewCell: UITableViewCell {
+    
+    // 기획전 리스트
+    var exhibitionList: [Exhibition] = []
+    
 
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!
@@ -38,7 +42,11 @@ class ExhibitionTableViewCell: UITableViewCell {
 extension ExhibitionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 8
+            if !exhibitionList.isEmpty {
+                return exhibitionList.count
+            }else {
+                return 3
+            }
         }else {
             return 1
         }
@@ -50,7 +58,9 @@ extension ExhibitionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ExhibitionCollectionViewCell", for: indexPath) as? ExhibitionCollectionViewCell else {
                 return UICollectionViewCell()
             }
-//            cell.updateCell(<#T##img: UIImage##UIImage#>, text: <#T##String#>, <#T##companyImg: UIImage##UIImage#>, company: <#T##String#>)
+            if !exhibitionList.isEmpty {
+                cell.updateCell(exhibitionList[indexPath.row])
+            }
             return cell
         }else if indexPath.section == 0 {
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularityCollectionViewHeaderCell", for: indexPath) as? PopularityCollectionViewHeaderCell else {

@@ -33,6 +33,8 @@ class HomePopularityVC: BaseViewController {
     // 인기 사진 리스트
     var popularityPhotoList: [PopularityPhoto] = []
     
+    // 기획전 리스트
+    var exhibitionList: [Exhibition] = []
     
     
     // UI연결
@@ -71,6 +73,8 @@ class HomePopularityVC: BaseViewController {
         InteriorReviewDataManager().getInteriorReview(delegate: self)
         
         PopularityPhotoDataManager().getPopularityPhoto(delegate: self)
+        
+        ExhibitionDataManager().getExhibitionList(delegate: self)
     }
 }
 
@@ -143,6 +147,9 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if !exhibitionList.isEmpty {
+                cell.exhibitionList = self.exhibitionList
+            }
             return cell
         }
     }
@@ -162,7 +169,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
         }else if indexPath.row == 6{
             return tableView.frame.width * 1.35
         }else {
-            return tableView.frame.width * 2.3
+            return tableView.frame.width * 1.9
         }
     }
     

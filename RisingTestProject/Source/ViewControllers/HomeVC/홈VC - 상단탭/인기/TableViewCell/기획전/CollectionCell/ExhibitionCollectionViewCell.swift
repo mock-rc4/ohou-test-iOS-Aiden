@@ -23,10 +23,10 @@ class ExhibitionCollectionViewCell: UICollectionViewCell {
     }
 
     
-    func updateCell(_ img: UIImage, _ subT: String, _ mainT: String, numOfProduct: Int) {
-        image.image = img
-        subTitle.text = subT
-        title.text = mainT
-        numberOfProduct.text = "\(numOfProduct)개 상품"
+    func updateCell(_ data: Exhibition) {
+        image.load(url: URL(string: data.thumbnail)!)
+        subTitle.text = data.subtitle
+        title.text = data.title
+        numberOfProduct.text = "\(data.goodsCnt)개 상품"
     }
 }
