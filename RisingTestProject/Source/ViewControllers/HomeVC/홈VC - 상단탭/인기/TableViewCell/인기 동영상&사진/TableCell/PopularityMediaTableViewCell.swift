@@ -9,6 +9,10 @@ import UIKit
 
 class PopularityMediaTableViewCell: UITableViewCell {
 
+    // 인기 사진 리스트 데이터
+    var popularityPhotoList: [PopularityPhoto] = []
+    
+    
     // UI 연결
     @IBOutlet weak var mediaCollectionView: UICollectionView!
     
@@ -41,7 +45,11 @@ class PopularityMediaTableViewCell: UITableViewCell {
 extension PopularityMediaTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 10
+            if !popularityPhotoList.isEmpty {
+                return popularityPhotoList.count
+            }else {
+                return 3
+            }
         }else {
             return 1
         }
@@ -58,7 +66,9 @@ extension PopularityMediaTableViewCell: UICollectionViewDelegate, UICollectionVi
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MediaRankCell", for: indexPath) as? MediaRankCell else {
                 return UICollectionViewCell()
             }
-            cell.updateCell(indexPath.row+1, img: UIImage(named: "순위 테스트 이미지.jpeg")!)
+            if !popularityPhotoList.isEmpty {
+                cell.updateCell(indexPath.row+1, data: popularityPhotoList[indexPath.row])
+            }
             return cell
         }else {
             guard let footer = collectionView.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewFooter", for: indexPath) as? MediaCollectionViewFooter else {

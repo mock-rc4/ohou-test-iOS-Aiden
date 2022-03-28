@@ -36,6 +36,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxo-uq-2pY">
+                                <rect key="frame" x="10" y="263.5" width="37" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -44,8 +50,10 @@
                             <constraint firstAttribute="bottom" secondItem="TWb-do-mXp" secondAttribute="bottom" id="9na-TK-YmA"/>
                             <constraint firstItem="VzZ-Vx-pRK" firstAttribute="centerX" secondItem="m6y-0K-kiW" secondAttribute="centerX" id="QSd-dE-LdN"/>
                             <constraint firstItem="m6y-0K-kiW" firstAttribute="width" secondItem="QOK-pk-jr7" secondAttribute="width" multiplier="0.229437" id="UCu-De-l9p"/>
+                            <constraint firstAttribute="bottom" secondItem="oxo-uq-2pY" secondAttribute="bottom" constant="20" id="Vyy-TN-JWY"/>
                             <constraint firstItem="TWb-do-mXp" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" id="Wdu-Ce-RKz"/>
                             <constraint firstItem="m6y-0K-kiW" firstAttribute="top" secondItem="QOK-pk-jr7" secondAttribute="top" constant="-10" id="XB6-li-PFu"/>
+                            <constraint firstItem="oxo-uq-2pY" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" constant="10" id="aUc-Em-xFR"/>
                             <constraint firstItem="m6y-0K-kiW" firstAttribute="leading" secondItem="QOK-pk-jr7" secondAttribute="leading" id="sOX-Vb-yo6"/>
                             <constraint firstItem="VzZ-Vx-pRK" firstAttribute="top" secondItem="QOK-pk-jr7" secondAttribute="top" constant="5" id="yrE-CQ-PTd"/>
                             <constraint firstAttribute="trailing" secondItem="TWb-do-mXp" secondAttribute="trailing" id="zHp-rZ-tmI"/>
@@ -61,6 +69,7 @@
             </constraints>
             <size key="customSize" width="231" height="301"/>
             <connections>
+                <outlet property="nickName" destination="oxo-uq-2pY" id="mxC-K1-0rW"/>
                 <outlet property="postImage" destination="TWb-do-mXp" id="xgu-eb-aYo"/>
                 <outlet property="rankLabel" destination="VzZ-Vx-pRK" id="q34-LQ-aEi"/>
             </connections>

@@ -12,7 +12,7 @@ class MediaRankCell: UICollectionViewCell {
     // UI 연결
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var postImage: UIImageView!
-    
+    @IBOutlet weak var nickName: UILabel!
     
     
     override func awakeFromNib() {
@@ -22,8 +22,9 @@ class MediaRankCell: UICollectionViewCell {
 
     
     // 셀 업데이트 함수
-    func updateCell(_ rank: Int, img: UIImage) {
+    func updateCell(_ rank: Int, data: PopularityPhoto) {
         rankLabel.text = "\(rank)"
-        postImage.image = img
+        postImage.load(url: URL(string: data.photo)!)
+        nickName.text = data.nickname
     }
 }

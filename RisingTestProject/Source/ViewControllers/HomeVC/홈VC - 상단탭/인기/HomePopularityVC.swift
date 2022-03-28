@@ -30,6 +30,9 @@ class HomePopularityVC: BaseViewController {
     // 인테리어 리뷰 게시글
     var interiorReviewPost: [InteriorReview] = []
     
+    // 인기 사진 리스트
+    var popularityPhotoList: [PopularityPhoto] = []
+    
     
     
     // UI연결
@@ -66,6 +69,8 @@ class HomePopularityVC: BaseViewController {
         PopularityPostDataManager().getPopularityPost(delegate: self)
         
         InteriorReviewDataManager().getInteriorReview(delegate: self)
+        
+        PopularityPhotoDataManager().getPopularityPhoto(delegate: self)
     }
 }
 
@@ -118,6 +123,9 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             addSeparator(cell)
+            if !popularityPhotoList.isEmpty {
+                cell.popularityPhotoList = self.popularityPhotoList
+            }
             return cell
         }
         else if indexPath.row == 6{

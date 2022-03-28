@@ -234,6 +234,8 @@
 		D0E1065927F199A2008F4D3B /* PopularityPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */; };
 		D0E1065C27F1A3BC008F4D3B /* InteriorReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065B27F1A3BC008F4D3B /* InteriorReviewDataManager.swift */; };
 		D0E1065F27F1A3D9008F4D3B /* InteriorReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */; };
+		D0E1300627F1A9B3005E0D75 /* PopularityPhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300527F1A9B3005E0D75 /* PopularityPhotoDataManager.swift */; };
+		D0E1300927F1A9CD005E0D75 /* PopularityPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E1300827F1A9CD005E0D75 /* PopularityPhotoResponse.swift */; };
 		D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */; };
 		D0E5857027EA2932004CB81A /* PopularProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */; };
 		D0EA7F6727E58F9100948269 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EA7F6627E58F9100948269 /* Constant.swift */; };
@@ -507,6 +509,8 @@
 		D0E1065827F199A2008F4D3B /* PopularityPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPostResponse.swift; sourceTree = "<group>"; };
 		D0E1065B27F1A3BC008F4D3B /* InteriorReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorReviewDataManager.swift; sourceTree = "<group>"; };
 		D0E1065E27F1A3D9008F4D3B /* InteriorReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorReviewResponse.swift; sourceTree = "<group>"; };
+		D0E1300527F1A9B3005E0D75 /* PopularityPhotoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPhotoDataManager.swift; sourceTree = "<group>"; };
+		D0E1300827F1A9CD005E0D75 /* PopularityPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularityPhotoResponse.swift; sourceTree = "<group>"; };
 		D0E5856D27EA2932004CB81A /* PopularProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0E5856E27EA2932004CB81A /* PopularProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0EA7F6627E58F9100948269 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -849,6 +853,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D0E1066027F1A96E008F4D3B /* 인기 사진 조회 */,
 				D0E1065A27F1A020008F4D3B /* 인테리어 시공 리뷰 조회 */,
 				D0E1065427F19942008F4D3B /* 인기 게시물 조회 */,
 				D0053D6A27F133DD005F9982 /* 집들이 상세조회 */,
@@ -2246,6 +2251,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D0E1066027F1A96E008F4D3B /* 인기 사진 조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1300527F1A9B3005E0D75 /* PopularityPhotoDataManager.swift */,
+				D0E1300727F1A9C4005E0D75 /* Entity */,
+			);
+			name = "인기 사진 조회";
+			path = "인기 사진 조회";
+			sourceTree = "<group>";
+		};
+		D0E1300727F1A9C4005E0D75 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D0E1300827F1A9CD005E0D75 /* PopularityPhotoResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0EA7F6527E58F7A00948269 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -2836,6 +2859,7 @@
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
 				D088EA1C27EF51C400C129C0 /* OrdererTableViewCell.swift in Sources */,
+				D0E1300927F1A9CD005E0D75 /* PopularityPhotoResponse.swift in Sources */,
 				D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */,
 				D0D5B65327EDD80700319E3D /* ProductInfoDataManager.swift in Sources */,
 				D0252C6B27E84A1900998372 /* MyShoppingTableViewCell.swift in Sources */,
@@ -2869,6 +2893,7 @@
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
 				D0FE01F027EEA0E8005D5C4F /* PutInBasketResponse.swift in Sources */,
+				D0E1300627F1A9B3005E0D75 /* PopularityPhotoDataManager.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
 				D0EA7F7827E590A700948269 /* UIColor.swift in Sources */,
 				D0A871F627EAD5FC00144BD8 /* ProductInfoTableViewHeader.swift in Sources */,

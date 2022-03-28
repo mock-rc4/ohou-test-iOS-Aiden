@@ -1,5 +1,5 @@
 //
-//  InteriorReviewDataManager.swift
+//  PopularityPhotoDataManager.swift
 //  RisingTestProject
 //
 //  Created by 신동희 on 2022/03/28.
@@ -7,20 +7,20 @@
 
 import Alamofire
 
-class InteriorReviewDataManager {
+class PopularityPhotoDataManager {
     
-    func getInteriorReview(delegate: HomePopularityVC) {
-        let url = "\(Constant.baseURL)/home/reviews"
+    func getPopularityPhoto(delegate: HomePopularityVC) {
+        let url = "\(Constant.baseURL)/home/photos"
         
         AF.request(url,
                    method: .get,
                    headers: nil)
-            .responseDecodable(of: InteriorReviewResponse.self) { response in
+            .responseDecodable(of: PopularityPhotoResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess {
-                        print("인테리어 시공 리뷰 조회 성공")
-                        delegate.interiorReviewPost = response.result
+                        print("인기 사진 조회 성공")
+                        delegate.popularityPhotoList = response.result
                         delegate.tableView.reloadData()
                     }
                     else {
