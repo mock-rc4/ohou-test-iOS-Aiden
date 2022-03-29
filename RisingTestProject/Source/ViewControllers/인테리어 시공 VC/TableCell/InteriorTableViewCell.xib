@@ -30,7 +30,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zFE-1I-S2e" userLabel="업체명">
-                                        <rect key="frame" x="0.0" y="191.5" width="232" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="191.5" width="224" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(주)WJ디자인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O3-I1-t7F">
                                                 <rect key="frame" x="20" y="0.0" width="97" height="20.5"/>
@@ -39,10 +39,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-uI-dN3">
-                                                <rect key="frame" x="125" y="0.0" width="107" height="20.5"/>
+                                                <rect key="frame" x="125" y="0.0" width="99" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응답빠름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M2-c1-k4G" customClass="PaddingLabel" customModule="RisingTestProject" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,7 +63,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전문건설업" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-hI-oGT" customClass="PaddingLabel" customModule="RisingTestProject" customModuleProvider="target">
-                                                        <rect key="frame" x="51" y="0.0" width="56" height="20.5"/>
+                                                        <rect key="frame" x="47" y="0.0" width="52" height="20.5"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,10 +193,10 @@
     </objects>
     <designables>
         <designable name="5M2-c1-k4G">
-            <size key="intrinsicContentSize" width="46" height="18.5"/>
+            <size key="intrinsicContentSize" width="42" height="14.5"/>
         </designable>
         <designable name="dWG-hI-oGT">
-            <size key="intrinsicContentSize" width="56" height="18.5"/>
+            <size key="intrinsicContentSize" width="52" height="14.5"/>
         </designable>
     </designables>
     <resources>

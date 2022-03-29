@@ -173,6 +173,9 @@
 		D08DE46727ED564400B715C4 /* RealTimeBestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */; };
 		D08DE46827ED564400B715C4 /* RealTimeBestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */; };
 		D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DE46A27ED65D500B715C4 /* BasketViewController.swift */; };
+		D090C19427F2A75600A4B205 /* WritingReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19327F2A75600A4B205 /* WritingReviewDataManager.swift */; };
+		D090C19727F2A77300A4B205 /* WritingReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19627F2A77300A4B205 /* WritingReviewResponse.swift */; };
+		D090C19927F2A7BF00A4B205 /* WritingReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19827F2A7BF00A4B205 /* WritingReviewRequest.swift */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -453,6 +456,9 @@
 		D08DE46527ED564400B715C4 /* RealTimeBestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeBestTableViewCell.swift; sourceTree = "<group>"; };
 		D08DE46627ED564400B715C4 /* RealTimeBestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealTimeBestTableViewCell.xib; sourceTree = "<group>"; };
 		D08DE46A27ED65D500B715C4 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		D090C19327F2A75600A4B205 /* WritingReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewDataManager.swift; sourceTree = "<group>"; };
+		D090C19627F2A77300A4B205 /* WritingReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewResponse.swift; sourceTree = "<group>"; };
+		D090C19827F2A7BF00A4B205 /* WritingReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewRequest.swift; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1913,6 +1919,34 @@
 			path = "장바구니VC";
 			sourceTree = "<group>";
 		};
+		D090C19127F2A73600A4B205 /* 리뷰 */ = {
+			isa = PBXGroup;
+			children = (
+				D090C19227F2A73B00A4B205 /* 리뷰작성 */,
+			);
+			name = "리뷰";
+			path = "리뷰";
+			sourceTree = "<group>";
+		};
+		D090C19227F2A73B00A4B205 /* 리뷰작성 */ = {
+			isa = PBXGroup;
+			children = (
+				D090C19327F2A75600A4B205 /* WritingReviewDataManager.swift */,
+				D090C19527F2A76800A4B205 /* Entity */,
+			);
+			name = "리뷰작성";
+			path = "리뷰작성";
+			sourceTree = "<group>";
+		};
+		D090C19527F2A76800A4B205 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D090C19827F2A7BF00A4B205 /* WritingReviewRequest.swift */,
+				D090C19627F2A77300A4B205 /* WritingReviewResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0910F4E27E56D9800793D90 = {
 			isa = PBXGroup;
 			children = (
@@ -2435,6 +2469,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D090C19127F2A73600A4B205 /* 리뷰 */,
 				D088EA0A27EF394800C129C0 /* 결제하기 */,
 				D0FE01E927EEA007005D5C4F /* 장바구니 */,
 				D0D5B65127EDD7CB00319E3D /* 제품 상세 조회 */,
@@ -2893,6 +2928,7 @@
 				D0FE01EE27EEA0BB005D5C4F /* PutInBasketDataManager.swift in Sources */,
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
 				D0392E6227F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift in Sources */,
+				D090C19427F2A75600A4B205 /* WritingReviewDataManager.swift in Sources */,
 				D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0392E5D27F0B5790053F6F0 /* HouseWarmingDetailVC.swift in Sources */,
@@ -2997,6 +3033,7 @@
 				D047897A27F05AF200DEA095 /* HomeExpertResponse.swift in Sources */,
 				D011D0B027E7590B00E72072 /* ReviewTableViewCell.swift in Sources */,
 				D0252C6627E83A5600998372 /* ProfileTableViewHeader.swift in Sources */,
+				D090C19927F2A7BF00A4B205 /* WritingReviewRequest.swift in Sources */,
 				D0FC804D27EF1ECD00A1A650 /* ModifyProductCountResponse.swift in Sources */,
 				D0124A0427E7320B0035456F /* MediaRankCell.swift in Sources */,
 				D01FB65227E8C91E00D01FDF /* BannersResponse.swift in Sources */,
@@ -3041,6 +3078,7 @@
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
+				D090C19727F2A77300A4B205 /* WritingReviewResponse.swift in Sources */,
 				D088EA0D27EF3D7B00C129C0 /* PaymentViewController.swift in Sources */,
 				D03B6C7027F0001E00241222 /* AgreeTableViewCell.swift in Sources */,
 				D0E1300C27F1ADFE005E0D75 /* ExhibitionDataManager.swift in Sources */,

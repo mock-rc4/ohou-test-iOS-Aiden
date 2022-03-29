@@ -3721,27 +3721,39 @@
                                                         <color key="textColor" white="0.0" alpha="0.75258692052980136" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="사진 업로드 아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-96-x3y">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="사진 업로드 아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="BJ7-96-x3y">
                                                         <rect key="frame" x="15" y="115.5" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="HHt-aP-lFY"/>
                                                             <constraint firstAttribute="width" secondItem="BJ7-96-x3y" secondAttribute="height" multiplier="1:1" id="XJi-wb-bib"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-uO-Hdw">
+                                                        <rect key="frame" x="15" y="115.5" width="100" height="100"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="didTapUploadImageButton:" destination="Hdc-ct-lbC" eventType="touchUpInside" id="qaf-mX-LAo"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="nnB-UB-fQy" firstAttribute="leading" secondItem="TVw-pS-JgW" secondAttribute="leading" constant="15" id="7P9-7d-MD1"/>
+                                                    <constraint firstItem="ELa-uO-Hdw" firstAttribute="leading" secondItem="BJ7-96-x3y" secondAttribute="leading" id="BVa-1q-IHh"/>
                                                     <constraint firstItem="UpL-l9-asb" firstAttribute="top" secondItem="nnB-UB-fQy" secondAttribute="bottom" constant="8" id="ByR-Ln-gH4"/>
                                                     <constraint firstItem="BJ7-96-x3y" firstAttribute="leading" secondItem="TVw-pS-JgW" secondAttribute="leading" constant="15" id="Ell-dn-I8x"/>
                                                     <constraint firstItem="fV3-fV-a8c" firstAttribute="leading" secondItem="ylY-Il-qRL" secondAttribute="trailing" constant="5" id="F9v-4j-JGw"/>
                                                     <constraint firstItem="fV3-fV-a8c" firstAttribute="centerY" secondItem="nnB-UB-fQy" secondAttribute="centerY" id="Jhs-t3-gSr"/>
                                                     <constraint firstItem="BJ7-96-x3y" firstAttribute="top" secondItem="UpL-l9-asb" secondAttribute="bottom" constant="10" id="KRg-fC-blp"/>
                                                     <constraint firstAttribute="trailing" secondItem="UpL-l9-asb" secondAttribute="trailing" constant="30" id="V8g-2E-Myu"/>
+                                                    <constraint firstItem="ELa-uO-Hdw" firstAttribute="bottom" secondItem="BJ7-96-x3y" secondAttribute="bottom" id="VGs-So-zeu"/>
+                                                    <constraint firstItem="ELa-uO-Hdw" firstAttribute="top" secondItem="BJ7-96-x3y" secondAttribute="top" id="dJ7-x6-yJb"/>
                                                     <constraint firstItem="nnB-UB-fQy" firstAttribute="top" secondItem="TVw-pS-JgW" secondAttribute="top" constant="30" id="dYn-GR-5Gj"/>
                                                     <constraint firstItem="UpL-l9-asb" firstAttribute="leading" secondItem="nnB-UB-fQy" secondAttribute="leading" id="hub-lJ-Zo8"/>
                                                     <constraint firstItem="ylY-Il-qRL" firstAttribute="bottom" secondItem="nnB-UB-fQy" secondAttribute="bottom" id="pYD-mg-WkY"/>
                                                     <constraint firstItem="ylY-Il-qRL" firstAttribute="leading" secondItem="nnB-UB-fQy" secondAttribute="trailing" constant="3" id="pd8-F7-uI8"/>
+                                                    <constraint firstItem="ELa-uO-Hdw" firstAttribute="trailing" secondItem="BJ7-96-x3y" secondAttribute="trailing" id="qMb-uU-QBJ"/>
                                                     <constraint firstAttribute="bottom" secondItem="BJ7-96-x3y" secondAttribute="bottom" constant="20" id="sW6-H2-Loi"/>
                                                 </constraints>
                                             </view>
@@ -3845,6 +3857,8 @@
                         <outlet property="productImage" destination="wde-i7-Fxe" id="btR-HJ-WdO"/>
                         <outlet property="productName" destination="Jz2-wv-Keo" id="J9S-4I-WFB"/>
                         <outlet property="reviewSaveButton" destination="UlF-BJ-3TM" id="5bO-G3-nsL"/>
+                        <outlet property="reviewText" destination="p6E-7A-hBC" id="J18-Oe-HIJ"/>
+                        <outlet property="selectedImage" destination="BJ7-96-x3y" id="OM0-lT-BpX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kZ-Of-nKL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
