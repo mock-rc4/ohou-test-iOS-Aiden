@@ -22,6 +22,8 @@ class UserStylingCollectionViewCell: UICollectionViewCell {
 
     
     func updateCell(_ url: String) {
-        userPhoto.load(url: URL(string: url)!)
+        if let url = URL(string: url) {
+            userPhoto.load(url: url)
+        }
     }
 }

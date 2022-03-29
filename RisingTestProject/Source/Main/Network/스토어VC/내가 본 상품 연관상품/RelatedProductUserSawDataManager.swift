@@ -11,7 +11,7 @@ import Alamofire
 class RelatedProductUserSawDataManager {
     
     func getRelatedProduct(delegate: StoreHomeViewController) {
-        let url = "\(Constant.baseURL)/store/goods/relation"
+        let url = "\(Constant.baseURL)/store/products/relation"
         
         var header = HTTPHeaders()
         header.add(name: "X-ACCESS-TOKEN", value: Constant.jwt ?? "")

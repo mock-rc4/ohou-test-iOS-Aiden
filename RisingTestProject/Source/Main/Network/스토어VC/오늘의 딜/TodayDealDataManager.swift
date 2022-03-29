@@ -11,7 +11,7 @@ import Alamofire
 class TodayDealDataManager {
     
     func getTodayDealProductInfo(delegate: StoreHomeViewController) {
-        let url = "\(Constant.baseURL)/store/todayDeal"
+        let url = "\(Constant.baseURL)/store/today-deal"
         
         AF.request(url,
                    method: .get,

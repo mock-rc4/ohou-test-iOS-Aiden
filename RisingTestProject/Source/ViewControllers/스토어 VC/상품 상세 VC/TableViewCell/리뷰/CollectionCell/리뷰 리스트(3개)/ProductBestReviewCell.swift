@@ -36,7 +36,9 @@ class ProductBestReviewCell: UICollectionViewCell {
         nickName.text = data.nickname
         purchaseDate.text = data.time + " / 오늘의집 구매"
         if let img = data.reviewImg {
-            reviewImage.load(url: URL(string: img)!)
+            if let url = URL(string: img) {
+                reviewImage.load(url: url)
+            }
         }else {
             reviewImage.isHidden = true
         }

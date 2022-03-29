@@ -12,7 +12,7 @@ class PopularProductDataManager {
     
     
     func getPopularProduct(delegate: StoreHomeViewController) {
-        let url = "\(Constant.baseURL)/store/popularGoods"
+        let url = "\(Constant.baseURL)/store/popular-products"
         
         AF.request(url,
                    method: .get,

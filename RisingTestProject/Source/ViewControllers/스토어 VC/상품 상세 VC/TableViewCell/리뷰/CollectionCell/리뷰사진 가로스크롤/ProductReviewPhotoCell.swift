@@ -23,6 +23,8 @@ class ProductReviewPhotoCell: UICollectionViewCell {
     
     
     func updateCell(_ imgString: String) {
-        reviewImage.load(url: URL(string: imgString)!)
+        if let url = URL(string: imgString) {
+            reviewImage.load(url: url)
+        }
     }
 }

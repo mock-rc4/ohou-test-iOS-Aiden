@@ -12,7 +12,7 @@ class ProductInfoDataManager {
     
     func getProductInfo(_ parameters: ProductInfoRequest, delegate: ProductInfoViewController) {
         
-        let url = "\(Constant.baseURL)/store/goods/\(parameters.productId)"
+        let url = "\(Constant.baseURL)/store/products/\(parameters.productId)"
         
         
         AF.request(url,

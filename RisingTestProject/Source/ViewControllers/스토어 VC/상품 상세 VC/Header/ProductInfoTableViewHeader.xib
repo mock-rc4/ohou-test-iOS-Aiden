@@ -17,7 +17,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-vi-jGv">
                     <rect key="frame" x="0.0" y="0.0" width="412" height="924"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="상품상세 테스트 이미지" translatesAutoresizingMaskIntoConstraints="NO" id="WGH-q6-dYL">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="WGH-q6-dYL">
                             <rect key="frame" x="0.0" y="0.0" width="412" height="412"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="WGH-q6-dYL" secondAttribute="height" multiplier="10:10" id="HJE-BZ-E1X"/>
@@ -365,9 +365,9 @@
     <resources>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="공유 누끼" width="90" height="90"/>
+        <image name="기본이미지" width="198" height="199"/>
         <image name="길쭉한 광고" width="1125" height="164"/>
         <image name="상점 아이콘" width="54" height="49"/>
-        <image name="상품상세 테스트 이미지" width="1125" height="1121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

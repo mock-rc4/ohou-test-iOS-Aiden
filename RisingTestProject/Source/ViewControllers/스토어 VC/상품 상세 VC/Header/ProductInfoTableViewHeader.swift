@@ -56,7 +56,9 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
     
     
     func updateCell(_ data: ProductDetail) {
-        productImage.load(url: URL(string: data.productImg1)!)
+        if let urlString = URL(string: data.productImg1) {
+            productImage.load(url: urlString)
+        }
         productName.text = data.name
         companyName.forEach({
             $0.text = data.company

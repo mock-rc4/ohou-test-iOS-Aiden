@@ -50,6 +50,13 @@ extension ProductReviewTableViewCell: UICollectionViewDelegate, UICollectionView
             return reviewImage.count
         }else if section == 2 {
             // Cell에 보여지는 리뷰 개수 (3개)
+            if !reviewData.isEmpty {
+                if reviewData.count > 3 {
+                    return 3
+                }else {
+                    return reviewData.count
+                }
+            }
             return 3
         }else {
             return 1
