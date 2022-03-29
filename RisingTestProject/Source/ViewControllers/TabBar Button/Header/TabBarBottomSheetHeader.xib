@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TabBarBottomSheetHeader" id="iN0-l3-epB" customClass="TabBarBottomSheetHeader" customModule="RisingTestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="바텀시트 Header" translatesAutoresizingMaskIntoConstraints="NO" id="0cV-OM-EQ1">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0cV-OM-EQ1" secondAttribute="height" multiplier="34:10" id="i5T-E3-HN7"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0cV-OM-EQ1" secondAttribute="trailing" id="M1H-CR-SWD"/>
+                <constraint firstItem="0cV-OM-EQ1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eNI-oc-7HG"/>
+                <constraint firstItem="0cV-OM-EQ1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nUb-HA-x4a"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="341.85267857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="바텀시트 Header" width="1125" height="333"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

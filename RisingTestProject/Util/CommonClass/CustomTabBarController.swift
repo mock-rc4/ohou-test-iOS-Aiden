@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MaterialComponents.MaterialBottomSheet
 
 
 class CustomTabBarController: UITabBarController {
@@ -36,8 +37,15 @@ extension CustomTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
 
         if viewController.tabBarItem.tag == 4{
-
             print("+버튼")
+            
+            guard let tabbarBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "TabBarBottomSheetVC") as? TabBarBottomSheetVC else {
+                return false
+            }
+            let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: tabbarBottomSheetVC)
+            bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = 500
+            present(bottomSheet, animated: true)
+            
             return false
         }
 
@@ -47,36 +55,36 @@ extension CustomTabBarController: UITabBarControllerDelegate {
     
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-
-//        self.tabBarController?.selectedIndex = 2
-        for tabBarItem in (self.tabBar.items)!{
-
-            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
-
-            let  imgView = viewTabBar?.subviews[0] as? UIImageView
-//            viewTabBar?.origin.y  = 6
-            imgView?.frame.size.height = 24
-            imgView?.frame.size.width = 24
-            imgView?.clipsToBounds = true
-            imgView?.contentMode = .scaleAspectFit
-        }
-    }
-
-
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        for tabBarItem in (self.tabBar.items)!{
-
-            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
-            let  imgView = viewTabBar?.subviews[0] as? UIImageView
-            imgView?.frame.size.height = 24
-            imgView?.frame.size.width = 24
-
-            imgView?.clipsToBounds = true
-            imgView?.contentMode = .scaleAspectFit
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//
+////        self.tabBarController?.selectedIndex = 2
+//        for tabBarItem in (self.tabBar.items)!{
+//
+//            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
+//
+//            let  imgView = viewTabBar?.subviews[0] as? UIImageView
+////            viewTabBar?.origin.y  = 6
+//            imgView?.frame.size.height = 24
+//            imgView?.frame.size.width = 24
+//            imgView?.clipsToBounds = true
+//            imgView?.contentMode = .scaleAspectFit
+//        }
+//    }
+//
+//
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        for tabBarItem in (self.tabBar.items)!{
+//
+//            let viewTabBar = tabBarItem.value(forKey: "view") as? UIView
+//            let  imgView = viewTabBar?.subviews[0] as? UIImageView
+//            imgView?.frame.size.height = 24
+//            imgView?.frame.size.width = 24
+//
+//            imgView?.clipsToBounds = true
+//            imgView?.contentMode = .scaleAspectFit
+//        }
+//    }
 }
 
 

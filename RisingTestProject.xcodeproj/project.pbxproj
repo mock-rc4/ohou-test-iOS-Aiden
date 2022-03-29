@@ -122,6 +122,7 @@
 		D0562EF327ED8A1F00AAACE9 /* SelectAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0562EF127ED8A1F00AAACE9 /* SelectAllTableViewCell.xib */; };
 		D064453B27F2E09000FF0E39 /* CancelLikeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */; };
 		D064453E27F2E0B400FF0E39 /* CancelLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */; };
+		D064454127F2EAF600FF0E39 /* TabBarBottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
@@ -412,6 +413,7 @@
 		D0562EF127ED8A1F00AAACE9 /* SelectAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAllTableViewCell.xib; sourceTree = "<group>"; };
 		D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeDataManager.swift; sourceTree = "<group>"; };
 		D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeResponse.swift; sourceTree = "<group>"; };
+		D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBottomSheetVC.swift; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
@@ -1486,6 +1488,14 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D064453F27F2EADB00FF0E39 /* TabBar Button */ = {
+			isa = PBXGroup;
+			children = (
+				D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */,
+			);
+			path = "TabBar Button";
+			sourceTree = "<group>";
+		};
 		D06AE19727E9CE7100F6EB3E /* 오늘의딜 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2529,6 +2539,7 @@
 		D0EA7F8627E5915400948269 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D064453F27F2EADB00FF0E39 /* TabBar Button */,
 				D0F722D527F202E500DF181B /* 인테리어 시공 VC */,
 				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
@@ -3034,6 +3045,7 @@
 				D0B8F21927E77E840085BEBD /* KakaoLoginManager.swift in Sources */,
 				D04A2DD827E5C2C900D1C7D6 /* HomeHouseWarmingVC.swift in Sources */,
 				D04A2DDC27E5C34800D1C7D6 /* HomeExpertVC.swift in Sources */,
+				D064454127F2EAF600FF0E39 /* TabBarBottomSheetVC.swift in Sources */,
 				D01480FB27EA0A8100BD3BAA /* RecommendedProductTableViewCell.swift in Sources */,
 				D047896527F03C4A00DEA095 /* HouseWarmingResponse.swift in Sources */,
 				D0B8F22127E78B5C0085BEBD /* SignUpResponse.swift in Sources */,
