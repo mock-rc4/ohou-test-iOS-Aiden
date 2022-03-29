@@ -120,6 +120,8 @@
 		D0513FDA27EB6D780053714E /* TodayDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0513FD927EB6D780053714E /* TodayDealViewController.swift */; };
 		D0562EF227ED8A1F00AAACE9 /* SelectAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0562EF027ED8A1F00AAACE9 /* SelectAllTableViewCell.swift */; };
 		D0562EF327ED8A1F00AAACE9 /* SelectAllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0562EF127ED8A1F00AAACE9 /* SelectAllTableViewCell.xib */; };
+		D064453B27F2E09000FF0E39 /* CancelLikeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */; };
+		D064453E27F2E0B400FF0E39 /* CancelLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
@@ -408,6 +410,8 @@
 		D0513FD927EB6D780053714E /* TodayDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealViewController.swift; sourceTree = "<group>"; };
 		D0562EF027ED8A1F00AAACE9 /* SelectAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAllTableViewCell.swift; sourceTree = "<group>"; };
 		D0562EF127ED8A1F00AAACE9 /* SelectAllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAllTableViewCell.xib; sourceTree = "<group>"; };
+		D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeDataManager.swift; sourceTree = "<group>"; };
+		D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeResponse.swift; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
@@ -1474,6 +1478,14 @@
 			path = footer;
 			sourceTree = "<group>";
 		};
+		D064453C27F2E09E00FF0E39 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D06AE19727E9CE7100F6EB3E /* 오늘의딜 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2008,6 +2020,8 @@
 		D090C1A227F2BF4200A4B205 /* 좋아요 취소 */ = {
 			isa = PBXGroup;
 			children = (
+				D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */,
+				D064453C27F2E09E00FF0E39 /* Entity */,
 			);
 			name = "좋아요 취소";
 			path = "좋아요 취소";
@@ -3136,6 +3150,7 @@
 				D0C0823C27ED9DE6008BABDF /* BasketTableViewFooter.swift in Sources */,
 				D0053D6F27F1343E005F9982 /* HouseWarmingDetailResponse.swift in Sources */,
 				D0F6E21427EC88B40058A7E7 /* RelatedProductUserSawDataManager.swift in Sources */,
+				D064453B27F2E09000FF0E39 /* CancelLikeDataManager.swift in Sources */,
 				D0EA7F6727E58F9100948269 /* Constant.swift in Sources */,
 				D0FDE81827EB783000C4C2A3 /* UserStylingCollectionViewCell.swift in Sources */,
 				D0CD0A8727F176E100472295 /* ReviewProductListDataManager.swift in Sources */,
@@ -3173,6 +3188,7 @@
 				D072FAE427EC3393007134C7 /* ProductReviewHeader.swift in Sources */,
 				D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
+				D064453E27F2E0B400FF0E39 /* CancelLikeResponse.swift in Sources */,
 				D047896A27F04C7500DEA095 /* AlignmentBottomSheetVC.swift in Sources */,
 				D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */,
 				D0F7C1A527F01100009918A1 /* PaymentResponse.swift in Sources */,

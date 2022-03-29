@@ -9,6 +9,8 @@ import UIKit
 
 protocol TapLikeButtonDelegate {
     func didTapLikeButton(_ boardId: Int)
+    
+    func didTapCancelLikeButton(_ boardId: Int)
 }
 
 
@@ -31,11 +33,23 @@ class HomeFollowingTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var content: UILabel!
     
+    
+    // 유저가 해당 게시물을 좋아요 누른 상태인지 여부
+    var isUserLike: Bool = false
+    
     // 좋아요 버튼 이미지
     @IBOutlet weak var likeImage: UIImageView!
     // 좋아요 버튼 클릭되면?
     @IBAction func didTapLikeButton(_ sender: UIButton) {
-        delegate?.didTapLikeButton(boardId!)
+        // 유저가 해당 게시물을 좋아요 누른 상태인 경우 -> 좋아요 취소
+        if self.isUserLike {
+            delegate?.didTapCancelLikeButton(boardId!)
+        }
+        // 유저가 해당 게시물을 좋아요 누른 상태가 아닌 경우 -> 좋아요
+        else {
+            delegate?.didTapLikeButton(boardId!)
+        }
+        
     }
     
     
@@ -73,5 +87,7 @@ class HomeFollowingTableViewCell: UITableViewCell {
 //        if data.isUserLikePost {
 //            likeImage.image = UIImage(systemName: "heart.fill")
 //        }
+//        self.isUserLike = data.isUserLikePost
+        
     }
 }

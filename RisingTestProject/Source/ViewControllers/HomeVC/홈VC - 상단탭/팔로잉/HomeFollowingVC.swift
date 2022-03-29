@@ -84,8 +84,15 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
 
 
 extension HomeFollowingVC: TapLikeButtonDelegate {
+    
+    // 좋아요 버튼
     func didTapLikeButton(_ boardId: Int) {
         AddLikeDataManager().addLike(AddLikeRequest(boardId: boardId), delegate: self)
+    }
+    
+    // 좋아요 취소 버튼
+    func didTapCancelLikeButton(_ boardId: Int) {
+        CancelLikeDataManager().cancelLike(delegate: self, boardId: boardId)
     }
     
 }
