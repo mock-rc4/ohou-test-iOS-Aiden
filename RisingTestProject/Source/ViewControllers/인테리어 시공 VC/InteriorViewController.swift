@@ -10,6 +10,10 @@ import UIKit
 
 class InteriorViewController: BaseViewController {
     
+    // 게시글 정보
+    var interiorPost: [InteriorPost] = []
+    
+    
     // UI 연결
     @IBOutlet weak var forRadiusView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -35,6 +39,10 @@ class InteriorViewController: BaseViewController {
         // 자동 높이 계산
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = tableView.frame.width * 0.75
+        
+        
+        // API호출
+        InteriorPostDataManager().getInteriorPost(delegate: self)
     }
 }
 
@@ -44,7 +52,11 @@ extension InteriorViewController: UITableViewDelegate, UITableViewDataSource {
     
     // cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if !interiorPost.isEmpty {
+            return interiorPost.count
+        }else {
+            return 3
+        }
     }
     
     // 사용할 Cell 지정
@@ -52,12 +64,12 @@ extension InteriorViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "InteriorTableViewCell", for: indexPath) as? InteriorTableViewCell else {
             return UITableViewCell()
         }
+        if !interiorPost.isEmpty {
+            cell.updateCell(interiorPost[indexPath.row])
+        }
+        
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return tableView.frame.width * 0.7
-//    }
     
     
     

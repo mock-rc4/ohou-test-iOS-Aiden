@@ -176,6 +176,8 @@
 		D090C19427F2A75600A4B205 /* WritingReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19327F2A75600A4B205 /* WritingReviewDataManager.swift */; };
 		D090C19727F2A77300A4B205 /* WritingReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19627F2A77300A4B205 /* WritingReviewResponse.swift */; };
 		D090C19927F2A7BF00A4B205 /* WritingReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19827F2A7BF00A4B205 /* WritingReviewRequest.swift */; };
+		D090C19C27F2B27900A4B205 /* InteriorPostDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19B27F2B27900A4B205 /* InteriorPostDataManager.swift */; };
+		D090C19F27F2B29100A4B205 /* InteriorPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D090C19E27F2B29100A4B205 /* InteriorPostResponse.swift */; };
 		D0910F5B27E56D9800793D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5A27E56D9800793D90 /* AppDelegate.swift */; };
 		D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5C27E56D9800793D90 /* SceneDelegate.swift */; };
 		D0910F5F27E56D9800793D90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0910F5E27E56D9800793D90 /* HomeViewController.swift */; };
@@ -459,6 +461,8 @@
 		D090C19327F2A75600A4B205 /* WritingReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewDataManager.swift; sourceTree = "<group>"; };
 		D090C19627F2A77300A4B205 /* WritingReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewResponse.swift; sourceTree = "<group>"; };
 		D090C19827F2A7BF00A4B205 /* WritingReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingReviewRequest.swift; sourceTree = "<group>"; };
+		D090C19B27F2B27900A4B205 /* InteriorPostDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorPostDataManager.swift; sourceTree = "<group>"; };
+		D090C19E27F2B29100A4B205 /* InteriorPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorPostResponse.swift; sourceTree = "<group>"; };
 		D0910F5727E56D9800793D90 /* RisingTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0910F5A27E56D9800793D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0910F5C27E56D9800793D90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1947,6 +1951,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D090C19A27F2B0FA00A4B205 /* 인테리어시공 VC */ = {
+			isa = PBXGroup;
+			children = (
+				D090C19B27F2B27900A4B205 /* InteriorPostDataManager.swift */,
+				D090C19D27F2B28300A4B205 /* Entity */,
+			);
+			name = "인테리어시공 VC";
+			path = "인테리어시공VC";
+			sourceTree = "<group>";
+		};
+		D090C19D27F2B28300A4B205 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D090C19E27F2B29100A4B205 /* InteriorPostResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0910F4E27E56D9800793D90 = {
 			isa = PBXGroup;
 			children = (
@@ -2469,6 +2491,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D090C19A27F2B0FA00A4B205 /* 인테리어시공 VC */,
 				D090C19127F2A73600A4B205 /* 리뷰 */,
 				D088EA0A27EF394800C129C0 /* 결제하기 */,
 				D0FE01E927EEA007005D5C4F /* 장바구니 */,
@@ -2956,6 +2979,7 @@
 				D047896527F03C4A00DEA095 /* HouseWarmingResponse.swift in Sources */,
 				D0B8F22127E78B5C0085BEBD /* SignUpResponse.swift in Sources */,
 				D01B628227EB487C00E09520 /* Tabbar.swift in Sources */,
+				D090C19F27F2B29100A4B205 /* InteriorPostResponse.swift in Sources */,
 				D03BF36027EBFBAF006A0CE9 /* ProductInfoTableViewCell.swift in Sources */,
 				D0EA7F7A27E590BC00948269 /* Date.swift in Sources */,
 				D0EA7F7E27E590ED00948269 /* Int.swift in Sources */,
@@ -3089,6 +3113,7 @@
 				D047896227F03C3D00DEA095 /* HouseWarmingDataManager.swift in Sources */,
 				D06B482627E80F9D00C881E0 /* ExhibitionTableViewCell.swift in Sources */,
 				D0C0823527ED8F85008BABDF /* ProductInBasketTableViewCell.swift in Sources */,
+				D090C19C27F2B27900A4B205 /* InteriorPostDataManager.swift in Sources */,
 				D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */,
 				D088EA2427EF55AB00C129C0 /* PaymentMethodTableViewCell.swift in Sources */,
 				D02AA6AC27E96A2C004E6703 /* ModifyProfileResponse.swift in Sources */,

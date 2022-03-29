@@ -20,7 +20,10 @@ class InteriorTableViewCell: UITableViewCell {
     
     // API로 업데이트할 내용
     @IBOutlet weak var postImage: UIImageView!
-    
+    @IBOutlet weak var companyName: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var contract: UILabel!
     
     
     
@@ -47,4 +50,13 @@ class InteriorTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    
+    func updateCell(_ data: InteriorPost) {
+        postImage.load(url: URL(string: data.profileImg)!)
+        companyName.text = data.name
+        score.text = "\(data.score)"
+        distance.text = "\(data.distance)km"
+        contract.text = "\(data.contract)"
+    }
 }

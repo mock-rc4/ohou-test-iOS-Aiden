@@ -1,26 +1,27 @@
 //
-//  RealTimeBestProductDataManager.swift
+//  InteriorPostDataManager.swift
 //  RisingTestProject
 //
-//  Created by 신동희 on 2022/03/25.
+//  Created by 신동희 on 2022/03/29.
 //
 
 import Alamofire
 
-class RealTimeBestProductDataManager {
+
+class InteriorPostDataManager {
     
-    func getBestProduct(delegate: StoreBestViewController) {
-        let url = "\(Constant.baseURL)/store/best"
+    func getInteriorPost(delegate: InteriorViewController) {
+        let url = "\(Constant.baseURL)/Interior"
         
         AF.request(url,
                    method: .get,
                    parameters: nil)
-        .responseDecodable(of: RealTimeBestProductResponse.self) { response in
+        .responseDecodable(of: InteriorPostResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
-                    print("데이터 가져오기 성공")
-                    delegate.realTimeBestProductInfo = response.result
+                    print("인테리어시공 게시글 리스트 조회 성공")
+                    delegate.interiorPost = response.result
                     delegate.tableView.reloadData()
                 }else {
                     switch response.code {
