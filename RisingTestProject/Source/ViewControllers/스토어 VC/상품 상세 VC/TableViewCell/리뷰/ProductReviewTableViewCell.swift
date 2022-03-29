@@ -15,6 +15,8 @@ class ProductReviewTableViewCell: UITableViewCell {
     // 리뷰 데이터
     var reviewData: [ReviewData] = []
     var reviewImage: [String] = []
+    var reviewCount: Int?
+    var reviewScore: Int?
     
     
     override func awakeFromNib() {
@@ -59,6 +61,9 @@ extension ProductReviewTableViewCell: UICollectionViewDelegate, UICollectionView
         if indexPath.section == 0 {
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductReviewHeader", for: indexPath) as? ProductReviewHeader else {
                 return UICollectionViewCell()
+            }
+            if let score = reviewScore {
+                header.updateCell(reviewCount: reviewCount ?? 0, score: score)
             }
             return header
         }

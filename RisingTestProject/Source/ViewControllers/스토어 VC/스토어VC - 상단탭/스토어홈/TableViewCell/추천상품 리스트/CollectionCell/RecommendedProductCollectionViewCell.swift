@@ -54,4 +54,9 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
             specialPrice.isHidden = true
         }
     }
+    
+    
+    override func prepareForReuse() {
+        productImage.image = UIImage(named: "기본이미지.jpeg")
+    }
 }

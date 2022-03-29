@@ -26,8 +26,6 @@ class RealTimeBestTableViewCell: UITableViewCell {
     @IBOutlet weak var freeDelivery: UILabel!
     
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

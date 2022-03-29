@@ -29,6 +29,7 @@ class ProductInfoViewController: BaseViewController {
     // 보여줄 제품의 정보
     var productDetail: ProductDetail? {
         didSet {
+            // 최근 조회한 상품 목록에 추가하는 로직
             if let idNum = productDetail?.productId {
                 let productInfo = Constant.popularProductInfo.filter({
                     $0.productId == idNum
@@ -177,6 +178,10 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
         else if section == 2{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductReviewTableViewCell") as? ProductReviewTableViewCell else {
                 return UITableViewCell()
+            }
+            if let info = productDetail {
+                cell.reviewCount = info.reviewCnt
+                cell.reviewScore = info.score
             }
             if !reviewData.isEmpty {
                 cell.reviewData = self.reviewData

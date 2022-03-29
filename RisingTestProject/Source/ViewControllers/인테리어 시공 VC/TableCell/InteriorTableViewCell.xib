@@ -23,7 +23,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-Ad-wdq">
                                 <rect key="frame" x="0.0" y="0.0" width="365" height="315"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="광고1" translatesAutoresizingMaskIntoConstraints="NO" id="ati-Ml-bbm">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="ati-Ml-bbm">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="182.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ati-Ml-bbm" secondAttribute="height" multiplier="20:10" id="qTZ-yW-Fv5"/>
@@ -205,7 +205,7 @@
     </designables>
     <resources>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="광고1" width="1125" height="511"/>
+        <image name="기본이미지" width="198" height="199"/>
         <image name="안심보험 아이콘" width="369" height="78"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

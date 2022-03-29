@@ -52,7 +52,44 @@ class ProductReviewHeader: UICollectionViewCell {
     }
 
     
-    func updateCell() {
+    func updateCell(reviewCount: Int, score: Int) {
+        self.reviewCount.text = "\(reviewCount)"
+        self.reviewScore.text = "\(score)"
         
+        if score < 5 {
+            score5Count.text = "\(Int(Double(reviewCount) * 0.9))"
+            score4Count.text = "\(Int(Double(reviewCount) * 0.1))"
+        }else {
+            score5Count.text = "\(reviewCount)"
+            progress4.progress = 0
+            progress5.progress = 1
+        }
+        
+        
+        // 별 조절
+        switch score {
+        case 5:
+            return
+        case 4..<5:
+            star5.image = UIImage(systemName: "star")
+        case 3..<4:
+            star5.image = UIImage(systemName: "star")
+            star4.image = UIImage(systemName: "star")
+        case 2..<3:
+            star5.image = UIImage(systemName: "star")
+            star4.image = UIImage(systemName: "star")
+            star3.image = UIImage(systemName: "star")
+        case 1..<2:
+            star5.image = UIImage(systemName: "star")
+            star4.image = UIImage(systemName: "star")
+            star3.image = UIImage(systemName: "star")
+            star2.image = UIImage(systemName: "star")
+        default:
+            star5.image = UIImage(systemName: "star")
+            star4.image = UIImage(systemName: "star")
+            star3.image = UIImage(systemName: "star")
+            star2.image = UIImage(systemName: "star")
+            star1.image = UIImage(systemName: "star")
+        }
     }
 }

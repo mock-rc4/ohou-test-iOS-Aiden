@@ -14,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="542"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="봄이불세트" translatesAutoresizingMaskIntoConstraints="NO" id="bNA-nt-a0X">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="bNA-nt-a0X">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="bNA-nt-a0X" secondAttribute="height" multiplier="4:3" id="tb8-Mh-QES"/>
@@ -177,7 +177,7 @@
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="기본 프로필" width="256" height="258"/>
-        <image name="봄이불세트" width="503" height="284"/>
+        <image name="기본이미지" width="198" height="199"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -36,4 +36,9 @@ class PopularityPostCollectionViewCell: UICollectionViewCell {
             scrapImage.image = UIImage(systemName: "bookmark.fill")
         }
     }
+    
+    
+    override func prepareForReuse() {
+        postImage.image = UIImage(named: "기본이미지.jpeg")
+    }
 }

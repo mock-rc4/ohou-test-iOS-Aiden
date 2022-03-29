@@ -41,7 +41,7 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
     
     
     override func prepareForReuse() {
-        productImage.image = UIImage(named: "오늘의집 아이콘.png")
+        productImage.image = UIImage(named: "기본이미지.jpeg")
     }
     
 
@@ -66,4 +66,5 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
             specialPrice.isHidden = true
         }
     }
+    
 }

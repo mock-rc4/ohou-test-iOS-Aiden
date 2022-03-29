@@ -38,7 +38,7 @@
                             <constraint firstAttribute="width" constant="25" id="a8Q-ze-Iy3"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-he-r4P">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-he-r4P">
                         <rect key="frame" x="0.0" y="55.5" width="387" height="387"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bG0-he-r4P" secondAttribute="height" multiplier="1:1" id="a0g-rq-XDP"/>
@@ -61,6 +61,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="좋아요" translatesAutoresizingMaskIntoConstraints="NO" id="tiB-1Q-hWd">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tiB-1Q-hWd" secondAttribute="height" multiplier="1:1" id="8gU-DT-rTe"/>
                                                     <constraint firstAttribute="width" constant="25" id="M6C-iw-hjt"/>
@@ -241,9 +242,9 @@
     <resources>
         <image name="공유 누끼" width="90" height="90"/>
         <image name="기본 프로필" width="256" height="258"/>
+        <image name="기본이미지" width="198" height="199"/>
         <image name="댓글쓰기" width="48" height="48"/>
         <image name="스크랩북" width="80" height="86"/>
-        <image name="오늘의딜 제품" width="544" height="555"/>
         <image name="점3개" width="44" height="49"/>
         <image name="좋아요" width="86" height="86"/>
         <systemColor name="systemGray5Color">

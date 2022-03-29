@@ -47,4 +47,9 @@ class HomeExpertCollectionViewCell: UICollectionViewCell {
         nickName.text = data.name
         scrapsAndViews.text = "\(data.scrapCnt)명 스크랩 | \(data.checkCnt)명 조회"
     }
+    
+    
+    override func prepareForReuse() {
+        postingImage.image = UIImage(named: "기본이미지.jpeg")
+    }
 }

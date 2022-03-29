@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="406" height="176"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-pc-bRK">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="Pdo-pc-bRK">
                         <rect key="frame" x="0.0" y="0.0" width="176" height="176"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Pdo-pc-bRK" secondAttribute="height" multiplier="1:1" id="eOk-x9-N2p"/>
@@ -151,7 +151,7 @@
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qcP-41-cJJ">
                         <rect key="frame" x="146" y="146" width="20" height="20"/>
-                        <color key="tintColor" systemColor="systemCyanColor"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="kxa-jv-LG6"/>
                             <constraint firstAttribute="height" constant="20" id="xne-pF-rfx"/>
@@ -203,7 +203,7 @@
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="오늘의딜 제품" width="544" height="555"/>
+        <image name="기본이미지" width="198" height="199"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

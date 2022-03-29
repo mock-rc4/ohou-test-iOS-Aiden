@@ -86,10 +86,18 @@ class HomeFollowingTableViewCell: UITableViewCell {
         
         if data.isLiked == 1 {
             likeImage.image = UIImage(systemName: "heart.fill")
+            likeImage.tintColor = UIColor.systemCyan
         }else {
             likeImage.image = UIImage(systemName: "heart")
+            likeImage.tintColor = UIColor.darkGray
         }
         self.isUserLike = data.isLiked
         
+    }
+    
+    
+    
+    override func prepareForReuse() {
+        postImage.image = UIImage(named: "기본이미지.jpeg")
     }
 }

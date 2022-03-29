@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="399" height="365"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="반려식물" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-qq-SS5">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-qq-SS5">
                         <rect key="frame" x="15" y="0.0" width="369" height="230.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="vKA-qq-SS5" secondAttribute="height" multiplier="4:2.5" id="sJJ-sA-XX9"/>
@@ -32,7 +31,7 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-AV-SoL">
                         <rect key="frame" x="329" y="190" width="40" height="25.5"/>
-                        <color key="tintColor" systemColor="systemTealColor"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="UrD-38-VAR"/>
                             <constraint firstAttribute="width" secondItem="fXZ-AV-SoL" secondAttribute="height" multiplier="14:9" id="ipX-5j-TZ0"/>
@@ -103,9 +102,6 @@
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="new이미지" width="108" height="60"/>
         <image name="기본 프로필" width="256" height="258"/>
-        <image name="반려식물" width="503" height="284"/>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="기본이미지" width="198" height="199"/>
     </resources>
 </document>

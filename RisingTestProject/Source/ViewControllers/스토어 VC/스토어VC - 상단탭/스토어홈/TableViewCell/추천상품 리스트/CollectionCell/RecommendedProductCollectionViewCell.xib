@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="218" height="390"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-eo-uYE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="9dF-eo-uYE">
                         <rect key="frame" x="0.0" y="0.0" width="218" height="218"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="9dF-eo-uYE" secondAttribute="height" multiplier="1:1" id="fAf-xh-Ad8"/>
@@ -164,7 +164,7 @@
     </designables>
     <resources>
         <image name="star.fill" catalog="system" width="128" height="116"/>
-        <image name="오늘의딜 제품" width="544" height="555"/>
+        <image name="기본이미지" width="198" height="199"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
