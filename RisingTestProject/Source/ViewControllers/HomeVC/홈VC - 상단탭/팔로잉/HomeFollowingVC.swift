@@ -34,6 +34,11 @@ class HomeFollowingVC: BaseViewController {
         // header
         tableView.register(UINib(nibName: "HomeFollowingTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "HomeFollowingTableViewHeader")
         
+        // 높이 설정
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = tableView.frame.width * 1.45
+        
+        
         // API 호출
         HomeFollowingDataManager().getFollowingPost(delegate: self)
     }
@@ -49,16 +54,12 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeFollowingTableViewCell", for: indexPath) as? HomeFollowingTableViewCell else {
             return UITableViewCell()
         }
-        addSeparator(cell)
+        cell.delegate = self
         cell.selectionStyle = .none
         if followingPost.count >= 1 {
             cell.updateCell(followingPost[indexPath.row])
         }
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width * 1.43
     }
     
     
@@ -77,4 +78,14 @@ extension HomeFollowingVC: UITableViewDelegate, UITableViewDataSource {
         return tableView.frame.width * 0.3
         
     }
+}
+
+
+
+
+extension HomeFollowingVC: TapLikeButtonDelegate {
+    func didTapLikeButton(_ boardId: Int) {
+        AddLikeDataManager().addLike(AddLikeRequest(boardId: boardId), delegate: self)
+    }
+    
 }

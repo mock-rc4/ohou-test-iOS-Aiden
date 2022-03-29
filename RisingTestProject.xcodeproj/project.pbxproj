@@ -156,6 +156,9 @@
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
 		D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */; };
 		D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */; };
+		D080639F27F2C0D400A26DEC /* AddLikeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080639E27F2C0D400A26DEC /* AddLikeDataManager.swift */; };
+		D08063A227F2C0FB00A26DEC /* AddLikeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08063A127F2C0FB00A26DEC /* AddLikeRequest.swift */; };
+		D08063A427F2C10100A26DEC /* AddLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08063A327F2C10100A26DEC /* AddLikeResponse.swift */; };
 		D088EA0427EF2B9D00C129C0 /* DeleteProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */; };
 		D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */; };
 		D088EA0927EF2C2A00C129C0 /* DeleteProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */; };
@@ -441,6 +444,9 @@
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
 		D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforePutInProductTableCell.swift; sourceTree = "<group>"; };
 		D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforePutInProductTableCell.xib; sourceTree = "<group>"; };
+		D080639E27F2C0D400A26DEC /* AddLikeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeDataManager.swift; sourceTree = "<group>"; };
+		D08063A127F2C0FB00A26DEC /* AddLikeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeRequest.swift; sourceTree = "<group>"; };
+		D08063A327F2C10100A26DEC /* AddLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeResponse.swift; sourceTree = "<group>"; };
 		D088EA0327EF2B9D00C129C0 /* DeleteProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductDataManager.swift; sourceTree = "<group>"; };
 		D088EA0627EF2C2400C129C0 /* DeleteProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductRequest.swift; sourceTree = "<group>"; };
 		D088EA0827EF2C2A00C129C0 /* DeleteProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProductResponse.swift; sourceTree = "<group>"; };
@@ -877,6 +883,7 @@
 		D01FB64C27E8C87A00D01FDF /* 홈VC */ = {
 			isa = PBXGroup;
 			children = (
+				D090C1A027F2BF2F00A4B205 /* 좋아요 버튼 */,
 				D0E1300A27F1ADCE005E0D75 /* 기획전 조회 */,
 				D0E1066027F1A96E008F4D3B /* 인기 사진 조회 */,
 				D0E1065A27F1A020008F4D3B /* 인테리어 시공 리뷰 조회 */,
@@ -1782,6 +1789,15 @@
 			path = "담기기 후";
 			sourceTree = "<group>";
 		};
+		D08063A027F2C0E200A26DEC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D08063A127F2C0FB00A26DEC /* AddLikeRequest.swift */,
+				D08063A327F2C10100A26DEC /* AddLikeResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D088EA0527EF2BAF00C129C0 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -1967,6 +1983,34 @@
 				D090C19E27F2B29100A4B205 /* InteriorPostResponse.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D090C1A027F2BF2F00A4B205 /* 좋아요 버튼 */ = {
+			isa = PBXGroup;
+			children = (
+				D090C1A127F2BF3E00A4B205 /* 좋아요 생성 */,
+				D090C1A227F2BF4200A4B205 /* 좋아요 취소 */,
+			);
+			name = "좋아요 버튼";
+			path = "좋아요 버튼";
+			sourceTree = "<group>";
+		};
+		D090C1A127F2BF3E00A4B205 /* 좋아요 생성 */ = {
+			isa = PBXGroup;
+			children = (
+				D080639E27F2C0D400A26DEC /* AddLikeDataManager.swift */,
+				D08063A027F2C0E200A26DEC /* Entity */,
+			);
+			name = "좋아요 생성";
+			path = "좋아요 생성";
+			sourceTree = "<group>";
+		};
+		D090C1A227F2BF4200A4B205 /* 좋아요 취소 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "좋아요 취소";
+			path = "좋아요 취소";
 			sourceTree = "<group>";
 		};
 		D0910F4E27E56D9800793D90 = {
@@ -2952,6 +2996,7 @@
 				D04A2DE727E5CE9800D1C7D6 /* PopularityTableViewHeader.swift in Sources */,
 				D0392E6227F0B8400053F6F0 /* HouseWarmingDetailTableViewCell.swift in Sources */,
 				D090C19427F2A75600A4B205 /* WritingReviewDataManager.swift in Sources */,
+				D08063A427F2C10100A26DEC /* AddLikeResponse.swift in Sources */,
 				D088EA0727EF2C2400C129C0 /* DeleteProductRequest.swift in Sources */,
 				D01480FF27EA0D2400BD3BAA /* RecommendedProductCollectionViewCell.swift in Sources */,
 				D0392E5D27F0B5790053F6F0 /* HouseWarmingDetailVC.swift in Sources */,
@@ -3018,6 +3063,7 @@
 				D06AE1A027E9CF2B00F6EB3E /* StoreTodayDealCollectionViewCell.swift in Sources */,
 				D0124A0027E72FF60035456F /* MediaCollectionViewHeader.swift in Sources */,
 				D044D91C27E70CD1004E9EC6 /* TodayDealCollectionViewCell.swift in Sources */,
+				D08063A227F2C0FB00A26DEC /* AddLikeRequest.swift in Sources */,
 				D0FE01F027EEA0E8005D5C4F /* PutInBasketResponse.swift in Sources */,
 				D0E1300627F1A9B3005E0D75 /* PopularityPhotoDataManager.swift in Sources */,
 				D04A2DD427E5C23600D1C7D6 /* HomeFollowingVC.swift in Sources */,
@@ -3043,6 +3089,7 @@
 				D0F6E21927EC97070058A7E7 /* RecommendProductDataManager.swift in Sources */,
 				D03B6C7327F004FC00241222 /* PaymentTableViewFooter.swift in Sources */,
 				D029587627F20BB200AE8C71 /* InteriorTableViewHeader.swift in Sources */,
+				D080639F27F2C0D400A26DEC /* AddLikeDataManager.swift in Sources */,
 				D036072E27F15F5200182EE4 /* ChooseProductToReviewTableViewCell.swift in Sources */,
 				D0E5856F27EA2932004CB81A /* PopularProductCollectionViewCell.swift in Sources */,
 				D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */,
