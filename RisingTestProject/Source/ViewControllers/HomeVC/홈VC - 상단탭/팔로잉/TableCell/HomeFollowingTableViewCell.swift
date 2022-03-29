@@ -35,14 +35,14 @@ class HomeFollowingTableViewCell: UITableViewCell {
     
     
     // 유저가 해당 게시물을 좋아요 누른 상태인지 여부
-    var isUserLike: Bool = false
+    var isUserLike: Int = 0
     
     // 좋아요 버튼 이미지
     @IBOutlet weak var likeImage: UIImageView!
     // 좋아요 버튼 클릭되면?
     @IBAction func didTapLikeButton(_ sender: UIButton) {
         // 유저가 해당 게시물을 좋아요 누른 상태인 경우 -> 좋아요 취소
-        if self.isUserLike {
+        if self.isUserLike == 1{
             delegate?.didTapCancelLikeButton(boardId!)
         }
         // 유저가 해당 게시물을 좋아요 누른 상태가 아닌 경우 -> 좋아요
@@ -84,10 +84,12 @@ class HomeFollowingTableViewCell: UITableViewCell {
         timeLabel.text = data.time
         content.text = data.contents
         
-//        if data.isUserLikePost {
-//            likeImage.image = UIImage(systemName: "heart.fill")
-//        }
-//        self.isUserLike = data.isUserLikePost
+        if data.isLiked == 1 {
+            likeImage.image = UIImage(systemName: "heart.fill")
+        }else {
+            likeImage.image = UIImage(systemName: "heart")
+        }
+        self.isUserLike = data.isLiked
         
     }
 }

@@ -12,7 +12,9 @@ class ProductReviewTableViewCell: UITableViewCell {
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    // 리뷰 데이터
+    var reviewData: [ReviewData] = []
+    var reviewImage: [String] = []
     
     
     override func awakeFromNib() {
@@ -43,7 +45,7 @@ extension ProductReviewTableViewCell: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
             // 리뷰 사진의 개수
-            return 10
+            return reviewImage.count
         }else if section == 2 {
             // Cell에 보여지는 리뷰 개수 (3개)
             return 3
@@ -65,12 +67,16 @@ extension ProductReviewTableViewCell: UICollectionViewDelegate, UICollectionView
             guard let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductReviewPhotoCell", for: indexPath) as? ProductReviewPhotoCell else {
                 return UICollectionViewCell()
             }
+            photoCell.updateCell(reviewImage[indexPath.row])
             return photoCell
         }
         // 베스트리뷰 (3개)
         else if indexPath.section == 2 {
             guard let reviewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductBestReviewCell", for: indexPath) as? ProductBestReviewCell else {
                 return UICollectionViewCell()
+            }
+            if !reviewData.isEmpty {
+                reviewCell.updateCell(reviewData.reversed()[indexPath.row])
             }
             return reviewCell
         }

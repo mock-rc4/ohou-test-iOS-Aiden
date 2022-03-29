@@ -14,6 +14,9 @@ class UserStylingTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
+    // 리뷰 사진 데이터
+    var reviewImage: [String] = []
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +43,7 @@ extension UserStylingTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
             // 유저 사진 개수
-            return 5
+            return reviewImage.count
         }else {
             return 1
         }
@@ -51,13 +54,15 @@ extension UserStylingTableViewCell: UICollectionViewDelegate, UICollectionViewDa
             guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "UserStylingCollectionViewHeader", for: indexPath) as? UserStylingCollectionViewHeader else {
                 return UICollectionViewCell()
             }
-            header.updateCell(title: "유저들의 리뷰사진", 161)
+            header.updateCell(title: "유저들의 리뷰사진", reviewImage.count)
             return header
         }else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserStylingCollectionViewCell", for: indexPath) as? UserStylingCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            
+            if !reviewImage.isEmpty {
+                cell.updateCell(reviewImage[indexPath.row])
+            }
             return cell
         }
     }

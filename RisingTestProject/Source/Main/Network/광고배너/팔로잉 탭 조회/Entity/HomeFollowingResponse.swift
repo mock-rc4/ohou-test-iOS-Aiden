@@ -29,4 +29,5 @@ struct FollowingPost: Decodable  {
     var nickname: String
     var profile_Img: String?
     var time: String
+    var isLiked: Int
 }

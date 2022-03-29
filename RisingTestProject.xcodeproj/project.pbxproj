@@ -125,6 +125,8 @@
 		D064454127F2EAF600FF0E39 /* TabBarBottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */; };
 		D064454E27F2FAA500FF0E39 /* AutoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064454D27F2FAA500FF0E39 /* AutoLoginDataManager.swift */; };
 		D064455127F2FACA00FF0E39 /* AutoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */; };
+		D064455427F315E900FF0E39 /* ReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064455327F315E900FF0E39 /* ReviewDataManager.swift */; };
+		D064455727F315FF00FF0E39 /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064455627F315FF00FF0E39 /* ReviewResponse.swift */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
@@ -418,6 +420,8 @@
 		D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBottomSheetVC.swift; sourceTree = "<group>"; };
 		D064454D27F2FAA500FF0E39 /* AutoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginDataManager.swift; sourceTree = "<group>"; };
 		D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginResponse.swift; sourceTree = "<group>"; };
+		D064455327F315E900FF0E39 /* ReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDataManager.swift; sourceTree = "<group>"; };
+		D064455627F315FF00FF0E39 /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
@@ -1059,7 +1063,7 @@
 		D02FD0BA27EAD3D400E21319 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				D0FDE80F27EB778900C4C2A3 /* 유저들의 스타일링샷 */,
+				D0FDE80F27EB778900C4C2A3 /* 리뷰사진 리스트 */,
 				D03BF35C27EBFABE006A0CE9 /* 상품정보 */,
 				D03BF36627EC13BA006A0CE9 /* 리뷰 */,
 				D072FAF227EC5898007134C7 /* 문의, 배송, 교환, 환불 */,
@@ -1514,6 +1518,24 @@
 			isa = PBXGroup;
 			children = (
 				D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D064455227F315A300FF0E39 /* 리뷰조회 */ = {
+			isa = PBXGroup;
+			children = (
+				D064455327F315E900FF0E39 /* ReviewDataManager.swift */,
+				D064455527F315F300FF0E39 /* Entity */,
+			);
+			name = "리뷰조회";
+			path = "리뷰조회";
+			sourceTree = "<group>";
+		};
+		D064455527F315F300FF0E39 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D064455627F315FF00FF0E39 /* ReviewResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1986,6 +2008,7 @@
 		D090C19127F2A73600A4B205 /* 리뷰 */ = {
 			isa = PBXGroup;
 			children = (
+				D064455227F315A300FF0E39 /* 리뷰조회 */,
 				D090C19227F2A73B00A4B205 /* 리뷰작성 */,
 			);
 			name = "리뷰";
@@ -2728,13 +2751,13 @@
 			path = header;
 			sourceTree = "<group>";
 		};
-		D0FDE80F27EB778900C4C2A3 /* 유저들의 스타일링샷 */ = {
+		D0FDE80F27EB778900C4C2A3 /* 리뷰사진 리스트 */ = {
 			isa = PBXGroup;
 			children = (
 				D0FDE81027EB779200C4C2A3 /* TableCell */,
 				D0FDE81127EB779900C4C2A3 /* CollectionCell */,
 			);
-			name = "유저들의 스타일링샷";
+			name = "리뷰사진 리스트";
 			path = "유저들의 스타일링샷";
 			sourceTree = "<group>";
 		};
@@ -3225,7 +3248,9 @@
 				D072FAE427EC3393007134C7 /* ProductReviewHeader.swift in Sources */,
 				D08DE46B27ED65D500B715C4 /* BasketViewController.swift in Sources */,
 				D06B481A27E808F000C881E0 /* SignInDataManager.swift in Sources */,
+				D064455727F315FF00FF0E39 /* ReviewResponse.swift in Sources */,
 				D064453E27F2E0B400FF0E39 /* CancelLikeResponse.swift in Sources */,
+				D064455427F315E900FF0E39 /* ReviewDataManager.swift in Sources */,
 				D047896A27F04C7500DEA095 /* AlignmentBottomSheetVC.swift in Sources */,
 				D0D771D127E955DC00E47DA6 /* SettingTableViewCell.swift in Sources */,
 				D0F7C1A527F01100009918A1 /* PaymentResponse.swift in Sources */,

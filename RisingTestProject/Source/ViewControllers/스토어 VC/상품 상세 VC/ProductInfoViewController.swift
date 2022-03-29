@@ -21,6 +21,11 @@ class ProductInfoViewController: BaseViewController {
     // 보여줄 제품의 ID
     var productID: Int?
     
+    // 리뷰 정보
+    var reviewData: [ReviewData] = []
+    var reviewPhoto: [String] = []
+    
+    
     // 보여줄 제품의 정보
     var productDetail: ProductDetail? {
         didSet {
@@ -102,9 +107,13 @@ class ProductInfoViewController: BaseViewController {
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
         
         
-        // 제품정보 가져오기 API 호출
+        // MARK: - API 호출
         if let id = productID {
+            // 제품정보 가져오기 API 호출
             ProductInfoDataManager().getProductInfo(ProductInfoRequest(productId: id), delegate: self)
+            
+            // 리뷰정보 가져오기 API 호출
+            ReviewDataManager().getReviewData(id, delegate: self)
         }
     }
     
@@ -150,6 +159,10 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserStylingTableViewCell") as? UserStylingTableViewCell else {
                 return UITableViewCell()
             }
+            if !reviewData.isEmpty {
+                cell.reviewImage = self.reviewPhoto
+                cell.collectionView.reloadData()
+            }
             return cell
         }
         // 상품설명 셀 (펼치기, 접기)
@@ -165,6 +178,11 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductReviewTableViewCell") as? ProductReviewTableViewCell else {
                 return UITableViewCell()
             }
+            if !reviewData.isEmpty {
+                cell.reviewData = self.reviewData
+                cell.reviewImage = self.reviewPhoto
+                cell.collectionView.reloadData()
+            }
             cell.selectionStyle = .none
             return cell
         }
@@ -174,7 +192,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
-            cell.updateCell(title: "문의", 1043)
+            cell.updateCell(title: "문의", 31)
             return cell
         }
         // 배송/교환/환불 셀
