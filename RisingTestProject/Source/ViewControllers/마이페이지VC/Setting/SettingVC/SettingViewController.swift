@@ -94,18 +94,22 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            guard let modifyProfileVC = storyboard?.instantiateViewController(withIdentifier: "ModifyProfileViewController") as? ModifyProfileViewController else {
-                return
+            if Constant.isUserLogged {
+                guard let modifyProfileVC = storyboard?.instantiateViewController(withIdentifier: "ModifyProfileViewController") as? ModifyProfileViewController else {
+                    return
+                }
+                
+                self.navigationController?.pushViewController(modifyProfileVC, animated: true)
+            }else {
+                presentAlert(title: "로그인 후 사용 가능합니다.")
             }
-            
-            self.navigationController?.pushViewController(modifyProfileVC, animated: true)
         }
         // 로그아웃
         if indexPath.section == 2 && indexPath.row == 0 {
             
             if Constant.isUserLogged {
                 Constant.isUserLogged = false
-                //Constant.jwt = nil 임시
+                UserDefaults.standard.set("", forKey: "jwt")
                 Constant.userDidTapLogoutButton = true
                 presentAlert(title: "로그아웃 되었습니다.")
             }else {

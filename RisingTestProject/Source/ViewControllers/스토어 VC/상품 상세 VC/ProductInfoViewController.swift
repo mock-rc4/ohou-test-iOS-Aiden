@@ -67,7 +67,7 @@ class ProductInfoViewController: BaseViewController {
         let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: optionVC)
         
         // bottomsheet의 높이
-        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = view.frame.width / 3
+        bottomSheet.mdc_bottomSheetPresentationController?.preferredSheetHeight = view.frame.width / 2.8
         present(bottomSheet, animated: true)
     }
     

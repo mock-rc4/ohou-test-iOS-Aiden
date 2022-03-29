@@ -123,6 +123,8 @@
 		D064453B27F2E09000FF0E39 /* CancelLikeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */; };
 		D064453E27F2E0B400FF0E39 /* CancelLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */; };
 		D064454127F2EAF600FF0E39 /* TabBarBottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */; };
+		D064454E27F2FAA500FF0E39 /* AutoLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064454D27F2FAA500FF0E39 /* AutoLoginDataManager.swift */; };
+		D064455127F2FACA00FF0E39 /* AutoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */; };
 		D06AE19427E9B93300F6EB3E /* StoreHomeTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */; };
 		D06AE19627E9B94400F6EB3E /* StoreHomeTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */; };
 		D06AE19C27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */; };
@@ -414,6 +416,8 @@
 		D064453A27F2E09000FF0E39 /* CancelLikeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeDataManager.swift; sourceTree = "<group>"; };
 		D064453D27F2E0B400FF0E39 /* CancelLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLikeResponse.swift; sourceTree = "<group>"; };
 		D064454027F2EAF600FF0E39 /* TabBarBottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarBottomSheetVC.swift; sourceTree = "<group>"; };
+		D064454D27F2FAA500FF0E39 /* AutoLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginDataManager.swift; sourceTree = "<group>"; };
+		D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginResponse.swift; sourceTree = "<group>"; };
 		D06AE19327E9B93300F6EB3E /* StoreHomeTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewHeader.swift; sourceTree = "<group>"; };
 		D06AE19527E9B94400F6EB3E /* StoreHomeTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreHomeTableViewHeader.xib; sourceTree = "<group>"; };
 		D06AE19A27E9CEE000F6EB3E /* StoreTodayDealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTodayDealTableViewCell.swift; sourceTree = "<group>"; };
@@ -1496,6 +1500,24 @@
 			path = "TabBar Button";
 			sourceTree = "<group>";
 		};
+		D064454C27F2F9D400FF0E39 /* 자동로그인 (토큰유효성 검사) */ = {
+			isa = PBXGroup;
+			children = (
+				D064454D27F2FAA500FF0E39 /* AutoLoginDataManager.swift */,
+				D064454F27F2FABA00FF0E39 /* Entity */,
+			);
+			name = "자동로그인 (토큰유효성 검사)";
+			path = "자동로그인 (토큰유효성 검사)";
+			sourceTree = "<group>";
+		};
+		D064454F27F2FABA00FF0E39 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D064455027F2FACA00FF0E39 /* AutoLoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D06AE19727E9CE7100F6EB3E /* 오늘의딜 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2560,6 +2582,7 @@
 		D0EA7F8927E5919B00948269 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D064454C27F2F9D400FF0E39 /* 자동로그인 (토큰유효성 검사) */,
 				D090C19A27F2B0FA00A4B205 /* 인테리어시공 VC */,
 				D090C19127F2A73600A4B205 /* 리뷰 */,
 				D088EA0A27EF394800C129C0 /* 결제하기 */,
@@ -3011,6 +3034,7 @@
 				D04A2DD227E5C20C00D1C7D6 /* HomePopularityVC.swift in Sources */,
 				D0D771CD27E9549900E47DA6 /* SettingViewController.swift in Sources */,
 				D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */,
+				D064455127F2FACA00FF0E39 /* AutoLoginResponse.swift in Sources */,
 				D0562EF227ED8A1F00AAACE9 /* SelectAllTableViewCell.swift in Sources */,
 				D0EA7F8227E5911B00948269 /* UIViewController.swift in Sources */,
 				D03B6C6C27EFF3C200241222 /* PaymentPriceTableViewCell.swift in Sources */,
@@ -3028,6 +3052,7 @@
 				D0B8F21C27E78A800085BEBD /* SignUpDataManager.swift in Sources */,
 				D0AE5E6B27ECC1490091DA72 /* PopularProductResponse.swift in Sources */,
 				D047897727F05AB200DEA095 /* HomeExpertDataManager.swift in Sources */,
+				D064454E27F2FAA500FF0E39 /* AutoLoginDataManager.swift in Sources */,
 				D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */,
 				D0392E5A27F0AD170053F6F0 /* HomeFollowingResponse.swift in Sources */,
 				D0053D6C27F13418005F9982 /* HouseWarmingDetailDataManager.swift in Sources */,

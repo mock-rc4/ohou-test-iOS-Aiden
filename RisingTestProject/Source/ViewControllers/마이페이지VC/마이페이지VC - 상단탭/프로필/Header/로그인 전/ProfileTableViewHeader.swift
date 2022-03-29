@@ -31,7 +31,7 @@ class ProfileTableViewHeader: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+//        profileImage.layer.cornerRadius = profileImage.frame.height / 2
     }
     
 }

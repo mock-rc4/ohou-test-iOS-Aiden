@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - 여기서 유저디폴트에 있는 jwt 유효성검사 후 토큰이 유효하다면 Constant.isUserLogged를 true로 설정
         Constant.jwt = UserDefaults.standard.string(forKey: "jwt")
+        AutoLoginDataManager().jwtCheck()
         
         return true
     }

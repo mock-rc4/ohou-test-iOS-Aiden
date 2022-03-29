@@ -17,7 +17,7 @@ struct Constant {
     static var isUserLogged: Bool = false
     
     // 유저가 둘러보기 버튼을 눌렀는지?  -> 영상찍기 전 false로 변경해두기
-    static var isUserTapLookAroundButton: Bool = true
+    static var isUserTapLookAroundButton: Bool = false
     
     
     // API호출 기본 url
