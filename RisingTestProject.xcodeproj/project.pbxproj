@@ -265,6 +265,8 @@
 		D0F7C1A227F010E8009918A1 /* PaymentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A127F010E8009918A1 /* PaymentDataManager.swift */; };
 		D0F7C1A527F01100009918A1 /* PaymentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A427F01100009918A1 /* PaymentResponse.swift */; };
 		D0F7C1A727F0110A009918A1 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7C1A627F0110A009918A1 /* PaymentRequest.swift */; };
+		D0F9665527F28AA500321ED2 /* InteriorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9665327F28AA500321ED2 /* InteriorTableViewCell.swift */; };
+		D0F9665627F28AA500321ED2 /* InteriorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F9665427F28AA500321ED2 /* InteriorTableViewCell.xib */; };
 		D0FC804A27EF1E8B00A1A650 /* ModifyProductCountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */; };
 		D0FC804D27EF1ECD00A1A650 /* ModifyProductCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */; };
 		D0FC804F27EF1ED500A1A650 /* ModifyProductCountRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */; };
@@ -545,6 +547,8 @@
 		D0F7C1A127F010E8009918A1 /* PaymentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDataManager.swift; sourceTree = "<group>"; };
 		D0F7C1A427F01100009918A1 /* PaymentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentResponse.swift; sourceTree = "<group>"; };
 		D0F7C1A627F0110A009918A1 /* PaymentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
+		D0F9665327F28AA500321ED2 /* InteriorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteriorTableViewCell.swift; sourceTree = "<group>"; };
+		D0F9665427F28AA500321ED2 /* InteriorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InteriorTableViewCell.xib; sourceTree = "<group>"; };
 		D0FC804927EF1E8B00A1A650 /* ModifyProductCountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountDataManager.swift; sourceTree = "<group>"; };
 		D0FC804C27EF1ECD00A1A650 /* ModifyProductCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountResponse.swift; sourceTree = "<group>"; };
 		D0FC804E27EF1ED500A1A650 /* ModifyProductCountRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyProductCountRequest.swift; sourceTree = "<group>"; };
@@ -926,6 +930,8 @@
 		D029587327F20B2B00AE8C71 /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
+				D0F9665327F28AA500321ED2 /* InteriorTableViewCell.swift */,
+				D0F9665427F28AA500321ED2 /* InteriorTableViewCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -2776,6 +2782,7 @@
 				D0D771D227E955DC00E47DA6 /* SettingTableViewCell.xib in Resources */,
 				D03BF36127EBFBAF006A0CE9 /* ProductInfoTableViewCell.xib in Resources */,
 				D0910F6427E56D9B00793D90 /* Assets.xcassets in Resources */,
+				D0F9665627F28AA500321ED2 /* InteriorTableViewCell.xib in Resources */,
 				D072BD7727E61A18000FB9C4 /* PopularityPostCollectionViewCell.xib in Resources */,
 				D0252C7427E853CA00998372 /* PhotoCollectionViewCell.xib in Resources */,
 				D0FDE81527EB77FC00C4C2A3 /* UserStylingTableViewCell.xib in Resources */,
@@ -3029,6 +3036,7 @@
 				D0EA7F8B27E5958100948269 /* InitialViewController.swift in Sources */,
 				D0A431B627E9B2AB00421A34 /* StoreHomeViewController.swift in Sources */,
 				D02FD0B827EAD35200E21319 /* ProductInfoViewController.swift in Sources */,
+				D0F9665527F28AA500321ED2 /* InteriorTableViewCell.swift in Sources */,
 				D072FAF027EC3401007134C7 /* ProductReviewFooter.swift in Sources */,
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,

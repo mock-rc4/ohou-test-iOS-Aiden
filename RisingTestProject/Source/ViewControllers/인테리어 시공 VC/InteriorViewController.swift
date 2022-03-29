@@ -30,7 +30,11 @@ class InteriorViewController: BaseViewController {
         tableView.register(UINib(nibName: "InteriorTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: "InteriorTableViewHeader")
         
         // cell
-//        tableView.register(UINib(nibName: <#T##String#>, bundle: <#T##Bundle?#>), forCellReuseIdentifier: <#T##String#>)
+        tableView.register(UINib(nibName: "InteriorTableViewCell", bundle: nil), forCellReuseIdentifier: "InteriorTableViewCell")
+        
+        // 자동 높이 계산
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = tableView.frame.width * 0.75
     }
 }
 
@@ -43,9 +47,17 @@ extension InteriorViewController: UITableViewDelegate, UITableViewDataSource {
         return 10
     }
     
+    // 사용할 Cell 지정
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "InteriorTableViewCell", for: indexPath) as? InteriorTableViewCell else {
+            return UITableViewCell()
+        }
+        return cell
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return tableView.frame.width * 0.7
+//    }
     
     
     
@@ -59,6 +71,6 @@ extension InteriorViewController: UITableViewDelegate, UITableViewDataSource {
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width * 0.85
+        return tableView.frame.width
     }
 }

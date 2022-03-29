@@ -210,20 +210,20 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rm-SH-kyc">
-                    <rect key="frame" x="0.0" y="377.5" width="414" height="41.5"/>
+                    <rect key="frame" x="0.0" y="377.5" width="414" height="34.5"/>
                     <subviews>
                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1a-Dj-xIZ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uPd-xp-MwQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="41.5"/>
+                                    <rect key="frame" x="10" y="0.0" width="383" height="34.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29I-YF-GUr">
-                                            <rect key="frame" x="0.0" y="0.0" width="76" height="41.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="76" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 순" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1X-rO-qJv">
-                                                    <rect key="frame" x="10" y="5" width="56" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="10" y="5" width="56" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -237,11 +237,11 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sR-ws-snW">
-                                            <rect key="frame" x="91" y="0.0" width="93" height="41.5"/>
+                                            <rect key="frame" x="91" y="0.0" width="93" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="리뷰 많은 순" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-Al-vlI">
-                                                    <rect key="frame" x="10" y="5" width="73" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="10" y="5" width="73" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -255,11 +255,11 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izW-bB-b6d">
-                                            <rect key="frame" x="199" y="0.0" width="93" height="41.5"/>
+                                            <rect key="frame" x="199" y="0.0" width="93" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계약 많은 순" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cby-dc-rzI">
-                                                    <rect key="frame" x="10" y="5" width="73" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="10" y="5" width="73" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -273,11 +273,11 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-ic-O6S">
-                                            <rect key="frame" x="307" y="0.0" width="76" height="41.5"/>
+                                            <rect key="frame" x="307" y="0.0" width="76" height="34.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가까운 순" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhg-nX-RLN">
-                                                    <rect key="frame" x="10" y="5" width="56" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <rect key="frame" x="10" y="5" width="56" height="24.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -296,7 +296,7 @@
                             <constraints>
                                 <constraint firstItem="uPd-xp-MwQ" firstAttribute="height" secondItem="494-T9-VcX" secondAttribute="height" id="Ue0-zJ-tSd"/>
                                 <constraint firstItem="uPd-xp-MwQ" firstAttribute="bottom" secondItem="nd2-jJ-Y53" secondAttribute="bottom" id="VcF-2x-O6x"/>
-                                <constraint firstItem="uPd-xp-MwQ" firstAttribute="leading" secondItem="nd2-jJ-Y53" secondAttribute="leading" id="bJp-TW-d1M"/>
+                                <constraint firstItem="uPd-xp-MwQ" firstAttribute="leading" secondItem="nd2-jJ-Y53" secondAttribute="leading" constant="10" id="bJp-TW-d1M"/>
                                 <constraint firstItem="nd2-jJ-Y53" firstAttribute="top" secondItem="uPd-xp-MwQ" secondAttribute="top" id="fNE-zu-OLP"/>
                                 <constraint firstItem="uPd-xp-MwQ" firstAttribute="trailing" secondItem="nd2-jJ-Y53" secondAttribute="trailing" id="h4V-UD-ked"/>
                             </constraints>
@@ -306,7 +306,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="4rm-SH-kyc" secondAttribute="height" multiplier="10:1" id="9x3-CK-H7S"/>
+                        <constraint firstAttribute="width" secondItem="4rm-SH-kyc" secondAttribute="height" multiplier="12:1" id="9x3-CK-H7S"/>
                         <constraint firstItem="D1a-Dj-xIZ" firstAttribute="leading" secondItem="4rm-SH-kyc" secondAttribute="leading" id="Qqo-8L-rOe"/>
                         <constraint firstAttribute="bottom" secondItem="D1a-Dj-xIZ" secondAttribute="bottom" id="hL3-Nz-ZsF"/>
                         <constraint firstAttribute="trailing" secondItem="D1a-Dj-xIZ" secondAttribute="trailing" id="jjD-cJ-bg6"/>
