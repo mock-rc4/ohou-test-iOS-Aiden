@@ -28,7 +28,7 @@ class BasketTableViewFooter: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        buyNowButton.layer.cornerRadius = buyNowButton.frame.height / 10
+        buyNowButton.layer.cornerRadius = buyNowButton.frame.height / 8
     }
 
 }

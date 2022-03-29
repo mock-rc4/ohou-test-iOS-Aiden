@@ -16,6 +16,9 @@ protocol TableViewReload {
     
     // 제품 삭제버튼 클릭
     func deleteProduct(_ productID: Int)
+    
+    // 선택되었는지 여부 저장
+    func saveIsProductSelected(_ productID: Int, isSelected: Bool)
 }
 
 
@@ -27,13 +30,15 @@ class ProductInBasketTableViewCell: UITableViewCell {
     
     @IBOutlet weak var checkImage: UIImageView!
     var isButtonSelected: Bool = true
-    // 모두선택 버튼
+    // 선택 버튼
     @IBAction func didTapSelectButton(_ sender: UIButton) {
         isButtonSelected.toggle()
         if isButtonSelected {
             checkImage.image = UIImage(systemName: "checkmark.square.fill")
+            delegate?.saveIsProductSelected(productID, isSelected: true)
         }else {
             checkImage.image = UIImage(systemName: "square")
+            delegate?.saveIsProductSelected(productID, isSelected: false)
         }
     }
     

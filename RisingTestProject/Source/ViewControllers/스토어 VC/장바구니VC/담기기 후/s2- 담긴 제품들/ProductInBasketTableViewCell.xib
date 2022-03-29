@@ -59,7 +59,7 @@
                                             <constraint firstAttribute="height" constant="25" id="kAA-n4-tRy"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-FU-YVi">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="기본이미지" translatesAutoresizingMaskIntoConstraints="NO" id="JFO-FU-YVi">
                                         <rect key="frame" x="40" y="10" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="9XS-Zi-X8d"/>
@@ -273,7 +273,7 @@
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <image name="오늘의딜 제품" width="544" height="555"/>
+        <image name="기본이미지" width="198" height="199"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

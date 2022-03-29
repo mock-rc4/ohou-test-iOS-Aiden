@@ -9,6 +9,8 @@ import UIKit
 
 protocol selectAllButtonDelegate {
     func selectAll(_ isSelect: Bool)
+    
+    func removeSelectedProduct()
 }
 
 
@@ -22,6 +24,7 @@ class SelectAllTableViewCell: UITableViewCell {
     @IBOutlet weak var checkImage: UIImageView!
     
     var isButtonSelected: Bool = true
+    
     // 모두선택 버튼
     @IBAction func didTapSelectAllButton(_ sender: UIButton) {
         isButtonSelected.toggle()
@@ -36,6 +39,7 @@ class SelectAllTableViewCell: UITableViewCell {
     
     // 삭제버튼
     @IBAction func didTapDeleteButton(_ sender: UIButton) {
+        delegate?.removeSelectedProduct()
     }
     
     

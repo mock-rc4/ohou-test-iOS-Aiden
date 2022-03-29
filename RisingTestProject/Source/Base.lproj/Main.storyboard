@@ -531,8 +531,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="4" title="" id="MaQ-2P-a94">
-                        <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
-                        <imageReference key="selectedImage" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="탭바버튼" symbolScale="large"/>
+                        <inset key="imageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwN-hK-oFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4812,14 +4813,12 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="wrench.and.screwdriver" catalog="system" width="128" height="120"/>
         <image name="wrench.and.screwdriver.fill" catalog="system" width="128" height="120"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="공유 누끼" width="90" height="90"/>
         <image name="기본 프로필" width="256" height="258"/>
         <image name="네이버 로그인" width="152" height="152"/>
@@ -4838,6 +4837,7 @@
         <image name="인테리어시공 리뷰쓰기" width="105" height="105"/>
         <image name="좋아요" width="86" height="86"/>
         <image name="카톡 로그인" width="969" height="142"/>
+        <image name="탭바버튼" width="120" height="120"/>
         <image name="페이스북 로그인" width="152" height="152"/>
         <image name="포토리뷰 포인트" width="246" height="51"/>
         <image name="회원가입 말풍선" width="507" height="143"/>

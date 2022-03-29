@@ -24,8 +24,21 @@ class BasketViewController: BaseViewController {
     
     
     
+    
+    // 현재 선택되어 있는 상품들의 Id값
+    var selectedProductID: Set<Int> = []
+    
+    
     // 장바구니에 담긴 상품들 배열
-    var inBasketProduct: [BasketProductInfo] = []
+    var inBasketProduct: [BasketProductInfo] = [] {
+        didSet {
+            if !inBasketProduct.isEmpty {
+                inBasketProduct.forEach({
+                    selectedProductID.insert($0.productId)
+                })
+            }
+        }
+    }
     
     var totalPrice: Int = 0
     var totalDeliveryCharge: Int = 0
@@ -242,6 +255,18 @@ extension BasketViewController: UITableViewDelegate, UITableViewDataSource {
 
 // 테이블뷰 리로드 프로토콜
 extension BasketViewController: TableViewReload {
+    
+    // 상품이 선택&안선택 토글되면 상태 저장
+    func saveIsProductSelected(_ productID: Int, isSelected: Bool) {
+        if isSelected {
+            selectedProductID.insert(productID)
+        }else {
+            selectedProductID.remove(productID)
+        }
+    }
+    
+    
+    // 장바구니에서 상품 삭제
     func deleteProduct(_ productID: Int) {
         presentAlert(title: "정말 삭제하시겠습니까?", isCancelActionIncluded: true, preferredStyle: .alert, handler: { _ in
             DeleteProductDataManager().deleteProduct(DeleteProductRequest(status: 0), delegate: self, productID: productID)
@@ -280,7 +305,26 @@ extension BasketViewController: showPeymentVC {
 
 // 전체선택 버튼 구현을 위한 프로토콜 채택
 extension BasketViewController: selectAllButtonDelegate {
+    
+    // 선택된 상품들 제거
+    func removeSelectedProduct() {
+        presentAlert(title: "선택된 상품들을 삭제하시겠습니까?", isCancelActionIncluded: true) { _ in
+            self.selectedProductID.forEach({
+                DeleteProductDataManager().deleteProduct(DeleteProductRequest(status: 0), delegate: self, productID: $0)
+            })
+        }
+    }
+    
     func selectAll(_ isSelect: Bool) {
+        
+        if isSelect {
+            inBasketProduct.forEach({
+                selectedProductID.insert($0.productId)
+            })
+        }else {
+            selectedProductID.removeAll()
+        }
+        
         self.isAllSelected = isSelect
         self.tableView.reloadData()
     }
