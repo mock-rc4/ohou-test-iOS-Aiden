@@ -36,7 +36,7 @@ class StoreBestViewController: BaseViewController {
         tableView.register(UINib(nibName: "RealTimeBestTableViewCell", bundle: nil), forCellReuseIdentifier: "RealTimeBestTableViewCell")
         
         // API호출
-        RealTimeBestProductDataManager().getBestProduct(delegate: self)
+        RealTimeBestProductDataManager().getBestProduct(delegate: self, lastIndex: realTimeBestProductInfo.count)
     }
 }
 
@@ -85,15 +85,16 @@ extension StoreBestViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 // MARK: - 무한스크롤
-//extension StoreBestViewController {
-//
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
-//            print("마지막에 도달")
-//            if !fetchingMore {
+extension StoreBestViewController {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
+            
+            if !fetchingMore {
+                print("마지막에 도달")
+                RealTimeBestProductDataManager().getBestProduct(delegate: self, lastIndex: realTimeBestProductInfo.count)
 //                showIndicator()
-//                print("")
-//            }
-//        }
-//    }
-//}
+            }
+        }
+    }
+}
