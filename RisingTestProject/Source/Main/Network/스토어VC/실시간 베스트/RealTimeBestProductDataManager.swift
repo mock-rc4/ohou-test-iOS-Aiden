@@ -19,7 +19,7 @@ class RealTimeBestProductDataManager {
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
-                    print("데이터 가져오기 성공")
+                    print("실시간 베스트 조회 성공")
                     delegate.realTimeBestProductInfo = response.result
                     delegate.tableView.reloadData()
                 }else {

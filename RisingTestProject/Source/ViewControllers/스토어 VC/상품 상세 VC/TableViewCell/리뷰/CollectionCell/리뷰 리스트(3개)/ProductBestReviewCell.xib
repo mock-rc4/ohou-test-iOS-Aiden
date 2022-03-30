@@ -81,7 +81,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-kl-tSl">
                         <rect key="frame" x="0.0" y="57.5" width="405" height="114.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-V9-6bk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의딜 제품" translatesAutoresizingMaskIntoConstraints="NO" id="ZLE-V9-6bk">
                                 <rect key="frame" x="0.0" y="0.0" width="114.5" height="114.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZLE-V9-6bk" secondAttribute="height" multiplier="1:1" id="CtD-67-6Sv"/>

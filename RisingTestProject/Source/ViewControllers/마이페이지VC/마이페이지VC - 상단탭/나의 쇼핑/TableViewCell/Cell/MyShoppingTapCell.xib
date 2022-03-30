@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문배송내역 조회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVU-7L-OrU">
-                        <rect key="frame" x="15" y="11.5" width="129" height="21.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                        <rect key="frame" x="15" y="12" width="122" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -27,14 +27,14 @@
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="J7B-PB-xy7" secondAttribute="height" multiplier="1:1" id="E5d-vB-sgU"/>
+                            <constraint firstAttribute="width" constant="20" id="y23-ae-q62"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="J7B-PB-xy7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="E1r-nC-X4r"/>
                     <constraint firstItem="cVU-7L-OrU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="EO9-F4-TJx"/>
-                    <constraint firstAttribute="trailing" secondItem="J7B-PB-xy7" secondAttribute="trailing" constant="15" id="J1U-p2-dQu"/>
-                    <constraint firstAttribute="bottom" secondItem="J7B-PB-xy7" secondAttribute="bottom" constant="12" id="b4g-2F-w6d"/>
+                    <constraint firstAttribute="trailing" secondItem="J7B-PB-xy7" secondAttribute="trailing" constant="15" id="gpt-SA-Xw8"/>
+                    <constraint firstItem="J7B-PB-xy7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mhk-oX-TbZ"/>
                     <constraint firstItem="cVU-7L-OrU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wUx-8D-7Xv"/>
                 </constraints>
             </tableViewCellContentView>
