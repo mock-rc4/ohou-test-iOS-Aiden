@@ -177,7 +177,7 @@
                         <constraint firstAttribute="width" secondItem="4kj-lU-zVq" secondAttribute="height" multiplier="4:1" id="oac-Bf-8aM"/>
                     </constraints>
                 </stackView>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-ot-tF0">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-ot-tF0">
                     <rect key="frame" x="0.0" y="150" width="414" height="145"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>

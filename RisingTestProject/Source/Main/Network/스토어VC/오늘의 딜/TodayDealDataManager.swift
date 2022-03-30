@@ -10,8 +10,14 @@ import Alamofire
 
 class TodayDealDataManager {
     
-    func getTodayDealProductInfo(delegate: StoreHomeViewController) {
-        let url = "\(Constant.baseURL)/store/today-deal"
+    func getTodayDealProductInfo(delegate: BaseViewController, lastIndex: Int) {
+        
+        if let todayDealVC = delegate as? TodayDealViewController {
+            todayDealVC.fetchingMore = true
+        }
+        
+        
+        let url = "\(Constant.baseURL)/store/today-deal/\(lastIndex)"
         
         AF.request(url,
                    method: .get,
@@ -21,10 +27,21 @@ class TodayDealDataManager {
                 case .success(let response):
                     if response.isSuccess {
                         // MARK: - 성공
-                        print("데이터 가져오기 성공")
-                        Constant.todayDealProductInfo = response.result
-                        delegate.isApiConnectionSuccess[1] = true
-                        delegate.tableView.reloadData()
+                        print("오늘의딜 데이터 가져오기 성공")
+                        
+                        if let storeHomeVC = delegate as? StoreHomeViewController {
+                            Constant.todayDealProductInfo = response.result
+                            storeHomeVC.isApiConnectionSuccess[1] = true
+                            storeHomeVC.tableView.reloadData()
+                        }
+                        if let todayDealVC = delegate as? TodayDealViewController {
+                            Constant.todayDealProductInfo.append(contentsOf: response.result)
+                            todayDealVC.tableView.reloadData()
+                            
+                            if !response.result.isEmpty {
+                                todayDealVC.fetchingMore = false
+                            }
+                        }
                     }
                     else {
                         switch response.code {
@@ -34,7 +51,7 @@ class TodayDealDataManager {
                     }
                     
                 case .failure(let error):
-                    print("값 가져오기 실패: \(error.localizedDescription)")
+                    print("오늘의 딜 값 가져오기 실패: \(error.localizedDescription)")
                 }
             }
     }

@@ -9,6 +9,9 @@ import UIKit
 
 class StoreHomeViewController: BaseViewController {
     
+    // 무한스크롤 컨트롤
+    var fetchingMore: Bool = false
+    
     // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
     var isApiConnectionSuccess: [Bool] = [false, false, false, false, false, false] {
         didSet {
@@ -53,13 +56,13 @@ class StoreHomeViewController: BaseViewController {
         CommercialImageDataManager().getBannerImage(CommercialImageRequest(location: "store"), delegate: self)
         
         // 오늘의딜 API 호출
-        TodayDealDataManager().getTodayDealProductInfo(delegate: self)
+        TodayDealDataManager().getTodayDealProductInfo(delegate: self, lastIndex: Constant.todayDealProductInfo.count)
         
         // 인기키워드 API 호출
         PopularKeywordDataManager().getPopularKeyword(delegate: self)
         
         // 인기상품 API 호출
-        PopularProductDataManager().getPopularProduct(delegate: self)
+        PopularProductDataManager().getPopularProduct(delegate: self, lastIndex: Constant.popularProductInfo.count)
     }
     
     
@@ -165,7 +168,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "PopularProductTableViewCell", for: indexPath) as? PopularProductTableViewCell else {
                     return UITableViewCell()
                 }
-                addSeparator(cell)
+//                addSeparator(cell)
                 // View 전환 delegate
                 cell.delegate = self
                 if Constant.popularProductInfo.count >= 1 {
@@ -226,7 +229,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 // 인기상품 Cell 높이 조절 필요
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
                 if Constant.popularProductInfo.count >= 1 {
-                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+                    let heightCount: Int = Constant.popularProductInfo.count % 2 == 0 ? Constant.popularProductInfo.count / 2 : Constant.popularProductInfo.count / 2 + 1
+                    return (tableView.frame.width / 9) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
                 }else {
                     return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
                 }
@@ -241,7 +245,8 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 // 인기상품 Cell 높이 조절 필요
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
                 if Constant.popularProductInfo.count >= 1 {
-                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat((Constant.popularProductInfo.count/2)))
+                    let heightCount: Int = Constant.popularProductInfo.count % 2 == 0 ? Constant.popularProductInfo.count / 2 : Constant.popularProductInfo.count / 2 + 1
+                    return (tableView.frame.width / 9) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
                 }else {
                     return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
                 }
@@ -282,4 +287,20 @@ extension StoreHomeViewController: ShowProductDetailPage {
         self.navigationController?.pushViewController(productInfoVC, animated: true)
     }
     
+}
+
+
+
+// MARK: - 무한스크롤
+extension StoreHomeViewController {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
+            
+            if !fetchingMore {
+                print("마지막에 도달")
+                PopularProductDataManager().getPopularProduct(delegate: self, lastIndex: Constant.popularProductInfo.count)
+            }
+        }
+    }
 }

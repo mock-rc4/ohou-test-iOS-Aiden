@@ -9,6 +9,8 @@ import UIKit
 
 class TodayDealViewController: BaseViewController {
     
+    // 무한스크롤 컨트롤
+    var fetchingMore: Bool = false
     
     // UI 연결
     @IBOutlet weak var tableView: UITableView!
@@ -31,7 +33,7 @@ class TodayDealViewController: BaseViewController {
 }
 
 
-
+// MARK: - TableVIew Protocol채택
 extension TodayDealViewController: UITableViewDelegate, UITableViewDataSource {
     
     // Cell 설정
@@ -67,5 +69,21 @@ extension TodayDealViewController: UITableViewDelegate, UITableViewDataSource {
     // header높이
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return tableView.frame.width / 3
+    }
+}
+
+
+
+// MARK: - 무한스크롤
+extension TodayDealViewController {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
+            
+            if !fetchingMore {
+                print("마지막에 도달")
+                TodayDealDataManager().getTodayDealProductInfo(delegate: self, lastIndex: Constant.todayDealProductInfo.count)
+            }
+        }
     }
 }
