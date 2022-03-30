@@ -38,8 +38,7 @@ extension CustomTabBarController: UITabBarControllerDelegate {
 
         if viewController.tabBarItem.tag == 4{
             print("+버튼")
-            
-            guard let tabbarBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "TabBarBottomSheetVC") as? TabBarBottomSheetVC else {
+            guard let tabbarBottomSheetVC = storyboard?.instantiateViewController(withIdentifier: "TabBarButtonNavigationController") as? UINavigationController else {
                 return false
             }
             let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: tabbarBottomSheetVC)

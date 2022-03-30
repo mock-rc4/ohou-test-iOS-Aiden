@@ -58,6 +58,9 @@ class ProductInfoViewController: BaseViewController {
     }
     
     
+    // 구매하기 버튼에 radius추가
+    @IBOutlet weak var forRadiusButton: UIButton!
+        
     
     // MARK: - Bottom Sheet
     // 구매하기 버튼 클릭
@@ -106,6 +109,9 @@ class ProductInfoViewController: BaseViewController {
         
         // 장바구니 버튼 addTarget
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
+        
+        // 구매하기 버튼에 radius추가
+        forRadiusButton.layer.cornerRadius = forRadiusButton.frame.height / 8
         
         
         // MARK: - API 호출

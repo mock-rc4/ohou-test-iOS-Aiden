@@ -31,20 +31,28 @@ class RealTimeBestProductDataManager {
                     
                     delegate.tableView.reloadData()
                     
+                    if !response.result.isEmpty {
+                        delegate.fetchingMore = false
+                    }
+                    
                 }else {
                     switch response.code {
                     case 2600: delegate.presentAlert(title: "no(index)를 입력해주세요.")
                     case 4000: delegate.presentAlert(title: "데이터베이스 에러.")
                     default: print("")
                     }
+                    delegate.fetchingMore = false
                 }
             case .failure(let error):
                 print(error.localizedDescription)
                 delegate.presentAlert(title: "네트워크 상태가 좋지 않습니다.")
+                delegate.fetchingMore = false
             }
+            
+            
         }
         
 //        delegate.dismissIndicator()
-        delegate.fetchingMore = false
+//        delegate.fetchingMore = false
     }
 }

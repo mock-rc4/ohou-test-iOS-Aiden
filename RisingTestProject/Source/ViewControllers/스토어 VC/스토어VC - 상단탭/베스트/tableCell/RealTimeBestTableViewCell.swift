@@ -19,6 +19,7 @@ class RealTimeBestTableViewCell: UITableViewCell {
     @IBOutlet weak var reviews: UILabel!
     @IBOutlet weak var scrapImage: UIImageView!
     @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var rankImage: UIImageView!
     
     
     // 특가인지 무배인지 여부에 따라 히든: ture/false
@@ -60,6 +61,9 @@ class RealTimeBestTableViewCell: UITableViewCell {
             specialPrice.isHidden = true
         }
         rankLabel.text = "\(rank)"
+        if rank > 3 {
+            rankImage.tintColor = UIColor.lightGray
+        }
 }
 }
     

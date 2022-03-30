@@ -173,4 +173,9 @@ class ProductInBasketTableViewCell: UITableViewCell {
 //        price.text = orderPrice.insertComma() + "원"
 //        totalPrice.text = (orderPrice + delivery).insertComma() + "원"
 //    }
+    
+    
+    override func prepareForReuse() {
+        self.productImage.image = UIImage(named: "기본이미지.jpeg")
+    }
 }

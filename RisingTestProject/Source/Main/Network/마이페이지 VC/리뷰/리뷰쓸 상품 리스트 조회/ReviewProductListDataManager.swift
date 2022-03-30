@@ -11,7 +11,7 @@ import Alamofire
 class ReviewProductListDataManager {
     
     func getReviewProductList(delegate: ChooseProductToReviewVC) {
-        let url = "\(Constant.baseURL)/store/popularGoods"
+        let url = "\(Constant.baseURL)/store/popular-products"
         
         AF.request(url,
                    method: .get,

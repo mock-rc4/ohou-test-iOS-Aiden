@@ -686,14 +686,26 @@
                                                 <color key="textColor" systemColor="systemCyanColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHN-St-LWI">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="didTapReviewButton:" destination="sEu-uA-zVk" eventType="touchUpInside" id="7B7-3Z-cF1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cuQ-DF-9fd" secondAttribute="trailing" id="22d-ff-EJC"/>
                                             <constraint firstAttribute="bottom" secondItem="pc0-ua-XCk" secondAttribute="bottom" constant="15" id="BVQ-tu-4R7"/>
+                                            <constraint firstItem="rHN-St-LWI" firstAttribute="top" secondItem="4Zn-CI-7f6" secondAttribute="top" id="G76-Zy-bX8"/>
+                                            <constraint firstAttribute="bottom" secondItem="rHN-St-LWI" secondAttribute="bottom" id="Kcq-uL-ubI"/>
+                                            <constraint firstItem="rHN-St-LWI" firstAttribute="leading" secondItem="4Zn-CI-7f6" secondAttribute="leading" id="Lfz-0g-EWJ"/>
                                             <constraint firstItem="pc0-ua-XCk" firstAttribute="top" secondItem="4Zn-CI-7f6" secondAttribute="top" constant="15" id="W3G-e6-w6R"/>
                                             <constraint firstItem="Rtr-X8-5q1" firstAttribute="centerY" secondItem="pc0-ua-XCk" secondAttribute="centerY" id="adq-gZ-vhL"/>
                                             <constraint firstItem="pc0-ua-XCk" firstAttribute="leading" secondItem="4Zn-CI-7f6" secondAttribute="leading" constant="20" id="bcY-2a-6K8"/>
+                                            <constraint firstAttribute="trailing" secondItem="rHN-St-LWI" secondAttribute="trailing" id="dsQ-HA-p7W"/>
                                             <constraint firstAttribute="bottom" secondItem="cuQ-DF-9fd" secondAttribute="bottom" id="gAV-yR-QbO"/>
                                             <constraint firstAttribute="trailing" secondItem="aNU-77-mSR" secondAttribute="trailing" constant="15" id="h5e-nD-b5J"/>
                                             <constraint firstItem="Rtr-X8-5q1" firstAttribute="leading" secondItem="pc0-ua-XCk" secondAttribute="trailing" constant="15" id="pDX-Qu-gLY"/>
@@ -792,10 +804,11 @@
                             <constraint firstItem="ltd-IH-hmV" firstAttribute="leading" secondItem="Rnl-J8-ecb" secondAttribute="leading" id="Ig0-0y-RMt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TC8-ro-9wa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVa-tW-7NA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6523" y="112"/>
+            <point key="canvasLocation" x="7291" y="112"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="2hA-oW-XgB">
@@ -2968,6 +2981,9 @@
                                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" image="square.grid.2x2.fill" catalog="system"/>
+                                                                <connections>
+                                                                    <action selector="didTapStructureButton:" destination="xu5-fx-eKC" eventType="touchUpInside" id="jKQ-Gs-hfg"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3243,6 +3259,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="0Xj-FY-iHh" id="fMi-NV-k0c"/>
+                        <outlet property="structureButton" destination="iM6-pc-sw3" id="ZWD-xL-4Xh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qe-kx-utU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4514,15 +4531,15 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZqC-iy-oqY" customClass="ExpyTableView" customModule="ExpyTableView">
-                                <rect key="frame" x="0.0" y="96" width="414" height="714.5"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="702.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArM-Dh-Mio" userLabel="구매버튼">
-                                <rect key="frame" x="0.0" y="810.5" width="414" height="51.5"/>
+                                <rect key="frame" x="0.0" y="798.5" width="414" height="63.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isQ-Te-xUu">
-                                        <rect key="frame" x="15" y="5" width="41.5" height="41.5"/>
+                                        <rect key="frame" x="15" y="5" width="41.5" height="53.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="tintColor" systemColor="systemCyanColor"/>
                                         <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -4531,7 +4548,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0b-bI-Ebs">
-                                        <rect key="frame" x="71.5" y="8" width="327.5" height="35.5"/>
+                                        <rect key="frame" x="71.5" y="8" width="327.5" height="47.5"/>
                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4548,7 +4565,7 @@
                                     <constraint firstItem="H0b-bI-Ebs" firstAttribute="top" secondItem="ArM-Dh-Mio" secondAttribute="top" constant="8" id="Hrd-Hi-bks"/>
                                     <constraint firstItem="H0b-bI-Ebs" firstAttribute="leading" secondItem="isQ-Te-xUu" secondAttribute="trailing" constant="15" id="JLs-av-a4Y"/>
                                     <constraint firstItem="isQ-Te-xUu" firstAttribute="top" secondItem="ArM-Dh-Mio" secondAttribute="top" constant="5" id="SBs-qC-K4F"/>
-                                    <constraint firstAttribute="width" secondItem="ArM-Dh-Mio" secondAttribute="height" multiplier="8:1" id="ZNc-J3-1CO"/>
+                                    <constraint firstAttribute="width" secondItem="ArM-Dh-Mio" secondAttribute="height" multiplier="6.5:1" id="ZNc-J3-1CO"/>
                                     <constraint firstAttribute="bottom" secondItem="H0b-bI-Ebs" secondAttribute="bottom" constant="8" id="dyK-CW-nIf"/>
                                     <constraint firstAttribute="trailing" secondItem="H0b-bI-Ebs" secondAttribute="trailing" constant="15" id="qRc-La-P3M"/>
                                     <constraint firstAttribute="bottom" secondItem="isQ-Te-xUu" secondAttribute="bottom" constant="5" id="yo9-HQ-1Zy"/>
@@ -4575,6 +4592,7 @@
                     </view>
                     <connections>
                         <outlet property="basketButton" destination="pJ7-gc-0qA" id="4T9-RO-0TT"/>
+                        <outlet property="forRadiusButton" destination="H0b-bI-Ebs" id="FKQ-Sn-Lwk"/>
                         <outlet property="tableView" destination="ZqC-iy-oqY" id="nmv-Ke-p9I"/>
                     </connections>
                 </viewController>
@@ -4886,7 +4904,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-dC-Ian">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tsu-dC-Ian">
                                 <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -4967,6 +4985,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQF-Tp-60x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-781" y="2967"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yhN-s8-QWg">
+            <objects>
+                <navigationController storyboardIdentifier="TabBarButtonNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="cpw-MT-vDt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvM-jm-dwa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sEu-uA-zVk" kind="relationship" relationship="rootViewController" id="zDI-Ot-YdT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFV-xH-XYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6521.739130434783" y="111.83035714285714"/>
         </scene>
     </scenes>
     <resources>

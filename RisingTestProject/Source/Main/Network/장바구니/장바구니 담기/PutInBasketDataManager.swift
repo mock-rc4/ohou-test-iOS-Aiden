@@ -41,7 +41,9 @@ class PutInBasketDataManager {
                     case 2002: delegate.presentAlert(title: "유효하지 않은 JWT입니다. 로그인을 다시 해주세요.")
                     case 2019: delegate.presentAlert(title: "상품 고유번호를 입력해주세요.")
                     case 2020: delegate.presentAlert(title: "장바구니에 담을 상품 개수를 입력해주세요.")
-                    case 2021: delegate.presentAlert(title: "이미 장바구니에 존재하는 상품입니다.")
+                    case 2021: delegate.presentAlert(title: "이미 장바구니에 존재하는 상품입니다.") { _ in
+                        delegate.dismiss(animated: true)
+                    }
                     case 4000: delegate.presentAlert(title: "데이터베이스 에러.")
                     default: print("")
                     }

@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oBx-3i-Wu1">
-                                <rect key="frame" x="0.0" y="67.5" width="100" height="20.5"/>
+                                <rect key="frame" x="0.0" y="67.5" width="105.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="41%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8m-54-2C6">
                                         <rect key="frame" x="0.0" y="0.0" width="35.5" height="20.5"/>
@@ -63,8 +63,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24,900" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wu-7Y-4ZL">
-                                        <rect key="frame" x="45.5" y="0.0" width="54.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="45.5" y="0.0" width="60" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -174,6 +174,7 @@
                 <outlet property="price" destination="1wu-7Y-4ZL" id="kSL-Iy-lPn"/>
                 <outlet property="productImage" destination="phR-1d-UBi" id="5rN-lh-woE"/>
                 <outlet property="productName" destination="Rsu-YB-LkA" id="Cv6-9d-YQZ"/>
+                <outlet property="rankImage" destination="zuX-zQ-UP3" id="2ZM-Xh-6ne"/>
                 <outlet property="rankLabel" destination="wlu-gG-REN" id="U4H-Ba-Yn7"/>
                 <outlet property="rating" destination="ju4-9G-yr1" id="5Ra-M5-jmF"/>
                 <outlet property="reviews" destination="2Js-3R-tvJ" id="OOk-IV-zdg"/>
