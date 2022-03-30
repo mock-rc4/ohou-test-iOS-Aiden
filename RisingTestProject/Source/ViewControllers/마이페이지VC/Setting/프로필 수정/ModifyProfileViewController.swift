@@ -18,6 +18,7 @@ class ModifyProfileViewController: BaseViewController {
     // UI 연결
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var introduceTextField: UITextField!
+    @IBOutlet weak var modifyButton: UIButton!
     
     @IBAction func didTapModifyButton(_ sender: UIButton) {
         // API 호출
@@ -36,5 +37,7 @@ class ModifyProfileViewController: BaseViewController {
         if let introduce = Constant.userInfo?.introduce {
             introduceTextField.text = introduce
         }
+        
+        addRadiusToUIButton(modifyButton, size: modifyButton.frame.height / 10)
     }
 }

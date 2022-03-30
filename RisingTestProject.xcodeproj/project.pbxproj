@@ -163,6 +163,7 @@
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
 		D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */; };
 		D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */; };
+		D07BD92D27F3E6C00033F6DE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BD92C27F3E6C00033F6DE /* ChangePasswordViewController.swift */; };
 		D080639F27F2C0D400A26DEC /* AddLikeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D080639E27F2C0D400A26DEC /* AddLikeDataManager.swift */; };
 		D08063A227F2C0FB00A26DEC /* AddLikeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08063A127F2C0FB00A26DEC /* AddLikeRequest.swift */; };
 		D08063A427F2C10100A26DEC /* AddLikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08063A327F2C10100A26DEC /* AddLikeResponse.swift */; };
@@ -458,6 +459,7 @@
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
 		D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforePutInProductTableCell.swift; sourceTree = "<group>"; };
 		D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforePutInProductTableCell.xib; sourceTree = "<group>"; };
+		D07BD92C27F3E6C00033F6DE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D080639E27F2C0D400A26DEC /* AddLikeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeDataManager.swift; sourceTree = "<group>"; };
 		D08063A127F2C0FB00A26DEC /* AddLikeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeRequest.swift; sourceTree = "<group>"; };
 		D08063A327F2C10100A26DEC /* AddLikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLikeResponse.swift; sourceTree = "<group>"; };
@@ -1855,6 +1857,15 @@
 			path = "담기기 후";
 			sourceTree = "<group>";
 		};
+		D07BD92B27F3E6A30033F6DE /* 비밀번호 변경 */ = {
+			isa = PBXGroup;
+			children = (
+				D07BD92C27F3E6C00033F6DE /* ChangePasswordViewController.swift */,
+			);
+			name = "비밀번호 변경";
+			path = "비밀번호 변경";
+			sourceTree = "<group>";
+		};
 		D08063A027F2C0E200A26DEC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -2386,6 +2397,7 @@
 			children = (
 				D0DB6C7227E95B8E00DC55D4 /* SettingVC */,
 				D0DB6C7327E95B9600DC55D4 /* 프로필 수정 */,
+				D07BD92B27F3E6A30033F6DE /* 비밀번호 변경 */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -3201,6 +3213,7 @@
 				D0F7C1A227F010E8009918A1 /* PaymentDataManager.swift in Sources */,
 				D0392E5327F091360053F6F0 /* HomeFollowingTableViewCell.swift in Sources */,
 				D0B8F21627E77CE40085BEBD /* KakaoKey.swift in Sources */,
+				D07BD92D27F3E6C00033F6DE /* ChangePasswordViewController.swift in Sources */,
 				D0BE89C027E6BCDF00FE9451 /* SignUpViewController.swift in Sources */,
 				D0FE01F227EEA0F4005D5C4F /* PutInBasketRequest.swift in Sources */,
 				D0CD0A8927F17A7200472295 /* WritingReviewViewController.swift in Sources */,

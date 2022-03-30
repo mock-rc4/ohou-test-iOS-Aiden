@@ -1871,6 +1871,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-Oo-IJl">
+                                        <rect key="frame" x="43.5" y="7" width="60" height="38"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="house" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapPopButton:" destination="Com-IG-zUT" eventType="touchUpInside" id="COo-mS-wUw"/>
+                                            <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="SMU-Uc-Sbo"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-bA-cyy">
                                         <rect key="frame" x="0.0" y="7" width="53.5" height="38"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1887,7 +1899,9 @@
                                 <constraints>
                                     <constraint firstItem="tCQ-bA-cyy" firstAttribute="centerY" secondItem="W6N-vf-FLA" secondAttribute="centerY" id="1xx-U7-5e0"/>
                                     <constraint firstItem="qDy-tB-RH6" firstAttribute="centerY" secondItem="W6N-vf-FLA" secondAttribute="centerY" id="Az0-2y-JQn"/>
+                                    <constraint firstItem="U9O-Oo-IJl" firstAttribute="leading" secondItem="tCQ-bA-cyy" secondAttribute="trailing" constant="-10" id="BFa-hc-MtX"/>
                                     <constraint firstItem="qDy-tB-RH6" firstAttribute="centerX" secondItem="W6N-vf-FLA" secondAttribute="centerX" id="CcX-Cf-bkR"/>
+                                    <constraint firstItem="U9O-Oo-IJl" firstAttribute="centerY" secondItem="tCQ-bA-cyy" secondAttribute="centerY" id="Iul-5O-IBL"/>
                                     <constraint firstAttribute="width" secondItem="W6N-vf-FLA" secondAttribute="height" multiplier="8:1" id="mta-YE-rfb"/>
                                     <constraint firstItem="tCQ-bA-cyy" firstAttribute="leading" secondItem="W6N-vf-FLA" secondAttribute="leading" id="wY2-P3-xe8"/>
                                 </constraints>
@@ -1974,12 +1988,15 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFT-PS-5Uc">
-                                <rect key="frame" x="15" y="551" width="384" height="34.5"/>
+                                <rect key="frame" x="15" y="551" width="384" height="45"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BbD-6L-vhw"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="변경하기">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                <buttonConfiguration key="configuration" style="plain" title="프로필 수정">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapModifyButton:" destination="Com-IG-zUT" eventType="touchUpInside" id="nOE-FK-Of8"/>
@@ -2025,12 +2042,149 @@
                     </view>
                     <connections>
                         <outlet property="introduceTextField" destination="op0-Fa-HpP" id="AcD-qz-qrG"/>
+                        <outlet property="modifyButton" destination="bFT-PS-5Uc" id="iH7-U0-8Ki"/>
                         <outlet property="nickNameTextField" destination="gRU-CB-UPN" id="Lzv-EM-mnn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSs-Gs-gIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6278" y="942"/>
+            <point key="canvasLocation" x="6349" y="942"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="XV2-jd-A9X">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" id="AuQ-07-6Vj" customClass="ChangePasswordViewController" customModule="RisingTestProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZPG-CR-4IU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUu-lk-u7t" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xft-jK-MrB">
+                                        <rect key="frame" x="207" y="26" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvg-eU-RU5">
+                                        <rect key="frame" x="43.5" y="7" width="60" height="38"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="house" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="LHj-5d-hZe"/>
+                                            <action selector="didTapPopButton:" destination="Com-IG-zUT" eventType="touchUpInside" id="Yxu-xc-7R2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhv-KU-S15">
+                                        <rect key="frame" x="0.0" y="7" width="53.5" height="38"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapPopButton:" destination="Com-IG-zUT" eventType="touchUpInside" id="Tmg-6e-fkZ"/>
+                                            <action selector="didTapPopButton:" destination="AuQ-07-6Vj" eventType="touchUpInside" id="kl3-hs-GoF"/>
+                                            <action selector="didTapPopButton:" destination="jiq-mz-KHY" eventType="touchUpInside" id="u4i-mM-nKd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kvg-eU-RU5" firstAttribute="leading" secondItem="Jhv-KU-S15" secondAttribute="trailing" constant="-10" id="7XE-QR-FF5"/>
+                                    <constraint firstItem="Kvg-eU-RU5" firstAttribute="centerY" secondItem="Jhv-KU-S15" secondAttribute="centerY" id="Lid-qo-QVM"/>
+                                    <constraint firstItem="xft-jK-MrB" firstAttribute="centerX" secondItem="wUu-lk-u7t" secondAttribute="centerX" id="Mf6-N0-n58"/>
+                                    <constraint firstItem="Jhv-KU-S15" firstAttribute="leading" secondItem="wUu-lk-u7t" secondAttribute="leading" id="OeH-0j-Aso"/>
+                                    <constraint firstItem="xft-jK-MrB" firstAttribute="centerY" secondItem="wUu-lk-u7t" secondAttribute="centerY" id="Wjw-DI-D7A"/>
+                                    <constraint firstAttribute="width" secondItem="wUu-lk-u7t" secondAttribute="height" multiplier="8:1" id="Yso-1R-GJk"/>
+                                    <constraint firstItem="Jhv-KU-S15" firstAttribute="centerY" secondItem="wUu-lk-u7t" secondAttribute="centerY" id="nc0-SF-Lzc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0O-bc-OLt">
+                                <rect key="frame" x="15" y="146" width="136" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYT-mF-ahz">
+                                <rect key="frame" x="15" y="186" width="69" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1Z-6g-ncd">
+                                <rect key="frame" x="15" y="305" width="69" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-PS-LDT">
+                                <rect key="frame" x="15" y="214" width="318.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCN-6a-iCo">
+                                <rect key="frame" x="15" y="251" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30q-hS-weD">
+                                <rect key="frame" x="15" y="343" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEq-Eb-ixM">
+                                <rect key="frame" x="15" y="397" width="384" height="45"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GIK-hk-lqS"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapModifyButton:" destination="Com-IG-zUT" eventType="touchUpInside" id="uCG-Sd-lMe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Vp-fY-naq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wUu-lk-u7t" firstAttribute="leading" secondItem="ZPG-CR-4IU" secondAttribute="leading" id="1Ig-WH-25F"/>
+                            <constraint firstItem="30q-hS-weD" firstAttribute="top" secondItem="i1Z-6g-ncd" secondAttribute="bottom" constant="20" id="F1z-Hc-Dzo"/>
+                            <constraint firstItem="i1Z-6g-ncd" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="IjZ-uc-aTL"/>
+                            <constraint firstItem="GYT-mF-ahz" firstAttribute="leading" secondItem="M0O-bc-OLt" secondAttribute="leading" id="KbT-1M-iWx"/>
+                            <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="30q-hS-weD" secondAttribute="trailing" constant="15" id="QF5-Fl-XTm"/>
+                            <constraint firstItem="NCN-6a-iCo" firstAttribute="top" secondItem="0mt-PS-LDT" secondAttribute="bottom" constant="20" id="QJb-Tm-7iE"/>
+                            <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="lEq-Eb-ixM" secondAttribute="trailing" constant="15" id="XXI-xa-KGI"/>
+                            <constraint firstItem="M0O-bc-OLt" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="cCb-WP-BsA"/>
+                            <constraint firstItem="lEq-Eb-ixM" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="g4l-41-oAa"/>
+                            <constraint firstItem="i1Z-6g-ncd" firstAttribute="top" secondItem="NCN-6a-iCo" secondAttribute="bottom" constant="20" id="gON-Ly-dI7"/>
+                            <constraint firstItem="0mt-PS-LDT" firstAttribute="leading" secondItem="GYT-mF-ahz" secondAttribute="leading" id="iff-cB-7sm"/>
+                            <constraint firstItem="GYT-mF-ahz" firstAttribute="top" secondItem="M0O-bc-OLt" secondAttribute="bottom" constant="10" id="jEE-TZ-Cax"/>
+                            <constraint firstItem="lEq-Eb-ixM" firstAttribute="top" secondItem="30q-hS-weD" secondAttribute="bottom" constant="20" id="jtJ-vm-K8f"/>
+                            <constraint firstItem="NCN-6a-iCo" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="llR-1b-egN"/>
+                            <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="NCN-6a-iCo" secondAttribute="trailing" constant="15" id="mSA-zy-553"/>
+                            <constraint firstItem="M0O-bc-OLt" firstAttribute="top" secondItem="wUu-lk-u7t" secondAttribute="bottom" constant="50" id="nTE-gw-ErM"/>
+                            <constraint firstItem="0mt-PS-LDT" firstAttribute="top" secondItem="GYT-mF-ahz" secondAttribute="bottom" constant="10" id="oKK-tD-uY0"/>
+                            <constraint firstItem="30q-hS-weD" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="vZH-ck-cWo"/>
+                            <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="wUu-lk-u7t" secondAttribute="trailing" id="vks-3M-xmB"/>
+                            <constraint firstItem="wUu-lk-u7t" firstAttribute="top" secondItem="8Vp-fY-naq" secondAttribute="top" id="wum-se-oud"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changePasswordButton" destination="lEq-Eb-ixM" id="STg-GP-b1L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIz-ji-dLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7126" y="942"/>
         </scene>
         <!--홈-->
         <scene sceneID="pXa-lQ-gWK">

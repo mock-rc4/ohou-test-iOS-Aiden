@@ -159,7 +159,7 @@ extension HomePopularityVC: UITableViewDelegate, UITableViewDataSource {
     // 테이블뷰 셀 높이
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row <= 2 {
-            return tableView.frame.width * 1.4
+            return tableView.frame.width * 1.45
         }else if indexPath.row == 3{
             return tableView.frame.width / 1.8
         }else if indexPath.row == 4{

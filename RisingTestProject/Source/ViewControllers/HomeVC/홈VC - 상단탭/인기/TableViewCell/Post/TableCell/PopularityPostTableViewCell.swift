@@ -127,7 +127,7 @@ extension PopularityPostTableViewCell {
 //                section.orthogonalScrollingBehavior = .continuous
                     
                 // 섹션에 대한 간격 설정
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 15, bottom: 20, trailing: 15)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 20, trailing: 5)
                     
                 return section
             }

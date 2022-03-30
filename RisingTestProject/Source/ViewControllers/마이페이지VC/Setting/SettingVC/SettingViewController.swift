@@ -93,6 +93,8 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 프로필 수정
         if indexPath.section == 0 && indexPath.row == 0 {
             if Constant.isUserLogged {
                 guard let modifyProfileVC = storyboard?.instantiateViewController(withIdentifier: "ModifyProfileViewController") as? ModifyProfileViewController else {
@@ -104,6 +106,20 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 presentAlert(title: "로그인 후 사용 가능합니다.")
             }
         }
+        
+        // 비밀번호 변경
+        if indexPath.section == 0 && indexPath.row == 2 {
+            if Constant.isUserLogged {
+                guard let changePasswordVC = storyboard?.instantiateViewController(withIdentifier: "ChangePasswordViewController") as? ChangePasswordViewController else {
+                    return
+                }
+                
+                self.navigationController?.pushViewController(changePasswordVC, animated: true)
+            }else {
+                presentAlert(title: "로그인 후 사용 가능합니다.")
+            }
+        }
+        
         // 로그아웃
         if indexPath.section == 2 && indexPath.row == 0 {
             
