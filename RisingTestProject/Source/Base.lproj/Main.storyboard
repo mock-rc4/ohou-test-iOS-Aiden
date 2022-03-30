@@ -2104,41 +2104,41 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0O-bc-OLt">
-                                <rect key="frame" x="15" y="146" width="136" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <rect key="frame" x="15" y="196" width="136" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYT-mF-ahz">
-                                <rect key="frame" x="15" y="186" width="69" height="18"/>
+                                <rect key="frame" x="15" y="236" width="69" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1Z-6g-ncd">
-                                <rect key="frame" x="15" y="305" width="69" height="18"/>
+                                <rect key="frame" x="15" y="355" width="69" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mt-PS-LDT">
-                                <rect key="frame" x="15" y="214" width="318.5" height="17"/>
+                                <rect key="frame" x="15" y="264" width="318.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCN-6a-iCo">
-                                <rect key="frame" x="15" y="251" width="384" height="34"/>
+                                <rect key="frame" x="15" y="301" width="384" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="30q-hS-weD">
-                                <rect key="frame" x="15" y="343" width="384" height="34"/>
+                                <rect key="frame" x="15" y="393" width="384" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEq-Eb-ixM">
-                                <rect key="frame" x="15" y="397" width="384" height="45"/>
+                                <rect key="frame" x="15" y="447" width="384" height="45"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="GIK-hk-lqS"/>
@@ -2157,6 +2157,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wUu-lk-u7t" firstAttribute="leading" secondItem="ZPG-CR-4IU" secondAttribute="leading" id="1Ig-WH-25F"/>
+                            <constraint firstItem="M0O-bc-OLt" firstAttribute="top" secondItem="wUu-lk-u7t" secondAttribute="bottom" constant="100" id="Dgi-Nt-eUq"/>
                             <constraint firstItem="30q-hS-weD" firstAttribute="top" secondItem="i1Z-6g-ncd" secondAttribute="bottom" constant="20" id="F1z-Hc-Dzo"/>
                             <constraint firstItem="i1Z-6g-ncd" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="IjZ-uc-aTL"/>
                             <constraint firstItem="GYT-mF-ahz" firstAttribute="leading" secondItem="M0O-bc-OLt" secondAttribute="leading" id="KbT-1M-iWx"/>
@@ -2171,7 +2172,6 @@
                             <constraint firstItem="lEq-Eb-ixM" firstAttribute="top" secondItem="30q-hS-weD" secondAttribute="bottom" constant="20" id="jtJ-vm-K8f"/>
                             <constraint firstItem="NCN-6a-iCo" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="llR-1b-egN"/>
                             <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="NCN-6a-iCo" secondAttribute="trailing" constant="15" id="mSA-zy-553"/>
-                            <constraint firstItem="M0O-bc-OLt" firstAttribute="top" secondItem="wUu-lk-u7t" secondAttribute="bottom" constant="50" id="nTE-gw-ErM"/>
                             <constraint firstItem="0mt-PS-LDT" firstAttribute="top" secondItem="GYT-mF-ahz" secondAttribute="bottom" constant="10" id="oKK-tD-uY0"/>
                             <constraint firstItem="30q-hS-weD" firstAttribute="leading" secondItem="8Vp-fY-naq" secondAttribute="leading" constant="15" id="vZH-ck-cWo"/>
                             <constraint firstItem="8Vp-fY-naq" firstAttribute="trailing" secondItem="wUu-lk-u7t" secondAttribute="trailing" id="vks-3M-xmB"/>

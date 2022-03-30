@@ -27,6 +27,7 @@ class AutoLoginDataManager {
                     print("자동로그인 성공")
                     Constant.isUserLogged = true
                     Constant.accoundID = response.result?.accountId
+                    
                 }else {
                     switch response.code {
                     case 2001: print("토큰이 입력되지 않았습니다.")
@@ -40,5 +41,8 @@ class AutoLoginDataManager {
                 print("자동로그인 네트워킹 실패")
             }
         }
+        
+        // jwt토큰 유효성 검사가 끝나면 세마포어 시그널
+        Constant.semaphore.signal()
     }
 }

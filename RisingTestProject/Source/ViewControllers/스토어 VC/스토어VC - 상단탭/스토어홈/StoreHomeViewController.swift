@@ -219,7 +219,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             if indexPath.row == 0 {
                 return tableView.frame.width * 2.2
             }else if indexPath.row <= 3 {
-                return tableView.frame.width * 1.1
+                return tableView.frame.width * 1.07
             }else if indexPath.row == 4{
                 return tableView.frame.width * 0.75
             }else {

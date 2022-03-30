@@ -27,7 +27,12 @@ class PopularKeywordTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let radius: CGFloat = image1.frame.height / 10
+        image1.layer.cornerRadius = radius
+        image2.layer.cornerRadius = radius
+        image3.layer.cornerRadius = radius
+        image4.layer.cornerRadius = radius
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

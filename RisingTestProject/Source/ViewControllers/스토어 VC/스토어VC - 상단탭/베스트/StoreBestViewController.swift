@@ -9,6 +9,9 @@ import UIKit
 
 class StoreBestViewController: BaseViewController {
     
+    // 무한스크롤 컨트롤
+    var fetchingMore: Bool = false
+    
     // UI 연결
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,7 +41,7 @@ class StoreBestViewController: BaseViewController {
 }
 
 
-
+// MARK: - TableView Protocol 채택
 extension StoreBestViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return realTimeBestProductInfo.count
@@ -76,3 +79,21 @@ extension StoreBestViewController: UITableViewDelegate, UITableViewDataSource {
         return tableView.frame.width / 8
     }
 }
+
+
+
+
+
+// MARK: - 무한스크롤
+//extension StoreBestViewController {
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
+//            print("마지막에 도달")
+//            if !fetchingMore {
+//                showIndicator()
+//                print("")
+//            }
+//        }
+//    }
+//}

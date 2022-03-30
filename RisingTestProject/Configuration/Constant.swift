@@ -13,10 +13,13 @@ import UIKit
 /// Contant.baseURL 형식으로 가져다가 사용
 struct Constant {
     
+    // jwt토큰 유효성검사를 동기적으로 처리하기 위한 세마포어
+    static let semaphore = DispatchSemaphore(value: 0)
+    
     // 유저가 로그인 상태인지?
     static var isUserLogged: Bool = false
     
-    // 유저가 둘러보기 버튼을 눌렀는지?  -> 영상찍기 전 false로 변경해두기
+    // 유저가 둘러보기 버튼을 눌렀는지?
     static var isUserTapLookAroundButton: Bool = false
     
     
@@ -28,6 +31,9 @@ struct Constant {
     // 로그인 성공하면 userDefault에도 jwt 저장
     static var accoundID: Int?
     static var jwt: String?
+    
+    // 카카오 로그인 성공하면 저장할 값
+    static var kakaoOauthToken: String?
     
     
     

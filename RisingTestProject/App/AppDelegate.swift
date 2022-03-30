@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         KakaoSDK.initSDK(appKey: KakaoKey.kakaoKey)
         
         
-        // MARK: - 여기서 유저디폴트에 있는 jwt 유효성검사 후 토큰이 유효하다면 Constant.isUserLogged를 true로 설정
+        // 유저디폴트에 있는 jwt 유효성검사를 세마포어 사용하여 동기적으로 처리
         Constant.jwt = UserDefaults.standard.string(forKey: "jwt")
         AutoLoginDataManager().jwtCheck()
+        Constant.semaphore.wait()
         
         return true
     }
@@ -40,7 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
 
 }
 

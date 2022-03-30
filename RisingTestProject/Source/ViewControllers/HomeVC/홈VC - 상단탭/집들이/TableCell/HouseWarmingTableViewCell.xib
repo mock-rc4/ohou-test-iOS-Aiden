@@ -30,11 +30,11 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fXZ-AV-SoL">
-                        <rect key="frame" x="329" y="190" width="40" height="25.5"/>
+                        <rect key="frame" x="349" y="192.5" width="20" height="23"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="UrD-38-VAR"/>
-                            <constraint firstAttribute="width" secondItem="fXZ-AV-SoL" secondAttribute="height" multiplier="14:9" id="ipX-5j-TZ0"/>
+                            <constraint firstAttribute="width" constant="20" id="UrD-38-VAR"/>
+                            <constraint firstAttribute="width" secondItem="fXZ-AV-SoL" secondAttribute="height" multiplier="55:64" id="ipX-5j-TZ0"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데스크테리어에 진.심. 가구 웹디자이너의 오피스텔" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Zd-60g">

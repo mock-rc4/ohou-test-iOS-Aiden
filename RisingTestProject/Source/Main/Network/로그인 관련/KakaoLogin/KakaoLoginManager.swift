@@ -51,11 +51,14 @@ class KakaoLoginManager {
                    print("loginWithKakaoAccount() success.")
                 
                    //do something
-                   _ = oauthToken
-                   //let accessToken = oauthToken?.accessToken
+                   Constant.kakaoOauthToken = oauthToken?.accessToken
+                   
+                   // MARK: - 여기서 access토큰을 사용하여 서버와 API (post)통신!
                    
                    self.setUserInfo()
                    
+                   
+                   // MARK: - 아래 내용은 서버와 API통신을 연결하면 지울것!!
                    // RootVC로 이동
                    guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
                        return

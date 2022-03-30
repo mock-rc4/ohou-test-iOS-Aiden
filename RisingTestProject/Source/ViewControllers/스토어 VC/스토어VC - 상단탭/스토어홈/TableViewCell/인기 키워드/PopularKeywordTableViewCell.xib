@@ -35,20 +35,20 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="PoK-J5-Caz">
-                        <rect key="frame" x="20" y="60.5" width="385" height="231"/>
+                        <rect key="frame" x="15" y="60.5" width="395" height="237"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Fcc-RH-pCp">
-                                <rect key="frame" x="0.0" y="0.0" width="189" height="231"/>
+                                <rect key="frame" x="0.0" y="0.0" width="194" height="237"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdz-Ll-Fia">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="봄이불세트" translatesAutoresizingMaskIntoConstraints="NO" id="QCw-HD-TWW">
-                                                <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄이불세트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uib-os-9Nl">
-                                                <rect key="frame" x="57.5" y="46" width="74" height="20.5"/>
-                                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="60" y="47.5" width="74" height="20.5"/>
+                                                <color key="backgroundColor" white="0.29809736394557823" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -65,14 +65,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-Kc-HUq">
-                                        <rect key="frame" x="0.0" y="119" width="189" height="112"/>
+                                        <rect key="frame" x="0.0" y="122" width="194" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="오늘의집배송" translatesAutoresizingMaskIntoConstraints="NO" id="kcl-OV-bjD">
-                                                <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄이불세트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-DZ-BK4">
-                                                <rect key="frame" x="57.5" y="46" width="74" height="20.5"/>
-                                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="60" y="47.5" width="74" height="20.5"/>
+                                                <color key="backgroundColor" white="0.29809736390000002" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -91,17 +91,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="dVh-ls-vzT">
-                                <rect key="frame" x="196" y="0.0" width="189" height="231"/>
+                                <rect key="frame" x="201" y="0.0" width="194" height="237"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CG5-Wb-nwv">
-                                        <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="홈 인테리어 빅세일" translatesAutoresizingMaskIntoConstraints="NO" id="fcC-xO-w42">
-                                                <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄이불세트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-Nt-HQ7">
-                                                <rect key="frame" x="57.5" y="46" width="74" height="20.5"/>
-                                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="60" y="47.5" width="74" height="20.5"/>
+                                                <color key="backgroundColor" white="0.29809736390000002" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -118,14 +118,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zuq-vX-J9F">
-                                        <rect key="frame" x="0.0" y="119" width="189" height="112"/>
+                                        <rect key="frame" x="0.0" y="122" width="194" height="115"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="반려식물" translatesAutoresizingMaskIntoConstraints="NO" id="tQI-hq-6Jh">
-                                                <rect key="frame" x="0.0" y="0.0" width="189" height="112"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="194" height="115"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="봄이불세트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBh-Bf-IlB">
-                                                <rect key="frame" x="57.5" y="46" width="74" height="20.5"/>
-                                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="60" y="47.5" width="74" height="20.5"/>
+                                                <color key="backgroundColor" white="0.29809736390000002" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -152,8 +152,8 @@
                 <constraints>
                     <constraint firstItem="VmV-a0-Squ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BJl-ma-b4G"/>
                     <constraint firstItem="VmV-a0-Squ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BO4-Nd-bss"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="PoK-J5-Caz" secondAttribute="trailing" id="RBO-GT-OYF"/>
-                    <constraint firstItem="PoK-J5-Caz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gzg-nj-lRN"/>
+                    <constraint firstItem="PoK-J5-Caz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="UJs-Rw-bCR"/>
+                    <constraint firstAttribute="trailing" secondItem="PoK-J5-Caz" secondAttribute="trailing" constant="15" id="gWx-Eg-7KI"/>
                     <constraint firstItem="PoK-J5-Caz" firstAttribute="top" secondItem="VmV-a0-Squ" secondAttribute="bottom" id="umI-Vb-rSZ"/>
                     <constraint firstAttribute="trailing" secondItem="VmV-a0-Squ" secondAttribute="trailing" id="wLG-1Y-GDD"/>
                 </constraints>

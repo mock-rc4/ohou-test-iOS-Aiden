@@ -2129,6 +2129,7 @@
 			isa = PBXGroup;
 			children = (
 				D0AE5E6C27ECCB7F0091DA72 /* 실시간 베스트 */,
+				D0C4C81027F406DD005FCE2A /* 실시간 베스트 - 무한스크롤 */,
 				D0F6E21D27ECC0770058A7E7 /* 인기상품 */,
 				D0F6E21727EC96EF0058A7E7 /* 추천상품 */,
 				D0F6E21127EC87F60058A7E7 /* 내가 본 상품 연관상품 */,
@@ -2353,6 +2354,14 @@
 			);
 			name = "초기 & 회원가입 VC";
 			path = "초기 & 회원가입 VC";
+			sourceTree = "<group>";
+		};
+		D0C4C81027F406DD005FCE2A /* 실시간 베스트 - 무한스크롤 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "실시간 베스트 - 무한스크롤";
+			path = "실시간 베스트 - 무한스크롤";
 			sourceTree = "<group>";
 		};
 		D0CD0A8427F1769000472295 /* 리뷰 */ = {
@@ -2596,12 +2605,12 @@
 		D0EA7F8627E5915400948269 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D064453F27F2EADB00FF0E39 /* TabBar Button */,
-				D0F722D527F202E500DF181B /* 인테리어 시공 VC */,
-				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 				D04A2DCD27E5C00000D1C7D6 /* HomeVC */,
 				D02AA6AD27E9725A004E6703 /* 스토어 VC */,
+				D0F722D527F202E500DF181B /* 인테리어 시공 VC */,
 				D06B483227E8193B00C881E0 /* 마이페이지VC */,
+				D064453F27F2EADB00FF0E39 /* TabBar Button */,
+				D0BE89C127E6BCE300FE9451 /* 초기 & 회원가입 VC */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
