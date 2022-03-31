@@ -42,6 +42,7 @@ class StoreTodayDealCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         productImage.image = UIImage(named: "기본이미지.jpeg")
+//        productImage.image = nil
     }
     
 

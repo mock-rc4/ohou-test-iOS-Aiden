@@ -76,7 +76,7 @@ extension StoreBestViewController: UITableViewDelegate, UITableViewDataSource {
     }
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.frame.width / 8
+        return tableView.frame.width / 6
     }
 }
 

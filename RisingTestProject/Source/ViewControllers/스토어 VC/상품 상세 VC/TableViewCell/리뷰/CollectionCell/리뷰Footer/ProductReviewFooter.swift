@@ -17,7 +17,7 @@ class ProductReviewFooter: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        seeMoreReviewButton.layer.cornerRadius = seeMoreReviewButton.frame.height / 10
+        seeMoreReviewButton.layer.cornerRadius = seeMoreReviewButton.frame.height / 12
     }
 
     

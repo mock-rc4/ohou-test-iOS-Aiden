@@ -224,7 +224,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             }else if indexPath.row <= 3 {
                 return tableView.frame.width * 1.07
             }else if indexPath.row == 4{
-                return tableView.frame.width * 0.75
+                return tableView.frame.width * 0.8
             }else {
                 // 인기상품 Cell 높이 조절 필요
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
@@ -240,7 +240,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
             if indexPath.row == 0 {
                 return tableView.frame.width * 2.2
             }else if indexPath.row == 1{
-                return tableView.frame.width * 0.75
+                return tableView.frame.width * 0.8
             }else {
                 // 인기상품 Cell 높이 조절 필요
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수

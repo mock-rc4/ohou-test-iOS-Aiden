@@ -53,6 +53,10 @@ class ProductInfoViewController: BaseViewController {
                     }
                 }
             }
+            
+            if let scrapCount = productDetail?.scrapCnt {
+                scrapButton.setTitle(scrapCount.insertComma(), for: .normal)
+            }
         }
     }
     
@@ -62,6 +66,9 @@ class ProductInfoViewController: BaseViewController {
     
     // 장바구니 버튼
     @IBOutlet weak var basketButton: UIButton!
+    
+    // 스크랩 버튼
+    @IBOutlet weak var scrapButton: UIButton!
     
     // 뒤로가기 버튼
     @IBAction func didTapPopButton(_ sender: UIButton) {

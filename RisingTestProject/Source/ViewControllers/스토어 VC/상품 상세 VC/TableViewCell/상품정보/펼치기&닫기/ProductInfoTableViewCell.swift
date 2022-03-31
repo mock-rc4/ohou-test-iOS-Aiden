@@ -19,7 +19,9 @@ class ProductInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        exTitleLabel.clipsToBounds = true
+        exTitleLabel.layer.cornerRadius = exTitleLabel.frame.height / 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

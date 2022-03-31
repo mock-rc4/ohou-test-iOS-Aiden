@@ -11,11 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="StoreBestTableViewHeader" id="iN0-l3-epB" customClass="StoreBestTableViewHeader" customModule="RisingTestProject" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="84"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="99"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-0g-vUw">
-                    <rect key="frame" x="15" y="0.0" width="370" height="74"/>
+                    <rect key="frame" x="15" y="10" width="370" height="74"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-yW-nMd">
                             <rect key="frame" x="0.0" y="0.0" width="185" height="74"/>
@@ -52,7 +52,7 @@
                     </subviews>
                 </stackView>
                 <segmentedControl opaque="NO" alpha="0.02" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-gf-8UA">
-                    <rect key="frame" x="15" y="0.0" width="370" height="75"/>
+                    <rect key="frame" x="15" y="10" width="370" height="75"/>
                     <segments>
                         <segment title=""/>
                         <segment title=""/>
@@ -65,22 +65,23 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <constraints>
                 <constraint firstItem="1E5-gf-8UA" firstAttribute="bottom" secondItem="Yb9-0g-vUw" secondAttribute="bottom" id="2yv-RO-uzU"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Yb9-0g-vUw" secondAttribute="bottom" constant="10" id="97q-Nd-MYH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Yb9-0g-vUw" secondAttribute="bottom" constant="15" id="97q-Nd-MYH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yb9-0g-vUw" secondAttribute="trailing" constant="15" id="JHH-5E-l1B"/>
                 <constraint firstItem="Yb9-0g-vUw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Pzx-Lm-hi2"/>
                 <constraint firstItem="1E5-gf-8UA" firstAttribute="leading" secondItem="Yb9-0g-vUw" secondAttribute="leading" id="VMi-Zw-CGw"/>
-                <constraint firstItem="Yb9-0g-vUw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ndj-M4-qJZ"/>
+                <constraint firstItem="Yb9-0g-vUw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ndj-M4-qJZ"/>
                 <constraint firstItem="1E5-gf-8UA" firstAttribute="top" secondItem="Yb9-0g-vUw" secondAttribute="top" id="qLz-Qt-IHp"/>
                 <constraint firstItem="1E5-gf-8UA" firstAttribute="trailing" secondItem="Yb9-0g-vUw" secondAttribute="trailing" id="sxv-qb-dlG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="forRadius" destination="Yb9-0g-vUw" id="z1v-Hm-79G"/>
                 <outlet property="historicalBestLabel" destination="a9L-yQ-xnm" id="gI2-1L-eqH"/>
                 <outlet property="historicalBestView" destination="GU2-08-Q76" id="V5Y-Hh-YJH"/>
                 <outlet property="realTimeBestLabel" destination="zJE-iG-ZVT" id="b8h-NI-k9X"/>
                 <outlet property="realTimeBestView" destination="hGb-yW-nMd" id="INL-tm-kGf"/>
             </connections>
-            <point key="canvasLocation" x="127.53623188405798" y="273.88392857142856"/>
+            <point key="canvasLocation" x="127.53623188405798" y="278.23660714285711"/>
         </view>
     </objects>
     <resources>

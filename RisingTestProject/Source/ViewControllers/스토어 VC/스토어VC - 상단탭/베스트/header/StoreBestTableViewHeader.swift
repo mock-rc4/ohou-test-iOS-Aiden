@@ -11,6 +11,9 @@ class StoreBestTableViewHeader: UITableViewHeaderFooterView {
 
     // MARK: - UI 연결
     
+    // 스택뷰
+    @IBOutlet weak var forRadius: UIStackView!
+    
     // 실시간 베스트
     @IBOutlet weak var realTimeBestView: UIView!
     @IBOutlet weak var realTimeBestLabel: UILabel!
@@ -44,6 +47,11 @@ class StoreBestTableViewHeader: UITableViewHeaderFooterView {
         realTimeBestView.layer.borderWidth = 1
         historicalBestView.layer.borderColor = UIColor.lightGray.cgColor
         historicalBestView.layer.borderWidth = 1
+        
+        realTimeBestView.layer.cornerRadius = 5
+        realTimeBestView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        historicalBestView.layer.cornerRadius = 5
+        historicalBestView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
     }
 
     
