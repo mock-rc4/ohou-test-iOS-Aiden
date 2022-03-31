@@ -13,6 +13,7 @@ class StoreViewController: BaseViewController {
     @IBOutlet weak var searchBar: UIView!
     @IBOutlet weak var basketButton: UIButton!
     
+    @IBOutlet weak var searchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class StoreViewController: BaseViewController {
         // UI 설정
         addRadiusToUIView(searchBar, size: searchBar.frame.height / 5)
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
+        
+        searchButton.addTarget(self, action: #selector(showSearchVC), for: .touchUpInside)
     }
     
 }

@@ -19,6 +19,7 @@ class InteriorViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tempView: UIView!
     
+    @IBOutlet weak var searchButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -39,6 +40,8 @@ class InteriorViewController: BaseViewController {
         // 자동 높이 계산
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = tableView.frame.width * 0.75
+        
+        searchButton.addTarget(self, action: #selector(showSearchVC), for: .touchUpInside)
         
         
         // API호출
