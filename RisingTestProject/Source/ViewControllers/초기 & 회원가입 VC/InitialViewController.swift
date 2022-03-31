@@ -39,6 +39,8 @@ class InitialViewController: BaseViewController {
         naverLoginInstance?.requestThirdPartyLogin()
     }
     
+    
+    
     // 이메일로 로그인 & 이메일로 가입 버튼
     // underline줘야되서 addTarget으로 액션 부여
     @IBOutlet weak var emailLoginButton: UIButton!
@@ -105,7 +107,6 @@ extension InitialViewController: NaverThirdPartyLoginConnectionDelegate {
     // 로그인에 성공하면 호출되는 함수
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
         print("네이버 로그인 성공")
-//        self.naverLoginPaser()
         if let loginInstance = naverLoginInstance {
             NaverLoginDataManager().naverLoginPaser(self, loginInstance: loginInstance)
         }
