@@ -33,7 +33,9 @@ class RecommendedProductCollectionViewCell: UICollectionViewCell {
         // Radius추가
         productImage.layer.cornerRadius = productImage.frame.height / 10
         specialPrice.clipsToBounds = true
-        specialPrice.layer.cornerRadius = specialPrice.frame.height / 10
+        specialPrice.layer.cornerRadius = specialPrice.frame.height / 8
+        freeDelivery.clipsToBounds = true
+        freeDelivery.layer.cornerRadius = freeDelivery.frame.height / 8
 
     }
 

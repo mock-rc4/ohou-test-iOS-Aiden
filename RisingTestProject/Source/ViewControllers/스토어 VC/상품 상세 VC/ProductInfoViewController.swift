@@ -321,7 +321,7 @@ extension ProductInfoViewController: ExpyTableViewDelegate, ExpyTableViewDataSou
     // header 높이값 주기
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return tableView.frame.width * 2.3
+            return tableView.frame.width * 2.2
         }else {
             return 10
         }

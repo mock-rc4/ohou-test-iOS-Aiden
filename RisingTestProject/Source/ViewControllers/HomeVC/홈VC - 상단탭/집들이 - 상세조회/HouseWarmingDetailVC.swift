@@ -22,10 +22,10 @@ class HouseWarmingDetailVC: BaseViewController {
                 }else {
                     nickName.text = info.expertName
                 }
-                likeCount.text = "\(info.likeCnt)"
-                scrapCount.text = "\(info.scrapCnt)"
-                commentCount.text = "\(info.commentCnt)"
-                linkCount.text = "\(info.linkCnt)"
+                likeCount.text = info.likeCnt.insertComma()
+                scrapCount.text = info.scrapCnt.insertComma()
+                commentCount.text = info.commentCnt.insertComma()
+                linkCount.text = info.linkCnt.insertComma()
             }
         }
     }

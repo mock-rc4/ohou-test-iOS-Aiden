@@ -77,6 +77,9 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
             specialPrice.isHidden = true
         }
         
+        specialPrice.clipsToBounds = true
+        specialPrice.layer.cornerRadius = specialPrice.frame.height / 8
+        
         // 별 조절
         switch data.score {
         case 5:

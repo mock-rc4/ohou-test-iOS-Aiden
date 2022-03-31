@@ -48,7 +48,7 @@ class HouseWarmingTableViewCell: UITableViewCell {
             }
         }
         nickName.text = data.nickname
-        scrapsAndViews.text = "\(data.scrapCnt)명 스크랩 | \(data.checkCnt)명 조회"
+        scrapsAndViews.text = "\((data.scrapCnt).insertComma())명 스크랩 | \((data.checkCnt).insertComma())명 조회"
     }
     
     

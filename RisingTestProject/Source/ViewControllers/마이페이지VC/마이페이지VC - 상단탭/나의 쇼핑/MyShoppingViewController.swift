@@ -35,6 +35,11 @@ class MyShoppingViewController: BaseViewController {
         tableView.register(UINib(nibName: "OngoingOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OngoingOrderTableViewCell")
         tableView.register(UINib(nibName: "MyShoppingTapCell", bundle: nil), forCellReuseIdentifier: "MyShoppingTapCell")
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 }
 
 

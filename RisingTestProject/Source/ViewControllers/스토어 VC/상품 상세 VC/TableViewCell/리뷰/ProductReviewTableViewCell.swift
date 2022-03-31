@@ -94,10 +94,11 @@ extension ProductReviewTableViewCell: UICollectionViewDelegate, UICollectionView
         }
         // footer
         else {
-            guard let header = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductReviewFooter", for: indexPath) as? ProductReviewFooter else {
+            guard let footer = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductReviewFooter", for: indexPath) as? ProductReviewFooter else {
                 return UICollectionViewCell()
             }
-            return header
+            footer.updateCell(reviewCount ?? 0)
+            return footer
         }
     }
     

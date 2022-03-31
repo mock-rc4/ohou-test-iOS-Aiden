@@ -22,6 +22,6 @@ class ProductReviewFooter: UICollectionViewCell {
 
     
     func updateCell(_ reviewCount: Int) {
-        seeMoreReviewButton.setTitle("리뷰 더보기 (\(reviewCount)", for: .normal)
+        seeMoreReviewButton.setTitle("리뷰 더보기 (\(reviewCount))", for: .normal)
     }
 }

@@ -53,7 +53,7 @@ extension TodayDealViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.width * 0.4
+        return tableView.frame.width * 0.48
     }
     
     
