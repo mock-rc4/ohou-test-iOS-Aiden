@@ -21,6 +21,9 @@ class StoreHomeViewController: BaseViewController {
         }
     }
     
+    // 연관상품, 추천상품 API를 호출했는지 여부
+    var isRelatedRecommendedProductLoaded: Bool = false
+    
     // API로 받아오는 데이터 (인기 키워드)
     var popularKeywords: [PopularKeyword] = []
     
@@ -69,12 +72,14 @@ class StoreHomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         // MARK: - API
-        if Constant.isUserLogged {
+        if Constant.isUserLogged && isRelatedRecommendedProductLoaded == false {
             // 내가본 상품과 연관상품 API 호출
             RelatedProductUserSawDataManager().getRelatedProduct(delegate: self)
             
             // 추천상품 API 호출
             RecommendProductDataManager().getRecommendProduct(delegate: self)
+            
+            isRelatedRecommendedProductLoaded = true
         }
         
         
