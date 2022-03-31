@@ -14,6 +14,7 @@ pod 'KakaoSDKUser'
 pod 'Alamofire', '~> 5.5'
 pod 'MaterialComponents/BottomSheet'
 pod 'ExpyTableView'
+pod 'naveridlogin-sdk-ios'
 
 
 end

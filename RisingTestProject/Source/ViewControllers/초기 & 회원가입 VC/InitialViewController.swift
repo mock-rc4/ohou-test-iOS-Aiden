@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import NaverThirdPartyLogin
+import Alamofire
 
 
 class InitialViewController: BaseViewController {
@@ -32,7 +34,9 @@ class InitialViewController: BaseViewController {
     }
     
     // 네이버 로그인 버튼
+    let naverLoginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     @IBAction func didTapNaverLoginButton(_ sender: UIButton) {
+        naverLoginInstance?.requestThirdPartyLogin()
     }
     
     // 이메일로 로그인 & 이메일로 가입 버튼
@@ -66,6 +70,9 @@ class InitialViewController: BaseViewController {
         
         // 이메일로 로그인하기 버튼 addTarget
         emailLoginButton.addTarget(self, action: #selector(didTapEmailLoginButton), for: .touchUpInside)
+        
+        // 네이버 로그인 인스턴스 delegate설정
+        naverLoginInstance?.delegate = self
     }
     
     
@@ -86,5 +93,36 @@ class InitialViewController: BaseViewController {
             return
         }
         self.navigationController?.pushViewController(signInVC, animated: true)
+    }
+}
+
+
+
+
+// MARK: - 네이버 로그인
+extension InitialViewController: NaverThirdPartyLoginConnectionDelegate {
+    
+    // 로그인에 성공하면 호출되는 함수
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        print("네이버 로그인 성공")
+//        self.naverLoginPaser()
+        if let loginInstance = naverLoginInstance {
+            NaverLoginDataManager().naverLoginPaser(self, loginInstance: loginInstance)
+        }
+    }
+    
+    // 접근 토큰을 갱신할 때 호출되는 함수
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        print("네이버 토큰: \(naverLoginInstance?.accessToken ?? "")")
+    }
+    
+    // 토큰을 삭제하면 호출되는 함수 (로그아웃에 사용)
+    func oauth20ConnectionDidFinishDeleteToken() {
+        print("네이버 로그아웃")
+    }
+    
+    // 네이버로 로그인하는 과정에서 발생하는 모든 에러에 호출되는 함수
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print("에러 = \(error.localizedDescription)")
     }
 }

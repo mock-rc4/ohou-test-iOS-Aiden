@@ -162,6 +162,8 @@
 		D072FAF127EC3401007134C7 /* ProductReviewFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */; };
 		D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */; };
 		D072FAF627EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */; };
+		D076162827F5FD000001BE03 /* NaverKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076162727F5FD000001BE03 /* NaverKey.swift */; };
+		D076162B27F6033B0001BE03 /* NaverLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D076162A27F6033B0001BE03 /* NaverLoginDataManager.swift */; };
 		D07AD6B227ED6CCD00268E90 /* BeforePutInProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */; };
 		D07AD6B327ED6CCD00268E90 /* BeforePutInProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */; };
 		D07BD92D27F3E6C00033F6DE /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07BD92C27F3E6C00033F6DE /* ChangePasswordViewController.swift */; };
@@ -464,6 +466,8 @@
 		D072FAEF27EC3401007134C7 /* ProductReviewFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductReviewFooter.xib; sourceTree = "<group>"; };
 		D072FAF327EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDeliveryTableViewCell.swift; sourceTree = "<group>"; };
 		D072FAF427EC66B7007134C7 /* QuestionDeliveryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionDeliveryTableViewCell.xib; sourceTree = "<group>"; };
+		D076162727F5FD000001BE03 /* NaverKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverKey.swift; sourceTree = "<group>"; };
+		D076162A27F6033B0001BE03 /* NaverLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverLoginDataManager.swift; sourceTree = "<group>"; };
 		D07AD6B027ED6CCD00268E90 /* BeforePutInProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforePutInProductTableCell.swift; sourceTree = "<group>"; };
 		D07AD6B127ED6CCD00268E90 /* BeforePutInProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeforePutInProductTableCell.xib; sourceTree = "<group>"; };
 		D07BD92C27F3E6C00033F6DE /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -903,6 +907,7 @@
 				D06B481727E8050200C881E0 /* SignIn */,
 				D0B8F21A27E78A3B0085BEBD /* SignUp */,
 				D09DAB8E27F5920300DBB702 /* 소셜로그인 연동 */,
+				D076162927F603030001BE03 /* NaverLogin */,
 				D0B8F21727E77E680085BEBD /* KakaoLogin */,
 			);
 			name = "로그인 관련";
@@ -1857,6 +1862,14 @@
 			path = "문의, 배송, 교환, 환불";
 			sourceTree = "<group>";
 		};
+		D076162927F603030001BE03 /* NaverLogin */ = {
+			isa = PBXGroup;
+			children = (
+				D076162A27F6033B0001BE03 /* NaverLoginDataManager.swift */,
+			);
+			path = NaverLogin;
+			sourceTree = "<group>";
+		};
 		D07AD6AC27ED6BF800268E90 /* 담기기 전 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2586,6 +2599,7 @@
 			isa = PBXGroup;
 			children = (
 				D0B8F21527E77CE40085BEBD /* KakaoKey.swift */,
+				D076162727F5FD000001BE03 /* NaverKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -3158,6 +3172,7 @@
 				D0ED008E27EB313000904DC7 /* PopularKeywordDataManager.swift in Sources */,
 				D06B481C27E80A1E00C881E0 /* SignInRequest.swift in Sources */,
 				D0EA7F6D27E58FF900948269 /* BaseViewController.swift in Sources */,
+				D076162B27F6033B0001BE03 /* NaverLoginDataManager.swift in Sources */,
 				D0EA7F8027E5910000948269 /* UIButton.swift in Sources */,
 				D04A2DCF27E5C03C00D1C7D6 /* HomeTapmanViewController.swift in Sources */,
 				D0EA7F7C27E590D300948269 /* String.swift in Sources */,
@@ -3249,6 +3264,7 @@
 				D088EA0927EF2C2A00C129C0 /* DeleteProductResponse.swift in Sources */,
 				D011D0B427E75B6100E72072 /* ReviewCollectionViewCell.swift in Sources */,
 				D06B482F27E8185400C881E0 /* UITabBar.swift in Sources */,
+				D076162827F5FD000001BE03 /* NaverKey.swift in Sources */,
 				D02FD0B127EAAB0B00E21319 /* CommercialImageDataManager.swift in Sources */,
 				D04A2DDA27E5C2F500D1C7D6 /* HomeKnowHowVC.swift in Sources */,
 				D0FDE80D27EB731B00C4C2A3 /* TodayDealTabCell.swift in Sources */,
@@ -3485,6 +3501,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PW2RLJT734;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RisingTestProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -3513,6 +3530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PW2RLJT734;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RisingTestProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -41,6 +41,7 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
+  - naveridlogin-sdk-ios (4.1.3)
   - Pageboy (3.6.2)
   - Tabman (2.11.1):
     - Pageboy (~> 3.6.0)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - KakaoSDKCommon
   - KakaoSDKUser
   - MaterialComponents/BottomSheet
+  - naveridlogin-sdk-ios
   - Tabman (~> 2.11)
 
 SPEC REPOS:
@@ -62,6 +64,7 @@ SPEC REPOS:
     - KakaoSDKCommon
     - KakaoSDKUser
     - MaterialComponents
+    - naveridlogin-sdk-ios
     - Pageboy
     - Tabman
 
@@ -72,9 +75,10 @@ SPEC CHECKSUMS:
   KakaoSDKCommon: 7e56600ff4c1bd82bed93fea4299b5a37f47e6a5
   KakaoSDKUser: e79480355fa789f42e628dfba359fc21e9914f4c
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  naveridlogin-sdk-ios: b9d7c20677981177ed994ecb1c8c2b49f223277d
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: 28fc4c7c24f8d12749d76829e2c25170e0f33c26
+PODFILE CHECKSUM: 84e4dca21b6492a01c36400fe0881a48f72ea584
 
 COCOAPODS: 1.11.2

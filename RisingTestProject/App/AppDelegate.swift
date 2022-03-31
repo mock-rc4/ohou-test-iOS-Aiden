@@ -7,7 +7,7 @@
 
 import UIKit
 import KakaoSDKCommon
-
+import NaverThirdPartyLogin
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // 앱 실행 직후, 사용자에게 화면 보여지기 전에 호출
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // 카카오 sdk초기화
         KakaoSDK.initSDK(appKey: KakaoKey.kakaoKey)
         
         
@@ -24,6 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Constant.jwt = UserDefaults.standard.string(forKey: "jwt")
         AutoLoginDataManager().jwtCheck()
         Constant.semaphore.wait()
+        
+        
+        // MARK: - 네이버 설정
+        let instance = NaverThirdPartyLoginConnection.getSharedInstance()
+        instance?.isNaverAppOauthEnable = true        // 네이버앱 로그인 설정
+        instance?.isInAppOauthEnable = true           // 사파리 로그인 설정
+        instance?.isOnlyPortraitSupportedInIphone()   // 인증화면을 iPhone의 세로 모드에서만 사용
+        
+        instance?.serviceUrlScheme = "naverlogin"           // URL Scheme
+        instance?.consumerKey = NaverKey.clientID         // 클라이언트 아이디
+        instance?.consumerSecret = NaverKey.clientSecret  // 시크릿 아이디
+        instance?.appName = "오늘의집"                   // 앱 이름
+        
+        
         
         return true
     }
