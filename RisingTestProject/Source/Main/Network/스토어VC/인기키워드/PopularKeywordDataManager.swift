@@ -35,7 +35,7 @@ class PopularKeywordDataManager {
                     }
                     
                 case .failure(let error):
-                    print("값 가져오기 실패: \(error.localizedDescription)")
+                    print("인기키워드 값 가져오기 실패: \(error.localizedDescription)")
                 }
             }
     }

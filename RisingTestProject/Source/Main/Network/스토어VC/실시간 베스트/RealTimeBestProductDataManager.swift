@@ -45,7 +45,7 @@ class RealTimeBestProductDataManager {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                delegate.presentAlert(title: "네트워크 상태가 좋지 않습니다.")
+                delegate.presentAlert(title: "네트워크 상태가 좋지 않습니다. (실시간베스트)")
                 delegate.fetchingMore = false
             }
             

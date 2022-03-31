@@ -41,7 +41,6 @@ class HouseWarmingDetailVC: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var likeCount: UILabel!
     @IBOutlet weak var scrapCount: UILabel!
@@ -49,6 +48,8 @@ class HouseWarmingDetailVC: BaseViewController {
     @IBOutlet weak var linkCount: UILabel!
     
     
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,6 +65,13 @@ class HouseWarmingDetailVC: BaseViewController {
         
         // API 호출
         HouseWarmingDetailDataManager().getHouseWarmingDetail(postNumber ?? 0, delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
 

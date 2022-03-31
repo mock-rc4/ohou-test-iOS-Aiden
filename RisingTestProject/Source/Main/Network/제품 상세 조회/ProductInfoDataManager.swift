@@ -41,7 +41,7 @@ class ProductInfoDataManager {
                 }
                 
             case .failure(let error):
-                print("값 가져오기 실패: \(error.localizedDescription)")
+                print("제품 상세값 가져오기 실패: \(error.localizedDescription)")
             }
         }
     }

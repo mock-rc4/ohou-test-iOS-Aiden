@@ -34,4 +34,12 @@ class SearchViewController: BaseViewController {
             $0.layer.borderWidth = 1
         })
     }
+    
+    // 탭바 설정
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
 }

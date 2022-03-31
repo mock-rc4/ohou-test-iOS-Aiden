@@ -38,7 +38,16 @@ class ProductInfoViewController: BaseViewController {
                     $0.productId == idNum
                 })
                 if !productInfo.isEmpty {
+                    // 최근 조회한 상품 목록에 유저가 조회한 상품이 "없는" 경우
                     if !isAlready {
+                        Constant.recentlySeenProductInfo.insert(productInfo[0], at: 0)
+                        Constant.didUserSeeProduct = true
+                    }
+                    // 최근 조회한 상품 목록에 유저가 조회한 상품이 "있는" 경우
+                    if isAlready {
+                        Constant.recentlySeenProductInfo.removeAll(where: {
+                            $0.productId == productInfo[0].productId
+                        })
                         Constant.recentlySeenProductInfo.insert(productInfo[0], at: 0)
                         Constant.didUserSeeProduct = true
                     }

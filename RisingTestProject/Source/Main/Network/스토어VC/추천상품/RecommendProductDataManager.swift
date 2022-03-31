@@ -37,7 +37,7 @@ class RecommendProductDataManager {
                 }
             case .failure(let error):
                 print(error.localizedDescription)
-                delegate.presentAlert(title: "네트워크 상태가 좋지 않습니다.")
+                delegate.presentAlert(title: "네트워크 상태가 좋지 않습니다. (추천상품)")
             }
         }
     }

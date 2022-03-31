@@ -12,7 +12,7 @@ class StoreHomeViewController: BaseViewController {
     // 무한스크롤 컨트롤
     var fetchingMore: Bool = false
     
-    // API가 성공하면 값을 true로 변경 -> 모든 API가 연결되면 테이블뷰를 리로드
+    // API가 성공하면 값을 true로 변경
     var isApiConnectionSuccess: [Bool] = [false, false, false, false, false, false] {
         didSet {
             if isApiConnectionSuccess.allSatisfy({$0}) {
@@ -21,7 +21,7 @@ class StoreHomeViewController: BaseViewController {
         }
     }
     
-    // API로 받아오는 데이터
+    // API로 받아오는 데이터 (인기 키워드)
     var popularKeywords: [PopularKeyword] = []
     
     

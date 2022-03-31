@@ -47,7 +47,7 @@ class WritingReviewDataManager {
             // 네트워킹 실패
             case .failure(let error):
                 print(error.localizedDescription)
-                delegate.presentAlert(title: "서버와의 연결이 좋지 않습니다.")
+                delegate.presentAlert(title: "서버와의 연결이 좋지 않습니다.(리뷰작성)")
             }
         }
     }
