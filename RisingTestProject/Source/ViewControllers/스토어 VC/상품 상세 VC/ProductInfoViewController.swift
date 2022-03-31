@@ -37,9 +37,11 @@ class ProductInfoViewController: BaseViewController {
                 let isAlready = Constant.recentlySeenProductInfo.contains(where: {
                     $0.productId == idNum
                 })
-                if !isAlready {
-                    Constant.recentlySeenProductInfo.insert(productInfo[0], at: 0)
-                    Constant.didUserSeeProduct = true
+                if !productInfo.isEmpty {
+                    if !isAlready {
+                        Constant.recentlySeenProductInfo.insert(productInfo[0], at: 0)
+                        Constant.didUserSeeProduct = true
+                    }
                 }
             }
         }
@@ -125,6 +127,10 @@ class ProductInfoViewController: BaseViewController {
     }
     
     
+    // 탭바 설정
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }

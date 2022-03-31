@@ -37,6 +37,8 @@ class SignUpDataManager {
                         switch response.code {
                         case 2015: delegate.presentAlert(title: "이메일을 입력해주세요.")
                         case 2016: delegate.presentAlert(title: "이메일 형식을 확인해주세요.")
+                        case 3015: delegate.presentAlert(title: "이미 가입된 별명입니다.")
+                        case 3013: delegate.presentAlert(title: "이미 가입된 이메일입니다.")
                         case 4000: delegate.presentAlert(title: "데이터데이스 에러.")
                         case 4012: delegate.presentAlert(title: "비밀번호 복호화에 실패하였습니다.")
                         default: print("")

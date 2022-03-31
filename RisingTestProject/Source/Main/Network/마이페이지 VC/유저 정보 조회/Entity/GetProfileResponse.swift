@@ -25,5 +25,5 @@ struct UserInfo: Decodable {
     var order_Cnt: Int
     var cupon_Cnt: Int
     var point_Score: Int
-    var introduce: String
+    var introduce: String?
 }

@@ -27,9 +27,11 @@ class ProductInfoDataManager {
                     // MARK: - 성공
                     print("데이터 가져오기 성공")
                     
-                    delegate.productDetail = response.result[0]
-                    delegate.productInfoImageArray = self.returnUrlString(response.result[0])
-                    delegate.tableView.reloadData()
+                    if !response.result.isEmpty {
+                        delegate.productDetail = response.result[0]
+                        delegate.productInfoImageArray = self.returnUrlString(response.result[0])
+                        delegate.tableView.reloadData()
+                    }
                 }
                 else {
                     switch response.code {

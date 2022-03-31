@@ -110,7 +110,7 @@
                     </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인하고 오늘의집 서비스를 자유롭게 이용해보세요" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-Qb-qty">
-                    <rect key="frame" x="118.5" y="59" width="223.5" height="36"/>
+                    <rect key="frame" x="118.5" y="59" width="243.5" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -131,7 +131,7 @@
                 <constraint firstItem="KGC-Qb-qty" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="8vo-Xo-ocD"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.75" id="CCK-rz-Tau"/>
                 <constraint firstItem="yYA-js-Whr" firstAttribute="leading" secondItem="4m3-Dg-q3c" secondAttribute="leading" id="Cg7-J6-gfu"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KGC-Qb-qty" secondAttribute="trailing" constant="100" id="FTg-QD-BDk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KGC-Qb-qty" secondAttribute="trailing" constant="80" id="FTg-QD-BDk"/>
                 <constraint firstItem="yYA-js-Whr" firstAttribute="trailing" secondItem="4m3-Dg-q3c" secondAttribute="trailing" id="PpQ-eM-CJF"/>
                 <constraint firstItem="YZG-1u-zJf" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.2" id="TDQ-WW-1D1"/>
                 <constraint firstItem="oJj-ih-E75" firstAttribute="top" secondItem="YZG-1u-zJf" secondAttribute="bottom" constant="20" id="a3S-Z0-HJx"/>
