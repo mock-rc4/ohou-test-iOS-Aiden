@@ -1,19 +1,19 @@
 //
-//  SignInDataManager.swift
+//  SocialLoginDataManager.swift
 //  RisingTestProject
 //
-//  Created by 신동희 on 2022/03/21.
+//  Created by 신동희 on 2022/03/31.
 //
 
 import Alamofire
-import CoreFoundation
 
-class SignInDataManager {
+
+class SocialLoginDataManager {
     
     // 매개변수(parameters)에 서버로 보낼 정보를 받아서 처리한다.
-    func postSignIn(_ parameters: SignInRequest, delegate: SignInViewController) {
+    func postSignIn(_ parameters: SocialLoginRequest, delegate: InitialViewController) {
 
-        let url = "\(Constant.baseURL)/app/accounts/login"
+        let url = "\(Constant.baseURL)/oauth"
 
         AF.request(url,
                    method: .post,
@@ -53,6 +53,7 @@ class SignInDataManager {
                     }
                 // 네트워킹 실패
                 case .failure(let error):
+                    print(error.localizedDescription)
                     delegate.presentAlert(title: "서버와의 연결이 좋지 않습니다.")
                 }
             }

@@ -200,6 +200,9 @@
 		D092D32727EB08BC00A5BAF2 /* TodayDealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D092D32627EB08BC00A5BAF2 /* TodayDealResponse.swift */; };
 		D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09D5BEF27EB26B800F4B9D0 /* UIImage.swift */; };
 		D09D5BF227EB2BC100F4B9D0 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09D5BF127EB2BC100F4B9D0 /* PaddingLabel.swift */; };
+		D09DAB9027F5922E00DBB702 /* SocialLoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DAB8F27F5922E00DBB702 /* SocialLoginDataManager.swift */; };
+		D09DAB9327F5926200DBB702 /* SocialLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DAB9227F5926200DBB702 /* SocialLoginResponse.swift */; };
+		D09DAB9527F5926900DBB702 /* SocialLoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09DAB9427F5926900DBB702 /* SocialLoginRequest.swift */; };
 		D0A431A427E98AD800421A34 /* GetProfileDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */; };
 		D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431A527E98C5400421A34 /* GetProfileResponse.swift */; };
 		D0A431AE27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */; };
@@ -501,6 +504,9 @@
 		D092D32627EB08BC00A5BAF2 /* TodayDealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayDealResponse.swift; sourceTree = "<group>"; };
 		D09D5BEF27EB26B800F4B9D0 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		D09D5BF127EB2BC100F4B9D0 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		D09DAB8F27F5922E00DBB702 /* SocialLoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginDataManager.swift; sourceTree = "<group>"; };
+		D09DAB9227F5926200DBB702 /* SocialLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginResponse.swift; sourceTree = "<group>"; };
+		D09DAB9427F5926900DBB702 /* SocialLoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginRequest.swift; sourceTree = "<group>"; };
 		D0A431A327E98AD800421A34 /* GetProfileDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileDataManager.swift; sourceTree = "<group>"; };
 		D0A431A527E98C5400421A34 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
 		D0A431AD27E995BD00421A34 /* AfterLoginProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginProfileTableViewHeader.swift; sourceTree = "<group>"; };
@@ -896,6 +902,7 @@
 			children = (
 				D06B481727E8050200C881E0 /* SignIn */,
 				D0B8F21A27E78A3B0085BEBD /* SignUp */,
+				D09DAB8E27F5920300DBB702 /* 소셜로그인 연동 */,
 				D0B8F21727E77E680085BEBD /* KakaoLogin */,
 			);
 			name = "로그인 관련";
@@ -2172,6 +2179,25 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		D09DAB8E27F5920300DBB702 /* 소셜로그인 연동 */ = {
+			isa = PBXGroup;
+			children = (
+				D09DAB8F27F5922E00DBB702 /* SocialLoginDataManager.swift */,
+				D09DAB9127F5923D00DBB702 /* Entity */,
+			);
+			name = "소셜로그인 연동";
+			path = "소셜로그인 연동";
+			sourceTree = "<group>";
+		};
+		D09DAB9127F5923D00DBB702 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D09DAB9427F5926900DBB702 /* SocialLoginRequest.swift */,
+				D09DAB9227F5926200DBB702 /* SocialLoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D0A431A127E98A7100421A34 /* 유저 정보 조회 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3097,6 +3123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09DAB9027F5922E00DBB702 /* SocialLoginDataManager.swift in Sources */,
 				D047896E27F04E9800DEA095 /* AlignmentBottomSheetTableViewCell.swift in Sources */,
 				D0AE5E6827ECC0ED0091DA72 /* PopularProductDataManager.swift in Sources */,
 				D0C0823927ED9B93008BABDF /* TotalPriceTableViewCell.swift in Sources */,
@@ -3235,6 +3262,7 @@
 				D072FAF527EC66B7007134C7 /* QuestionDeliveryTableViewCell.swift in Sources */,
 				D0910F5D27E56D9800793D90 /* SceneDelegate.swift in Sources */,
 				D014810B27EA228100BD3BAA /* PopularProductTableViewCell.swift in Sources */,
+				D09DAB9327F5926200DBB702 /* SocialLoginResponse.swift in Sources */,
 				D01FB64F27E8C8D300D01FDF /* BannersDataManager.swift in Sources */,
 				D0053D7427F1597E005F9982 /* ChooseProductToReviewVC.swift in Sources */,
 				D06B483B27E81C4700C881E0 /* ProfileViewController.swift in Sources */,
@@ -3273,6 +3301,7 @@
 				D0F9665527F28AA500321ED2 /* InteriorTableViewCell.swift in Sources */,
 				D072FAF027EC3401007134C7 /* ProductReviewFooter.swift in Sources */,
 				D02FD0B327EAAB4300E21319 /* CommercialImageRequest.swift in Sources */,
+				D09DAB9527F5926900DBB702 /* SocialLoginRequest.swift in Sources */,
 				D0A431A627E98C5400421A34 /* GetProfileResponse.swift in Sources */,
 				D09D5BF027EB26B800F4B9D0 /* UIImage.swift in Sources */,
 				D090C19727F2A77300A4B205 /* WritingReviewResponse.swift in Sources */,

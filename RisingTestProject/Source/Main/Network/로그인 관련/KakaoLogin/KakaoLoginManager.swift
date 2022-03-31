@@ -26,19 +26,10 @@ class KakaoLoginManager {
                 else {
                     print("loginWithKakaoTalk() success.")
                     
-                    //do something
-                    _ = OAuthToken
-                    Constant.kakaoOauthToken = OAuthToken?.accessToken
-                    //let accessToken = oauthToken?.accessToken
+                    // MARK: - 여기서 access토큰을 사용하여 서버와 API (post)통신!
+                    SocialLoginDataManager().postSignIn(SocialLoginRequest(accessToken: OAuthToken?.accessToken ?? "", type: "kakao"), delegate: delegate)
                     
                     self.setUserInfo()
-                    
-                    // RootVC로 이동
-                    guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
-                        return
-                    }
-                    Constant.isUserLogged = true
-                    delegate.changeRootViewController(rootVC)
                 }
             }
         }
@@ -51,21 +42,12 @@ class KakaoLoginManager {
                else {
                    print("loginWithKakaoAccount() success.")
                 
-                   //do something
-                   Constant.kakaoOauthToken = oauthToken?.accessToken
                    
                    // MARK: - 여기서 access토큰을 사용하여 서버와 API (post)통신!
+                   SocialLoginDataManager().postSignIn(SocialLoginRequest(accessToken: oauthToken?.accessToken ?? "", type: "kakao"), delegate: delegate)
                    
                    self.setUserInfo()
                    
-                   
-                   // MARK: - 아래 내용은 서버와 API통신을 연결하면 지울것!!
-                   // RootVC로 이동
-                   guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
-                       return
-                   }
-                   Constant.isUserLogged = true
-                   delegate.changeRootViewController(rootVC)
                }
             }
         }
