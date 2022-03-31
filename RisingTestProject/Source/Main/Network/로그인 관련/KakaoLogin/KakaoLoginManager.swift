@@ -28,6 +28,7 @@ class KakaoLoginManager {
                     
                     //do something
                     _ = OAuthToken
+                    Constant.kakaoOauthToken = OAuthToken?.accessToken
                     //let accessToken = oauthToken?.accessToken
                     
                     self.setUserInfo()

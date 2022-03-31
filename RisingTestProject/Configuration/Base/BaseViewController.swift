@@ -100,7 +100,7 @@ class BaseViewController: UIViewController {
         self.dismiss(animated: animation)
     }
     
-    
+    // 장바구니VC
     @objc func showBasketVC() {
         if Constant.isUserLogged {
             guard let basketVC = storyboard?.instantiateViewController(withIdentifier: "BasketViewController") as? BasketViewController else {
@@ -112,7 +112,7 @@ class BaseViewController: UIViewController {
         }
     }
     
-    
+    // 결제VC
     @objc func showPaymentVC() {
         if Constant.isUserLogged {
             guard let paymentVC = storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else {
@@ -122,5 +122,14 @@ class BaseViewController: UIViewController {
         }else {
             presentAlert(title: "로그인 후 진행해주세요.")
         }
+    }
+    
+    
+    // 검색VC
+    @objc func showSearchVC() {
+        guard let searchVC = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else {
+            return
+        }
+        self.navigationController?.pushViewController(searchVC, animated: true)
     }
 }

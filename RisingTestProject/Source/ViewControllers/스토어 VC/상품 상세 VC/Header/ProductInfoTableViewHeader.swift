@@ -68,7 +68,8 @@ class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
         beforeDiscountPrice.text = data.price.insertComma() + "원"
         afterDiscountPrice.text = data.salesPrice.insertComma() + "원"
         bonusPoint.text = "\(data.benefit)P"
-        monthlyPrice.text = "월 \(data.price/6)원 (7개월) 무이자할부 >"
+//        monthlyPrice.text = "월" + (data.price/6).insertComma + "원 (7개월) 무이자할부 >"
+        monthlyPrice.text = "월 \((data.price/7).insertComma())원 (7개월) 무이자할부 >"
         if data.isFree == 0 {
             deliveryPrice.text = data.deliveryCharge.insertComma()
         }

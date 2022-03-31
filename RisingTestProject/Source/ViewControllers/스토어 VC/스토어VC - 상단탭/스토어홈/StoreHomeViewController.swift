@@ -230,7 +230,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
                 if Constant.popularProductInfo.count >= 1 {
                     let heightCount: Int = Constant.popularProductInfo.count % 2 == 0 ? Constant.popularProductInfo.count / 2 : Constant.popularProductInfo.count / 2 + 1
-                    return (tableView.frame.width / 9) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
                 }else {
                     return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
                 }
@@ -246,7 +246,7 @@ extension StoreHomeViewController: UITableViewDelegate, UITableViewDataSource {
                 // 4 = 보여줄 상품 개수 / 2 = 높이 계산할 Cell 개수
                 if Constant.popularProductInfo.count >= 1 {
                     let heightCount: Int = Constant.popularProductInfo.count % 2 == 0 ? Constant.popularProductInfo.count / 2 : Constant.popularProductInfo.count / 2 + 1
-                    return (tableView.frame.width / 9) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
+                    return (tableView.frame.width / 7) + ((tableView.frame.width * 0.95) * CGFloat(heightCount))
                 }else {
                     return (tableView.frame.width / 7) + ((tableView.frame.width * 0.93) * 4)
                 }

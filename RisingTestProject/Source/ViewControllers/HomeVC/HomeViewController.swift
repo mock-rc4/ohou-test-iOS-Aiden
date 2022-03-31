@@ -15,6 +15,10 @@ class HomeViewController: BaseViewController {
     // 장바구니 버튼
     @IBOutlet weak var basketButton: UIButton!
     
+    // 검색 버튼
+    @IBOutlet weak var searchButton: UIButton!
+    
+    
     
     
     // MARK: - View Did Load
@@ -25,6 +29,8 @@ class HomeViewController: BaseViewController {
         addRadiusToUIView(searchBar, size: searchBar.frame.height / 5)
         
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
+        
+        searchButton.addTarget(self, action: #selector(showSearchVC), for: .touchUpInside)
     }
 
 

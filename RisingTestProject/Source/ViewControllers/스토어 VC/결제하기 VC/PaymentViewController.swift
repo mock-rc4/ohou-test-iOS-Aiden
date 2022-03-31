@@ -74,7 +74,11 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 2{
             // 주문제품의 수
-            return 2
+            if !forPaymentProductInfo.isEmpty {
+                return forPaymentProductInfo.count
+            }else {
+                return 1
+            }
         }else {
             return 1
         }
@@ -105,7 +109,9 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
 //            addSeparator(cell)
-            cell.updateCellUseBasketProductInfo(forPaymentProductInfo[indexPath.row])
+            if !forPaymentProductInfo.isEmpty {
+                cell.updateCellUseBasketProductInfo(forPaymentProductInfo[indexPath.row])
+            }
             return cell
         }
         // 결제수단 cell

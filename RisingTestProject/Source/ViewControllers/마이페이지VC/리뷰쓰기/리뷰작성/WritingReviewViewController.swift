@@ -202,12 +202,13 @@ class WritingReviewViewController: BaseViewController {
         }
         else {
             let score: Int = (durabilityRating + designRating + priceRating + deliveryRating) / 4
-            if isSelectedImage {
-//                WritingReviewDataManager().writingReview(WritingReviewRequest(productId: productID!, reviewImg: selectedImage, contents: reviewText.text!, score: score), delegate: self)
-            }
-            else {
-                WritingReviewDataManager().writingReview(WritingReviewRequest(productId: productID!, contents: reviewText.text!, score: score), delegate: self)
-            }
+//            if isSelectedImage {
+////                WritingReviewDataManager().writingReview(WritingReviewRequest(productId: productID!, reviewImg: selectedImage, contents: reviewText.text!, score: score), delegate: self)
+//            }
+//            else {
+//                WritingReviewDataManager().writingReview(WritingReviewRequest(productId: productID!, contents: reviewText.text!, score: score), delegate: self)
+//            }
+            WritingReviewDataManager().writingReview(WritingReviewRequest(productId: productID!, contents: reviewText.text!, score: score), delegate: self)
         }
     }
 }

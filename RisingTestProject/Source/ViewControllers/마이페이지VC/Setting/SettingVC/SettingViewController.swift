@@ -127,6 +127,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
                 Constant.isUserLogged = false
                 Constant.isUserTapLookAroundButton = true
                 UserDefaults.standard.set("", forKey: "jwt")
+                Constant.userInfo = nil
                 Constant.userDidTapLogoutButton = true
                 presentAlert(title: "로그아웃 되었습니다.")
             }else {
