@@ -31,7 +31,11 @@ class SignInViewController: BaseViewController {
         
         // 버튼 Radius추가
         addRadiusToUIButton(loginButton, size: loginButton.frame.height / 10)
+        
+        dismissKeyboardWhenTappedAround()
     }
+    
+    
     
     
     // objc 함수

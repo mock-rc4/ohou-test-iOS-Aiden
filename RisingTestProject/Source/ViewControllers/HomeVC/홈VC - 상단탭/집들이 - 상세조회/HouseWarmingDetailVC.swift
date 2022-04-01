@@ -10,6 +10,10 @@ import UIKit
 
 class HouseWarmingDetailVC: BaseViewController {
     
+    // UI연결
+    @IBOutlet weak var forRadiusButton: UIButton!
+    
+    
     // 게시글 고유번호
     var postNumber: Int?
     
@@ -65,6 +69,8 @@ class HouseWarmingDetailVC: BaseViewController {
         
         // API 호출
         HouseWarmingDetailDataManager().getHouseWarmingDetail(postNumber ?? 0, delegate: self)
+        
+        forRadiusButton.layer.cornerRadius = forRadiusButton.frame.height / 8
     }
     
     override func viewWillAppear(_ animated: Bool) {

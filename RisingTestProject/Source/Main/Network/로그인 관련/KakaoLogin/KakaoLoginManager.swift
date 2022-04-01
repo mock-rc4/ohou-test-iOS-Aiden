@@ -27,6 +27,7 @@ class KakaoLoginManager {
                     print("loginWithKakaoTalk() success.")
                     
                     // MARK: - 여기서 access토큰을 사용하여 서버와 API (post)통신!
+                    delegate.showIndicator()
                     SocialLoginDataManager().postSignIn(SocialLoginRequest(accessToken: OAuthToken?.accessToken ?? "", type: "kakao"), delegate: delegate)
                     
                     self.setUserInfo()

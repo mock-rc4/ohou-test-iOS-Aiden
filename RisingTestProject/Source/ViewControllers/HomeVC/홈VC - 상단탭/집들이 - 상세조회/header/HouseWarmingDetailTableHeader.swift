@@ -20,6 +20,8 @@ class HouseWarmingDetailTableHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var field: UILabel!
     @IBOutlet weak var familyType: UILabel!
     
+    @IBOutlet weak var forRadiusButton: UIButton!
+    
     
     
     override func awakeFromNib() {
@@ -36,6 +38,7 @@ class HouseWarmingDetailTableHeader: UITableViewHeaderFooterView {
         field.text = data.field
         familyType.text = data.familyType
         
+        forRadiusButton.layer.cornerRadius = forRadiusButton.frame.height / 8
         
         // 전문가 아닌경우
         if data.isExpert == 0 {

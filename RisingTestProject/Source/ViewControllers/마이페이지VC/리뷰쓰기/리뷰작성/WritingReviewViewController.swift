@@ -164,6 +164,7 @@ class WritingReviewViewController: BaseViewController {
         
         // addTarget
         reviewSaveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
+        dismissKeyboardWhenTappedAround()
     }
     
     

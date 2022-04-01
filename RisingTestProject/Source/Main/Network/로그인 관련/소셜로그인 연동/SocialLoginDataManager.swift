@@ -34,10 +34,11 @@ class SocialLoginDataManager {
                             }
                             // 토큰값 유저디폴트에 저장
                             UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
-                            
+
                             Constant.isUserLogged = true
                             Constant.accoundID = response.result?.account_Id
                             Constant.jwt = response.result?.jwt
+                            
                             delegate.changeRootViewController(rootVC)
                         }
                     }

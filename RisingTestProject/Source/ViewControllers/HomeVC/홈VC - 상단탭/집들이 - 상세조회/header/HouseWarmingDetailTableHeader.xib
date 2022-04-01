@@ -164,6 +164,7 @@
             <connections>
                 <outlet property="familyType" destination="X3z-TQ-g6y" id="Lhb-JB-bG1"/>
                 <outlet property="field" destination="cnD-bV-kLo" id="Egr-Ax-kZs"/>
+                <outlet property="forRadiusButton" destination="8Zh-GK-yaf" id="A9S-Ub-cOD"/>
                 <outlet property="housingType" destination="GCm-Mh-1PI" id="vSe-CP-9qW"/>
                 <outlet property="nickName" destination="Shk-EJ-d1P" id="CFy-vB-8Ui"/>
                 <outlet property="postImage" destination="bNA-nt-a0X" id="yE6-Wu-Fjk"/>

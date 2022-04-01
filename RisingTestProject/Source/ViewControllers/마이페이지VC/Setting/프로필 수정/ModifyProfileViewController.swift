@@ -39,6 +39,8 @@ class ModifyProfileViewController: BaseViewController {
         }
         
         addRadiusToUIButton(modifyButton, size: modifyButton.frame.height / 10)
+        
+        dismissKeyboardWhenTappedAround()
     }
     
     // 탭바 설정

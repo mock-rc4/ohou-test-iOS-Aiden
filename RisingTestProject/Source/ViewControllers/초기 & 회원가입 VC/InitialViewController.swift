@@ -33,6 +33,7 @@ class InitialViewController: BaseViewController {
         KakaoLoginManager().kakaoLogin(self)
     }
     
+    
     // 네이버 로그인 버튼
     let naverLoginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     @IBAction func didTapNaverLoginButton(_ sender: UIButton) {

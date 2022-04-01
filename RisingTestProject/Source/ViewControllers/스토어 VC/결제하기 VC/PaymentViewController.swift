@@ -32,6 +32,8 @@ class PaymentViewController: BaseViewController {
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dismissKeyboardWhenTappedAround()
 
         // tableview 세팅
         tableView.delegate = self

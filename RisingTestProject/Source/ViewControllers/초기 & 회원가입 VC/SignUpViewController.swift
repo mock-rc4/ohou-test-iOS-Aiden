@@ -150,7 +150,7 @@ class SignUpViewController: BaseViewController {
         // 회원가입 버튼 addTarget
         signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         
-        
+        dismissKeyboardWhenTappedAround()
     }
     
     

@@ -4225,6 +4225,7 @@
                     </view>
                     <connections>
                         <outlet property="commentCount" destination="2b6-tW-c2H" id="Xex-vp-Jtp"/>
+                        <outlet property="forRadiusButton" destination="7ff-vP-koA" id="CgY-gZ-5CJ"/>
                         <outlet property="likeCount" destination="cjC-ye-kgZ" id="v8d-MI-6Hk"/>
                         <outlet property="linkCount" destination="Fh1-CX-c2S" id="h8U-VY-DXM"/>
                         <outlet property="nickName" destination="rSp-dr-Kav" id="dI0-aZ-5yH"/>
