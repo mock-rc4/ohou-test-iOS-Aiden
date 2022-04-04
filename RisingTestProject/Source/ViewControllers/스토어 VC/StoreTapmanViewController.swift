@@ -19,6 +19,7 @@ class StoreTapmanViewController: TabmanViewController {
     @IBOutlet weak var tempView: UIView!
     
     
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         

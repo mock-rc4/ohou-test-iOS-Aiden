@@ -71,7 +71,7 @@ class StoreHomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        // MARK: - API
+        // MARK: - API - 로그인 상태에서 보여줄 Cell에 대한 API호출
         if Constant.isUserLogged && isRelatedRecommendedProductLoaded == false {
             // 내가본 상품과 연관상품 API 호출
             RelatedProductUserSawDataManager().getRelatedProduct(delegate: self)
@@ -83,8 +83,17 @@ class StoreHomeViewController: BaseViewController {
         }
         
         
-        if Constant.didUserSeeProduct {
-            tableView.reloadData()
+//        if Constant.didUserSeeProduct {
+//            tableView.reloadData()
+//            Constant.didUserSeeProduct = false
+//        }
+        // 최근본 상품 Cell만 Reload
+        if Constant.isUserLogged && Constant.didUserSeeProduct {
+            
+            let reloadRow = IndexPath(row: 3, section: 0)
+            
+            tableView.reloadRows(at: [reloadRow], with: .none)
+            
             Constant.didUserSeeProduct = false
         }
     }

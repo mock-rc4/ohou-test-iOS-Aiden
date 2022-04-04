@@ -28,8 +28,8 @@ class HomeViewController: BaseViewController {
         // UI 설정
         addRadiusToUIView(searchBar, size: searchBar.frame.height / 5)
         
+        // 장바구니, 검색창 Button 타겟설정
         basketButton.addTarget(self, action: #selector(showBasketVC), for: .touchUpInside)
-        
         searchButton.addTarget(self, action: #selector(showSearchVC), for: .touchUpInside)
     }
 

@@ -35,7 +35,7 @@ class HomeTapmanViewController: TabmanViewController {
             storyboard?.instantiateViewController(withIdentifier: "HomeQnAVC") as! HomeQnAVC
         ]
         
-        // datasource를 self로 지정
+        // datasource를 self로 지정 (탭맨)
         self.dataSource = self
         
         

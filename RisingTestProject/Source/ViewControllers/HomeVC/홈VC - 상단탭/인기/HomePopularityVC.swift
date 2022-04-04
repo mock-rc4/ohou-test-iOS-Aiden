@@ -51,7 +51,7 @@ class HomePopularityVC: BaseViewController {
         tableView.contentInset = .zero
         tableView.contentInsetAdjustmentBehavior = .never
 
-        
+        // Cell
         tableView.register(UINib(nibName: "PopularityPostTableViewCell", bundle: nil), forCellReuseIdentifier: "PopularityPostTableViewCell")
         tableView.register(UINib(nibName: "MainCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "MainCategoryTableViewCell")
         tableView.register(UINib(nibName: "TodayDealTableViewCell", bundle: nil), forCellReuseIdentifier: "TodayDealTableViewCell")
