@@ -87,6 +87,9 @@ extension StoreBestViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - 무한스크롤
 extension StoreBestViewController {
 
+    // 무한스크롤 컨트롤 - 위에서 정의
+    //var fetchingMore: Bool = false
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.tableView.contentOffset.y > (tableView.contentSize.height - tableView.bounds.size.height) {
             
