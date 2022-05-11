@@ -8,7 +8,7 @@
 import UIKit
 
 
-class InteriorViewController: BaseViewController {
+final class InteriorViewController: BaseViewController {
     
     // 게시글 정보
     var interiorPost: [InteriorPost] = []

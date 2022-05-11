@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AgreeTableViewCell: UITableViewCell {
+final class AgreeTableViewCell: UITableViewCell {
 
     var agreeIsSelected: Bool = false
     

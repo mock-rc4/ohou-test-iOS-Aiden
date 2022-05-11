@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrderProductTableViewCell: UITableViewCell {
+final class OrderProductTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var forBorder: UIView!

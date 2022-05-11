@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class InteriorPostDataManager {
+final class InteriorPostDataManager {
     
     func getInteriorPost(delegate: InteriorViewController) {
         let url = "\(Constant.baseURL)/Interior"

@@ -9,7 +9,7 @@ import UIKit
 import Tabman
 import Pageboy
 
-class MyPageTapmanViewController: TabmanViewController {
+final class MyPageTapmanViewController: TabmanViewController {
     
     // UI 연결
     @IBOutlet weak var tempView: UIView!

@@ -8,7 +8,7 @@
 import UIKit
 import ExpyTableView
 
-class UserStylingTableViewCell: UITableViewCell {
+final class UserStylingTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!

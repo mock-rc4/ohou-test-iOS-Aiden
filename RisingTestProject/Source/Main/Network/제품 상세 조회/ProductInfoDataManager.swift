@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class ProductInfoDataManager {
+final class ProductInfoDataManager {
     
     func getProductInfo(_ parameters: ProductInfoRequest, delegate: ProductInfoViewController) {
         

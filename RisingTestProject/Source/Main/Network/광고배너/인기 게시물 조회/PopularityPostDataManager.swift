@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class PopularityPostDataManager {
+final class PopularityPostDataManager {
     
     func getPopularityPost(delegate: HomePopularityVC) {
         let url = "\(Constant.baseURL)/home"

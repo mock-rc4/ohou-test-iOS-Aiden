@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class TodayDealDataManager {
+final class TodayDealDataManager {
     
     func getTodayDealProductInfo(delegate: BaseViewController, lastIndex: Int) {
         

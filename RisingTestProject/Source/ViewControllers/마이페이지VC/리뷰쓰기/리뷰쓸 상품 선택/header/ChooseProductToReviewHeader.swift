@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChooseProductToReviewHeader: UITableViewHeaderFooterView {
+final class ChooseProductToReviewHeader: UITableViewHeaderFooterView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

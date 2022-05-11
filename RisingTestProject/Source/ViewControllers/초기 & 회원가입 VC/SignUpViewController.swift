@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - 약관동의 데이터 [Bool] 형식으로 수정 -> didSet 사용
 
-class SignUpViewController: BaseViewController {
+final class SignUpViewController: BaseViewController {
     
     func updateAllAgreeButton() {
         allAgree = [essentialAgree1, essentialAgree2, essentialAgree3, chooseAgree].allSatisfy({$0})

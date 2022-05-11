@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class ModifyProfileDataManager {
+final class ModifyProfileDataManager {
     
     func modifyProtile(_ param: ModifyProfileRequest, delegate: ModifyProfileViewController) {
         

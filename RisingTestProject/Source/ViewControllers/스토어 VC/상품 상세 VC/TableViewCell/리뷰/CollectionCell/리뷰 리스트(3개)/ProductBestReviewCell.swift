@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductBestReviewCell: UICollectionViewCell {
+final class ProductBestReviewCell: UICollectionViewCell {
 
     // UI 연결
     @IBOutlet weak var profileImage: UIImageView!

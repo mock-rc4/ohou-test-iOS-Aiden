@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductReviewFooter: UICollectionViewCell {
+final class ProductReviewFooter: UICollectionViewCell {
 
     // UI 연결
     @IBOutlet weak var seeMoreReviewButton: UIButton!

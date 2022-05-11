@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoreBestViewController: BaseViewController {
+final class StoreBestViewController: BaseViewController {
     
     // 무한스크롤 컨트롤
     var fetchingMore: Bool = false

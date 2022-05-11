@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InteriorTableViewCell: UITableViewCell {
+final class InteriorTableViewCell: UITableViewCell {
 
     // MARK: - UI연결
     

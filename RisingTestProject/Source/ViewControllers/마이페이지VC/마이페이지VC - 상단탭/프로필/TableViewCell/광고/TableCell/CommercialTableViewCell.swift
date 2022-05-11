@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommercialTableViewCell: UITableViewCell {
+final class CommercialTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!

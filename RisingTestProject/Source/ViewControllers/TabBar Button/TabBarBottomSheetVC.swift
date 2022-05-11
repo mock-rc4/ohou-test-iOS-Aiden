@@ -8,7 +8,7 @@
 import UIKit
 
 
-class TabBarBottomSheetVC: BaseViewController {
+final class TabBarBottomSheetVC: BaseViewController {
     
     // UI연결
     @IBAction func didTapReviewButton(_ sender: UIButton) {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ModifyProfileViewController: BaseViewController {
+final class ModifyProfileViewController: BaseViewController {
     
     @IBAction func didTapPopButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductReviewPhotoCell: UICollectionViewCell {
+final class ProductReviewPhotoCell: UICollectionViewCell {
 
     // UI연결
     @IBOutlet weak var reviewImage: UIImageView!

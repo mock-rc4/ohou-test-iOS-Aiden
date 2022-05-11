@@ -8,7 +8,7 @@
 import UIKit
 
 
-class WritingReviewViewController: BaseViewController {
+final class WritingReviewViewController: BaseViewController {
     
     // 갤러리 접근하기 위한 인스턴스 생성
     let imagePickerController = UIImagePickerController()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserStylingCollectionViewCell: UICollectionViewCell {
+final class UserStylingCollectionViewCell: UICollectionViewCell {
 
     // UI연결
     @IBOutlet weak var userPhoto: UIImageView!

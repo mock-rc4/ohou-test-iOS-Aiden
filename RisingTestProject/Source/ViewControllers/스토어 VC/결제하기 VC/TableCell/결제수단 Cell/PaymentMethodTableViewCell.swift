@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaymentMethodTableViewCell: UITableViewCell {
+final class PaymentMethodTableViewCell: UITableViewCell {
 
     @IBOutlet var buttomGroub: [UIButton]!
     

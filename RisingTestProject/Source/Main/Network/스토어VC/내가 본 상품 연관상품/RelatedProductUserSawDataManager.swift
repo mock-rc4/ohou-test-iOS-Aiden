@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class RelatedProductUserSawDataManager {
+final class RelatedProductUserSawDataManager {
     
     func getRelatedProduct(delegate: StoreHomeViewController) {
         let url = "\(Constant.baseURL)/store/products/relation"

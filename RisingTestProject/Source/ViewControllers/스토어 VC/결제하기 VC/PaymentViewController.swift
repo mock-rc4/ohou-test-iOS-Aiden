@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaymentViewController: BaseViewController {
+final class PaymentViewController: BaseViewController {
     
     // UI 연결
     @IBOutlet weak var tableView: UITableView!

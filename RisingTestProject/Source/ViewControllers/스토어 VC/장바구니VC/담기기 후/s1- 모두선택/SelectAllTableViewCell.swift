@@ -14,7 +14,7 @@ protocol selectAllButtonDelegate {
 }
 
 
-class SelectAllTableViewCell: UITableViewCell {
+final class SelectAllTableViewCell: UITableViewCell {
 
     // 전체선택 버튼 구현을 위한 delegate
     var delegate: selectAllButtonDelegate?

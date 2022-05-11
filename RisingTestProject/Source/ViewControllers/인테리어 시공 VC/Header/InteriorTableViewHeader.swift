@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InteriorTableViewHeader: UITableViewHeaderFooterView {
+final class InteriorTableViewHeader: UITableViewHeaderFooterView {
 
     // UI연결
     @IBOutlet weak var commercialCollectionView: UICollectionView!

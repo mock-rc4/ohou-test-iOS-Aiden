@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DeliveryAddressTableViewCell: UITableViewCell {
+final class DeliveryAddressTableViewCell: UITableViewCell {
 
     // ui연결
     @IBOutlet weak var userNickName: UILabel!

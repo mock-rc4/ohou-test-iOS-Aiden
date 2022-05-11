@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class PopularityPhotoDataManager {
+final class PopularityPhotoDataManager {
     
     func getPopularityPhoto(delegate: HomePopularityVC) {
         let url = "\(Constant.baseURL)/home/photos"

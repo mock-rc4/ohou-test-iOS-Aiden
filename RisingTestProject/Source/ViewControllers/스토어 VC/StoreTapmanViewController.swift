@@ -10,7 +10,7 @@ import Tabman
 import Pageboy
 
 
-class StoreTapmanViewController: TabmanViewController {
+final class StoreTapmanViewController: TabmanViewController {
     
     // 전환시킬 VC들
     var viewControllers: [UIViewController] = []

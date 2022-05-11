@@ -24,7 +24,7 @@ protocol TableViewReload {
 
 
 
-class ProductInBasketTableViewCell: UITableViewCell {
+final class ProductInBasketTableViewCell: UITableViewCell {
 
     // MARK: - UI연결
     

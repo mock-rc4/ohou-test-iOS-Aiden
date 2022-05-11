@@ -10,7 +10,7 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 
-class KakaoLoginManager {
+final class KakaoLoginManager {
     
     static var userNickName: String?
     static var userEmail: String?

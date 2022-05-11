@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class BasketProductDataManager {
+final class BasketProductDataManager {
     
     func getBasketProductInfo(delegate: BasketViewController) {
         let url = "\(Constant.baseURL)/store/baskets"

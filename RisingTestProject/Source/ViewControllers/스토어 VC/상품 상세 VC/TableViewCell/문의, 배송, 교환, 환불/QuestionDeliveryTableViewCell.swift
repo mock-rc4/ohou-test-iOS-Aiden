@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionDeliveryTableViewCell: UITableViewCell {
+final class QuestionDeliveryTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var mainTitle: UILabel!

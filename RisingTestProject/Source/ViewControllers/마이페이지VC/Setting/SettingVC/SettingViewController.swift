@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SettingViewController: BaseViewController {
+final class SettingViewController: BaseViewController {
     
     // 세팅 정보 배열
     var settingArray: [[String]] = [

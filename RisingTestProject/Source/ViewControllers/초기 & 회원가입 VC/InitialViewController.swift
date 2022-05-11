@@ -10,7 +10,7 @@ import NaverThirdPartyLogin
 import Alamofire
 
 
-class InitialViewController: BaseViewController {
+final class InitialViewController: BaseViewController {
     
     // MARK: - UI 연결
     

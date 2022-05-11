@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ChangePasswordViewController: BaseViewController {
+final class ChangePasswordViewController: BaseViewController {
     
     // MARK: - UI 연결
     

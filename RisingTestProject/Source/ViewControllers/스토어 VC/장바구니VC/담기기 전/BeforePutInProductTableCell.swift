@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeforePutInProductTableCell: UITableViewCell {
+final class BeforePutInProductTableCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var putInProductButton: UIButton!

@@ -9,7 +9,7 @@
 import Alamofire
 
 
-class CommercialImageDataManager {
+final class CommercialImageDataManager {
     
     
     var urlImages: [UIImage] = []

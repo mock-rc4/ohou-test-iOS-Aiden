@@ -12,7 +12,7 @@ import MaterialComponents
 import ExpyTableView
 
 
-class ProductInfoViewController: BaseViewController {
+final class ProductInfoViewController: BaseViewController {
     
     // 펼치기로 확장되는 Cell에 넣을 이미지 배열
     var productInfoImageArray: [String] = []

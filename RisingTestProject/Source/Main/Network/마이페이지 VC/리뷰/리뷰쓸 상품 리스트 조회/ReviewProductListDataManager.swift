@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class ReviewProductListDataManager {
+final class ReviewProductListDataManager {
     
     func getReviewProductList(delegate: ChooseProductToReviewVC) {
         let url = "\(Constant.baseURL)/store/popular-products/0"

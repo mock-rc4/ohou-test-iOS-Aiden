@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class AddLikeDataManager {
+final class AddLikeDataManager {
     
     func addLike(_ param: AddLikeRequest, delegate: HomeFollowingVC) {
         

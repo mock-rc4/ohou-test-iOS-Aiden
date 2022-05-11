@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductReviewTableViewCell: UITableViewCell {
+final class ProductReviewTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!

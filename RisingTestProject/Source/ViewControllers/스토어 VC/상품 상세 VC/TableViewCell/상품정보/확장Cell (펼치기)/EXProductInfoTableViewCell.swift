@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EXProductInfoTableViewCell: UITableViewCell {
+final class EXProductInfoTableViewCell: UITableViewCell {
 
     // UI연결
     @IBOutlet weak var productImage: UIImageView!

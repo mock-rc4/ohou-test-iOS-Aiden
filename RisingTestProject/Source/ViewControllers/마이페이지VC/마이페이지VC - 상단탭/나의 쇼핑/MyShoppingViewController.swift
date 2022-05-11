@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyShoppingViewController: BaseViewController {
+final class MyShoppingViewController: BaseViewController {
     
     // UI 연결
     @IBOutlet weak var tableView: UITableView!

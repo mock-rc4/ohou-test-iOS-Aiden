@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
+final class ProductInfoTableViewHeader: UITableViewHeaderFooterView {
 
     // MARK: - UI 연결
     

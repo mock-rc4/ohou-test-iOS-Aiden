@@ -9,7 +9,7 @@ import Alamofire
 
 
 
-class PopularKeywordDataManager {
+final class PopularKeywordDataManager {
     
     func getPopularKeyword(delegate: StoreHomeViewController) {
         let url = "\(Constant.baseURL)/store/keywords"

@@ -10,7 +10,7 @@
 import Alamofire
 
 
-class HouseWarmingDetailDataManager {
+final class HouseWarmingDetailDataManager {
     
     func getHouseWarmingDetail(_ postID: Int, delegate: HouseWarmingDetailVC) {
         

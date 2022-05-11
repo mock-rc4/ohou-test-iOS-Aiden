@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
     
     // UI연결
     @IBOutlet weak var searchBar: UIView!

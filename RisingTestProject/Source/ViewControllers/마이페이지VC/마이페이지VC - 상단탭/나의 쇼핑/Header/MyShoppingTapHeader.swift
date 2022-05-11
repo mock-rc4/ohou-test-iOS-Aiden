@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyShoppingTapHeader: UITableViewHeaderFooterView {
+final class MyShoppingTapHeader: UITableViewHeaderFooterView {
 
     // UI 연결
     @IBOutlet weak var forBorder1: UIView!
@@ -22,11 +22,6 @@ class MyShoppingTapHeader: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // Border추가
-//        addBorderToUIView(forBorder)
-//        addBorderToUIView(forBorder1)
-//        addBorderToUIView(forBorder2)
     }
 
     

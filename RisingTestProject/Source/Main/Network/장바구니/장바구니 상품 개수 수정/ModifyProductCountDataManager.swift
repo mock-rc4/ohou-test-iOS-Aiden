@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class ModifyProductCountDataManager {
+final class ModifyProductCountDataManager {
     
     func modifyProductCount(_ param: ModifyProductCountRequest, delegate: BasketViewController, productID: Int) {
         

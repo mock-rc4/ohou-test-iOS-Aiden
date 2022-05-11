@@ -8,7 +8,7 @@
 
 import Alamofire
 
-class BannersDataManager {
+final class BannersDataManager {
     
     var urlImages: [UIImage] = []
     

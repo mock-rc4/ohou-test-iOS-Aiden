@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserStylingCollectionViewHeader: UICollectionViewCell {
+final class UserStylingCollectionViewHeader: UICollectionViewCell {
 
     // UI연결
     @IBOutlet weak var photoTitle: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductReviewHeader: UICollectionViewCell {
+final class ProductReviewHeader: UICollectionViewCell {
     
     // MARK: - UI 연결
     

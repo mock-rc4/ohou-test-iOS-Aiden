@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class PopularProductDataManager {
+final class PopularProductDataManager {
     
     
     func getPopularProduct(delegate: StoreHomeViewController, lastIndex: Int) {

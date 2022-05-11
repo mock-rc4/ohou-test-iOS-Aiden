@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class ReviewDataManager {
+final class ReviewDataManager {
     
     func getReviewData(_ productID: Int, delegate: ProductInfoViewController) {
         

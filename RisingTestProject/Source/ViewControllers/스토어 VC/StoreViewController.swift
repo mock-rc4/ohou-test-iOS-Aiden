@@ -8,7 +8,7 @@
 import UIKit
 
 
-class StoreViewController: BaseViewController {
+final class StoreViewController: BaseViewController {
     
     @IBOutlet weak var searchBar: UIView!
     @IBOutlet weak var basketButton: UIButton!

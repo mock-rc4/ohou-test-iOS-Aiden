@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaymentPriceTableViewCell: UITableViewCell {
+final class PaymentPriceTableViewCell: UITableViewCell {
 
     // UI연결
     @IBOutlet weak var totalPrice: UILabel!

@@ -12,7 +12,7 @@ protocol showLoginVC {
 }
 
 
-class ProfileTableViewHeader: UITableViewHeaderFooterView {
+final class ProfileTableViewHeader: UITableViewHeaderFooterView {
 
     // UI 연결
     @IBOutlet weak var profileImage: UIImageView!

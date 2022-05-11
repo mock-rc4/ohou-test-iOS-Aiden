@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyShoppingTapCell: UITableViewCell {
+final class MyShoppingTapCell: UITableViewCell {
     
     // UI 연결
     @IBOutlet weak var cellTitle: UILabel!

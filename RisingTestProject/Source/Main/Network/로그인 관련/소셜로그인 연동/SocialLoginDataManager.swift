@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class SocialLoginDataManager {
+final class SocialLoginDataManager {
     
     // 매개변수(parameters)에 서버로 보낼 정보를 받아서 처리한다.
     func postSignIn(_ parameters: SocialLoginRequest, delegate: InitialViewController) {

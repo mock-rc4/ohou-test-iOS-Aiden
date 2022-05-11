@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class HomeFollowingDataManager {
+final class HomeFollowingDataManager {
     
     func getFollowingPost(delegate: HomeFollowingVC) {
         

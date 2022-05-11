@@ -9,7 +9,7 @@
 import Alamofire
 
 
-class HomeExpertDataManager {
+final class HomeExpertDataManager {
     
     func getPost(_ filter: Int, delegate: HomeExpertVC) {
         let url = "\(Constant.baseURL)/housewarming/expert/\(filter)"

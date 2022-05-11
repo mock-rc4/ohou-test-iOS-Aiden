@@ -8,7 +8,7 @@
 import UIKit
 
 
-class MyPageViewController: BaseViewController {
+final class MyPageViewController: BaseViewController {
     
     @IBOutlet weak var basketButton: UIButton!
     

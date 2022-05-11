@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OrdererTableViewCell: UITableViewCell {
+final class OrdererTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

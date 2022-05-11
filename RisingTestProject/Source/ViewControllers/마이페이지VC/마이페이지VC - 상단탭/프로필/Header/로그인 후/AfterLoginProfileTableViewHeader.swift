@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AfterLoginProfileTableViewHeader: UITableViewHeaderFooterView {
+final class AfterLoginProfileTableViewHeader: UITableViewHeaderFooterView {
 
     // UI 연결
     @IBOutlet weak var profileImage: UIImageView!
@@ -34,7 +34,6 @@ class AfterLoginProfileTableViewHeader: UITableViewHeaderFooterView {
     
     
     func updateCell(_ userInfo: UserInfo) {
-//        profileImage.image = UIImage(named: userInfo.profile_Img)
         profileImage.image = UIImage(named: "기본 프로필.png")
         nickName.text = userInfo.nickname
         followers.text = "\(userInfo.follower_Cnt)"

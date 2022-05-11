@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class WritingReviewDataManager {
+final class WritingReviewDataManager {
     
     func writingReview(_ param: WritingReviewRequest, delegate: WritingReviewViewController) {
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoTableViewCell: UITableViewCell {
+final class PhotoTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var collectionView: UICollectionView!

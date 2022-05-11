@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInViewController: BaseViewController {
+final class SignInViewController: BaseViewController {
     
     // MARK: - UI 연결
     @IBOutlet weak var emailTextField: UITextField!

@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class InteriorReviewDataManager {
+final class InteriorReviewDataManager {
     
     func getInteriorReview(delegate: HomePopularityVC) {
         let url = "\(Constant.baseURL)/home/reviews"

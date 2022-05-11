@@ -13,7 +13,7 @@ protocol showPeymentVC {
 
 
 
-class BasketTableViewFooter: UITableViewHeaderFooterView {
+final class BasketTableViewFooter: UITableViewHeaderFooterView {
 
     var delegate: showPeymentVC?
     

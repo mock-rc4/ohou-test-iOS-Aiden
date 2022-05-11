@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ChooseProductToReviewVC: BaseViewController {
+final class ChooseProductToReviewVC: BaseViewController {
     
     // 셀 구성할 데이터
     var productInfo: [ProductCellInfoNoRemain] = []

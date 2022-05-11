@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+final class HomeViewController: BaseViewController {
 
     // MARK: - UI 연결
     @IBOutlet weak var searchBar: UIView!

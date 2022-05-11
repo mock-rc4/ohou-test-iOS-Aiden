@@ -8,7 +8,7 @@
 import UIKit
 import ExpyTableView
 
-class ProductInfoTableViewCell: UITableViewCell {
+final class ProductInfoTableViewCell: UITableViewCell {
 
     
     // UI 연결

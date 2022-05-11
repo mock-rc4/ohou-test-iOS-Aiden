@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class RealTimeBestProductDataManager {
+final class RealTimeBestProductDataManager {
     
     func getBestProduct(delegate: StoreBestViewController, lastIndex: Int) {
         delegate.fetchingMore = true

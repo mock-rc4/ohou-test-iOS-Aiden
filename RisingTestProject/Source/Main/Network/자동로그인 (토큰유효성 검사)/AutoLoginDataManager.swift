@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class AutoLoginDataManager {
+final class AutoLoginDataManager {
     
     func jwtCheck() {
         let url = "\(Constant.baseURL)/app/accounts/auto-login"

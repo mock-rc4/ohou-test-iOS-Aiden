@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class PutInBasketDataManager {
+final class PutInBasketDataManager {
     
     func putInBasket(_ param: PutInBasketRequest, delegate: ProductOptionViewController) {
         

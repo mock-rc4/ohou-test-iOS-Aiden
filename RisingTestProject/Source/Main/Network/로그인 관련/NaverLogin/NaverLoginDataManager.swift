@@ -8,7 +8,7 @@
 import NaverThirdPartyLogin
 import Alamofire
 
-class NaverLoginDataManager {
+final class NaverLoginDataManager {
     
     func naverLoginPaser(_ delegate: InitialViewController, loginInstance: NaverThirdPartyLoginConnection) {
         

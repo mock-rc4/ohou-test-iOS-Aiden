@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class HouseWarmingDataManager {
+final class HouseWarmingDataManager {
     
     func getPost(_ filter: Int, delegate: HomeHouseWarmingVC) {
         let url = "\(Constant.baseURL)/housewarming/\(filter)"

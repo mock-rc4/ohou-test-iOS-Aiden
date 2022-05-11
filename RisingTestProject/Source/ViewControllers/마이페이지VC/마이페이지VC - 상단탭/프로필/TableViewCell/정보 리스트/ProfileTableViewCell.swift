@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+final class ProfileTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var cellTitle: UILabel!

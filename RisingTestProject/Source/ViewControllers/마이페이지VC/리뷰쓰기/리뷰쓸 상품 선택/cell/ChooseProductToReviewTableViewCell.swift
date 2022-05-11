@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChooseProductToReviewTableViewCell: UITableViewCell {
+final class ChooseProductToReviewTableViewCell: UITableViewCell {
 
     // UI연결
     @IBOutlet weak var productImage: UIImageView!

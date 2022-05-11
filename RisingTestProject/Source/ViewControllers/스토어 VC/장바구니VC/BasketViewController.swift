@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class BasketViewController: BaseViewController {
+final class BasketViewController: BaseViewController {
     
     // 전체선택 bool
     var isAllSelected: Bool?

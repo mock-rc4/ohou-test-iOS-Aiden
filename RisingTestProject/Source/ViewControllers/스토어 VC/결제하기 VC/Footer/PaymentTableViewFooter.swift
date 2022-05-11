@@ -12,7 +12,7 @@ protocol PaymentDelegateProtocol {
 }
 
 
-class PaymentTableViewFooter: UITableViewHeaderFooterView {
+final class PaymentTableViewFooter: UITableViewHeaderFooterView {
 
     // 결제 API호출 delegate
     var delegate: PaymentDelegateProtocol?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodayDealViewController: BaseViewController {
+final class TodayDealViewController: BaseViewController {
     
     // 무한스크롤 컨트롤
     var fetchingMore: Bool = false

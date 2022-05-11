@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController {
+final class ProfileViewController: BaseViewController {
     
     // UI 연결
     @IBOutlet weak var tableView: UITableView!
@@ -57,19 +57,6 @@ class ProfileViewController: BaseViewController {
     
     // MARK: - View Did Appear
     override func viewDidAppear(_ animated: Bool) {
-        // 유저 정보 조회하기 API 호출
-//        if Constant.isUserLogged && Constant.profileChanged {
-//            GetProfileDataManager().getProfile(delegate: self)
-//            Constant.profileChanged = false
-//        }
-//        if Constant.isUserLogged == false && Constant.userDidTapLogoutButton {
-//            tableView.reloadData()
-//            Constant.userDidTapLogoutButton = false
-//        }
-//        if Constant.isUserLogged && Constant.didUserOrderProduct {
-//            GetProfileDataManager().getProfile(delegate: self)
-//            Constant.didUserOrderProduct = false
-//        }
         
         if Constant.isUserLogged == false && Constant.userDidTapLogoutButton {
             tableView.reloadData()

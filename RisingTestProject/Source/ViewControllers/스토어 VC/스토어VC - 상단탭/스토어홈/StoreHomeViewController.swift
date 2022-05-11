@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StoreHomeViewController: BaseViewController {
+final class StoreHomeViewController: BaseViewController {
     
     // 무한스크롤 컨트롤
     var fetchingMore: Bool = false
@@ -83,10 +83,6 @@ class StoreHomeViewController: BaseViewController {
         }
         
         
-//        if Constant.didUserSeeProduct {
-//            tableView.reloadData()
-//            Constant.didUserSeeProduct = false
-//        }
         // 최근본 상품 Cell만 Reload
         if Constant.isUserLogged && Constant.didUserSeeProduct {
             

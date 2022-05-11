@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class RecommendProductDataManager {
+final class RecommendProductDataManager {
     
     func getRecommendProduct(delegate: StoreHomeViewController) {
         let url = "\(Constant.baseURL)/store/recommendation"

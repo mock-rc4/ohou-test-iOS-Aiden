@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OngoingOrderTableViewCell: UITableViewCell {
+final class OngoingOrderTableViewCell: UITableViewCell {
     
     // UI 연결
     @IBOutlet weak var waitingForPayment: UILabel!

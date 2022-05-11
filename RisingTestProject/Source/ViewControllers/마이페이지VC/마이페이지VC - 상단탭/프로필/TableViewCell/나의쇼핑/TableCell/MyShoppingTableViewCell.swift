@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyShoppingTableViewCell: UITableViewCell {
+final class MyShoppingTableViewCell: UITableViewCell {
 
     // UI 연결
     @IBOutlet weak var orderCount: UILabel!

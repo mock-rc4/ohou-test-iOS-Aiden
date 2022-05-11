@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class ExhibitionDataManager {
+final class ExhibitionDataManager {
     
     func getExhibitionList(delegate: HomePopularityVC) {
         let url = "\(Constant.baseURL)/home/exhibition"

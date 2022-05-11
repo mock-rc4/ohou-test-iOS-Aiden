@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class ProductOptionViewController: BaseViewController {
+final class ProductOptionViewController: BaseViewController {
     
     // MARK: - UI연결
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommercialCollectionViewCell: UICollectionViewCell {
+final class CommercialCollectionViewCell: UICollectionViewCell {
 
     // UI 연결
     @IBOutlet weak var commercialImage: UIImageView!

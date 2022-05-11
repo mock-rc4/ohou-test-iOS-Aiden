@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class DeleteProductDataManager {
+final class DeleteProductDataManager {
     
     func deleteProduct(_ param: DeleteProductRequest, delegate: BasketViewController, productID: Int) {
         

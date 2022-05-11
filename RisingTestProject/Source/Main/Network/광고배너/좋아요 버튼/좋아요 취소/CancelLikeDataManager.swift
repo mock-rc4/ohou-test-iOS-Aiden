@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class CancelLikeDataManager {
+final class CancelLikeDataManager {
     
     func cancelLike(delegate: HomeFollowingVC, boardId: Int) {
         

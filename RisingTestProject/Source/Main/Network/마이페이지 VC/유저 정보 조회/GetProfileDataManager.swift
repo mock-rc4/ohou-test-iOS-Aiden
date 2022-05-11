@@ -8,7 +8,7 @@
 import Alamofire
 
 
-class GetProfileDataManager {
+final class GetProfileDataManager {
     
     func getProfile(delegate: ProfileViewController) {
         let url = "\(Constant.baseURL)/app/accounts/profile"
